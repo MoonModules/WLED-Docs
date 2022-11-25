@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-the-wled-wiki" class="md-skip">
+        <a href="#welcome-to-custom-effects" class="md-skip">
           Skip to content
         </a>
       
@@ -1225,11 +1225,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-to-the-wled-wiki" class="md-nav__link">
-    Welcome to the WLED wiki!
+  <a href="#welcome-to-custom-effects" class="md-nav__link">
+    Welcome to Custom Effects!
   </a>
   
-    <nav class="md-nav" aria-label="Welcome to the WLED wiki!">
+    <nav class="md-nav" aria-label="Welcome to Custom Effects!">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1240,15 +1240,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wifi-setup" class="md-nav__link">
-    Wifi Setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#software-update-procedure" class="md-nav__link">
-    Software update procedure
+  <a href="#setup" class="md-nav__link">
+    Setup
   </a>
   
 </li>
@@ -1422,11 +1415,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-to-the-wled-wiki" class="md-nav__link">
-    Welcome to the WLED wiki!
+  <a href="#welcome-to-custom-effects" class="md-nav__link">
+    Welcome to Custom Effects!
   </a>
   
-    <nav class="md-nav" aria-label="Welcome to the WLED wiki!">
+    <nav class="md-nav" aria-label="Welcome to Custom Effects!">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1437,15 +1430,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wifi-setup" class="md-nav__link">
-    Wifi Setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#software-update-procedure" class="md-nav__link">
-    Software update procedure
+  <a href="#setup" class="md-nav__link">
+    Setup
   </a>
   
 </li>
@@ -1477,7 +1463,8 @@
 
   <h1>Custom Effects</h1>
 
-<h2 id="welcome-to-the-wled-wiki">Welcome to the WLED wiki!</h2>
+<h2 id="welcome-to-custom-effects">Welcome to Custom Effects!</h2>
+<p>Work in progress </p>
 <div class="admonition info">
 <p class="admonition-title">Version Info</p>
 <p>Unless noted otherwise, all information applies to the latest release (vx.y.z.a.b).</p>
@@ -1485,58 +1472,12 @@
 <h3 id="quick-start-guide">Quick start guide</h3>
 <p><strong>1.</strong> bla vla
 <strong>Note:</strong> more bla vla</p>
-<p><img alt="Connection schematics" src="https://i.ibb.co/k9Jgr8S/connections.jpg" /></p>
 <p>bla bla</p>
-<h3 id="wifi-setup">Wifi Setup</h3>
+<h3 id="setup">Setup</h3>
 <p>bla bla</p>
 <div class="admonition info">
 <p class="admonition-title">These are only defaults</p>
 <p>All pins can be changed in the Hardware section of LED settings. Please note that these are GPIO numbers, please consult a pinout for your board to find the labeled pin (e.g <code>D4</code> = <code>GPIO2</code> on most ESP8266 boards). When using an ESP8266 board, it's recommended to use pins <code>GPIO1</code>, <code>GPIO2</code>, or <code>GPIO3</code> for LED Data; using other pins will require <em>bit-banging</em> and may cause slow performance and/or issues elsewhere (such as with IR decoding).</p>
-</div>
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>GPIO</th>
-<th>Suggested pin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LED Data</td>
-<td>2</td>
-<td>ESP8266: 1, 2 (3 if &lt;= 100 LEDs), ESP32: 1, 2, 3, 4, 16</td>
-</tr>
-<tr>
-<td>Button</td>
-<td>0</td>
-<td></td>
-</tr>
-<tr>
-<td>IR Remote</td>
-<td>None</td>
-<td>4</td>
-</tr>
-<tr>
-<td>Relay</td>
-<td>None</td>
-<td>12</td>
-</tr>
-</tbody>
-</table>
-<h3 id="software-update-procedure">Software update procedure</h3>
-<p>Method 1: Reflashing the new update like a new install (see above).</p>
-<p>Method 2: The software has an integrated <em>OTA software update</em> capability.
-First you have to enable it by typing in the correct OTA passphrase (default: "wledota") in the settings menu.
-Remove the tick in the checkbox "OTA locked". Then save settings and reboot the ESP.
-Then you can select "Manual OTA update" in Security settings and upload a <a href="https://github.com/Aircoookie/WLED/releases">release binary</a>.
-After you are done, it is recommended to lock the OTA function again.
-To do so, tick the checkbox again (you can change the passphrase by typing in a new one now). Reboot.
-If you try to access the update page now, you should see the message "OTA lock active".</p>
-<p>Method 3: ArduinoOTA is also supported.</p>
-<div class="admonition info">
-<p class="admonition-title">If you own multiple devices and want to update them</p>
-<p>Since v0.13 of WLED source code includes shell/command prompt scripts which is allow you to update multiple devices with a single command. Please check <code>tools</code> subfolder for <code>multi-update</code> scripts (.cmd or .sh). You will need to modify them to include IP addresses of your WLED devices and assign firmware binary file for each device. If you are using Windows, make sure you install <code>curl</code> utility somewhere in your <code>PATH</code> (curl is included with Windows 10 since build 17063). This will only work if "OTA Lock" is disabled.</p>
 </div>
 
 
