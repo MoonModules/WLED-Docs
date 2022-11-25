@@ -15,7 +15,7 @@
     
     
       
-        <title>FAQ - WLED Project (MM & SR Fork)</title>
+        <title>Fork Comparison - WLED Project (MM & SR Fork)</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#contents" class="md-skip">
+        <a href="#what-are-the-differences-between-wled-sr-upstream-ac-wled-and-moonmodules-fork" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FAQ
+              Fork Comparison
             
           </span>
         </div>
@@ -595,6 +595,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -605,12 +619,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          FAQ
+          Fork comparison
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        FAQ
+        Fork comparison
       </a>
       
         
@@ -627,399 +641,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contents" class="md-nav__link">
-    Contents
+  <a href="#what-are-the-differences-between-wled-sr-upstream-ac-wled-and-moonmodules-fork" class="md-nav__link">
+    What are the differences between WLED SR, upstream AC WLED, and MoonModules fork?
   </a>
-  
-    <nav class="md-nav" aria-label="Contents">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#connection-issues" class="md-nav__link">
-    Connection issues
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compilation-issues" class="md-nav__link">
-    Compilation issues
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#led-issues" class="md-nav__link">
-    LED issues
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#general-questions" class="md-nav__link">
-    General questions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-question-or-solution-is-not-on-this-page" class="md-nav__link">
-    My question or solution is not on this page
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation_1" class="md-nav__link">
-    Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-binary-should-i-use" class="md-nav__link">
-    What binary should I use?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ive-flashed-a-bin-but-i-get-no-response-at-all" class="md-nav__link">
-    I've flashed a bin, but i get no response at all
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connection-issues_1" class="md-nav__link">
-    Connection issues
-  </a>
-  
-    <nav class="md-nav" aria-label="Connection issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#once-i-attach-leds-i-cant-connect-to-the-esp-anymore" class="md-nav__link">
-    Once I attach LEDs, I can't connect to the ESP anymore!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#i-have-entered-my-wifi-credentials-and-rebooted-but-i-can-not-connect-to-the-module-now" class="md-nav__link">
-    I have entered my WiFi credentials and rebooted, but I can not connect to the module now!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-module-once-was-connected-but-i-can-no-longer-reach-it" class="md-nav__link">
-    The module once was connected, but I can no longer reach it
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-wled-xxxlocal-address-mdns-does-not-work" class="md-nav__link">
-    The wled-xxx.local address (mDNS) does not work
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#is-it-safe-to-do-a-port-forwarding-to-the-public-internet-to-control-the-lights-from-anywhere" class="md-nav__link">
-    Is it safe to do a port forwarding to the public internet to control the lights from anywhere?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-device-is-unresponsive-or-animations-lag" class="md-nav__link">
-    My device is unresponsive or animations lag!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#im-having-a-bootloop-leds-turn-on-every-5seconds" class="md-nav__link">
-    I'm having a bootloop! (LEDs turn on every ~5seconds)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#still-having-connection-issuesconnection-dropping-what-more-can-i-check" class="md-nav__link">
-    Still having connection issues/connection dropping: what more can i check?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#i-am-running-realtime-eg-e131-and-not-all-of-my-leds-are-driven-fluently" class="md-nav__link">
-    I am running realtime (e.g. E1.31) and not all of my LEDs are driven fluently!
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compilation-issues_1" class="md-nav__link">
-    Compilation issues
-  </a>
-  
-    <nav class="md-nav" aria-label="Compilation issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#when-compiling-wled-in-vs-code-using-platformio-i-get-an-error" class="md-nav__link">
-    When compiling WLED in VS Code using platformio, I get an error
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#led-issues_1" class="md-nav__link">
-    LED issues
-  </a>
-  
-    <nav class="md-nav" aria-label="LED issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#my-leds-dont-turn-on-at-all" class="md-nav__link">
-    My LEDs don't turn on at all.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-leds-dont-get-as-bright-as-they-should" class="md-nav__link">
-    My LEDs don't get as bright as they should!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-leds-are-unable-to-be-set-into-an-consistent-solid-color" class="md-nav__link">
-    My LEDs are unable to be set into an consistent solid color
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#when-i-select-green-the-leds-turn-red" class="md-nav__link">
-    When I select green, the LEDs turn red!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-leds-act-funny-and-flicker-randomly" class="md-nav__link">
-    My LEDs act funny and flicker randomly
-  </a>
-  
-    <nav class="md-nav" aria-label="My LEDs act funny and flicker randomly">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reason-1" class="md-nav__link">
-    Reason 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reason-2" class="md-nav__link">
-    Reason 2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reason-3" class="md-nav__link">
-    Reason 3
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reason-4" class="md-nav__link">
-    Reason 4
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#not-all-my-leds-turn-on" class="md-nav__link">
-    Not all my LEDs turn on
-  </a>
-  
-    <nav class="md-nav" aria-label="Not all my LEDs turn on">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reason-1_1" class="md-nav__link">
-    Reason 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reason-2_1" class="md-nav__link">
-    Reason 2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-turn-off-the-bright-blue-onboard-led" class="md-nav__link">
-    How to turn off the bright blue onboard LED?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-is-gpio2d4-the-default-led-pin" class="md-nav__link">
-    Why is gpio2/D4 the default LED pin?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-can-i-only-use-500-leds-on-the-esp8266-gpio-pin-3" class="md-nav__link">
-    Why can I only use 500 LEDs on the ESP8266 GPIO pin 3?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-led-strip-hardware-is-supported-by-wled" class="md-nav__link">
-    What LED strip hardware is supported by WLED?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#general-questions_1" class="md-nav__link">
-    General Questions
-  </a>
-  
-    <nav class="md-nav" aria-label="General Questions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-does-the-name-wled-mean" class="md-nav__link">
-    What does the name WLED mean?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-do-the-wled-version-names-mean" class="md-nav__link">
-    What do the WLED version names mean?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-is-the-difference-between-the-brightness-sliders-in-the-web-ui" class="md-nav__link">
-    What is the difference between the brightness sliders in the web UI?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-segments-are-gone-after-a-reboot" class="md-nav__link">
-    My Segments are gone after a reboot!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#may-i-sell-a-product-running-wled" class="md-nav__link">
-    May I sell a product running WLED?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#my-question-or-solution-is-not-on-this-page_1" class="md-nav__link">
-    My question or solution is not on this page
-  </a>
-  
-    <nav class="md-nav" aria-label="My question or solution is not on this page">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#check-out-the-wled-forum" class="md-nav__link">
-    Check out the WLED forum!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#look-through-the-issues" class="md-nav__link">
-    Look through the Issues
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#if-i-report-a-new-issue-what-do-i-need-to-share" class="md-nav__link">
-    If I report a new Issue, what do i need to share?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1027,20 +651,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../fork-comparison/" class="md-nav__link">
-        Fork comparison
-      </a>
     </li>
   
 
@@ -1799,399 +1409,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contents" class="md-nav__link">
-    Contents
+  <a href="#what-are-the-differences-between-wled-sr-upstream-ac-wled-and-moonmodules-fork" class="md-nav__link">
+    What are the differences between WLED SR, upstream AC WLED, and MoonModules fork?
   </a>
-  
-    <nav class="md-nav" aria-label="Contents">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#connection-issues" class="md-nav__link">
-    Connection issues
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compilation-issues" class="md-nav__link">
-    Compilation issues
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#led-issues" class="md-nav__link">
-    LED issues
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#general-questions" class="md-nav__link">
-    General questions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-question-or-solution-is-not-on-this-page" class="md-nav__link">
-    My question or solution is not on this page
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation_1" class="md-nav__link">
-    Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-binary-should-i-use" class="md-nav__link">
-    What binary should I use?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ive-flashed-a-bin-but-i-get-no-response-at-all" class="md-nav__link">
-    I've flashed a bin, but i get no response at all
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connection-issues_1" class="md-nav__link">
-    Connection issues
-  </a>
-  
-    <nav class="md-nav" aria-label="Connection issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#once-i-attach-leds-i-cant-connect-to-the-esp-anymore" class="md-nav__link">
-    Once I attach LEDs, I can't connect to the ESP anymore!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#i-have-entered-my-wifi-credentials-and-rebooted-but-i-can-not-connect-to-the-module-now" class="md-nav__link">
-    I have entered my WiFi credentials and rebooted, but I can not connect to the module now!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-module-once-was-connected-but-i-can-no-longer-reach-it" class="md-nav__link">
-    The module once was connected, but I can no longer reach it
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-wled-xxxlocal-address-mdns-does-not-work" class="md-nav__link">
-    The wled-xxx.local address (mDNS) does not work
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#is-it-safe-to-do-a-port-forwarding-to-the-public-internet-to-control-the-lights-from-anywhere" class="md-nav__link">
-    Is it safe to do a port forwarding to the public internet to control the lights from anywhere?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-device-is-unresponsive-or-animations-lag" class="md-nav__link">
-    My device is unresponsive or animations lag!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#im-having-a-bootloop-leds-turn-on-every-5seconds" class="md-nav__link">
-    I'm having a bootloop! (LEDs turn on every ~5seconds)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#still-having-connection-issuesconnection-dropping-what-more-can-i-check" class="md-nav__link">
-    Still having connection issues/connection dropping: what more can i check?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#i-am-running-realtime-eg-e131-and-not-all-of-my-leds-are-driven-fluently" class="md-nav__link">
-    I am running realtime (e.g. E1.31) and not all of my LEDs are driven fluently!
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compilation-issues_1" class="md-nav__link">
-    Compilation issues
-  </a>
-  
-    <nav class="md-nav" aria-label="Compilation issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#when-compiling-wled-in-vs-code-using-platformio-i-get-an-error" class="md-nav__link">
-    When compiling WLED in VS Code using platformio, I get an error
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#led-issues_1" class="md-nav__link">
-    LED issues
-  </a>
-  
-    <nav class="md-nav" aria-label="LED issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#my-leds-dont-turn-on-at-all" class="md-nav__link">
-    My LEDs don't turn on at all.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-leds-dont-get-as-bright-as-they-should" class="md-nav__link">
-    My LEDs don't get as bright as they should!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-leds-are-unable-to-be-set-into-an-consistent-solid-color" class="md-nav__link">
-    My LEDs are unable to be set into an consistent solid color
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#when-i-select-green-the-leds-turn-red" class="md-nav__link">
-    When I select green, the LEDs turn red!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-leds-act-funny-and-flicker-randomly" class="md-nav__link">
-    My LEDs act funny and flicker randomly
-  </a>
-  
-    <nav class="md-nav" aria-label="My LEDs act funny and flicker randomly">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reason-1" class="md-nav__link">
-    Reason 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reason-2" class="md-nav__link">
-    Reason 2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reason-3" class="md-nav__link">
-    Reason 3
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reason-4" class="md-nav__link">
-    Reason 4
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#not-all-my-leds-turn-on" class="md-nav__link">
-    Not all my LEDs turn on
-  </a>
-  
-    <nav class="md-nav" aria-label="Not all my LEDs turn on">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reason-1_1" class="md-nav__link">
-    Reason 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reason-2_1" class="md-nav__link">
-    Reason 2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-turn-off-the-bright-blue-onboard-led" class="md-nav__link">
-    How to turn off the bright blue onboard LED?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-is-gpio2d4-the-default-led-pin" class="md-nav__link">
-    Why is gpio2/D4 the default LED pin?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-can-i-only-use-500-leds-on-the-esp8266-gpio-pin-3" class="md-nav__link">
-    Why can I only use 500 LEDs on the ESP8266 GPIO pin 3?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-led-strip-hardware-is-supported-by-wled" class="md-nav__link">
-    What LED strip hardware is supported by WLED?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#general-questions_1" class="md-nav__link">
-    General Questions
-  </a>
-  
-    <nav class="md-nav" aria-label="General Questions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-does-the-name-wled-mean" class="md-nav__link">
-    What does the name WLED mean?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-do-the-wled-version-names-mean" class="md-nav__link">
-    What do the WLED version names mean?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-is-the-difference-between-the-brightness-sliders-in-the-web-ui" class="md-nav__link">
-    What is the difference between the brightness sliders in the web UI?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-segments-are-gone-after-a-reboot" class="md-nav__link">
-    My Segments are gone after a reboot!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#may-i-sell-a-product-running-wled" class="md-nav__link">
-    May I sell a product running WLED?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#my-question-or-solution-is-not-on-this-page_1" class="md-nav__link">
-    My question or solution is not on this page
-  </a>
-  
-    <nav class="md-nav" aria-label="My question or solution is not on this page">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#check-out-the-wled-forum" class="md-nav__link">
-    Check out the WLED forum!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#look-through-the-issues" class="md-nav__link">
-    Look through the Issues
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#if-i-report-a-new-issue-what-do-i-need-to-share" class="md-nav__link">
-    If I report a new Issue, what do i need to share?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2209,280 +1429,37 @@
                 
                   
 
-  <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/basics/faq.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/basics/fork-comparison.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>FAQ</h1>
+  <h1>Fork comparison</h1>
 
-<div class="admonition tip">
-<p>This page will continually get updated with questions often asked.</p>
-</div>
-<h2 id="contents">Contents</h2>
-<h3 id="installation">Installation</h3>
-<ul>
-<li><a href="#what-binary-should-i-use">What binary should I use?</a></li>
-<li><a href="#ive-flashed-a-bin-but-i-get-no-response-at-all">I've flashed a bin, but i get no response at all</a></li>
-</ul>
-<h3 id="connection-issues">Connection issues</h3>
-<ul>
-<li><a href="#once-i-attach-leds-i-cant-connect-to-the-esp-anymore">Once I attach LEDs, I can't connect to the ESP anymore!</a></li>
-<li><a href="#i-have-entered-my-wifi-credentials-and-rebooted-but-i-can-not-connect-to-the-module-now">I have entered my WiFi credentials and rebooted, but I can not connect to the module now!</a></li>
-<li><a href="#the-module-once-was-connected-but-i-can-no-longer-reach-it">The module once was connected, but I can no longer reach it.</a></li>
-<li><a href="#the-wled-xxxlocal-address-mdns-does-not-work">The wled-xxx.local address (mDNS) does not work.</a></li>
-<li><a href="/advanced/security">Is it safe to do a port forwarding to the public internet to control the lights from anywhere?</a></li>
-<li><a href="#my-device-is-unresponsive-or-animations-lag">My device is unresponsive or animations lag!</a></li>
-<li><a href="#im-having-a-bootloop-leds-turn-on-every-5seconds">I'm having a bootloop! (LEDs turn on every ~5seconds)</a></li>
-<li><a href="#i-am-running-realtime-eg-e131-and-not-all-of-my-leds-are-driven-fluently">I am running realtime (e.g. E1.31) and not all of my LEDs are driven fluently!</a></li>
-<li><a href="#still-having-connection-issuesconnection-dropping-what-more-can-i-check">Still having connection issues/connection dropping: what more can i check?</a></li>
-</ul>
-<h3 id="compilation-issues">Compilation issues</h3>
-<ul>
-<li><a href="#when-compiling-wled-in-vs-code-using-platformio-i-get-an-error">When compiling WLED in VS Code using platformio, I get an error.</a></li>
-</ul>
-<h3 id="led-issues">LED issues</h3>
-<ul>
-<li><a href="#my-leds-dont-turn-on-at-all">My LEDs don't turn on at all.</a></li>
-<li><a href="#my-leds-dont-get-as-bright-as-they-should">My LEDs don't get as bright as they should!</a></li>
-<li><a href="#my-leds-are-unable-to-be-set-into-an-consistent-solid-color">My LEDs are unable to be set into an consistent solid color.</a></li>
-<li><a href="#when-i-select-green-the-leds-turn-red">When I select green, the LEDs turn red!</a></li>
-<li><a href="#my-leds-act-funny-and-flicker-randomly">My LEDs act funny and flicker randomly.</a></li>
-<li><a href="#not-all-my-leds-turn-on">Not all my LEDs turn on.</a></li>
-<li><a href="#how-to-turn-off-the-bright-blue-onboard-led">How to turn off the bright blue onboard LED?</a></li>
-<li><a href="#why-is-gpio2d4-the-default-led-pin">Why is gpio2/D4 the default LED pin?</a></li>
-<li><a href="#why-can-i-only-use-500-leds-on-the-esp8266-gpio-pin-3">Why can I only use 500 LEDs on the ESP8266 GPIO pin 3?</a></li>
-<li><a href="#what-led-strip-hardware-is-supported-by-wled">What LED strip hardware is supported by WLED?</a></li>
-</ul>
-<h3 id="general-questions">General questions</h3>
-<ul>
-<li><a href="#what-does-the-name-wled-mean">What does the name WLED mean?</a></li>
-<li><a href="#what-do-the-wled-version-names-mean">What do the WLED version names mean?</a></li>
-<li><a href="#what-is-the-difference-between-the-brightness-sliders-in-the-web-ui">What is the difference between the brightness sliders in the web UI?</a></li>
-<li><a href="#my-segments-are-gone-after-a-reboot">My Segments are gone after a reboot!</a></li>
-<li><a href="#may-i-sell-a-product-running-wled">May I sell a product running WLED?</a></li>
-</ul>
-<h3 id="my-question-or-solution-is-not-on-this-page">My question or solution is not on this page</h3>
-<ul>
-<li><a href="https://wled.discourse.group/">Check out the WLED forum!</a></li>
-<li><a href="#look-through-the-issues">Look through the Issues</a></li>
-<li><a href="#if-i-report-a-new-issue-what-do-i-need-to-share">If I report a new Issue, what do i need to share?</a></li>
-</ul>
-<h2 id="installation_1">Installation</h2>
-<h3 id="what-binary-should-i-use">What binary should I use?</h3>
-<p>Please see <a href="/basics/install-binary#what-binary-should-i-use">this page</a>.</p>
-<h3 id="ive-flashed-a-bin-but-i-get-no-response-at-all">I've flashed a bin, but i get no response at all</h3>
-<p>Some users report first erasing the flash (yes, even on a new device) sometimes helps .</p>
-<h2 id="connection-issues_1">Connection issues</h2>
-<h3 id="once-i-attach-leds-i-cant-connect-to-the-esp-anymore">Once I attach LEDs, I can't connect to the ESP anymore!</h3>
-<p>The gpio2/D4 pin needs to be high (pullup) at powerup time for the controller to boot successfully.
-If you accidentally connected the strip the wrong way (if it has arrows printed on, make sure they face away from the pin, otherwise pay attention to the DIN printing). Most strips have the 3-pin male JST connector with 3 holes on the input side. Some users have reported troubles booting even with the direction being correct. In that case, please try adding a 3.3 or 4.7kOhms resistor between the data pin and 3v3 pin!</p>
-<h3 id="i-have-entered-my-wifi-credentials-and-rebooted-but-i-can-not-connect-to-the-module-now">I have entered my WiFi credentials and rebooted, but I can not connect to the module now!</h3>
-<p>If you did not enter a static IP, the module will automatically obtain a dynamic IP from the router.
-You can check it in the router configuration or in the settings page, if the Access Point is still enabled.
-An easier way is to use the WLED Android app which features automatic discovery!</p>
-<h3 id="the-module-once-was-connected-but-i-can-no-longer-reach-it">The module once was connected, but I can no longer reach it</h3>
-<p>First, make sure you can reach the connected WiFi yourself (with another device).
-See if you can connect to the Access Point, then go to <strong>4.3.2.1/reset</strong>.
-Else, power-cycle the module manually.</p>
-<h3 id="the-wled-xxxlocal-address-mdns-does-not-work">The wled-xxx.local address (mDNS) does not work</h3>
-<p>This only works with Apple devices out of the box. You can install Bonjour to make it work in Windows.
-For Android there is no convenient way to achieve it, though you can use apps like "Bonjour search" to find the IP.
-I highly recommend you install the WLED app, which makes automatic discovery easy!</p>
-<h3 id="is-it-safe-to-do-a-port-forwarding-to-the-public-internet-to-control-the-lights-from-anywhere">Is it safe to do a port forwarding to the public internet to control the lights from anywhere?</h3>
-<p>See <a href="/advanced/security">this</a> page.</p>
-<h3 id="my-device-is-unresponsive-or-animations-lag">My device is unresponsive or animations lag!</h3>
-<p>You are probably using too many sync interfaces. Please only enable one of Hue sync, MQTT, or Blynk at a time.
-For optimal performance, use two devices and sync them via the UDP notifier.
-Maybe you are also using a very high amount of LEDs. 750 is the recommended maximum. If using E1.31 feature on an ESP32, try "Disabling WiFi Sleep" in the WiFi setup section to reduce lag/stuttering of visual effects.</p>
-<h3 id="im-having-a-bootloop-leds-turn-on-every-5seconds">I'm having a bootloop! (LEDs turn on every ~5seconds)</h3>
-<p>Please open an issue or message me on Discord to resolve your issue. Most of the time, wiping the flash (Arduino IDE compile setting: Erase flash -&gt; All flash contents) resolves the issue. Unfortunately it will also reset all your settings and presets. You can also try if using a different ESP resolves the issue. If you compiled with lwip version 2, try version 1.4 Higher Bandwidth instead!</p>
-<h3 id="still-having-connection-issuesconnection-dropping-what-more-can-i-check">Still having connection issues/connection dropping: what more can i check?</h3>
-<p>Try disabling "Emulate Alexa device" in Sync settings before entering your home Wifi credentials.
-Check whether mDNS is on or off and toggle it: does it make a difference? Same for 'NTP'. Same for 'Sync Send'. Check your router: is your 2.4Ghz on band 1: if not, try it please. If you have the possibility to try another 8266, please try it.</p>
-<h3 id="i-am-running-realtime-eg-e131-and-not-all-of-my-leds-are-driven-fluently">I am running realtime (e.g. E1.31) and not all of my LEDs are driven fluently!</h3>
-<p>Realtime effect streaming uses a rather large bandwidth as data is transmitted uncompressed. For example, to drive 1000 LEDs at 30 fps, you will need a data rate of 720 kBit/s, which is difficult to achieve with most cheap ESP boards over WiFi.
-Even if you split the total amount of LEDs across multiple controllers, your WiFi network could become the limiting factor quickly.
-The best way to ensure a low-latency, reliable, fluid stream when using large quantities of LEDs is to invest in a wired Ethernet ESP32 board like QuinLED-Dig boards with ethernet or the Olimex ESP32-POE.</p>
-<p>There is a 9 DMX universe limit by default in WLED. You can raise it in line 240 of const.h (E131_MAX_UNIVERSE_COUNT 9) and compile your own binary, but the performance of 2000 LEDs over WiFi will likely not be good unless you use an Ethernet enabled board.</p>
-<p>If Ethernet is not an option, decrease your LED count as far as possible, lower the frame rate in the sending software and make sure the WiFi signal reception of the board is good. Even without Ethernet, a board with an external antenna is significantly better than a PCB antenna board.</p>
-<p>Furthermore I suggest using the DDP protocol if available in your sender software (available in xLights). DDP has a smaller packet header and because of the reduced overhead the fluidity of your animations will be a bit better.</p>
-<h2 id="compilation-issues_1">Compilation issues</h2>
-<h3 id="when-compiling-wled-in-vs-code-using-platformio-i-get-an-error">When compiling WLED in VS Code using platformio, I get an error</h3>
-<p>Try building again. If the error says the <code>wled00.ino.cpp</code> or <code>.sconsign27.db.dblite</code> file could not be found, this often helps.
-You can also try <a href="https://github.com/Aircoookie/WLED/issues/361#issuecomment-557818554">this</a>!</p>
-<h2 id="led-issues_1">LED issues</h2>
-<h3 id="my-leds-dont-turn-on-at-all">My LEDs don't turn on at all.</h3>
-<p>Please make sure you have connected the strip to GPIO2 and it is sufficiently powered.</p>
-<h3 id="my-leds-dont-get-as-bright-as-they-should">My LEDs don't get as bright as they should!</h3>
-<p>If the brightness slider in the UI is already at maximum, try checking the auto brightness limiter in the LED settings.
-Set the milliamp limit to slightly below the rating of your power supply.
-If the LEDs are still too dim or change color towards the end of the strip, there may be a significant voltage drop. Try injecting 5v power at the end or middle of the strip with some appropriate cabling.</p>
-<h3 id="my-leds-are-unable-to-be-set-into-an-consistent-solid-color">My LEDs are unable to be set into an consistent solid color</h3>
-<p>If the LEDs should be individually addressable, like the SK6812, but instead they only behave as either RED,GREEN OR BlUE pixels (in a row).
-You might not have enabled (settings -&gt; led preferences) "LEDs are 4-channel type (RGBW)"  for an RGBW/RGBWW/RGBNW strip.
-This behaviour is accompanied by WLED being unable to address all LEDs, if you specify the exact amount of LEDs in the strip.</p>
-<h3 id="when-i-select-green-the-leds-turn-red">When I select green, the LEDs turn red!</h3>
-<p>Depending on the type of LEDs used, Red and Green or other colors might be reversed. You can change the order in LED settings.
-WS2812B and most related chips use GRB, WS2811 uses RGB in most cases.</p>
-<h3 id="my-leds-act-funny-and-flicker-randomly">My LEDs act funny and flicker randomly</h3>
-<h4 id="reason-1">Reason 1</h4>
-<p>If you use an external 5V power supply for your LEDs, please connect the GND of power supply, LEDs, and ESP.
-Otherwise, the LEDs can't read the data signal from the ESP.</p>
-<h4 id="reason-2">Reason 2</h4>
-<p>The ESP8266 is a 3.3V microcontroller while the WS2812B LED uses 5V.
-I have personally got away with this in most cases, but you should technically add a level shifter.
-A string of WS2811 did not work in one case (pure static white).
-A possible workaround is chaining a single WS2812B pixel in front and checking "Skip first LED" in the settings.
-My recommended levelshifter is the SN74AHCT125N, also used in the QuinLED Dig-Uno board.
-If you don't have a level shifter, you can use this creative <a href="https://hackaday.com/2017/01/20/cheating-at-5v-ws2812-control-to-use-a-3-3v-data-line/">workaround</a>.</p>
-<h4 id="reason-3">Reason 3</h4>
-<p>Your data line can only be <a href="https://youtu.be/ZFO_QOBG9Bs?t=657">so long</a>. Try out with less or thicker wire between your data pin on your controller and the LED strip, or add (see video) some voltage booster (which can make even 40m data wire length work ;-)).</p>
-<h4 id="reason-4">Reason 4</h4>
-<p>If they don't flicker, but display funny colors, try switching between RGB/RGBW modes in LED settings.</p>
-<h3 id="not-all-my-leds-turn-on">Not all my LEDs turn on</h3>
-<h4 id="reason-1_1">Reason 1</h4>
-<p>By default the LED count is set to 30.
-If you have more and can power them, go to LED settings and increase the LED count!
-Please also enter the milliamp rating of your 5v power supply for optimal brightness in the field below it.
-Do not increase the mA number if you power LEDs directly from the 5V pin of the ESP!</p>
-<p>See <a href="https://kno.wled.ge/features/multi-strip/">here</a> for maximum recommended LED counts.</p>
-<h4 id="reason-2_1">Reason 2</h4>
-<p>An LED in your chain may be broken. Try another strip or removing the first LED that doesn't light up. Make sure you are in solid effect mode and the LED count is set high enough first!</p>
-<h3 id="how-to-turn-off-the-bright-blue-onboard-led">How to turn off the bright blue onboard LED?</h3>
-<p>This LED can be very distracting. Unfortunately it can't easily be disabled as it shares the gpio2/D4 pin with the LED output.<br />
-It is turned off together with your LEDs (unless they require <code>Off Refresh</code> to be active)<br />
-Currently there are 3 workarounds:</p>
-<ul>
-<li>Cover the LED</li>
-<li>Remove the LED permanently (desolder or apply pressure with e.g. a flathead screwdriver)</li>
-<li>Use a different <code>LEDPIN</code>, although the default is recommended for stable operation</li>
-</ul>
-<h3 id="why-is-gpio2d4-the-default-led-pin">Why is gpio2/D4 the default LED pin?</h3>
-<p>Although pins D1 and D2 are usually regarded the best GPIO pins to use in an ESP8266 project, D4 is the default in WLED, despite having two major and one minor drawback. The major drawbacks are the permanently lit blue onboard LEDs and the fact that the pin level needs to be high (pullup) at powerup or the controller will not boot. A minor drawback is that the <code>Serial1</code> bus can not be used, but this is irrelevant in most cases, as the USB/serial converter is connected to the other <code>Serial</code> interface. The reason for using this pin is that it uses UART hardware driving, which increases stability and decreases CPU overhead especially with larger amounts of pixels.</p>
-<h3 id="why-can-i-only-use-500-leds-on-the-esp8266-gpio-pin-3">Why can I only use 500 LEDs on the ESP8266 GPIO pin 3?</h3>
-<p>The problem is the DMA hardware driving method used on (just) that pin. It works well, but uses <strong>4x (!)</strong> as much RAM memory as the UART hardware driving on pin 2 and the bitbang driver on all other pins.</p>
-<h3 id="what-led-strip-hardware-is-supported-by-wled">What LED strip hardware is supported by WLED?</h3>
-<p>The compatible chipsets for the color-coding are</p>
-<ul>
-<li>
-<p>1 pin:</p>
-</li>
-<li>
-<p>WS2812B (5V)</p>
-</li>
-<li>WS2811 (12V power, with 5V signal)</li>
-<li>WS2813 (WS2812 with redundant data on 2 wires DI and BI, to resist LEDs failure)</li>
-<li>WS2815 (like WS2813 but 12V), send 5V signal on BI.</li>
-<li>BTF2815 (cheaper 12V)</li>
-<li>SK6813 (redundant like WS2813)</li>
-<li>SK6812 (can support up to 4 colors, commonly GRBW)</li>
-<li>
-<p>SK6805 (3 colors)</p>
-</li>
-<li>
-<p>2 pins (clock CI and data DI) chips:</p>
-</li>
-<li>
-<p>APA102</p>
-</li>
-<li>SK9822</li>
-<li>WS2801 (uses gpio0 and 2)</li>
-<li>LPD8806</li>
-</ul>
-<p>Beside the <strong>digital addressable</strong> LED strips the good old <strong>analog</strong> LED strips are supported, too:</p>
-<ul>
-<li>4 pins: RGB</li>
-<li>5 pins: RGBW / RGBWW / RGBCW / RGBNW (RGB + one white channel)</li>
-<li>6 pins: RGBCT (RGB + 2 white channels) <em>Note: Support is only for Alexa.</em></li>
-</ul>
-<h2 id="general-questions_1">General Questions</h2>
-<h3 id="what-does-the-name-wled-mean">What does the name WLED mean?</h3>
-<p>WiFi Lighting Effects Driver. Also it has LED in the name and is similar to the official term for WiFi, WLAN!</p>
-<h3 id="what-do-the-wled-version-names-mean">What do the WLED version names mean?</h3>
-<p>WLED version names are Japanese! Here is a nice list of their meanings:</p>
-<table>
-<thead>
-<tr>
-<th>Version</th>
-<th>Name</th>
-<th>Kanji</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0.10</td>
-<td>Namigai</td>
-<td>浪貝</td>
-<td>Geoduck (don't google it!)</td>
-</tr>
-<tr>
-<td>0.11.0</td>
-<td>Mirai</td>
-<td>未来</td>
-<td>Future</td>
-</tr>
-<tr>
-<td>0.11.1</td>
-<td>Fumikiri</td>
-<td>踏切</td>
-<td>Railroad crossing</td>
-</tr>
-<tr>
-<td>0.12</td>
-<td>Hikari</td>
-<td>光</td>
-<td>Light</td>
-</tr>
-<tr>
-<td>0.13</td>
-<td>Toki</td>
-<td>時</td>
-<td>Time</td>
-</tr>
-<tr>
-<td>N/A</td>
-<td>Kuuhaku</td>
-<td>空白</td>
-<td>Blank</td>
-</tr>
-</tbody>
-</table>
-<h3 id="what-is-the-difference-between-the-brightness-sliders-in-the-web-ui">What is the difference between the brightness sliders in the web UI?</h3>
-<p>There are three brightness slider types in the web UI. The white one in the <strong>top bar</strong> is the <strong>master brightness</strong> - it scales down every single color and all effects, palettes and segments by the same factor.  </p>
-<p>In contrast, the slider <strong>underneath the color wheel only</strong> applies to the <strong>currently selected color</strong> and will not affect the brightness of other colors or Palettes. It is recommended to use this slider only if you like a darker version of a color alongside other, brighter colors. It should not be used to control the overall brightness, so it is preferable to leave it on maximum and instead use the master brightness control.  </p>
-<p>There is a third brightness slider in each Segment panel. This serves the same purpose as master brightness, but limited to that segment. Please note that this does not override the master brightness, but instead is an additional downscaling. (If you set both Master and Segment brightness sliders to 50%, the resulting brightness is 25%)</p>
-<h3 id="my-segments-are-gone-after-a-reboot">My Segments are gone after a reboot!</h3>
-<p>Segments are non-persistant by default. If you want to load your preset at every startup, just do the following:</p>
-<ul>
-<li>Set your segments up as desired</li>
-<li>Go into the Favorites tab in the web UI, click the save checkbox and save the config to preset slot number <code>16</code></li>
-<li>In LED settings, set <code>Boot Preset</code> to <code>16</code></li>
-</ul>
-<p>This will be improved in a future release, so that you will be able to save multiple segment configurations!</p>
-<h3 id="may-i-sell-a-product-running-wled">May I sell a product running WLED?</h3>
-<p>WLED is licensed under the MIT license, thus you are free to use it in any way you wish as long as you retain the copyright notice and accept that I am not to be held liable for anything regarding your use of the software. For product pages, a link to the WLED GitHub repository would be hugely appreciated !</p>
-<h2 id="my-question-or-solution-is-not-on-this-page_1">My question or solution is not on this page</h2>
-<h3 id="check-out-the-wled-forum">Check out the WLED forum!</h3>
-<p>You can check out and use <a href="https://wled.discourse.group">the WLED Discourse forum</a>.</p>
-<h3 id="look-through-the-issues">Look through the Issues</h3>
-<p>Maybe someone already reported your issue, so everybody supplying support would be grateful if you take some time to <a href="https://github.com/Aircoookie/WLED/issues">search through the existing issues</a>.</p>
-<h3 id="if-i-report-a-new-issue-what-do-i-need-to-share">If I report a new Issue, what do i need to share?</h3>
-<p>When you create a ticket, please share:</p>
-<ul>
-<li>exact controller, maybe a link to the shop you bought it from</li>
-<li>LED-strip type and amount of LEDs</li>
-<li>Specifications of your power supply (max. current/voltage)</li>
-<li>how you wired up all components (a diagram and/or picture often helps)</li>
-<li>the BIN-file you tried to flash (version and file name) or your IDE version if compiling from source</li>
-<li>Have you followed the quick start and compile settings at <a href="https://docs.wled.me">https://docs.wled.me</a>?</li>
-<li>Has it worked before?</li>
-<li>Does it works without any LEDs connected? (for instance the controller just connected to your PC over USB)</li>
-<li>Are you using/trying to use DHCP or static IP?</li>
-<li>Did you try to use a mobile hotspot instead of your WLAN AP/home wifi?</li>
-</ul>
+<h2 id="what-are-the-differences-between-wled-sr-upstream-ac-wled-and-moonmodules-fork">What are the differences between WLED SR, upstream AC WLED, and MoonModules fork?</h2>
+<p>Feature | <a href="https://github.com/atuline/WLED/tree/dev">WLED SR 0.13</a> | <a href="https://github.com/MoonModules/WLED/tree/mdev">MoonModules WLED 0.14</a> | <a href="https://github.com/Aircoookie/WLED">Upstream WLED 0.14</a> 
+|:---|:---:|:---:|:---:|
+0.14 architecture|No|Yes (upstream frequently merged)|Yes
+Usermods have own pages in main config menu|Audio Reactive only|Yes|No
+Segments 2D aware|No (XY calculated, mirror not working)|Yes|Yes
+Audio reactive|Core|Usermod|Usermod
+Microphone Profiles|No|Yes|No|
+Audio dynamics limiter|No|Yes|Yes
+High Definition audio analysis, 32 channel GEQ|No| Yes (WIP) <br/>for ESP32 and ESP32-S3|No
+Custom Effects|Yes|Yes as a usermod!|No
+Effect ID's|0.13 compatible|0.13 compatible (recommended!)|Changed, old SR presets will not work.
+Expand 1D effects|No|Yes (+ Circles and Block)|Yes
+Extended hw info|basic|Yes|No
+JSON Mapping on 1D effects|No|Yes|No
+Games usermod (3D to 2D, gyro)|No|Yes (WIP)|No
+Weather usermod (syncing internet data)|No|Yes (WIP)|No
+HB effects|Fully supported|80% supported (WIP)|Not supported
+"classic" ESP32|Yes|Yes|Yes
+ESP32-S3|No|Yes|Experimental
+ESP32-S2 and <br/>ESP32-C3|No|Experimental|Experimental
+ESP8266|No|No|Yes but no Audio Reactive for 8266
+Ledmaps in presets|Yes|No (wait for upstream fix)|No</p>
 
 
 
@@ -2508,7 +1485,7 @@ Currently there are 3 workarounds:</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../tutorials/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tutorials" rel="prev">
+        <a href="../faq/" class="md-footer__link md-footer__link--prev" aria-label="Previous: FAQ" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2517,20 +1494,20 @@ Currently there are 3 workarounds:</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Tutorials
+              FAQ
             </div>
           </div>
         </a>
       
       
         
-        <a href="../fork-comparison/" class="md-footer__link md-footer__link--next" aria-label="Next: Fork comparison" rel="next">
+        <a href="../../features/effects-palettes/" class="md-footer__link md-footer__link--next" aria-label="Next: Effects &amp; Palettes" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Fork comparison
+              Effects & Palettes
             </div>
           </div>
           <div class="md-footer__button md-icon">
