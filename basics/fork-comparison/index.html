@@ -1629,29 +1629,156 @@
   <h1>Fork comparison</h1>
 
 <p>What are the differences between WLED SR, upstream AC WLED, and MoonModules fork?</p>
-<p>| Feature | <a href="https://github.com/atuline/WLED/tree/dev">WLED SR 0.13</a> | <a href="https://github.com/MoonModules/WLED/tree/mdev">MoonModules WLED 0.14</a> | <a href="https://github.com/Aircoookie/WLED">Upstream WLED 0.14</a> |
-0.14 architecture | No | Yes (upstream frequently merged) | Yes</p>
-<p>| Feature | WLED SR 0.13 | MoonModules WLED 0.14 | Upstream WLED 0.14 |
-0.14 architecture | No | Yes (upstream frequently merged) | Yes
-Usermods have own pages in main config menu | Audio Reactive only | Yes | No
-Segments 2D aware | No (XY calculated, mirror not working) | Yes | Yes
-Audio reactive | Core | Usermod | Usermod
-Microphone Profiles | No | Yes | No | 
-Audio dynamics limiter | No | Yes | Yes
-High Definition audio analysis, 32 channel GEQ | No |  Yes (WIP) for ESP32 and ESP32-S3 | No
-Custom Effects | Yes | Yes as a usermod! | No
-Effect ID's | 0.13 compatible | 0.13 compatible (recommended!) | Changed, old SR presets will not work.
-Expand 1D effects | No | Yes (+ Circles and Block) | Yes
-Extended hw info | basic | Yes | No
-JSON Mapping on 1D effects | No | Yes | No
-Games usermod (3D to 2D, gyro) | No | Yes (WIP) | No
-Weather usermod (syncing internet data) | No | Yes (WIP) | No
-HB effects | Fully supported | 80% supported (WIP) | Not supported
-classic ESP32 | Yes | Yes | Yes
-ESP32-S3 | No | Yes | Experimental
-ESP32-S2 and ESP32-C3 | No | Experimental | Experimental
-ESP8266 | No | No | Yes but no Audio Reactive for 8266
-Ledmaps in presets | Yes | No (wait for upstream fix) | No</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><a href="https://github.com/atuline/WLED/tree/dev">WLED SR 0.13</a></th>
+<th><a href="https://github.com/MoonModules/WLED/tree/mdev">MoonModules WLED 0.14</a></th>
+<th><a href="https://github.com/Aircoookie/WLED">Upstream WLED 0.14</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.14 architecture</td>
+<td>No</td>
+<td>Yes (upstream frequently merged)</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>WLED SR 0.13</th>
+<th>MoonModules WLED 0.14</th>
+<th>Upstream WLED 0.14</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.14 architecture</td>
+<td>No</td>
+<td>Yes (upstream frequently merged)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Usermods have own pages in main config menu</td>
+<td>Audio Reactive only</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Segments 2D aware</td>
+<td>No (XY calculated, mirror not working)</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Audio reactive</td>
+<td>Core</td>
+<td>Usermod</td>
+<td>Usermod</td>
+</tr>
+<tr>
+<td>Microphone Profiles</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Audio dynamics limiter</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>High Definition audio analysis, 32 channel GEQ</td>
+<td>No</td>
+<td>Yes (WIP) for ESP32 and ESP32-S3</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Custom Effects</td>
+<td>Yes</td>
+<td>Yes as a usermod!</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Effect ID's</td>
+<td>0.13 compatible</td>
+<td>0.13 compatible (recommended!)</td>
+<td>Changed, old SR presets will not work.</td>
+</tr>
+<tr>
+<td>Expand 1D effects</td>
+<td>No</td>
+<td>Yes (+ Circles and Block)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Extended hw info</td>
+<td>basic</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>JSON Mapping on 1D effects</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Games usermod (3D to 2D, gyro)</td>
+<td>No</td>
+<td>Yes (WIP)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Weather usermod (syncing internet data)</td>
+<td>No</td>
+<td>Yes (WIP)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>HB effects</td>
+<td>Fully supported</td>
+<td>80% supported (WIP)</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>classic ESP32</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ESP32-S3</td>
+<td>No</td>
+<td>Yes</td>
+<td>Experimental</td>
+</tr>
+<tr>
+<td>ESP32-S2 and ESP32-C3</td>
+<td>No</td>
+<td>Experimental</td>
+<td>Experimental</td>
+</tr>
+<tr>
+<td>ESP8266</td>
+<td>No</td>
+<td>No</td>
+<td>Yes but no Audio Reactive for 8266</td>
+</tr>
+<tr>
+<td>Ledmaps in presets</td>
+<td>Yes</td>
+<td>No (wait for upstream fix)</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
 
 
 
