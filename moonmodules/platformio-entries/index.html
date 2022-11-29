@@ -1676,7 +1676,9 @@
 <li>Orange: Base entries: only minimal settings, where possible move to common settings (blue), used by environment settings</li>
 <li>Green: Environment entries =&gt; use to generate bins using WLED_RELEASE_NAME</li>
 </ul>
-<p>Remark: build flags cannot be overwritten in entries using extends. Example is WLED_RELEASE_NAME: only defined in environment entries, not in base (orange) or common settings (blue).</p>
+<p>Remarks: 
+* build flags cannot be overwritten in entries using extends. Example is WLED_RELEASE_NAME: only defined in environment entries, not in base (orange) or common settings (blue).
+* The arrows indicate re-use using ${} and the <a href="https://docs.platformio.org/en/stable/projectconf/section_env_advanced.html">extends</a> keyword.</p>
 <h2 id="to-do">To do</h2>
 <ul>
 <li>Remove / evaluate (commented) settings from base entries and move to common settings:</li>
