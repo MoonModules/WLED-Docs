@@ -1667,7 +1667,7 @@
 
   <h1>Platform io entries</h1>
 
-<p>To reuse settings in a consistent way, MoonModules platformio entries conform to the following standard:</p>
+<p>To re-use settings in a consistent way, MoonModules platformio entries conform to the following standard:</p>
 <h2 id="overview">Overview</h2>
 <p><img width="913" alt="image" src="https://user-images.githubusercontent.com/1737159/204511583-6e6210dc-acd2-49a8-8574-9b840464ebc1.png"></p>
 <ul>
@@ -1675,10 +1675,14 @@
 <li>Blue: MoonModules common settings: build flags and lib deps (move settings here if possible)</li>
 <li>Orange: Base entries: only minimal settings, where possible move to common settings (blue), used by environment settings</li>
 <li>Green: Environment entries =&gt; use to generate bins using WLED_RELEASE_NAME</li>
+<li>White text: settings added. If no white text, settings should come from other entries (except WLED_RELEASE_NAME in environment entries)</li>
 </ul>
-<p>Remarks: 
-* build flags cannot be overwritten in entries using extends. Example is WLED_RELEASE_NAME: only defined in environment entries, not in base (orange) or common settings (blue).
-* The arrows indicate re-use using ${} and the <a href="https://docs.platformio.org/en/stable/projectconf/section_env_advanced.html">extends</a> keyword.</p>
+<p>Remarks: </p>
+<ul>
+<li>build flags cannot be overwritten in entries using extends. Example is WLED_RELEASE_NAME: only defined in environment entries, not in base (orange) or common settings (blue).</li>
+<li>The arrows indicate re-use using ${} and the <a href="https://docs.platformio.org/en/stable/projectconf/section_env_advanced.html">extends</a> keyword.</li>
+<li>Bin name of an environment entry is derived as follows: WLEDMM_WLED_RELEASE_NAME_VERSION.bin</li>
+</ul>
 <h2 id="to-do">To do</h2>
 <ul>
 <li>Remove / evaluate (commented) settings from base entries and move to common settings:</li>
