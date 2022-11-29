@@ -15,7 +15,7 @@
     
     
       
-        <title>Digital Microphone Hookup - WLED MoonModules Project</title>
+        <title>2D Settings - WLED MoonModules Project</title>
       
     
     
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Digital Microphone Hookup
+              2D Settings
             
           </span>
         </div>
@@ -1673,29 +1673,104 @@
 <h3 id="2d-matrix">2D Matrix</h3>
 <p>2D effects are projected on a 2 dimensional matrix. </p>
 <p>A specific led is identified by led[x,y] where led[0,0] is in the top left corner (logical layer)</p>
-<p>Setting name | Value Range | Description | Master/Dev
-|---|---|---|---|
-Width| 1..x | Width of the matrix | Master
-Height| 1..y | Height of the matrix | Master</p>
+<table>
+<thead>
+<tr>
+<th>Setting name</th>
+<th>Value Range</th>
+<th>Description</th>
+<th>Master/Dev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Width</td>
+<td>1..x</td>
+<td>Width of the matrix</td>
+<td>Master</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>1..y</td>
+<td>Height of the matrix</td>
+<td>Master</td>
+</tr>
+</tbody>
+</table>
 <p>Note: width x height should match LED count! </p>
 <h3 id="2d-panels">2D Panels</h3>
-<p>A matrix is made of 1 or more identical physical led panels (physical layer)
-Setting name | Value Range | Description | Master/Dev
-|---|---|---|---|
-Multiple panels| Y/N | No if only one panel, yes if more than one | Dev
-Horizontal panels| 1..x | Number of panels side by side | Dev 
-Vertical panels| 1..y | Number of panels above each other | Dev</p>
+<p>A matrix is made of 1 or more identical physical led panels (physical layer)</p>
+<table>
+<thead>
+<tr>
+<th>Setting name</th>
+<th>Value Range</th>
+<th>Description</th>
+<th>Master/Dev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multiple panels</td>
+<td>Y/N</td>
+<td>No if only one panel, yes if more than one</td>
+<td>Dev</td>
+</tr>
+<tr>
+<td>Horizontal panels</td>
+<td>1..x</td>
+<td>Number of panels side by side</td>
+<td>Dev</td>
+</tr>
+<tr>
+<td>Vertical panels</td>
+<td>1..y</td>
+<td>Number of panels above each other</td>
+<td>Dev</td>
+</tr>
+</tbody>
+</table>
 <p>Note: Panel width = matrix width / horizontal panels and panel height = matrix height / vertical panels</p>
 <p>Note: Total panels = horizontal * vertical</p>
 <h3 id="2d-panel-layout">2D Panel layout</h3>
 <p>Specify how a led panel is wired.</p>
 <p>This is in most cases different from the logical layer (first led top left). Parameters here translate the logical layer (led[x,y]) to the physical layer (led[0] .. led[n]). </p>
-<p>Setting name | Value Range | Description | Master/Dev
-|---|---|---|---|
-First led position| Top/Bottom &amp; Left/Right | Where is the first led positioned | Dev (replacing flipmajor/minor)
-Orientation| Horizontal / Vertical | Are rows of leds wired horizontal or vertical | Dev (replacing rowMajor)
-Serpentine| Y/N | Are rows of leds wired zig-zag or not | Master
-Transpose| Y/N | Swap the axes (otherwise no swap). Don't use on non-square panels | Dev</p>
+<table>
+<thead>
+<tr>
+<th>Setting name</th>
+<th>Value Range</th>
+<th>Description</th>
+<th>Master/Dev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First led position</td>
+<td>Top/Bottom &amp; Left/Right</td>
+<td>Where is the first led positioned</td>
+<td>Dev (replacing flipmajor/minor)</td>
+</tr>
+<tr>
+<td>Orientation</td>
+<td>Horizontal / Vertical</td>
+<td>Are rows of leds wired horizontal or vertical</td>
+<td>Dev (replacing rowMajor)</td>
+</tr>
+<tr>
+<td>Serpentine</td>
+<td>Y/N</td>
+<td>Are rows of leds wired zig-zag or not</td>
+<td>Master</td>
+</tr>
+<tr>
+<td>Transpose</td>
+<td>Y/N</td>
+<td>Swap the axes (otherwise no swap). Don't use on non-square panels</td>
+<td>Dev</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Note:</strong> If multiple panels are used, they must be identical.</p>
 <h3 id="example">Example:</h3>
 <p><img alt="" src="https://raw.githubusercontent.com/atuline/WLED/assets/media/2x3matrix.jpg" /></p>
