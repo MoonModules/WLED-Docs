@@ -39,7 +39,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/global.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1388,26 +1390,6 @@
     Fork specific info
   </a>
   
-    <nav class="md-nav" aria-label="Fork specific info">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wled-sr" class="md-nav__link">
-    WLED SR
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wled-ac" class="md-nav__link">
-    WLED AC
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1745,26 +1727,6 @@
     Fork specific info
   </a>
   
-    <nav class="md-nav" aria-label="Fork specific info">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wled-sr" class="md-nav__link">
-    WLED SR
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wled-ac" class="md-nav__link">
-    WLED AC
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1807,15 +1769,48 @@ Both for 1 and 2D</p>
 <h3 id="physical-to-busses">Physical to Busses</h3>
 <p>One or multiple GPIO ports</p>
 <h2 id="fork-specific-info">Fork specific info</h2>
-<h3 id="wled-sr">WLED SR</h3>
-<ul>
-<li>No JSON mapping as expand1D not implemented </li>
-</ul>
-<h3 id="wled-ac">WLED AC</h3>
-<ul>
-<li>No JSON mapping yet although it's based on an idea from AirCoookie </li>
-<li>Ledmaps only for 1D, 2D not implemented (PR pending)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><a href="https://github.com/atuline/WLED/tree/dev">WLED SR 0.13</a></th>
+<th><a href="https://github.com/MoonModules/WLED/tree/mdev">MoonModules WLED 0.14</a></th>
+<th><a href="https://github.com/Aircoookie/WLED">Upstream WLED 0.14</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JSON Mapping</td>
+<td>No</td>
+<td>Yes</td>
+<td>No JSON mapping yet although it's based on an idea from AirCoookie</td>
+</tr>
+<tr>
+<td>Segment to Logical</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Ledmaps</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Ledmaps only for 1D, 2D not implemented (PR pending)</td>
+</tr>
+<tr>
+<td>Logical to Physical</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Physical to Busses</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 
 
 
