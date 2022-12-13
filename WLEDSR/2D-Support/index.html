@@ -2370,8 +2370,6 @@
 
   <h1>2D Support</h1>
 
-<p>This page has moved to https://moonmodules.github.io/WLED-Docs/2D/introduction/</p>
-<p>Do not edit below!!</p>
 <h2 id="introduction">Introduction</h2>
 <p>In order to accommodate 2D effects we have modified how Segment settings are used and added 2D Matrix and panel variables on the <a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/LED-Preferences">Led Preferences</a> settings.
 Note: Currently only working in dev. You are invited to test this and give feedback on <a href="https://discord.com/channels/700041398778331156/700701772838207640">Beta testing discord channel</a></p>
@@ -2391,16 +2389,75 @@ Multiple segments can be specified this way. Segments can overlap. In fact overl
 <h3 id="rotation-and-reversexy">Rotation and ReverseX/Y</h3>
 <p>A segment can be rotated 90º degrees and reversed on the X or Y-axis and can be specified in the Segment-UI. The SegmentRotation branch of dev supports this and is currently in beta-test. This will move to dev and release over time.</p>
 <p>The following table shows the effect setting these values:</p>
-<p>Value | Rotation | Reverse X | Reverse Y| Effect
-|---|---|---|---|---|
-0|-|-|-|0º rotation and no reverse
-1|-|-|+|Reverse horizontal
-2|-|+|-|Reverse vertical
-3|-|+|+|180º rotation
-4|+|-|-|90º rotation
-5|+|-|+|90º and reverse horizontal
-6|+|+|-|90º and vertical
-7|+|+|+|270º rotation</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Rotation</th>
+<th>Reverse X</th>
+<th>Reverse Y</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>0º rotation and no reverse</td>
+</tr>
+<tr>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>+</td>
+<td>Reverse horizontal</td>
+</tr>
+<tr>
+<td>2</td>
+<td>-</td>
+<td>+</td>
+<td>-</td>
+<td>Reverse vertical</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-</td>
+<td>+</td>
+<td>+</td>
+<td>180º rotation</td>
+</tr>
+<tr>
+<td>4</td>
+<td>+</td>
+<td>-</td>
+<td>-</td>
+<td>90º rotation</td>
+</tr>
+<tr>
+<td>5</td>
+<td>+</td>
+<td>-</td>
+<td>+</td>
+<td>90º and reverse horizontal</td>
+</tr>
+<tr>
+<td>6</td>
+<td>+</td>
+<td>+</td>
+<td>-</td>
+<td>90º and vertical</td>
+</tr>
+<tr>
+<td>7</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>270º rotation</td>
+</tr>
+</tbody>
+</table>
 <h2 id="2d-matrices-and-panels">2D Matrices and panels</h2>
 <p>See <a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/LED-Preferences">Led Preferences</a></p>
 <h2 id="technical">Technical</h2>

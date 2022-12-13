@@ -2208,8 +2208,6 @@
 
   <h1>2D LED Preferences</h1>
 
-<p>This page has moved to https://moonmodules.github.io/WLED-Docs/2D/2d-settings/</p>
-<p>Do not edit below!!</p>
 <h2 id="led-preferences-for-sound-reactive-wled">LED Preferences for Sound Reactive WLED</h2>
 <p>The sound reactive fork of WLED supports multiple layouts of a 2D matrix led panel as well as multiple identical 2D matrix led panels. Many effects were written with a 16x16 panel in mind, so some 2D effects may not display properly on a panel/matrix of a different size.</p>
 <p><img alt="6 - 8x32 panels" src="https://github.com/atuline/WLED/blob/assets/media/panels1.jpg?raw=true" /></p>
@@ -2242,12 +2240,37 @@
 </table>
 <p>Note: width x height should match LED count! </p>
 <h3 id="2d-panels">2D Panels</h3>
-<p>A matrix is made of 1 or more identical physical led panels (physical layer)
-|Setting name | Value Range | Description | Master/Dev|
-|---|---|---|---|
-Multiple panels| Y/N | No if only one panel, yes if more than one | Dev
-Horizontal panels| 1..x | Number of panels side by side | Dev 
-Vertical panels| 1..y | Number of panels above each other | Dev</p>
+<p>A matrix is made of 1 or more identical physical led panels (physical layer)</p>
+<table>
+<thead>
+<tr>
+<th>Setting name</th>
+<th>Value Range</th>
+<th>Description</th>
+<th>Master/Dev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multiple panels</td>
+<td>Y/N</td>
+<td>No if only one panel, yes if more than one</td>
+<td>Dev</td>
+</tr>
+<tr>
+<td>Horizontal panels</td>
+<td>1..x</td>
+<td>Number of panels side by side</td>
+<td>Dev</td>
+</tr>
+<tr>
+<td>Vertical panels</td>
+<td>1..y</td>
+<td>Number of panels above each other</td>
+<td>Dev</td>
+</tr>
+</tbody>
+</table>
 <p>Note: Panel width = matrix width / horizontal panels and panel height = matrix height / vertical panels</p>
 <p>Note: Total panels = horizontal * vertical</p>
 <h3 id="2d-panel-layout">2D Panel layout</h3>
