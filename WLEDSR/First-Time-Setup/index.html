@@ -356,6 +356,8 @@
         
   
   
+    
+  
 
 
   
@@ -367,7 +369,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../wip/" class="md-tabs__link">
+      <a href="../Home/" class="md-tabs__link md-tabs__link--active">
         WLED SR
       </a>
     </li>
@@ -1604,12 +1606,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
       
       
       
@@ -1630,12 +1634,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_1" type="checkbox" id="__nav_10_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_1" type="checkbox" id="__nav_10_1" checked>
       
       
       
@@ -1658,7 +1664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wip/" class="md-nav__link">
+      <a href="../Home/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1672,7 +1678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wip/" class="md-nav__link">
+      <a href="../Installing-and-Compiling/" class="md-nav__link">
         Installing and Compiling
       </a>
     </li>
@@ -1684,11 +1690,129 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../wip/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          First Time Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         First Time Setup
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#some-of-the-default-services-supported-by-wled-such-as-ir-alexa-and-blynk-are-disabled-by-default-to-enable-them-update-the-definitions-in-wledh-and-re-compile" class="md-nav__link">
+    Some of the default services supported by WLED such as IR, Alexa and Blynk are disabled by default. To enable them, update the definitions in wled.h and re-compile.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-steps" class="md-nav__link">
+    First Steps
+  </a>
+  
+    <nav class="md-nav" aria-label="First Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-contact-after-uploading" class="md-nav__link">
+    First Contact (after uploading)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-and-leds" class="md-nav__link">
+    Wifi and LEDs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound" class="md-nav__link">
+    Sound
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sound-settings-getting-started-with-common-microphones" class="md-nav__link">
+    Sound Settings: getting started with common microphones
+  </a>
+  
+    <nav class="md-nav" aria-label="Sound Settings: getting started with common microphones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analog-or-i2s-digital" class="md-nav__link">
+    Analog or I2S Digital?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agc" class="md-nav__link">
+    AGC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noise-and-spikes" class="md-nav__link">
+    Noise and Spikes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1700,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wip/" class="md-nav__link">
+      <a href="../Running-Sound-Reactive-WLED/" class="md-nav__link">
         Running Sound Reactive WLED
       </a>
     </li>
@@ -1714,7 +1838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wip/" class="md-nav__link">
+      <a href="../2D-Support/" class="md-nav__link">
         2D Support
       </a>
     </li>
@@ -1728,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wip/" class="md-nav__link">
+      <a href="../Sound-Settings/" class="md-nav__link">
         Sound Settings
       </a>
     </li>
@@ -2466,6 +2590,42 @@ Click 'Login to network' when the notification about this shows up. You are then
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../Installing-and-Compiling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installing and Compiling" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Installing and Compiling
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Running-Sound-Reactive-WLED/" class="md-footer__link md-footer__link--next" aria-label="Next: Running Sound Reactive WLED" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Running Sound Reactive WLED
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
