@@ -2363,22 +2363,18 @@ If you are unable to compile WLED, please consider flashing your device with <a 
 <p><em>Warning</em>: We had to change the partition size on the ESP32 in order to 'fit' all the new features. This means that the 'old way' of upgrading/flashing, no longer work unfortunately. <strong>You cannot use ESPHome Flasher</strong>, and you cannot use OTA from a build prior to v0.13.0-b5.</p>
 <ol>
 <li>Download <a href="https://github.com/espressif/esptool">esptool</a>.</li>
-<li>Download the ESP32 bootloader, such as https://github.com/Aircoookie/WLED/releases/download/v0.13.3/esp32_bootloader_v4.bin</li>
-<li>Download the sound reactive binary, such as https://github.com/atuline/WLED/releases</li>
+<li>Download the ESP32 bootloader, such as <a href="https://github.com/Aircoookie/WLED/releases/download/v0.13.3/esp32_bootloader_v4.bin">esp32_bootloader_v4</a></li>
+<li>Download the sound reactive binary, such as <a href="https://github.com/atuline/WLED/releases">Atuline releases</a></li>
 <li>Plug the ESP32 board into your computer.</li>
 <li>Optionally determine which Com port it uses. You could use NodeMCU-PyFlasher to do this, but don't flash the binary with it.</li>
 <li>Open a Command prompt on your computer.</li>
-<li>
-<p>Assuming you copied esptool and both binaries to the same directory, you could clear the contents of the ESP32 with:</p>
-<p><code>esptool.exe erase_flash</code>
-1. Then burn the bootloader with:</p>
-<p><code>esptool.exe write_flash 0x0 esp32_bootloader_v4.bin</code>
-1. Once complete, you can now burn the sound reactive binary with:</p>
-<p><code>esptool write_flash 0x10000 soundReactive_WLED_0.13.X_ESP32.bin</code></p>
-</li>
-<li>
-<p>You can optionally add the port, such as '-p COM6'.</p>
-</li>
+<li>Assuming you copied esptool and both binaries to the same directory, you could clear the contents of the ESP32 with:
+    <code>esptool.exe erase_flash</code></li>
+<li>Then burn the bootloader with:
+    <code>esptool.exe write_flash 0x0 esp32_bootloader_v4.bin</code></li>
+<li>Once complete, you can now burn the sound reactive binary with:
+    <code>esptool write_flash 0x10000 soundReactive_WLED_0.13.X_ESP32.bin</code></li>
+<li>You can optionally add the port, such as '-p COM6'.</li>
 <li>In addition, if this is the first time you've used this version, you need to go to the "Security &amp; Updates" settings page and tick the "Factory reset" box, then select "Save &amp; Reboot". Caveat: May not be necessary if you ran 'erase_flash' above.</li>
 <li>This will reset the EEPROM and remove any settings or presets you may have saved.</li>
 </ol>
@@ -2398,8 +2394,8 @@ If you are unable to compile WLED, please consider flashing your device with <a 
 <p>You can find some unofficial SR WLED binaries, including intermediate development builds for ESP32, here:</p>
 <h3 id="installation-services">Installation services</h3>
 <ul>
-<li>https://wled-install.github.io</li>
-<li>https://install.wled.me</li>
+<li>(https://wled-install.github.io)</li>
+<li><a href="https://install.wled.me">https://install.wled.me</a></li>
 </ul>
 <h3 id="firmware-binaries">Firmware Binaries</h3>
 <ul>
