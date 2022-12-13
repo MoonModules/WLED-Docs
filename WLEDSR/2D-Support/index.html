@@ -1816,7 +1816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../WLED-Custom-Effects.md" class="md-nav__link">
+      <a href="../WLED-Custom-effects/" class="md-nav__link">
         Custom Effects
       </a>
     </li>
@@ -2373,7 +2373,7 @@
 <p>This page has moved to https://moonmodules.github.io/WLED-Docs/2D/introduction/</p>
 <p>Do not edit below!!</p>
 <h2 id="introduction">Introduction</h2>
-<p>In order to accommodate 2D effects we have modified how Segment settings are used and added 2D Matrix and panel variables on the <a href="https://github.com/atuline/WLED/wiki/LED-Preferences">Led Preferences</a> settings.
+<p>In order to accommodate 2D effects we have modified how Segment settings are used and added 2D Matrix and panel variables on the <a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/LED-Preferences">Led Preferences</a> settings.
 Note: Currently only working in dev. You are invited to test this and give feedback on <a href="https://discord.com/channels/700041398778331156/700701772838207640">Beta testing discord channel</a></p>
 <h2 id="2d-architecture">2D architecture</h2>
 <p>WLED SR distinguishes between the following levels
@@ -2387,7 +2387,7 @@ Note: Currently only working in dev. You are invited to test this and give feedb
 <p>In 2D, a segment is a rectangle on a 2D matrix and 2D effects plot on this rectangle using x,y coordinates of the SEGMENT.
 A rectangle can be defined in the Segment UI where the start led specifies the top-left and the stop led specifies the bottom-right of the rectangle.
 Multiple segments can be specified this way. Segments can overlap. In fact overlapping creates very nice effects.</p>
-<p>See <a href="https://github.com/atuline/WLED/wiki/2D-Support#2d-segment-start-stop-charts">Segment start stop charts</a> to easy find matrix start and stop values</p>
+<p>See <a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/2D-Support#2d-segment-start-stop-charts">Segment start stop charts</a> to easy find matrix start and stop values</p>
 <h3 id="rotation-and-reversexy">Rotation and ReverseX/Y</h3>
 <p>A segment can be rotated 90º degrees and reversed on the X or Y-axis and can be specified in the Segment-UI. The SegmentRotation branch of dev supports this and is currently in beta-test. This will move to dev and release over time.</p>
 <p>The following table shows the effect setting these values:</p>
@@ -2402,7 +2402,7 @@ Multiple segments can be specified this way. Segments can overlap. In fact overl
 6|+|+|-|90º and vertical
 7|+|+|+|270º rotation</p>
 <h2 id="2d-matrices-and-panels">2D Matrices and panels</h2>
-<p>See <a href="https://github.com/atuline/WLED/wiki/LED-Preferences">Led Preferences</a></p>
+<p>See <a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/LED-Preferences">Led Preferences</a></p>
 <h2 id="technical">Technical</h2>
 <ul>
 <li>CRGB leds[MAX_LEDS+1]; in FX.cpp defines all leds on the matrix. Multiple segments share this array and effects should only write to leds[] within the boundaries of a segment. This is done by calling leds[XY(x,y)] or leds[realPixelIndex(i)].</li>
