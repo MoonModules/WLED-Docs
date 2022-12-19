@@ -2304,7 +2304,7 @@
 
 <h2 id="introduction">Introduction</h2>
 <p>In order to accommodate a wide range of audio inputs, ambient environments and string lengths, we have added user configurable squelch (noise reduction/suppression) and gain controls on the sound settings page that apply to all sound reactive animations.</p>
-<p><img alt="WLEDSR-Sound-Setings-start" src="https://user-images.githubusercontent.com/91616163/202878155-5dce752b-a447-4e1f-9980-90b809d5f47c.jpg" /></p>
+<p><img width="368" alt="image" src="https://user-images.githubusercontent.com/91013628/208448097-f0824866-1a9d-4907-8863-6293d2e7e2de.png"></p>
 <p><br/></p>
 <h3 id="press-reset-key-after-changing-sound-source">Press reset key after changing sound source</h3>
 <p>After changing the sound source (either GPIO pins or Microphone type), it is important to press the "reset" (RST) button on your ESP32 - don't forget to "save" first. WLED cannot change the sound input configuration "on the fly", due to a known hardware problem of ESP32. See https://github.com/espressif/esp-idf/issues/7442 "only a hard CPU reset can disconnect the I2S signal from built-in ADC". </p>
