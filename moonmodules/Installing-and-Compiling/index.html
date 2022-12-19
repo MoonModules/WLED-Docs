@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installing-or-compiling" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -1368,6 +1368,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-convention" class="md-nav__link">
+    Naming convention:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bin-awareness" class="md-nav__link">
+    Bin awareness
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installing-or-compiling" class="md-nav__link">
     Installing or Compiling
   </a>
@@ -1384,8 +1411,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#serg" class="md-nav__link">
-    Serg
+  <a href="#serg74" class="md-nav__link">
+    Serg74
   </a>
   
 </li>
@@ -2205,6 +2232,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-convention" class="md-nav__link">
+    Naming convention:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bin-awareness" class="md-nav__link">
+    Bin awareness
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installing-or-compiling" class="md-nav__link">
     Installing or Compiling
   </a>
@@ -2221,8 +2275,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#serg" class="md-nav__link">
-    Serg
+  <a href="#serg74" class="md-nav__link">
+    Serg74
   </a>
   
 </li>
@@ -2314,42 +2368,50 @@
 
   <h1>Installing and Compiling</h1>
 
+<h2 id="introduction">Introduction</h2>
 <p>MoonModules introduces a new naming convention for bin(ary) files which contains configs and presets for used hardware. It also shows the used hardware in the bin name including shield esp flash memory size, audio input.</p>
-<p>Naming convention:
-* WLEDMM_ (to differentiate between WLEDSR and WLEDAC)
-* Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0.10
-* Hardware config / presets e.g. wemos_shield_esp32_4MB_ICS4343x
-* min or max config, use max where possible. </p>
-<p>Min:
-* USERMOD_AUDIOREACTIVE
-* USERMOD_CUSTOMEFFECTS</p>
-<p>Max
-* Min
-* USERMOD_DALLASTEMPERATURE
-* USERMOD_FOUR_LINE_DISPLAY
-* USERMOD_ROTARY_ENCODER_UI
-* USERMOD_AUTO_SAVE
-* USERMOD_WEATHER
-* USERMOD_MPU6050_IMU
-* USERMOD_GAMES</p>
+<h3 id="naming-convention">Naming convention:</h3>
+<ul>
+<li>WLEDMM_ (to differentiate between WLEDSR and WLEDAC)</li>
+<li>Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0.10</li>
+<li>Hardware config / presets e.g. wemos_shield_esp32_4MB_ICS4343x</li>
+<li>min or max config, use max where possible. </li>
+</ul>
+<p>Min:</p>
+<ul>
+<li>USERMOD_AUDIOREACTIVE</li>
+<li>USERMOD_CUSTOMEFFECTS</li>
+</ul>
+<p>Max:</p>
+<ul>
+<li>Min</li>
+<li>USERMOD_DALLASTEMPERATURE</li>
+<li>USERMOD_FOUR_LINE_DISPLAY</li>
+<li>USERMOD_ROTARY_ENCODER_UI</li>
+<li>USERMOD_AUTO_SAVE</li>
+<li>USERMOD_WEATHER</li>
+<li>USERMOD_MPU6050_IMU</li>
+<li>USERMOD_GAMES</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>WLEDMM_0.14.0.10_wemos_shield_esp32_16MB_max.bin</li>
+<li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_max.bin</li>
+<li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_LineIn_max.bin</li>
+<li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_SPM1423_max.bin</li>
+<li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_max.bin</li>
+</ul>
+<h3 id="bin-awareness">Bin awareness</h3>
 <p>Binaries can be downloaded or compiled yourself. See below.</p>
 <p>When uploading binaries in Manual OTA update , MoonModules support bin awareness: the UI shows which binary is installed and this is a recommendation for the binary to upload (should support the same hardware).</p>
 <h2 id="installing-or-compiling">Installing or Compiling</h2>
 <h3 id="installing-a-bin">Installing a bin</h3>
 <p>There are currently 3 locations where bins can be downloaded:
 They can be installed using Manual OTA update from within the WLED UI or using a tool like esptool.</p>
-<h4 id="serg"><a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive">Serg</a></h4>
-<p>Updated frequently with dev versions. Go here for latest features</p>
+<h4 id="serg74">Serg74</h4>
+<p><a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive">https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive</a>
+Updated frequently with dev versions. Go here for latest features</p>
 <p><img width="366" alt="image" src="https://user-images.githubusercontent.com/1737159/207882069-31f2d8cf-6623-4d91-93df-b7f322f5fbbd.png"></p>
-<p>e.g.
-* WLEDMM_0.14.0.10_wemos_shield_esp32_16MB_max.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_max.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_LineIn_max.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_SPM1423_max.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_max.bin</p>
-<ul>
-<li>To do: add more 16MB entries.</li>
-</ul>
 <h4 id="wladi">Wladi</h4>
 <p><a href="https://wled-install.github.io/">https://wled-install.github.io/</a></p>
 <p>Updated periodically with dev versions</p>
