@@ -1383,6 +1383,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#configurations" class="md-nav__link">
+    Configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#bin-awareness" class="md-nav__link">
     Bin awareness
   </a>
@@ -1427,6 +1441,13 @@
           <li class="md-nav__item">
   <a href="#wledme" class="md-nav__link">
     wled.me
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moonmodules-release-page" class="md-nav__link">
+    MoonModules release page
   </a>
   
 </li>
@@ -2247,6 +2268,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#configurations" class="md-nav__link">
+    Configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#bin-awareness" class="md-nav__link">
     Bin awareness
   </a>
@@ -2291,6 +2326,13 @@
           <li class="md-nav__item">
   <a href="#wledme" class="md-nav__link">
     wled.me
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moonmodules-release-page" class="md-nav__link">
+    MoonModules release page
   </a>
   
 </li>
@@ -2377,6 +2419,7 @@
 <li>Hardware config / presets e.g. wemos_shield_esp32_4MB_ICS4343x</li>
 <li>min or max config, use max where possible. </li>
 </ul>
+<h3 id="configurations">Configurations</h3>
 <p>Min:</p>
 <ul>
 <li>USERMOD_AUDIOREACTIVE</li>
@@ -2393,7 +2436,7 @@
 <li>USERMOD_MPU6050_IMU</li>
 <li>USERMOD_GAMES</li>
 </ul>
-<p>Examples:</p>
+<h3 id="examples">Examples</h3>
 <ul>
 <li>WLEDMM_0.14.0.10_wemos_shield_esp32_16MB_max.bin</li>
 <li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_max.bin</li>
@@ -2406,17 +2449,20 @@
 <p>When uploading binaries in Manual OTA update , MoonModules support bin awareness: the UI shows which binary is installed and this is a recommendation for the binary to upload (should support the same hardware).</p>
 <h2 id="installing-or-compiling">Installing or Compiling</h2>
 <h3 id="installing-a-bin">Installing a bin</h3>
-<p>There are currently 3 locations where bins can be downloaded:
-They can be installed using Manual OTA update from within the WLED UI or using a tool like esptool.</p>
+<p>There are currently 4 locations where bins can be downloaded.</p>
+<p>They can be installed using Manual OTA update from within the WLED UI or using a tool like esptool.</p>
 <h4 id="serg74">Serg74</h4>
-<p><a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive">https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive</a>
-Updated frequently with dev versions. Go here for latest features</p>
-<p><img width="366" alt="image" src="https://user-images.githubusercontent.com/1737159/207882069-31f2d8cf-6623-4d91-93df-b7f322f5fbbd.png"></p>
+<p><a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive">https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive</a></p>
+<p>Updated frequently with dev versions. Go here for latest features</p>
+<p><img width="200" alt="image" src="https://user-images.githubusercontent.com/1737159/207882069-31f2d8cf-6623-4d91-93df-b7f322f5fbbd.png"></p>
 <h4 id="wladi">Wladi</h4>
 <p><a href="https://wled-install.github.io/">https://wled-install.github.io/</a></p>
-<p>Updated periodically with dev versions</p>
+<p>Updated periodically with release and dev versions</p>
 <h4 id="wledme">wled.me</h4>
 <p><a href="https://install.wled.me">https://install.wled.me</a></p>
+<p>Releases only</p>
+<h4 id="moonmodules-release-page">MoonModules release page</h4>
+<p><a href="https://github.com/MoonModules/WLED/releases">https://github.com/MoonModules/WLED/releases</a></p>
 <p>Releases only</p>
 <h3 id="compiling-from-ms-code-platform-io">Compiling from MS Code / Platform IO</h3>
 <h2 id="platformio-environments">PlatformIO Environments</h2>
@@ -2431,14 +2477,16 @@ Updated frequently with dev versions. Go here for latest features</p>
 <h3 id="wled-sr">WLED SR</h3>
 <ul>
 <li>Also bin aware</li>
-<li><a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive">Bins</a>. Choose latest version. For Wemos Shield choose WLEDSR_0.13.3.4_wemos_shield_esp32_16MB_max.bin or WLEDSR_0.13.3.4_wemos_shield_esp32_4MB_max.bin (Pins pre-configured)
+<li>Bins
+** Serg74: <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive">https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive</a>. Choose latest version. For Wemos Shield choose WLEDSR_0.13.3.4_wemos_shield_esp32_16MB_max.bin or WLEDSR_0.13.3.4_wemos_shield_esp32_4MB_max.bin (Pins pre-configured)
 <img width="351" alt="image" src="https://user-images.githubusercontent.com/1737159/207881294-7fce1b1c-ad4f-4078-a71c-18287420a7df.png"></li>
 <li>To do: add microphones </li>
 </ul>
 <h3 id="wled-ac">WLED AC</h3>
 <ul>
 <li>Not bin aware</li>
-<li><a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield">Bins</a>. Select folder for WLED AC 0.13.3 or 0.14 beta
+<li>Bins</li>
+<li>** Serg74 <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield">https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield</a>. Select folder for WLED AC 0.13.3 or 0.14 beta
 <img width="338" alt="image" src="https://user-images.githubusercontent.com/1737159/207881529-fb190549-24e7-46ab-8d41-13ddf80d3be7.png"></li>
 <li>For Shields choose wemos_shield_esp32 environment (Pins not pre-configured, not available as bin)</li>
 </ul>
