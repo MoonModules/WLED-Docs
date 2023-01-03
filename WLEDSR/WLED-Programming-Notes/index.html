@@ -10,8 +10,14 @@
         <meta name="author" content="Ewoud Wijma (ewowi)">
       
       
+      
+        <link rel="prev" href="../Connectivity-Issues/">
+      
+      
+        <link rel="next" href="../Modifying-Sound-Reactive-WLED/">
+      
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -130,8 +135,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Light Mode" for="__palette_2" hidden>
@@ -139,8 +142,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -2499,10 +2500,9 @@
                 
                   
 
-  <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/WLEDSR/WLED-Programming-Notes.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="introduction">Introduction</h1>
@@ -2568,31 +2568,31 @@
 </ul>
 <h2 id="delays">Delays</h2>
 <p>You DO NOT use delay statements here, except to keep the watchdog happy. Here is the awesome FastLED method of timing/scheduling (which DOES NOT work with segments):</p>
-<div class="highlight"><pre><span></span><code><span class="n">EVERY_N_MILLISECONDS_I</span><span class="p">(</span><span class="n">pixTimer</span><span class="p">,</span><span class="w"> </span><span class="n">SEGMENT</span><span class="p">.</span><span class="n">speed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">pixTimer</span><span class="p">.</span><span class="n">setPeriod</span><span class="p">(</span><span class="mi">256</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">SEGMENT</span><span class="p">.</span><span class="n">speed</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">EVERY_N_MILLISECONDS_I</span><span class="p">(</span><span class="n">pixTimer</span><span class="p">,</span><span class="w"> </span><span class="n">SEGMENT</span><span class="p">.</span><span class="n">speed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">pixTimer</span><span class="p">.</span><span class="n">setPeriod</span><span class="p">(</span><span class="mi">256</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">SEGMENT</span><span class="p">.</span><span class="n">speed</span><span class="p">);</span>
 <span class="w">  </span><span class="c1">// Put your display code here.</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </code></pre></div>
 <p>Here's the standard blink without delay version:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="w"> </span><span class="n">lastTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="w"> </span><span class="n">lastTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">delayMs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="p">;</span><span class="w">            </span><span class="c1">// We want to do something every 2 seconds.</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">userLoop</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">lastTime</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">delayMs</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">lastTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">userLoop</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">lastTime</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">delayMs</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">lastTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span>
 <span class="w">    </span><span class="c1">//do something you want to do every 2 seconds</span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <h2 id="displaying-the-leds">Displaying the LED's.</h2>
 <p>We were used to FastLED.show(). Well, no longer, and this has some disadvantages.</p>
-<div class="highlight"><pre><span></span><code><span class="n">CRGB</span><span class="w"> </span><span class="n">myCol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ColorFromPalette</span><span class="p">(</span><span class="n">currentPalette</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">brightness</span><span class="p">,</span><span class="w"> </span><span class="n">LINEARBLEND</span><span class="p">);</span><span class="w"></span>
-<span class="n">setPixelColor</span><span class="p">(</span><span class="n">myLED</span><span class="p">,</span><span class="w"> </span><span class="n">myCol</span><span class="p">.</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">myCol</span><span class="p">.</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">myCol</span><span class="p">.</span><span class="n">blue</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">CRGB</span><span class="w"> </span><span class="n">myCol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ColorFromPalette</span><span class="p">(</span><span class="n">currentPalette</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">brightness</span><span class="p">,</span><span class="w"> </span><span class="n">LINEARBLEND</span><span class="p">);</span>
+<span class="n">setPixelColor</span><span class="p">(</span><span class="n">myLED</span><span class="p">,</span><span class="w"> </span><span class="n">myCol</span><span class="p">.</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">myCol</span><span class="p">.</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">myCol</span><span class="p">.</span><span class="n">blue</span><span class="p">);</span>
 </code></pre></div>
 <p>The next line supports SEGCOLOR(0) and SEGCOLOR(1) if no palette (i.e. default) is selected:</p>
-<div class="highlight"><pre><span></span><code><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color_blend</span><span class="p">(</span><span class="n">SEGCOLOR</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">color_from_palette</span><span class="p">(</span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">PALETTE_SOLID_WRAP</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">pixBri</span><span class="p">));</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color_blend</span><span class="p">(</span><span class="n">SEGCOLOR</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">color_from_palette</span><span class="p">(</span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">PALETTE_SOLID_WRAP</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">pixBri</span><span class="p">));</span>
 </code></pre></div>
 <p>where, <code>i</code> is the location, <code>index</code> is the color and <code>pixBri</code> is the brightness.</p>
 <p>Now, onto the disadvantage. . The problem is that you can perform a <code>getPixelColor</code> and move it to another LED with <code>setPixelColor</code>. After moving to about 10 pixels, the LED is now black. This is because of the built-in scaling and addressing the memory that's used for DMA transfer. Unfortunately, we don't get a nice lossless <code>leds[location]</code> as we do with FastLED.</p>
@@ -2616,9 +2616,9 @@
 <p>These will be used so that we can address leds[x] in our routines with the known and lossless FastLED method rather than the lossy NeoPixelBus method. We'll also be using these for ancillary functions, i.e. heat[x] as used in fire2012.</p>
 <p>Since you cannot define variable arrays in C, we need other methods to do so for our functions.</p>
 <p>The WLED method has been to malloc() some memory as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">SEGENV</span><span class="p">.</span><span class="n">allocateData</span><span class="p">(</span><span class="n">SEGLEN</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mode_static</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="n">byte</span><span class="w"> </span><span class="o">*</span><span class="n">heat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SEGENV</span><span class="p">.</span><span class="n">data</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">heat</span><span class="p">[</span><span class="n">value</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">SEGENV</span><span class="p">.</span><span class="n">allocateData</span><span class="p">(</span><span class="n">SEGLEN</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mode_static</span><span class="p">();</span>
+<span class="w">  </span><span class="n">byte</span><span class="w"> </span><span class="o">*</span><span class="n">heat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SEGENV</span><span class="p">.</span><span class="n">data</span><span class="p">;</span>
+<span class="w">  </span><span class="n">heat</span><span class="p">[</span><span class="n">value</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
 </code></pre></div>
 <p>For the 2D and FastLED data array functionality, the developers of this fork are not comfortable with the <code>malloc()</code> method of memory allocation and have decided to create large fixed arrays instead and to create pointers for use with variable-length arrays.</p>
 <p>Already declared in FX.cpp:
@@ -2627,8 +2627,8 @@
 </code></pre></div></p>
 <h3 id="using-crgb-color-space">Using CRGB Color Space</h3>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">CRGB</span><span class="w"> </span><span class="o">*</span><span class="n">leds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">CRGB</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">ledData</span><span class="p">;</span><span class="w">     </span><span class="c1">// Define the pointer and override the default data type.</span>
-<span class="w">  </span><span class="n">leds</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CRGB</span><span class="o">::</span><span class="n">Red</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">leds</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ColorFromPalette</span><span class="p">(</span><span class="n">currentPalette</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">bright</span><span class="p">,</span><span class="w"> </span><span class="n">LINEARBLEND</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">leds</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CRGB</span><span class="o">::</span><span class="n">Red</span><span class="p">;</span>
+<span class="w">  </span><span class="n">leds</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ColorFromPalette</span><span class="p">(</span><span class="n">currentPalette</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">bright</span><span class="p">,</span><span class="w"> </span><span class="n">LINEARBLEND</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="display-the-crgb-array">Display the CRGB Array</h3>
 <p>First, define a function and add to FX.h
@@ -2645,32 +2645,32 @@ You can now use FastLED address methods, AND it works with segments.</p>
 } // End of your routine.
 </code></pre></div></p>
 <h3 id="proposed-using-chsv-colour-space">Proposed - Using CHSV Colour Space</h3>
-<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="n">CHSV</span><span class="w"> </span><span class="o">*</span><span class="n">leds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">CHSV</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">ledData</span><span class="p">;</span><span class="w"></span>
-<span class="w">   </span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">CHSV</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="n">CHSV</span><span class="w"> </span><span class="o">*</span><span class="n">leds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">CHSV</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">ledData</span><span class="p">;</span>
+<span class="w">   </span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">CHSV</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="proposed-display-the-chsv-colour-space">Proposed - Display the CHSV Colour Space</h3>
 <p>The <code>leds[]</code> array is already defined in the CHSV color space.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">CRGB</span><span class="w"> </span><span class="n">color</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">SEGLEN</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
-<span class="w">      </span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">blue</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">CRGB</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">SEGLEN</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">      </span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">blue</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 <h3 id="current-use-of-the-chsv-colour-space">Current Use of the CHSV Colour Space</h3>
 <p>As used in one of the FFT animations (** Freqmatrix) in FX.cpp around line 4079.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">leds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ledData</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">CHSV</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CHSV</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">h</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">s</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">v</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">leds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ledData</span><span class="p">;</span>
+<span class="w">    </span><span class="n">CHSV</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CHSV</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span>
+<span class="w">    </span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">h</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">s</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">v</span><span class="w"> </span><span class="p">);</span>
 </code></pre></div>
 <h3 id="current-display-of-chsv-array">Current Display of CHSV array</h3>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">SEGLEN</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">c</span><span class="p">.</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="n">c</span><span class="p">.</span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="mh">0xFF</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="n">c</span><span class="p">.</span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">blue</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">SEGLEN</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">c</span><span class="p">.</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span>
+<span class="w">      </span><span class="n">c</span><span class="p">.</span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="mh">0xFF</span><span class="p">;</span>
+<span class="w">      </span><span class="n">c</span><span class="p">.</span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span>
+<span class="w">      </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="w">      </span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">blue</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 <h3 id="how-to-use-a-non-dynamically-created-variable-array">How to use a non-dynamically created variable array</h3>
 <p>We'll use that large dataStore array that was defined globally in FX.cpp. Although it was defined as a <code>unint32_t</code>, you can still use smaller dynamic arrays and override the data type using pointers with a function:</p>
@@ -2787,15 +2787,15 @@ You can now use FastLED address methods, AND it works with segments.</p>
 <li>For further reading on persistent variables, see this page https://moonmodules.github.io/WLED-Docs/WLEDSR/Persistent-Variables-and-WLED</li>
 </ul>
 <p>Here's a replacement for EVERY_N_MILLIS()</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">secondHand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="mi">256</span><span class="o">-</span><span class="n">SEGMENT</span><span class="p">.</span><span class="n">speed</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">SEGENV</span><span class="p">.</span><span class="n">aux0</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">secondHand</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">SEGENV</span><span class="p">.</span><span class="n">aux0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">secondHand</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="o">&lt;</span><span class="n">rest</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="n">goes</span><span class="w"> </span><span class="n">here</span><span class="o">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">secondHand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="mi">256</span><span class="o">-</span><span class="n">SEGMENT</span><span class="p">.</span><span class="n">speed</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">SEGENV</span><span class="p">.</span><span class="n">aux0</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">secondHand</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">SEGENV</span><span class="p">.</span><span class="n">aux0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">secondHand</span><span class="p">;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">rest</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="n">goes</span><span class="w"> </span><span class="n">here</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 <h3 id="getpixel-and-setpixel">getPixel and setPixel</h3>
 <p>In the FastLED world, we could cascade led information with things like:</p>
-<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 </code></pre></div>
 <p>That's not an option with WLED (unless you use the *ledData method described above), because it doesn't have the leds[] array. Instead, you have:</p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">getPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">));</span><span class="w"> </span>
@@ -2806,7 +2806,7 @@ You can now use FastLED address methods, AND it works with segments.</p>
 </code></pre></div>
 <p>If you want, you can give it another name with:</p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">SEGENV</span><span class="p">.</span><span class="n">allocateData</span><span class="p">(</span><span class="n">SEGLEN</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mode_static</span><span class="p">();</span><span class="w"> </span><span class="c1">// allocation failed</span>
-<span class="w">  </span><span class="n">byte</span><span class="o">*</span><span class="w"> </span><span class="n">heat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SEGENV</span><span class="p">.</span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">byte</span><span class="o">*</span><span class="w"> </span><span class="n">heat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SEGENV</span><span class="p">.</span><span class="n">data</span><span class="p">;</span>
 <span class="w">  </span><span class="n">heat</span><span class="p">[</span><span class="n">SEGLEN</span><span class="mi">-1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                                     </span><span class="c1">// a byte value</span>
 </code></pre></div>
 <p>You now have SEGENV.data[SEGLEN] allocated for your use. Adding a structure for use with your segment is a whole other level of complexity and can be found by examining mode_multi_comet and mode_oscillate among others. Just search for SEGENV.allocateData in FX.cpp.</p>
@@ -2830,42 +2830,6 @@ You can now use FastLED address methods, AND it works with segments.</p>
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../Connectivity-Issues/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Connectivity Issues" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Connectivity Issues
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../Modifying-Sound-Reactive-WLED/" class="md-footer__link md-footer__link--next" aria-label="Next: Modifying Sound Reactive WLED" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Modifying Sound Reactive WLED
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2946,14 +2910,13 @@ You can now use FastLED address methods, AND it works with segments.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
-    
     
   </body>
 </html>

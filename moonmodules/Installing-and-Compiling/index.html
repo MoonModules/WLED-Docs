@@ -10,8 +10,14 @@
         <meta name="author" content="Ewoud Wijma (ewowi)">
       
       
+      
+        <link rel="prev" href="../merge-history/">
+      
+      
+        <link rel="next" href="../mappings/">
+      
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -130,8 +135,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Light Mode" for="__palette_2" hidden>
@@ -139,8 +142,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -2513,10 +2514,9 @@
                 
                   
 
-  <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/moonmodules/Installing-and-Compiling.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>Installing and Compiling</h1>
@@ -2526,7 +2526,7 @@
 <h3 id="naming-convention">Naming convention:</h3>
 <ul>
 <li>WLEDMM_ (to differentiate between WLEDSR and WLEDAC)</li>
-<li>Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0.10</li>
+<li>Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0.11</li>
 <li>Hardware config / presets e.g. wemos_shield_esp32_4MB_ICS4343x</li>
 <li>min or max config, use max where possible. </li>
 </ul>
@@ -2561,7 +2561,7 @@
 <h2 id="installing-or-compiling">Installing or Compiling</h2>
 <h3 id="installing-a-bin">Installing a bin</h3>
 <p>There are currently 4 locations where bins can be downloaded.</p>
-<p>They can be installed using Manual OTA update from within the WLED UI or using a tool like esptool.</p>
+<p>They can be installed using Manual OTA update from within the WLED UI or use <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher">Sergs ESP_Flasher</a></p>
 <h4 id="serg74">Serg74</h4>
 <p><a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive">https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive</a></p>
 <p>Updated frequently with dev versions. Go here for latest features</p>
@@ -2583,22 +2583,27 @@
 <li>Build or upload: Build only creates the bin (to be uploaded via OTA or ESPTOOL), upload directly loads it into an USB connected ESP32 board.</li>
 <li>Shield environments: Pins for Shield are already preconfigured</li>
 <li>For developers: See <a href="https://moonmodules.github.io/WLED-Docs/moonmodules/platformio-entries/">platformio-entries</a></li>
+<li>In case of brownouts, file system issues etc: erase flash from the PlatformIO Core CLU (find in platformio quick access on the left pane of Code) pio run --target erase</li>
 </ul>
 <h2 id="fork-specific-info">Fork specific info</h2>
 <h3 id="wled-sr">WLED SR</h3>
 <ul>
 <li>Also bin aware</li>
-<li>Bins
-** Serg74: <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive">https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive</a>. Choose latest version. For Wemos Shield choose WLEDSR_0.13.3.4_wemos_shield_esp32_16MB_max.bin or WLEDSR_0.13.3.4_wemos_shield_esp32_4MB_max.bin (Pins pre-configured)
-<img width="351" alt="image" src="https://user-images.githubusercontent.com/1737159/207881294-7fce1b1c-ad4f-4078-a71c-18287420a7df.png"></li>
+<li>Bins</li>
+</ul>
+<p>Serg74: <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive">https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive</a>. Choose latest version. For Wemos Shield choose WLEDSR_0.13.3.4_wemos_shield_esp32_16MB_max.bin or WLEDSR_0.13.3.4_wemos_shield_esp32_4MB_max.bin (Pins pre-configured)</p>
+<p><img width="351" alt="image" src="https://user-images.githubusercontent.com/1737159/207881294-7fce1b1c-ad4f-4078-a71c-18287420a7df.png"></p>
+<ul>
 <li>To do: add microphones </li>
 </ul>
 <h3 id="wled-ac">WLED AC</h3>
 <ul>
 <li>Not bin aware</li>
 <li>Bins</li>
-<li>** Serg74 <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield">https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield</a>. Select folder for WLED AC 0.13.3 or 0.14 beta
-<img width="338" alt="image" src="https://user-images.githubusercontent.com/1737159/207881529-fb190549-24e7-46ab-8d41-13ddf80d3be7.png"></li>
+</ul>
+<p>Serg74 <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield">https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield</a>. Select folder for WLED AC 0.13.3 or 0.14 beta</p>
+<p><img width="338" alt="image" src="https://user-images.githubusercontent.com/1737159/207881529-fb190549-24e7-46ab-8d41-13ddf80d3be7.png"></p>
+<ul>
 <li>For Shields choose wemos_shield_esp32 environment (Pins not pre-configured, not available as bin)</li>
 </ul>
 
@@ -2621,42 +2626,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../merge-history/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Merge history" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Merge history
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../mappings/" class="md-footer__link md-footer__link--next" aria-label="Next: Mappings" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Mappings
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2737,14 +2706,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
-    
     
   </body>
 </html>

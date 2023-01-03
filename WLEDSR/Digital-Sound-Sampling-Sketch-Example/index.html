@@ -10,8 +10,10 @@
         <meta name="author" content="Ewoud Wijma (ewowi)">
       
       
+      
+      
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -125,8 +126,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Light Mode" for="__palette_2" hidden>
@@ -134,8 +133,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -2194,13 +2191,10 @@
                 
                   
 
-  <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/WLEDSR/Digital-Sound-Sampling-Sketch-Example.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
 
 
-  <h1>Digital Sound Sampling Sketch Example</h1>
 
 <p><strong>Use this code to read and calculate the average from the INMP441/ICS-43434 microphone on an ESP32 or ESP8266</strong></p>
 <ul>
@@ -2220,106 +2214,106 @@
 <span class="cm"> * VDD goes to 3.3V</span>
 <span class="cm"> * GND goes to Gnd </span>
 <span class="cm"> * </span>
-<span class="cm"> */</span><span class="w"></span>
+<span class="cm"> */</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;driver/i2s.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;driver/i2s.h&gt;</span>
 
 <span class="cp">#define I2S_WS  15         </span><span class="c1">// aka LRCL</span>
 <span class="cp">#define I2S_SD  32         </span><span class="c1">// aka DOUT</span>
 <span class="cp">#define I2S_SCK 14         </span><span class="c1">// aka BCLK</span>
 
-<span class="k">const</span><span class="w"> </span><span class="n">i2s_port_t</span><span class="w"> </span><span class="n">I2S_PORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2S_NUM_0</span><span class="p">;</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">BLOCK_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="p">;</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SAMPLE_RATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10240</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">i2s_port_t</span><span class="w"> </span><span class="n">I2S_PORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2S_NUM_0</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">BLOCK_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SAMPLE_RATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10240</span><span class="p">;</span>
 
-<span class="kt">float</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">INMP_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">INMP_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Configuring I2S...&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">esp_err_t</span><span class="w"> </span><span class="n">i2s_err</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Configuring I2S...&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">esp_err_t</span><span class="w"> </span><span class="n">i2s_err</span><span class="p">;</span>
 
 <span class="w">  </span><span class="c1">// The I2S config as per the example</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">i2s_config_t</span><span class="w"> </span><span class="n">i2s_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">i2s_config_t</span><span class="w"> </span><span class="n">i2s_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2s_mode_t</span><span class="p">(</span><span class="n">I2S_MODE_MASTER</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">I2S_MODE_RX</span><span class="p">),</span><span class="w"> </span><span class="c1">// Receive, not transfer</span>
 <span class="w">      </span><span class="p">.</span><span class="n">sample_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SAMPLE_RATE</span><span class="p">,</span><span class="w">                         </span><span class="c1">// 16KHz</span>
 <span class="w">      </span><span class="p">.</span><span class="n">bits_per_sample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2S_BITS_PER_SAMPLE_32BIT</span><span class="p">,</span><span class="w"> </span><span class="c1">// could only get it to work with 32bits</span>
 <span class="w">      </span><span class="p">.</span><span class="n">channel_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2S_CHANNEL_FMT_ONLY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="c1">// LEFT when pin is tied to ground.</span>
-<span class="w">      </span><span class="p">.</span><span class="n">communication_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2s_comm_format_t</span><span class="p">(</span><span class="n">I2S_COMM_FORMAT_I2S</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">I2S_COMM_FORMAT_I2S_MSB</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="n">communication_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2s_comm_format_t</span><span class="p">(</span><span class="n">I2S_COMM_FORMAT_I2S</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">I2S_COMM_FORMAT_I2S_MSB</span><span class="p">),</span>
 <span class="w">      </span><span class="p">.</span><span class="n">intr_alloc_flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ESP_INTR_FLAG_LEVEL1</span><span class="p">,</span><span class="w">     </span><span class="c1">// Interrupt level 1</span>
 <span class="w">      </span><span class="p">.</span><span class="n">dma_buf_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">                           </span><span class="c1">// number of buffers</span>
 <span class="w">      </span><span class="p">.</span><span class="n">dma_buf_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BLOCK_SIZE</span><span class="w">                     </span><span class="c1">// samples per buffer</span>
-<span class="w">  </span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span>
 
 <span class="w">  </span><span class="c1">// The pin config as per the setup</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">i2s_pin_config_t</span><span class="w"> </span><span class="n">pin_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">i2s_pin_config_t</span><span class="w"> </span><span class="n">pin_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="p">.</span><span class="n">bck_io_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2S_SCK</span><span class="p">,</span><span class="w">       </span><span class="c1">// BCLK aka SCK</span>
 <span class="w">      </span><span class="p">.</span><span class="n">ws_io_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2S_WS</span><span class="p">,</span><span class="w">        </span><span class="c1">// LRCL aka WS</span>
 <span class="w">      </span><span class="p">.</span><span class="n">data_out_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">         </span><span class="c1">// not used (only for speakers)</span>
 <span class="w">      </span><span class="p">.</span><span class="n">data_in_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2S_SD</span><span class="w">       </span><span class="c1">// DOUT aka SD</span>
-<span class="w">  </span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span>
 
 <span class="w">  </span><span class="c1">// Configuring the I2S driver and pins.</span>
 <span class="w">  </span><span class="c1">// This function must be called before any I2S driver read/write operations.</span>
-<span class="w">  </span><span class="n">i2s_err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2s_driver_install</span><span class="p">(</span><span class="n">I2S_PORT</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i2s_config</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i2s_err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ESP_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed installing driver: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i2s_err</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="n">i2s_err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2s_set_pin</span><span class="p">(</span><span class="n">I2S_PORT</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pin_config</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i2s_err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ESP_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed setting pin: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i2s_err</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;I2S driver installed.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">i2s_err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2s_driver_install</span><span class="p">(</span><span class="n">I2S_PORT</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i2s_config</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i2s_err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ESP_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed installing driver: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i2s_err</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">i2s_err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2s_set_pin</span><span class="p">(</span><span class="n">I2S_PORT</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pin_config</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i2s_err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ESP_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed setting pin: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i2s_err</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;I2S driver installed.&quot;</span><span class="p">);</span>
 
 <span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                        </span><span class="c1">// Enough time to see these messages. This need to be BEFORE the INMP test.</span>
 
-<span class="w">  </span><span class="n">getINMP</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mean</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;INMP is present.&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">INMP_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">getINMP</span><span class="p">();</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mean</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;INMP is present.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">INMP_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 
 <span class="p">}</span><span class="w"> </span><span class="c1">// setup()</span>
 
 
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">INMP_flag</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">getINMP</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">mean</span><span class="p">));</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="mi">1600</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">INMP_flag</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">getINMP</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">mean</span><span class="p">));</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="mi">1600</span><span class="p">);</span>
 
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Analog Read here!!</span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span>
 
 <span class="p">}</span><span class="w"> </span><span class="c1">// loop()</span>
 
 
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">getINMP</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">getINMP</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// Read multiple samples at once and calculate the sound pressure</span>
-<span class="w">  </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">samples</span><span class="p">[</span><span class="n">BLOCK_SIZE</span><span class="p">];</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">samples</span><span class="p">[</span><span class="n">BLOCK_SIZE</span><span class="p">];</span>
 <span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">num_bytes_read</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2s_read_bytes</span><span class="p">(</span><span class="n">I2S_PORT</span><span class="p">,</span><span class="w"> </span>
 <span class="w">                                      </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span>
 <span class="w">                                      </span><span class="n">BLOCK_SIZE</span><span class="p">,</span><span class="w">     </span><span class="c1">// the doc says bytes, but its elements.</span>
 <span class="w">                                      </span><span class="n">portMAX_DELAY</span><span class="p">);</span><span class="w"> </span><span class="c1">// no timeout</span>
 
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">samples_read</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num_bytes_read</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">samples_read</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">samples_read</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num_bytes_read</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">samples_read</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">samples_read</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">mean</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">samples</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="o">/</span><span class="n">BLOCK_SIZE</span><span class="o">/</span><span class="mi">16384</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">samples_read</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">mean</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">samples</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="o">/</span><span class="n">BLOCK_SIZE</span><span class="o">/</span><span class="mi">16384</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span><span class="w">  </span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </code></pre></div>
 
 
@@ -2421,14 +2415,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
-    
     
   </body>
 </html>

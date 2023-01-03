@@ -10,8 +10,14 @@
         <meta name="author" content="Ewoud Wijma (ewowi)">
       
       
+      
+        <link rel="prev" href="../Future-Directions/">
+      
+      
+        <link rel="next" href="../On-Lossy-Colours/">
+      
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -130,8 +135,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Light Mode" for="__palette_2" hidden>
@@ -139,8 +142,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -2341,10 +2342,9 @@
                 
                   
 
-  <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/WLEDSR/Adding-a-Sound-Settings-page-to-the-UI.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>Adding a new Settings Page</h1>
@@ -2379,55 +2379,55 @@ I also made some changes to the style of the buttons so they all show on the sam
   * 'm', a message to be displayed</p>
 <p>Around line 192 in xml.cpp we have the function <code>getSettingsJS()</code> which retrieves the settings values from EEPROM based on the current sub-page which is defined in wled_server.cpp.</p>
 <p>We want to add a sub-page so we need to change the following line from <code>if (subPage &lt;1 || subPage &gt;7)</code> to <code>if (subPage &lt;1 || subPage &gt;8)</code>. At the end of this function, after the last sub-page (previously 7) we have the following code block around line 522:
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">subPage</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">sappend</span><span class="p">(</span><span class="sc">&#39;v&#39;</span><span class="p">,</span><span class="s">&quot;SQ&quot;</span><span class="p">,</span><span class="n">soundSquelch</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">sappend</span><span class="p">(</span><span class="sc">&#39;v&#39;</span><span class="p">,</span><span class="s">&quot;GN&quot;</span><span class="p">,</span><span class="n">sampleGain</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">subPage</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">sappend</span><span class="p">(</span><span class="sc">&#39;v&#39;</span><span class="p">,</span><span class="s">&quot;SQ&quot;</span><span class="p">,</span><span class="n">soundSquelch</span><span class="p">);</span>
+<span class="w">  </span><span class="n">sappend</span><span class="p">(</span><span class="sc">&#39;v&#39;</span><span class="p">,</span><span class="s">&quot;GN&quot;</span><span class="p">,</span><span class="n">sampleGain</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 Here we can see our SQ and GN settings are loaded from EEPROM and filled in to their respective form field using the v case from the <code>sappend()</code> function.</p>
 <h2 id="modify-setcpp">Modify set.cpp</h2>
 <p>This file handles storing the settings entered into EEPROM. Similar to xml.cpp, we want to add a settings page so we need to tell WLED there is an additional page in the <code>handleSettingsSet()</code> function. I changed the following line from <code>if (subPage &lt;1 || subPage &gt;7) return;</code> to <code>if (subPage &lt;1 || subPage &gt;8) return;</code>. </p>
 <p>Lastly, I added the following code block after the last defined sub-page around line 361:
 <div class="highlight"><pre><span></span><code><span class="c1">//SOUND SETTINGS</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">subPage</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="o">-&gt;</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;SQ&quot;</span><span class="p">).</span><span class="n">toInt</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">soundSquelch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="o">-&gt;</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;GN&quot;</span><span class="p">).</span><span class="n">toInt</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">sampleGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">subPage</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">  </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="o">-&gt;</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;SQ&quot;</span><span class="p">).</span><span class="n">toInt</span><span class="p">();</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">soundSquelch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">  </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="o">-&gt;</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;GN&quot;</span><span class="p">).</span><span class="n">toInt</span><span class="p">();</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">sampleGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <h2 id="modify-wled_servercpp">Modify wled_server.cpp</h2>
 <p>This file serves the webpage for the WLED frontend. We want to <em>add</em> a settings page so we will add the following block of code around line 82, using the previous block as an example. Notice the sub-page defined in xml.cpp is referenced as well as the NEW setting page URL defined in settings.htm.
 <div class="highlight"><pre><span></span><code><span class="c1">// add sound settings page</span>
-<span class="n">server</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s">&quot;/settings/sound&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">HTTP_POST</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">AsyncWebServerRequest</span><span class="w"> </span><span class="o">*</span><span class="n">request</span><span class="p">){</span><span class="w"></span>
-<span class="w">  </span><span class="n">handleSettingsSet</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">serveMessage</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Sound settings saved.&quot;</span><span class="p">),</span><span class="s">&quot;Redirecting...&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<span class="n">server</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s">&quot;/settings/sound&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">HTTP_POST</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">AsyncWebServerRequest</span><span class="w"> </span><span class="o">*</span><span class="n">request</span><span class="p">){</span>
+<span class="w">  </span><span class="n">handleSettingsSet</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="w">  </span><span class="n">serveMessage</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Sound settings saved.&quot;</span><span class="p">),</span><span class="s">&quot;Redirecting...&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">});</span>
 </code></pre></div>
 In the <code>serveSettings()</code> function around line 383 we need to add <code>else if (url.indexOf("sound")&gt; 0) subPage = 8;  // add sound settings page</code>, so the webserver knows to load those settings. </p>
 <p>And finally we need to add a case around line 406 for our new sub-page like this <code>case 8:   request-&gt;send_P(200, "text/html", PAGE_settings_sound, settingsProcessor); break;</code>.</p>
 <h2 id="modify-cdatajs">Modify cdata.js</h2>
 <p>Finally, we need to add our new settings page to <code>cdata.js</code> in the tools folder. This file holds the framework for modifying the compressed <code>*.h</code> files that serve the WLED frontend. This is the file nodejs looks to when running <code>npm run build</code> to compress the <code>*.htm</code> files in the data folder into <code>*.h</code> files which are compiled with the firmware.</p>
 <p>I used the previous entries as an example and added the following code block around line 243:
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">file</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;settings_sound.htm&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;PAGE_settings_sound&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">prepend</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;=====(&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">append</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;)=====&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;plaintext&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;html-minify&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">mangle</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">str</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="nx">str</span><span class="w"></span>
-<span class="w">      </span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\&lt;link rel=&quot;stylesheet&quot;.*\&gt;/gms</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\&lt;style\&gt;.*\&lt;\/style\&gt;/gms</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;%CSS%%SCSS%&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="sr">/function GetV().*\&lt;\/script\&gt;/gms</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;function GetV() {var d=document;\n&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">),</span><span class="w"></span>
-<span class="p">},</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nx">file</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;settings_sound.htm&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;PAGE_settings_sound&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">prepend</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;=====(&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">append</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;)=====&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;plaintext&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;html-minify&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">mangle</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">str</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">    </span><span class="nx">str</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\&lt;link rel=&quot;stylesheet&quot;.*\&gt;/gms</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\&lt;style\&gt;.*\&lt;\/style\&gt;/gms</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;%CSS%%SCSS%&quot;</span><span class="p">)</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span>
+<span class="w">        </span><span class="sr">/function GetV().*\&lt;\/script\&gt;/gms</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;function GetV() {var d=document;\n&quot;</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="p">},</span>
 </code></pre></div></p>
 <p>Those are the steps I took to modify the WLED settings pages and add a page for the sound reactive related settings in the UI. Once those were completed, I ran <code>npm install</code> and <code>npm run build</code> to compress the new UI and include it in the firmware. After compiling the new firmware, I needed to reset the EEPROM via <code>http://WLED/settings/sec?</code> -&gt; Factory reset.</p>
 
@@ -2450,42 +2450,6 @@ In the <code>serveSettings()</code> function around line 383 we need to add <cod
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../Future-Directions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Future Directions" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Future Directions
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../On-Lossy-Colours/" class="md-footer__link md-footer__link--next" aria-label="Next: On Lossy Colours" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              On Lossy Colours
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2566,14 +2530,13 @@ In the <code>serveSettings()</code> function around line 383 we need to add <cod
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
-    
     
   </body>
 </html>
