@@ -1389,8 +1389,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Rotary Encoder
@@ -1407,8 +1405,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1417,6 +1413,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#rotary-encoder-ui-usermod" class="md-nav__link">
+    Rotary Encoder UI Usermod
+  </a>
+  
+    <nav class="md-nav" aria-label="Rotary Encoder UI Usermod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
@@ -1442,11 +1446,16 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#change-log" class="md-nav__link">
     Change Log
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2417,8 +2426,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2427,6 +2434,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#rotary-encoder-ui-usermod" class="md-nav__link">
+    Rotary Encoder UI Usermod
+  </a>
+  
+    <nav class="md-nav" aria-label="Rotary Encoder UI Usermod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
@@ -2452,11 +2467,16 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#change-log" class="md-nav__link">
     Change Log
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2539,16 +2559,18 @@
 
 
 
-<h1 id="rotary-encoder-ui-usermod">Rotary Encoder UI Usermod</h1>
+  <h1>Rotary Encoder</h1>
+
+<h2 id="rotary-encoder-ui-usermod">Rotary Encoder UI Usermod</h2>
 <p>First, thanks to the authors of other Rotary Encoder usermods.</p>
 <p>This usermod starts to provide a relatively complete on-device
 UI when paired with the Four Line Display usermod. I strongly
 encourage you to try them together.</p>
 <p><a href="https://www.youtube.com/watch?v=tITQY80rIOA">See the pair of usermods in action</a></p>
-<h2 id="installation">Installation</h2>
+<h3 id="installation">Installation</h3>
 <p>Copy and update the example <code>platformio_override.ini.sample</code> to the root directory of your particular build.
 This file should be placed in the same directory as <code>platformio.ini</code>.</p>
-<h3 id="define-your-options">Define Your Options</h3>
+<h4 id="define-your-options">Define Your Options</h4>
 <ul>
 <li><code>USERMOD_ROTARY_ENCODER_UI</code>       - define this to have this user mod included wled00\usermods_list.cpp</li>
 <li><code>USERMOD_ROTARY_ENCODER_GPIO</code>     - define the GPIO function (INPUT, INPUT_PULLUP, etc...)</li>
@@ -2562,10 +2584,10 @@ This file should be placed in the same directory as <code>platformio.ini</code>.
                                         <code>INPUT_PULLUP</code> to use internal pull-up
                                         <code>INPUT</code> to use pull-up on the PCB</li>
 </ul>
-<h3 id="platformio-requirements">PlatformIO requirements</h3>
+<h4 id="platformio-requirements">PlatformIO requirements</h4>
 <p>No special requirements.</p>
 <p>Note: the Four Line Display usermod requires the libraries <code>U8g2</code> and <code>Wire</code>.</p>
-<h2 id="change-log">Change Log</h2>
+<h3 id="change-log">Change Log</h3>
 <p>2021-02
 * First public release</p>
 <h2 id="rotary-encoder-ui-usermod-alt">Rotary Encoder UI Usermod ALT</h2>

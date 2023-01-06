@@ -1333,8 +1333,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Four Line Display
@@ -1351,8 +1349,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1361,6 +1357,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#i2c-4-line-display-usermod" class="md-nav__link">
+    I2C 4 Line Display Usermod
+  </a>
+  
+    <nav class="md-nav" aria-label="I2C 4 Line Display Usermod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
@@ -1386,18 +1390,23 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
     Configuration
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#change-log" class="md-nav__link">
     Change Log
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2431,8 +2440,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2441,6 +2448,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#i2c-4-line-display-usermod" class="md-nav__link">
+    I2C 4 Line Display Usermod
+  </a>
+  
+    <nav class="md-nav" aria-label="I2C 4 Line Display Usermod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
@@ -2466,18 +2481,23 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
     Configuration
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#change-log" class="md-nav__link">
     Change Log
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2567,7 +2587,9 @@
 
 
 
-<h1 id="i2c-4-line-display-usermod">I2C 4 Line Display Usermod</h1>
+  <h1>Four Line Display</h1>
+
+<h2 id="i2c-4-line-display-usermod">I2C 4 Line Display Usermod</h2>
 <p>First, thanks to the authors of the ssd11306_i2c_oled_u8g2 mod.</p>
 <p>Provides a four line display using either
 128x32 or 128x64 OLED displays.
@@ -2576,22 +2598,22 @@ a relatively complete on-device UI when paired with the
 Rotary Encoder UI usermod. I strongly encourage you to use 
 them together.</p>
 <p><a href="https://www.youtube.com/watch?v=tITQY80rIOA">See the pair of usermods in action</a></p>
-<h2 id="installation">Installation</h2>
+<h3 id="installation">Installation</h3>
 <p>Copy and update the example <code>platformio_override.ini.sample</code> 
 from the Rotary Encoder UI usermode folder to the root directory of your particular build.
 This file should be placed in the same directory as <code>platformio.ini</code>.</p>
-<h3 id="define-your-options">Define Your Options</h3>
+<h4 id="define-your-options">Define Your Options</h4>
 <ul>
 <li><code>USERMOD_FOUR_LINE_DISPLAY</code>  - define this to have this mod included wled00\usermods_list.cpp - also tells Rotary Encoder usermod, if installed, the display is available</li>
 <li><code>FLD_PIN_SCL</code>                - The display SCL pin, defaults to 5</li>
 <li><code>FLD_PIN_SDA</code>                - The display SDA pin, defaults to 4</li>
 </ul>
 <p>All of the parameters can be configured via the Usermods settings page, inluding GPIO pins.</p>
-<h3 id="platformio-requirements">PlatformIO requirements</h3>
+<h4 id="platformio-requirements">PlatformIO requirements</h4>
 <p>This usermod requires the <code>U8g2</code> and <code>Wire</code> libraries. See the 
 <code>platformio_override.ini.sample</code> found in the Rotary Encoder
 UI usermod folder for how to include these using <code>platformio_override.ini</code>.</p>
-<h2 id="configuration">Configuration</h2>
+<h3 id="configuration">Configuration</h3>
 <ul>
 <li><code>enabled</code> - enable/disable usermod</li>
 <li><code>pin</code> - GPIO pins used for display; I2C displays use Clk &amp; Data; SPI displays can use SCK, MOSI, CS, DC &amp; RST</li>
@@ -2613,7 +2635,7 @@ UI usermod folder for how to include these using <code>platformio_override.ini</
 <li><code>clockMode</code> - enable/disable clock display in screen saver mode</li>
 <li><code>i2c-freq-kHz</code> - I2C clock frequency in kHz (may help reduce dropped frames, range: 400-3400)</li>
 </ul>
-<h2 id="change-log">Change Log</h2>
+<h3 id="change-log">Change Log</h3>
 <p>2021-02
 * First public release</p>
 <p>2021-04
