@@ -3009,8 +3009,8 @@
 <p><em>history of features added to the mdev branch</em></p>
 <p>Our latest work can be found here: <a href="https://github.com/MoonModules/WLED/tree/mdev">mdev</a> and is based upon the latest version of 0.14. You can compile it yourself using PlatformIO.ini entry esp32_4MB_max or get a build from <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive">Serg74</a> (daily) or <a href="https://wled-install.github.io">Wladi</a> (periodically). </p>
 <h2 id="i2c-and-spi-pins-make-over">I2C and SPI pins make over</h2>
-<p>Januari 9, 2023
-We (Ewowi and Softhack) were not happy how currently pins are managed. It raises questions in discord we could not answer so we decided to refactor it. It's not easy as a lot is interconnected but we made the first steps:</p>
+<p>Januari 9, 2023</p>
+<p>We were not happy how currently pins are managed. It raises questions in discord we could not answer so we decided to refactor it. It's not easy as a lot is interconnected but we made the first steps:</p>
 <ul>
 <li>Drop down for pin variables (see below)</li>
 <li>Rebuild the usermods (pins) settings screen so it works the same</li>
@@ -3018,7 +3018,8 @@ We (Ewowi and Softhack) were not happy how currently pins are managed. It raises
 <li>do not reset ui variables if something is wrong (e.g. 4ld/type, enabled)</li>
 <li>use errorMessage instead and show errormessage in settings ui</li>
 <li>if global pins are -1, then there is no initialization of spi/i2c if usermods set pins to use global no initialisation</li>
-<li>HLD_PIN_* variables are used in platformio to specify defaults for global pins, no use of the recent introduced new variables I2CSDAPIN (etc) as causes more confusion, HLD_PIN serve these function and is used instead</li>
+<li>HLD_PIN_* variables are used in platformio to specify defaults for global pins, no use of the recent introduced new variables I2CSDAPIN (etc) as causes more confusion, HLD_PIN serve these function and is used instead, </li>
+<li>HW_PIN_DATASPI and HW_PIN_MOSISPI both existed but is one pin, merged to HW_PIN_MOSISPI as MOSI and MISO is both data</li>
 <li>i2c_scl (etc) variables are used in usermods without if -1 then HLD_PIN check, i2c_scl (etc) most be proper initialized before it can be used.</li>
 <li>No hijacking of global vars (giving them a value) in usermods </li>
 <li>Don't register pins if usermod is not enabled</li>
