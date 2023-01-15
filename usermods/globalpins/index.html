@@ -2481,7 +2481,7 @@
 <li>WLED does not support "software I2C" on esp32 - that's a common misunderstanding because people see they can freely chose pins on esp32.</li>
 <li>once the I2C bus pins are set, all usermods have to use these pins for I2C. Changing I2C pins requires a reboot.</li>
 <li>
-<p>four-line-display is an exception, because the driver library has its own "software I2C" - slow but can always be used</p>
+<p>four-line-display is an exception, because the driver library has its own "software I2C" - slow, but can always be used with any availeable pin.</p>
 </li>
 <li>
 <p>on both esp32 and 8266, you can decide to not use I2C, and use pins for something else. For example (on 8266), attach some buttons or rotary encoder to gpio 4+5. </p>
