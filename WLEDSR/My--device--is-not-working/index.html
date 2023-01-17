@@ -2446,16 +2446,16 @@
 </li>
 <li>Is it just sound reactivity that doesn't work? Is there a specific animation?</li>
 <li>Is it an ESP32? An ESP8266? Please provide the link that you downloaded the files from.</li>
-<li>How exactly did you flash the device? See https://moonmodules.github.io/WLED-Docs/WLEDSR/Installing-and-Compiling</li>
+<li>How exactly did you flash the device? See https://mm.kno.wled.ge/WLEDSR/Installing-and-Compiling</li>
 <li>Are you compiling from IDE? We are no longer supporting the Arduino IDE.</li>
 <li>Make sure your microphone is powered by the 3V pin and NOT Vin or 5V . . and that your LED's are NOT connected to that 3V pin either (source: experience).</li>
 <li>If you had previously used a 5V pin for your microphone, you may have blown that analog pin.</li>
-<li>Have you gone through <a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/Running-Sound-Reactive-WLED">initial settings</a>?</li>
-<li>Is your audio all wired up OK? <a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/Analog-Audio-Input-Options">See here</a>.</li>
+<li>Have you gone through <a href="https://mm.kno.wled.ge/WLEDSR/Running-Sound-Reactive-WLED">initial settings</a>?</li>
+<li>Is your audio all wired up OK? <a href="https://mm.kno.wled.ge/WLEDSR/Analog-Audio-Input-Options">See here</a>.</li>
 <li>Which microphone/input are you using and how is it configured?</li>
 <li>Leave the MAX4466 gain untouched. It works fine out of the box.</li>
-<li>Have you tested that microphone with a <a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/Analog-Sound-Sampling-Sketch-Example">basic analog sound sampling sketch</a>?</li>
-<li>You have an INMP441 or ICS-43434? Try the <a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/Digital-Sound-Sampling-Sketch-Example">basic digital sound sampling sketch</a>.</li>
+<li>Have you tested that microphone with a <a href="https://mm.kno.wled.ge/WLEDSR/Analog-Sound-Sampling-Sketch-Example">basic analog sound sampling sketch</a>?</li>
+<li>You have an INMP441 or ICS-43434? Try the <a href="https://mm.kno.wled.ge/WLEDSR/Digital-Sound-Sampling-Sketch-Example">basic digital sound sampling sketch</a>.</li>
 <li>What are the results of that sketch? Does it respond to your speech? A MAX4466 and INMP401 should average about 1875 on an ESP32, a MAX9814 about 1350 for all gain settings.</li>
 <li>Try a different pin when using that sketch if you're still not seeing good results.</li>
 <li>Have spares of everything. They're cheap and they break. (source: experience)</li>

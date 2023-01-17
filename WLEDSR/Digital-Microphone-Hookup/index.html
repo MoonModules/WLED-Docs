@@ -2663,9 +2663,9 @@
 </tr>
 </tbody>
 </table>
-<p>See also &rArr; <a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/First-Time-Setup#sound-settings-getting-started-with-common-microphones">Sound setting examples for common microphones</a></p>
+<p>See also &rArr; <a href="https://mm.kno.wled.ge/WLEDSR/First-Time-Setup#sound-settings-getting-started-with-common-microphones">Sound setting examples for common microphones</a></p>
 <p><br/></p>
-<p><strong>Microphone type</strong> (<a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/Sound-Settings#i2s-digital-input">SR-WLED sound settings</a>)
+<p><strong>Microphone type</strong> (<a href="https://mm.kno.wled.ge/WLEDSR/Sound-Settings#i2s-digital-input">SR-WLED sound settings</a>)
 * use <code>Generic I2S</code> for INMP441, ICS-43434, and other non-PDM devices
 * use <code>Generic I2S PDM</code> for PDM microphones like SPM1423
 * use <code>SPH0645</code> for adafruit SPH0645
@@ -2673,7 +2673,7 @@
 * use <code>Generic I2S with Mclk</code> only for devices that have an addition pin for 'master clock'</p>
 <p><strong>Important</strong>: please make sure that your I2S device provides sound input on the <strong>LEFT audio channel</strong>! For the INMP441 this is achieved by wiring the 'L/R' connection to GND (ground). Only exception is the "ES7243" driver, which is always using the <em>RIGHT</em> audio channel.</p>
 <p><br/></p>
-<p>Since 0.12.0, you can change I2S GPIO pins in the <a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/Sound-Settings">Sound Settings</a> interface; on ESP32 <strong>any</strong> available GPIO can be used for I²S. The 'SD' signal could also be mapped to an input-only (GPI) pin <em>(*)</em>, if you are low on GPIO pins. You'll need to reboot when done with pin assignment - don't forget to "save". To reboot, please press 'reset' on your ESP32. Unfortunately a restart by software ("soft reboot") is not always sufficient to activate new driver settings.</p>
+<p>Since 0.12.0, you can change I2S GPIO pins in the <a href="https://mm.kno.wled.ge/WLEDSR/Sound-Settings">Sound Settings</a> interface; on ESP32 <strong>any</strong> available GPIO can be used for I²S. The 'SD' signal could also be mapped to an input-only (GPI) pin <em>(*)</em>, if you are low on GPIO pins. You'll need to reboot when done with pin assignment - don't forget to "save". To reboot, please press 'reset' on your ESP32. Unfortunately a restart by software ("soft reboot") is not always sufficient to activate new driver settings.</p>
 <p>In addition to I2S microphones, there are solutions available for line-in via I2S. We already have driver support for Boards/Shields with "es7243" chip, and we're investigating "es8388". </p>
 <p>Other I2S ADC (analog-to-digital-converter) devices and microphones that have a <a href="https://en.m.wikipedia.org/wiki/I%C2%B2S">standard I2S interface</a> may already work with WLED-SR, by using one of the I2S "Generic" drivers (<code>Generic I2S</code>, <code>Generic I2S PDM</code>, or <code>Generic I2S with Mclk</code>). It is important however that sound input comes on the <strong>LEFT audio channel</strong>. Please keep in mind that this is a spare-time open source project - we do our best to make generic drivers but we cannot test with all available devices.</p>
 <h3 id="notes-for-older-releases-of-sr-wled-before-0132">Notes for older releases of SR WLED (before 0.13.2)</h3>

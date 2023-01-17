@@ -2689,8 +2689,8 @@ Click 'Login to network' when the notification about this shows up. You are then
 </tbody>
 </table>
 <h3 id="analog-or-i2s-digital">Analog or I2S Digital?</h3>
-<p>We recommend using an <a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/Digital-Microphone-Hookup">I2S digital microphone</a>, like INMP441, ICS-43434, or PDM microphones.</p>
-<p>Analog input (<a href="https://moonmodules.github.io/WLED-Docs/WLEDSR/Analog-Audio-Input-Options">Microphone or Line-in</a>) is also possible, however you might have power fluctuation (3.3V) and noise issues when using these. Analog devices are handled by the "ADC1" unit of your ESP32. Problems can be expected when connecting "analog buttons" (Potentiometer) to the same ADC1 unit. </p>
+<p>We recommend using an <a href="https://mm.kno.wled.ge/WLEDSR/Digital-Microphone-Hookup">I2S digital microphone</a>, like INMP441, ICS-43434, or PDM microphones.</p>
+<p>Analog input (<a href="https://mm.kno.wled.ge/WLEDSR/Analog-Audio-Input-Options">Microphone or Line-in</a>) is also possible, however you might have power fluctuation (3.3V) and noise issues when using these. Analog devices are handled by the "ADC1" unit of your ESP32. Problems can be expected when connecting "analog buttons" (Potentiometer) to the same ADC1 unit. </p>
 <p>Finally Analog Microphones often work best when placed very close to the sound source, while digital ones like the INMP441 can easily pick up sound from several meters apart. With the analog MAX4466, we found that 30-50cm is an optimal distance. </p>
 <h3 id="agc">AGC</h3>
 <p>Automatic gain control (AGC) is not enabled by default in SR WLED, because of so many different input types and ambient noise in different environments. We don't know what your 'quiet' is. In addition, the LED's should NOT be reacting when it IS quiet, so it's up to you to first make those adjustments. In addition, sensitivity can be further adjusted with either the Intensity or Speed slider in many of the animations.</p>
