@@ -11,17 +11,17 @@
       
       
       
-        <link rel="prev" href="../../usermods/pinmanager/">
+        <link rel="prev" href="../Temperature/">
       
       
-        <link rel="next" href="../merge-history/">
+        <link rel="next" href="../PIRsensorSwitch/">
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
     
     
       
-        <title>Fork Comparison - WLED MoonModules Project</title>
+        <title>Usermod Temperature - WLED MoonModules Project</title>
       
     
     
@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#multi-relay" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -120,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fork Comparison
+              Usermod Temperature
             
           </span>
         </div>
@@ -304,13 +309,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../usermods/4LineDisplay/" class="md-tabs__link">
+      <a href="../4LineDisplay/" class="md-tabs__link md-tabs__link--active">
         Usermods
       </a>
     </li>
@@ -320,15 +327,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../moonmodules/fork-comparison/" class="md-tabs__link">
         MoonModules
       </a>
     </li>
@@ -1313,18 +1318,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="true">
           Usermods
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -1342,7 +1349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/4LineDisplay/" class="md-nav__link">
+      <a href="../4LineDisplay/" class="md-nav__link">
         Four Line Display
       </a>
     </li>
@@ -1356,7 +1363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/Autosave/" class="md-nav__link">
+      <a href="../Autosave/" class="md-nav__link">
         Autosave
       </a>
     </li>
@@ -1370,7 +1377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/Battery/" class="md-nav__link">
+      <a href="../Battery/" class="md-nav__link">
         Battery
       </a>
     </li>
@@ -1384,7 +1391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/BH1750/" class="md-nav__link">
+      <a href="../BH1750/" class="md-nav__link">
         BH1750
       </a>
     </li>
@@ -1398,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/Rotary-Encoder/" class="md-nav__link">
+      <a href="../Rotary-Encoder/" class="md-nav__link">
         Rotary Encoder
       </a>
     </li>
@@ -1412,7 +1419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/staircase/" class="md-nav__link">
+      <a href="../staircase/" class="md-nav__link">
         Animated staircase
       </a>
     </li>
@@ -1426,7 +1433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/Temperature/" class="md-nav__link">
+      <a href="../Temperature/" class="md-nav__link">
         Temperature
       </a>
     </li>
@@ -1438,11 +1445,116 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../usermods/MultiRelay/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          MultiRelay
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         MultiRelay
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multi-relay" class="md-nav__link">
+    Multi Relay
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi Relay">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-api" class="md-nav__link">
+    HTTP API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-api" class="md-nav__link">
+    JSON API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mqtt-api" class="md-nav__link">
+    MQTT API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usermod-installation" class="md-nav__link">
+    Usermod installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    Change log
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork-specific-info" class="md-nav__link">
+    Fork specific info
+  </a>
+  
+    <nav class="md-nav" aria-label="Fork specific info">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wled-sr" class="md-nav__link">
+    WLED SR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1454,7 +1566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/PIRsensorSwitch/" class="md-nav__link">
+      <a href="../PIRsensorSwitch/" class="md-nav__link">
         PIRsensorSwitch
       </a>
     </li>
@@ -1468,7 +1580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/pinmanager/" class="md-nav__link">
+      <a href="../pinmanager/" class="md-nav__link">
         Pin Manager
       </a>
     </li>
@@ -1488,20 +1600,18 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_8" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_8" tabindex="0" aria-expanded="false">
           MoonModules
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -1517,19 +1627,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../moonmodules/fork-comparison/" class="md-nav__link">
         Fork comparison
       </a>
-      
     </li>
   
 
@@ -1541,7 +1643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../merge-history/" class="md-nav__link">
+      <a href="../../moonmodules/merge-history/" class="md-nav__link">
         Merge history
       </a>
     </li>
@@ -1555,7 +1657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Installing-and-Compiling/" class="md-nav__link">
+      <a href="../../moonmodules/Installing-and-Compiling/" class="md-nav__link">
         Installing and Compiling
       </a>
     </li>
@@ -1569,7 +1671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mappings/" class="md-nav__link">
+      <a href="../../moonmodules/mappings/" class="md-nav__link">
         Mappings
       </a>
     </li>
@@ -1583,7 +1685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../custom-effects/" class="md-nav__link">
+      <a href="../../moonmodules/custom-effects/" class="md-nav__link">
         Custom Effects
       </a>
     </li>
@@ -1597,7 +1699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../platformio-entries/" class="md-nav__link">
+      <a href="../../moonmodules/platformio-entries/" class="md-nav__link">
         Platformio entries
       </a>
     </li>
@@ -1611,7 +1713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wip/" class="md-nav__link">
+      <a href="../../moonmodules/wip/" class="md-nav__link">
         Multiple Segment Effects
       </a>
     </li>
@@ -1625,7 +1727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../preset-api-commands/" class="md-nav__link">
+      <a href="../../moonmodules/preset-api-commands/" class="md-nav__link">
         Preset API commands
       </a>
     </li>
@@ -1666,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Weather/" class="md-nav__link">
+      <a href="../../moonmodules/Weather/" class="md-nav__link">
         Weather
       </a>
     </li>
@@ -1687,7 +1789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contribute-docs/" class="md-nav__link">
+      <a href="../../moonmodules/contribute-docs/" class="md-nav__link">
         Contribute to docs
       </a>
     </li>
@@ -2352,6 +2454,89 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multi-relay" class="md-nav__link">
+    Multi Relay
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi Relay">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-api" class="md-nav__link">
+    HTTP API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-api" class="md-nav__link">
+    JSON API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mqtt-api" class="md-nav__link">
+    MQTT API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usermod-installation" class="md-nav__link">
+    Usermod installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    Change log
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork-specific-info" class="md-nav__link">
+    Fork specific info
+  </a>
+  
+    <nav class="md-nav" aria-label="Fork specific info">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wled-sr" class="md-nav__link">
+    WLED SR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2369,145 +2554,95 @@
 
 
 
-<p>What are the differences between WLED SR, upstream AC WLED, and MoonModules fork?</p>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th><a href="https://github.com/atuline/WLED/tree/dev">WLED SR 0.13</a></th>
-<th><a href="https://github.com/MoonModules/WLED/tree/mdev">MoonModules WLED 0.14</a></th>
-<th><a href="https://github.com/Aircoookie/WLED">Upstream WLED 0.14</a></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0.14 architecture</td>
-<td>No</td>
-<td>Yes (upstream frequently merged)</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Usermods have own pages in main config menu</td>
-<td>Audio Reactive only</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Segments 2D aware</td>
-<td>No (XY calculated, mirror not working)</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Audio reactive</td>
-<td>Core</td>
-<td>Usermod</td>
-<td>Usermod</td>
-</tr>
-<tr>
-<td>Microphone Profiles</td>
-<td>No</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Audio dynamics limiter</td>
-<td>No</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>High Definition audio analysis, 32 channel GEQ</td>
-<td>No</td>
-<td>Yes (WIP) for ESP32 and ESP32-S3</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Custom Effects</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Expand 1D effects</td>
-<td>No</td>
-<td>Yes (+ JMap, Circle and Block)</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Extended hw info</td>
-<td>basic</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>JSON Mapping on 1D effects</td>
-<td>No</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Games usermod (3D to 2D, gyro)</td>
-<td>No</td>
-<td>Yes (WIP)</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Weather usermod (syncing internet data)</td>
-<td>No</td>
-<td>Yes (WIP)</td>
-<td>No</td>
-</tr>
-<tr>
-<td>HB effects</td>
-<td>Fully supported</td>
-<td>80% supported (WIP)</td>
-<td>Not supported</td>
-</tr>
-<tr>
-<td>classic ESP32</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ESP32-S3</td>
-<td>No</td>
-<td>Yes</td>
-<td>Experimental</td>
-</tr>
-<tr>
-<td>ESP32-S2 and ESP32-C3</td>
-<td>No</td>
-<td>Experimental</td>
-<td>Experimental</td>
-</tr>
-<tr>
-<td>ESP8266</td>
-<td>No</td>
-<td>Yes but no Audio Reactive</td>
-<td>Yes but no Audio Reactive</td>
-</tr>
-<tr>
-<td>Bin Awareness</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Audioreactive palettes</td>
-<td>No</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Extended mic settings in platformIO</td>
-<td>No</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-</tbody>
-</table>
+  <h1>MultiRelay</h1>
+
+<h2 id="multi-relay">Multi Relay</h2>
+<p>This usermod-v2 modification allows the connection of multiple relays, each with individual delay and on/off mode.</p>
+<h3 id="http-api">HTTP API</h3>
+<p>All responses are returned in JSON format. </p>
+<ul>
+<li>Status Request: <code>http://[device-ip]/relays</code></li>
+<li>Switch Command: <code>http://[device-ip]/relays?switch=1,0,1,1</code></li>
+</ul>
+<p>The number of values behind the switch parameter must correspond to the number of relays. The value 1 switches the relay on, 0 switches it off. </p>
+<ul>
+<li>Toggle Command: <code>http://[device-ip]/relays?toggle=1,0,1,1</code></li>
+</ul>
+<p>The number of values behind the parameter switch must correspond to the number of relays. The value 1 causes the relay to toggle, 0 leaves its state unchanged.</p>
+<p>Examples:
+1. total of 4 relays, relay 2 will be toggled: <code>http://[device-ip]/relays?toggle=0,1,0,0</code>
+2. total of 3 relays, relay 1&amp;3 will be switched on: <code>http://[device-ip]/relays?switch=1,0,1</code></p>
+<h3 id="json-api">JSON API</h3>
+<p>You can toggle the relay state by sending the following JSON object to: <code>http://[device-ip]/json</code></p>
+<p>Switch relay 0 on: <code>{"MultiRelay":{"relay":0,"on":true}}</code></p>
+<p>Switch relay 3 and 4 off: <code>{"MultiRelay":[{"relay":2,"on":false},{"relay":3,"on":false}]}</code></p>
+<h3 id="mqtt-api">MQTT API</h3>
+<ul>
+<li><code>wled</code>/<em>deviceMAC</em>/<code>relay</code>/<code>0</code>/<code>command</code> <code>on</code>|<code>off</code>|<code>toggle</code></li>
+<li><code>wled</code>/<em>deviceMAC</em>/<code>relay</code>/<code>1</code>/<code>command</code> <code>on</code>|<code>off</code>|<code>toggle</code></li>
+</ul>
+<p>When a relay is switched, a message is published:</p>
+<ul>
+<li><code>wled</code>/<em>deviceMAC</em>/<code>relay</code>/<code>0</code> <code>on</code>|<code>off</code></li>
+</ul>
+<h3 id="usermod-installation">Usermod installation</h3>
+<ol>
+<li>Register the usermod by adding <code>#include "../usermods/multi_relay/usermod_multi_relay.h"</code> at the top and <code>usermods.add(new MultiRelay());</code> at the bottom of <code>usermods_list.cpp</code>.
+or</li>
+<li>Use <code>#define USERMOD_MULTI_RELAY</code> in wled.h or <code>-D USERMOD_MULTI_RELAY</code> in your platformio.ini</li>
+</ol>
+<p>You can override the default maximum number of relays (which is 4) by defining MULTI_RELAY_MAX_RELAYS.</p>
+<p>Example <strong>usermods_list.cpp</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;wled.h&quot;</span>
+<span class="cm">/*</span>
+<span class="cm"> * Register your v2 usermods here!</span>
+<span class="cm"> *   (for v1 usermods using just usermod.cpp, you can ignore this file)</span>
+<span class="cm"> */</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Add/uncomment your usermod filename here (and once more below)</span>
+<span class="cm"> * || || ||</span>
+<span class="cm"> * \/ \/ \/</span>
+<span class="cm"> */</span>
+<span class="c1">//#include &quot;usermod_v2_example.h&quot;</span>
+<span class="c1">//#include &quot;usermod_temperature.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../usermods/usermod_multi_relay.h&quot;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">registerUsermods</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="cm">/*</span>
+<span class="cm">   * Add your usermod class name here</span>
+<span class="cm">   * || || ||</span>
+<span class="cm">   * \/ \/ \/</span>
+<span class="cm">   */</span>
+<span class="w">  </span><span class="c1">//usermods.add(new MyExampleUsermod());</span>
+<span class="w">  </span><span class="c1">//usermods.add(new UsermodTemperature());</span>
+<span class="w">  </span><span class="n">usermods</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MultiRelay</span><span class="p">());</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="configuration">Configuration</h3>
+<p>Usermod can be configured via the Usermods settings page.</p>
+<ul>
+<li><code>enabled</code> - enable/disable usermod</li>
+<li><code>pin</code> - ESP GPIO pin the relay is connected to (can be configured at compile time <code>-D MULTI_RELAY_PINS=xx,xx,...</code>)</li>
+<li><code>delay-s</code> - delay in seconds after on/off command is received</li>
+<li><code>active-high</code> - assign high/low activation of relay (can be used to reverse relay states)</li>
+<li><code>external</code> - if enabled, WLED does not control relay, it can only be triggered by an external command (MQTT, HTTP, JSON or button)</li>
+<li><code>button</code> - button (from LED Settings) that controls this relay</li>
+<li><code>broadcast</code>- time in seconds between MQTT relay-state broadcasts</li>
+<li><code>HA-discovery</code>- enable Home Assistant auto discovery</li>
+</ul>
+<p>If there is no MultiRelay section, just save current configuration and re-open Usermods settings page. </p>
+<p>Have fun - @blazoncek</p>
+<h3 id="change-log">Change log</h3>
+<p>2021-04
+* First implementation.</p>
+<p>2021-11
+* Added information about dynamic configuration options
+* Added button support.</p>
+<h2 id="fork-specific-info">Fork specific info</h2>
+<h3 id="wled-sr">WLED SR</h3>
 
 
 
