@@ -1491,6 +1491,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#serial-pin-overview" class="md-nav__link">
+    Serial pin overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fork-specific-info" class="md-nav__link">
     Fork specific info
   </a>
@@ -2413,6 +2420,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#serial-pin-overview" class="md-nav__link">
+    Serial pin overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fork-specific-info" class="md-nav__link">
     Fork specific info
   </a>
@@ -2463,7 +2477,7 @@
 <p>I2C and SPI</p>
 <p>This page is work in progress</p>
 <h2 id="pin-dropdowns">Pin dropdowns</h2>
-<p><img width="170" alt="image" src="https://user-images.githubusercontent.com/91013628/212557801-0329826a-9d00-4c85-abd9-049c73c5a773.png"></p>
+<p>ESP32 <img width="170" alt="image" src="https://user-images.githubusercontent.com/91013628/212557801-0329826a-9d00-4c85-abd9-049c73c5a773.png"> ESP32-S3 <img width="100" alt="image" src="https://user-images.githubusercontent.com/91013628/212862709-95f150fd-42b8-4191-bbf4-d525ab8978a2.png">ESP32-C3<img width="100" alt="image" src="https://user-images.githubusercontent.com/91013628/212862773-1e330fb8-2f7d-47a7-989c-3791c2fec416.png"></p>
 <p>Nr of pins and functionality is depending on the board chosen (esp8266, esp32, esp32-c2, esp32-c3, esps32-s3)</p>
 <ul>
 <li>First option is undefined or use global (global pin)</li>
@@ -2489,6 +2503,9 @@
 <li>similar for SPI - if you want SPI, the pins are fixed on 8266. If you don't need SPI, the pins can be used for something else.</li>
 <li>on esp32 its a bit more complicated even, because the fastest SPI modes are only possible on certains pins. But still if people don't want SPI, the pins can be used for something different.</li>
 </ul>
+<h2 id="serial-pin-overview">Serial pin overview</h2>
+<p>After booting WLED MM an overview of allocated pns and possible conflicts is send to Serial output:</p>
+<p><img width="454" alt="image" src="https://user-images.githubusercontent.com/91013628/212862122-06dca5b1-0c37-4e5b-a43d-4a0b372d1698.png"></p>
 <h2 id="fork-specific-info">Fork specific info</h2>
 <h3 id="wled-sr">WLED SR</h3>
 <p>Pin drop downs not supported</p>
