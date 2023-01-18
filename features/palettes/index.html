@@ -76,11 +76,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#custom-palettes" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -726,38 +721,9 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Palettes
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         Palettes
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#custom-palettes" class="md-nav__link">
-    Custom Palettes
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -2400,21 +2366,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#custom-palettes" class="md-nav__link">
-    Custom Palettes
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2431,8 +2382,6 @@
   
 
 
-
-  <h1>Palettes</h1>
 
 <div class="admonition info">
 <p class="admonition-title">Version Info</p>
@@ -2802,9 +2751,23 @@
 <td>Candy2</td>
 <td>Faded gradient of yellow, salmon and blue<br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_70.gif" /></td>
 </tr>
+<tr>
+<td align="right">71</td>
+<td>Audio Responsive Ratio</td>
+<td>Dynamic palette based on FFT audio analysis - sets the RGB value based on the relative amplitude of different frequencies</td>
+</tr>
+<tr>
+<td align="right">72</td>
+<td>Audio Responsive Hue</td>
+<td>Dynamic palette based on FFT audio analysis - sets the hue based on that frequency</td>
+</tr>
+<tr>
+<td align="right">### Custom Palettes</td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<h3 id="custom-palettes">Custom Palettes</h3>
 <p>As of 0.14, up to 10 custom palettes can be uploaded by the user in JSON files named <code>palette0.json</code> through <code>palette9.json</code>
 The format closely resembles that of the palettes defined in <code>palettes.h</code>. An example of the content would be:
 <div class="highlight"><pre><span></span><code>{&quot;palette&quot;:[ 
