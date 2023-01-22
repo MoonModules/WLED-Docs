@@ -455,9 +455,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Welcome
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         Welcome
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#good-to-know" class="md-nav__link">
+    Good to know
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2375,6 +2406,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#good-to-know" class="md-nav__link">
+    Good to know
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2408,6 +2454,20 @@
 <p>This fork is created by members of the Atuline/WLED team to make development against v0.14 possible while still preserving Atuline/WLED v0.13 as a stable and supported version. The Atuline/WLED fork is also called WLED SR (Sound Reactive).</p>
 <p>Our latest work can be found here: <a href="https://github.com/MoonModules/WLED/tree/mdev">mdev</a>. You can compile it yourself using PlatformIO.ini entry <code>esp32_4MB_max</code>, or get a build from <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive">Serg74</a> (daily) or <a href="https://wled-install.github.io">wladi</a> (periodically). </p>
 <p>See <a href="https://github.com/MoonModules/WLED/wiki/Features">Features</a> for an overview what is in the pipeline.</p>
+<h2 id="good-to-know">Good to know</h2>
+<ul>
+<li>Aircoookie/WLED will be referred to as WLED AC or upstream in this documentation</li>
+<li>MoonModules/WLED will be referred to as WLED MM in this documentation</li>
+<li>Atuline/WLED will be referred to as WLED SR in this documentation (As this was called WLED Sound Reactive)</li>
+<li>This documentation is a fork of WLED AC documentation (<a href="http://kno.wled.ge">kno.wled.ge</a></li>
+<li>The menu options Welcome, Basics, Features, Interfaces, Advanced and About originate from kno.wled.ge</li>
+<li>The menu options Usermods, MoonModules, 2D, Sound Reactive and WLEDSR are added</li>
+<li>Usermods are the readme.md files of usermods and will move to kno.wled.ge (see https://github.com/Aircoookie/WLED/pull/2965)</li>
+<li>WLEDSR is a 1:1 copy of <a href="https://github.com/atuline/WLED/wiki">WLED SR Wiki</a> and will slowly moved to menu items more to the left (updated to 0.14 functionality)</li>
+<li>MoonModules, 2D and SoundReactive might also be moved to the left, depending on how upstream will organise these topics</li>
+<li>To see where this documantation differs from upstream documentation the following icons will be used in Welcome, Basics, Features, Interfaces, Advanced and About:🌜: Specific to WLED MM, 🎸: Specific to WLED SR</li>
+<li>Hint: search on 🌜or 🎸 to find WLED MM or AC specific info</li>
+</ul>
 <p>Disclaimer: using this software is the users responsibility as it is not bug free. Therefore contributors of this repo are not reliable for anything including but not limited to spontaneous combustion of the entire led strip, the house and the inevitable heat death of the universe</p>
 <p>Join the Discord server to discuss everything about WLED MM and SR!</p>
 <p><a href="https://discord.gg/K9JBvgNG"><img src="https://discordapp.com/api/guilds/473448917040758787/widget.png?style=banner2" width="25%"></a></p>
