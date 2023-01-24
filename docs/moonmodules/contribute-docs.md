@@ -11,6 +11,7 @@ You can contribute to the contents on this site as follows:
 * Create a fork
 * Edit in your fork (Commit -> workflow -> new pages)
 * Create pull request
+* See also [Good to know](/#good-to-know)
 
 ### Fork
 
@@ -20,7 +21,8 @@ You can contribute to the contents on this site as follows:
 
 * Clone your fork (https://github.com/yourfork/WLED-Docs.git)
 <img width="340" alt="image" src="https://user-images.githubusercontent.com/91013628/208883588-b5178d04-275e-4b0e-9405-48e95f9462b4.png">
-* Make edits in your fork (https://github.com/yourfork/WLED-Docs/)
+* Create a branch in your fork if you want to create a pull request for changes in that branch only
+* Make edits in your fork / branch (https://github.com/yourfork/WLED-Docs/)
 * Commit
 
 ### Edit in website
@@ -49,6 +51,7 @@ https://yourfork.github.io/WLED-Docs
 ### Create pull request
 
 * Create pull request from https://github.com/yourfork/WLED-Docs/ to https://github.com/MoonModules/WLED-Docs/
+* Pull from a branch if you only want to pull the changes in that branch
 
 ## Fork specific info
 
