@@ -124,6 +124,7 @@ nav:
       - Autosave: usermods/Autosave.md
       - Battery: usermods/Battery.md
       - BH1750: usermods/BH1750.md
+      - BME280: usermods/BME280.md
       - Rotary Encoder: usermods/Rotary-Encoder.md
       - Animated staircase: usermods/staircase.md
       - Temperature: usermods/Temperature.md
