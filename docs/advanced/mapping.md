@@ -46,3 +46,18 @@ It could be formatted any of the three ways demonstrated above.
 {"map":[0, 1, 2, 3, 4, 9, 8, 7, 6, 5, 10, 11, 12, 13, 14,
 19, 18, 17, 16, 15, 20, 21, 22, 23, 24, 29, 28, 27, 26, 25]}
 ```
+
+### 0.14 AC
+* Physical mapping of map coordinates to panels (see 2D settings page) is done using customMappingTable, the same table ledmap is using.
+* Ledmap only possible in 1D not in 2D
+* If ledmap files are uploaded you need to reboot in order for them to become effective !!!
+* A ledmap can be applied in a preset or 'global' (global is in segments tab)
+* A ledmap is specified in a dropdown which can have the following values: 
+<img width="289" alt="image" src="https://user-images.githubusercontent.com/91013628/217567957-9cb55f75-dbe9-486f-abcd-39d1131a6fb5.png">
+
+* Unchanged: nothing will happen (if a ledmap is active, that ledmap will stay active)
+* Default: no ledmap applied (or if ledmap0.json is present that will be applied)
+* Ledmap1.json to ledmap9.json. The ledmap to be applied
+
+### 0.14 MM ☾
+* Support of ledmaps in 2D using the customMappingTable both for physical mapping and for ledmapping (The map isn't in 2D coordinates, it's just linear remapping) 
