@@ -48,8 +48,8 @@ It could be formatted any of the three ways demonstrated above.
 ```
 
 ### 0.14 AC
-* Physical mapping of map coordinates to panels (see 2D settings page) is done using customMappingTable, the same table ledmap is using.
-* Ledmap only possible in 1D not in 2D
+* In 2D, physical mapping of map coordinates to panels (see 2D settings page) is done using ledmaps (using customMappingTable)
+* Custom Ledmaps therefore only possible in 1D not in 2D
 * If ledmap files are uploaded you need to reboot in order for them to become effective !!!
 * A ledmap can be applied in a preset or 'global' (global is in segments tab)
 * A ledmap is specified in a dropdown which can have the following values: 
