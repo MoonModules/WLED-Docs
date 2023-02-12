@@ -25,6 +25,10 @@ WLED MM releases and daily builds are made to deploy - and are deployed - on liv
 Many features added to MM came from live situation feedback.
 Although new builds may have errors, in practice they tend to be better then earlier versions. 
 
+Get latest build here: <https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/%40MoonModules>
+
+Get latest release here: <https://github.com/MoonModules/WLED/releases>
+
 WLED AC:
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/91013628/214047603-f5fa4f97-77ae-4519-9558-3a6cbf9eb583.png">
