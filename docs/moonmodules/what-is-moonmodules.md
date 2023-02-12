@@ -23,7 +23,7 @@ The reason WLED MM is created is that we have many ideas how to improve WLED AC 
 
 WLED MM releases and daily builds are made to deploy - and are deployed - on live situations, not test bench only.
 Many features added to MM came from live situation feedback.
-Although new builds may have errors, in practice to tend to be better then earlier versions. 
+Although new builds may have errors, in practice they tend to be better then earlier versions. 
 
 WLED AC:
 
