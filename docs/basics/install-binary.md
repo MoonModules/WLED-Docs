@@ -14,8 +14,8 @@ Make sure you are running a recent desktop Chrome or Edge browser and head over 
 If you are updating an existing version of WLED, make sure to uncheck "Clean install" so that your settings are kept.
 This installer is not yet available for ESPs with flash chips smaller than 4MB (e.g. ESP01)
 
-> **Note**
-> For flashing the MoonModules version of WLED, we recommend using this installer site: https://wled-install.github.io/
+!!! tip
+    For flashing the MoonModules version of WLED, we recommend using this installer site: https://wled-install.github.io/
 
 ### Flashing method 2: esptool
 
@@ -59,11 +59,11 @@ If you have a MagicHome controller, here is a [good video tutorial](https://www.
 
 ### ESP8266 Flashing method 3: [ESP Home Flasher](https://github.com/esphome/esphome-flasher/releases) tool
 
-> :boom: **Warning**
->    Don't use ESP Home flasher for ESP32.
->    
->    On ESP32, ESP Home Flasher will make the filesystem very small (61kB), which leads to issues making presets. 
->    Please consider using [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher), or the web installer or esptool.
+!!! *Warning* :boom:
+    Don't use ESP Home flasher for ESP32.
+    
+    On ESP32, ESP Home Flasher will make the filesystem very small (61kB), which leads to issues making presets. 
+    Please consider using [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher), or the web installer or esptool.
 
 
 This is a GUI-based tool recommended by some users as easier to use than esptool.
@@ -72,9 +72,9 @@ For some boards, you might have to press some buttons after uploading:
 
 If running Windows, you need a driver from here: <https://www.wemos.cc/en/latest/ch340_driver.html> before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.
 
-> **Note**
-> For offline installation on ESP32, you can use this [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher) tool.
-> Please wait at least 90 seconds after installing, to be sure you don't interrupt WLED when formatting its flash filesystem.
+!!!  Tip
+     For offline installation on ESP32, you can use this [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher) tool.
+     Please wait at least 90 seconds after installing, to be sure you don't interrupt WLED when formatting its flash filesystem.
 
 <br />
 
