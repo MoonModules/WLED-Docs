@@ -19,7 +19,7 @@ WLED MM is compatible with WLED AC (it's running on average 1 day to 1 week behi
 
 Consider WLED MM as a possible next version of WLED AC (we submit PR's on a regular basis). 
 
-The reason WLED MM is created is that we have many ideas how to improve WLED AC but we need a playground to develop those ideas. When they are ready for mass production they can be adopted in WLED AC. 
+The reason WLED MM is created is that we have many ideas how to improve WLED AC but we need a playground to develop those ideas. 
 
 WLED MM releases and daily builds are made to deploy - and are deployed - on live situations, not test bench only.
 Many features added to MM came from live situation feedback.
