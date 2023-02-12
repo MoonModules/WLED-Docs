@@ -54,7 +54,7 @@ There are currently 4 locations where bins can be downloaded.
 They can be installed using Manual OTA update from within the WLED UI or use [Sergs ESP_Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher)
 
 #### Serg74
-<https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive>
+<https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/%40MoonModules>
 
 Updated frequently with dev versions. Go here for latest features
 
