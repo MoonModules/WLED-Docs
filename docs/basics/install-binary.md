@@ -60,7 +60,7 @@ If you have a MagicHome controller, here is a [good video tutorial](https://www.
 ### ESP8266 Flashing method 3: [ESP Home Flasher](https://github.com/esphome/esphome-flasher/releases) tool
 
 !!! caution
-    :boom: Don't use ESP Home flasher for ESP32.   
+    Don't use ESP Home flasher for ESP32.   
     On ESP32, ESP Home Flasher will make the filesystem very small (61kB), which leads to issues making presets. 
     Please consider using [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher), or the web installer or esptool.
 
@@ -71,9 +71,9 @@ For some boards, you might have to press some buttons after uploading:
 
 If running Windows, you need a driver from here: <https://www.wemos.cc/en/latest/ch340_driver.html> before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.
 
-!!!  tip
-     For offline installation on ESP32, you can use this [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher) tool.
-     Please wait at least 90 seconds after installing, to be sure you don't interrupt WLED when formatting its flash filesystem.
+!!! tip
+    For offline installation on ESP32, you can use this [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher) tool.
+    Please wait at least 90 seconds after installing, to be sure you don't interrupt WLED when formatting its flash filesystem.
 
 <br />
 
