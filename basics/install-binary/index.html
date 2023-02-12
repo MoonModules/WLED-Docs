@@ -2525,10 +2525,10 @@
 <p>Make sure you are running a recent desktop Chrome or Edge browser and head over to the <a href="https://install.wled.me">WLED installer site</a>!
 If you are updating an existing version of WLED, make sure to uncheck "Clean install" so that your settings are kept.
 This installer is not yet available for ESPs with flash chips smaller than 4MB (e.g. ESP01)</p>
-<blockquote>
-<p><strong>Note</strong>
-For flashing the MoonModules version of WLED, we recommend using this installer site: https://wled-install.github.io/</p>
-</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For flashing the MoonModules version of WLED, we recommend using this installer site: https://wled-install.github.io/</p>
+</div>
 <h3 id="flashing-method-2-esptool">Flashing method 2: esptool</h3>
 <ul>
 <li>First of all, please follow the steps to install esptool.py <a href="https://github.com/espressif/esptool">here</a>.</li>
@@ -2556,23 +2556,20 @@ This step only has to be done once, to update afterwards the bootloader does not
 <p>If you have a MagicHome controller, here is a <a href="https://www.youtube.com/watch?v=qgBAU39v07k">good video tutorial</a> on how to flash it.</p>
 <p><br /></p>
 <h3 id="esp8266-flashing-method-3-esp-home-flasher-tool">ESP8266 Flashing method 3: <a href="https://github.com/esphome/esphome-flasher/releases">ESP Home Flasher</a> tool</h3>
-<blockquote>
-<p>:boom: <strong>Warning</strong>
-   Don't use ESP Home flasher for ESP32.</p>
-<p>On ESP32, ESP Home Flasher will make the filesystem very small (61kB), which leads to issues making presets. 
-   Please consider using <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher">WLED ESP Flasher</a>, or the web installer or esptool.</p>
-</blockquote>
+<p>!!! <em>Warning</em> :boom:
+    Don't use ESP Home flasher for ESP32.</p>
+<div class="highlight"><pre><span></span><code>On ESP32, ESP Home Flasher will make the filesystem very small (61kB), which leads to issues making presets. 
+Please consider using [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher), or the web installer or esptool.
+</code></pre></div>
 <p>This is a GUI-based tool recommended by some users as easier to use than esptool.
 For some boards, you might have to press some buttons after uploading:</p>
 <blockquote>
 <p>Hold both buttons down, plug it in, start flashing, then when it tries to detect, let go of the button to the left of the USB as you look at it, then when it detects the board type, let go of the other button.</p>
 </blockquote>
 <p>If running Windows, you need a driver from here: <a href="https://www.wemos.cc/en/latest/ch340_driver.html">https://www.wemos.cc/en/latest/ch340_driver.html</a> before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.</p>
-<blockquote>
-<p><strong>Note</strong>
-For offline installation on ESP32, you can use this <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher">WLED ESP Flasher</a> tool.
-Please wait at least 90 seconds after installing, to be sure you don't interrupt WLED when formatting its flash filesystem.</p>
-</blockquote>
+<p>!!!  Tip
+     For offline installation on ESP32, you can use this <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher">WLED ESP Flasher</a> tool.
+     Please wait at least 90 seconds after installing, to be sure you don't interrupt WLED when formatting its flash filesystem.</p>
 <p><br /></p>
 <h3 id="flashing-method-4-ota-update">Flashing method 4: OTA update</h3>
 <p>You can alternatively use my <a href="https://github.com/Aircoookie/ESP8266MinimalHTTPUpdater">basic HTTP OTA updater</a> sketch and upload the binary! This requires the Arduino IDE and ESP8266 core installed.
