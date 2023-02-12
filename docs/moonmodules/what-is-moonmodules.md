@@ -5,9 +5,9 @@ hide:
   # - toc
 ---
 
-WLED AC 0.14 = (WLED AC 0.13 + WLED SR)(2.0). 
-
 WLED MM 0.14 (🌜) = WLED AC 0.14 + Extra features
+
+WLED AC 0.14 = (WLED AC 0.13 + WLED SR)(2.0). 
 
 WLED SR (🎸) is for the last 2 years maintained mainly by @softhack007 and @ewowi. 
 
