@@ -2558,7 +2558,7 @@ This step only has to be done once, to update afterwards the bootloader does not
 <h3 id="esp8266-flashing-method-3-esp-home-flasher-tool">ESP8266 Flashing method 3: <a href="https://github.com/esphome/esphome-flasher/releases">ESP Home Flasher</a> tool</h3>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>:boom: Don't use ESP Home flasher for ESP32. <br />
+<p>Don't use ESP Home flasher for ESP32. <br />
 On ESP32, ESP Home Flasher will make the filesystem very small (61kB), which leads to issues making presets. 
 Please consider using <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher">WLED ESP Flasher</a>, or the web installer or esptool.</p>
 </div>
@@ -2568,9 +2568,11 @@ For some boards, you might have to press some buttons after uploading:</p>
 <p>Hold both buttons down, plug it in, start flashing, then when it tries to detect, let go of the button to the left of the USB as you look at it, then when it detects the board type, let go of the other button.</p>
 </blockquote>
 <p>If running Windows, you need a driver from here: <a href="https://www.wemos.cc/en/latest/ch340_driver.html">https://www.wemos.cc/en/latest/ch340_driver.html</a> before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.</p>
-<p>!!!  tip
-     For offline installation on ESP32, you can use this <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher">WLED ESP Flasher</a> tool.
-     Please wait at least 90 seconds after installing, to be sure you don't interrupt WLED when formatting its flash filesystem.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For offline installation on ESP32, you can use this <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher">WLED ESP Flasher</a> tool.
+Please wait at least 90 seconds after installing, to be sure you don't interrupt WLED when formatting its flash filesystem.</p>
+</div>
 <p><br /></p>
 <h3 id="flashing-method-4-ota-update">Flashing method 4: OTA update</h3>
 <p>You can alternatively use my <a href="https://github.com/Aircoookie/ESP8266MinimalHTTPUpdater">basic HTTP OTA updater</a> sketch and upload the binary! This requires the Arduino IDE and ESP8266 core installed.
