@@ -30,8 +30,11 @@ Get latest build here: <https://github.com/srg74/WLED-wemos-shield/tree/master/r
 Get latest release here: <https://github.com/MoonModules/WLED/releases>
 
 More info:
+
 * [Merge History](https://mm.kno.wled.ge/moonmodules/merge-history/)
+
 * [Installing and compiling](https://mm.kno.wled.ge/moonmodules/Installing-and-Compiling/)
+
 * [Fork comparison](https://mm.kno.wled.ge/moonmodules/fork-comparison/)
 
 WLED AC:
