@@ -21,6 +21,10 @@ Consider WLED MM as a possible next version of WLED AC (we submit PR's on a regu
 
 The reason WLED MM is created is that we have many ideas how to improve WLED AC but we need a playground to develop those ideas. When they are ready for mass production they can be adopted in WLED AC. 
 
+WLED MM releases and daily builds are made to deploy - and are deployed - on live situations, not test bench only.
+Many features added to MM came from live situation feedback.
+Although new builds may have errors, in practice to tend to be better then earlier versions. 
+
 WLED AC:
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/91013628/214047603-f5fa4f97-77ae-4519-9558-3a6cbf9eb583.png">
