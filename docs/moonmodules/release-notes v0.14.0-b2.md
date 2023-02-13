@@ -7,6 +7,35 @@ hide:
 
 Version b2 has not been official released yet so this is work in progress
 
+## 2D Ledmaps
+* segment names
+* default ledmaps
+* show in segments
+* persistant storage
+
+
+## Segment visualization
+* support mirror, reverse, transpose
+* support grouping and spacing
+* multi segment support
+
+## 2D setup: basic and advanced
+
+## 2D setup: Panel visualization
+* Reset segments only bounds, keep effect etc.
+
+## Grandient Random cycle palette
+
+## Pins
+* default pins -1
+* Analog pins in dropdown
+* D0-D8, RX, TX info in dropdowns
+* Any gpio on 8266
+
+## Audio reactive optimizations
+
+# Generate presets
+
 ## Pin drop downs support read only and reserved pins
 January 14, 2023
 
