@@ -135,10 +135,10 @@ nav:
       - Pin Manager: usermods/pinmanager.md
   - MoonModules: 
     - What is MoonModules: moonmodules/what-is-moonmodules.md
-    - Fork comparison: moonmodules/fork-comparison.md
     - Release notes v0.14.0-b2: moonmodules/release-notes v0.14.0-b2.md
     - Release notes v0.14.0-b1: moonmodules/release-notes v0.14.0-b1.md
     - Release notes v0.14.0-b0: moonmodules/release-notes v0.14.0-b0.md
+    - Fork comparison: moonmodules/fork-comparison.md
     - Installing and Compiling: moonmodules/Installing-and-Compiling.md
     - Mappings: moonmodules/mappings.md
     - Custom Effects: moonmodules/custom-effects.md
