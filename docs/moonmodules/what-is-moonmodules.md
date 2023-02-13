@@ -25,7 +25,9 @@ WLED MM releases and daily builds are made to deploy - and are deployed - on liv
 Many features added to MM came from live situation feedback.
 Although new builds may have errors, in practice they tend to be better then earlier versions. 
 
-Get latest build here: <https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/%40MoonModules>
+Our latest work can be found here: [mdev](https://github.com/MoonModules/WLED/tree/mdev). 
+
+You can compile it yourself using PlatformIO.ini entry esp32_4MB_max or get a build from [Serg74](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/%40MoonModules) (daily) or [Wladi](https://wled-install.github.io) (periodically). 
 
 Get latest release here: <https://github.com/MoonModules/WLED/releases>
 
