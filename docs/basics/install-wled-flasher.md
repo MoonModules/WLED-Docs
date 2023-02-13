@@ -1,5 +1,5 @@
 ---
-title: Installation using ESP GUI
+title: Installation using ESP GUI - WLED Flasher
 hide:
   # - navigation
   # - toc
@@ -32,7 +32,7 @@ Click on `Flash ESP`.
 
 ![](https://github.com/srg74/WLED-wemos-shield/raw/master/resources/Images/Flasher3.png)
 
-Now WLED firmware will be flashed to the ESP. Wait until process is finished and you will see `ADA` message.
+Now WLED firmware will be flashed to the ESP. Wait until process is finished and you will see `Ada` message.
 
 ![](https://github.com/srg74/WLED-wemos-shield/raw/master/resources/Images/Flasher4.png)
 
