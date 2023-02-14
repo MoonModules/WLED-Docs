@@ -15,7 +15,7 @@ Below are the ongoing updates which has not made it to a release yet (Next relea
 
 <video width="160" autoplay><source src="https://user-images.githubusercontent.com/1737159/218800190-8bf2a4a2-d058-4560-9bbd-157fbc746716.mov" type="video/mp4"></video>
 
-<img width="1428" alt="Screenshot 2023-02-14 at 13 04 01" src="https://user-images.githubusercontent.com/1737159/218801422-8dde6896-9f00-4b6e-84c3-5f1692cdb190.png">
+<img width="500" alt="Screenshot 2023-02-14 at 13 04 01" src="https://user-images.githubusercontent.com/1737159/218801422-8dde6896-9f00-4b6e-84c3-5f1692cdb190.png">
 
 ## Segment visualization
 * support mirror, reverse, transpose
