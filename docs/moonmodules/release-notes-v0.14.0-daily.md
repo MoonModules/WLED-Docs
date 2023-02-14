@@ -13,13 +13,18 @@ Below are the ongoing updates which has not made it to a release yet (Next relea
 * show in segments
 * persistant storage
 
+<video width="160" autoplay><source src="https://user-images.githubusercontent.com/1737159/218800190-8bf2a4a2-d058-4560-9bbd-157fbc746716.mov" type="video/mp4"></video>
 
 ## Segment visualization
 * support mirror, reverse, transpose
 * support grouping and spacing
 * multi segment support
 
+<img width="287" alt="Screenshot 2023-02-07 at 10 18 53" src="https://user-images.githubusercontent.com/1737159/218798487-34701396-0542-4865-9fae-e792582104e6.png"><img width="255" alt="Screenshot 2023-02-06 at 16 14 56" src="https://user-images.githubusercontent.com/1737159/218798950-3e36ab5c-85f6-4469-924a-91fbd9227709.png">
+
 ## 2D setup: basic and advanced
+
+<video width="160" autoplay><source src="https://user-images.githubusercontent.com/1737159/218800542-0f8bb19e-4cd8-43ec-8c52-40b41a3b3b05.mov" type="video/mp4"></video>
 
 ## 2D setup: Panel visualization
 * Reset segments only bounds, keep effect etc.
@@ -35,6 +40,8 @@ Below are the ongoing updates which has not made it to a release yet (Next relea
 ## Audio reactive optimizations
 
 # Generate presets
+
+<video width="160" autoplay><source src="https://user-images.githubusercontent.com/1737159/218799772-930c87f1-4abf-403e-8ed7-899008d23dba.mov" type="video/mp4"></video>
 
 ## Pin drop downs support read only and reserved pins
 January 14, 2023
