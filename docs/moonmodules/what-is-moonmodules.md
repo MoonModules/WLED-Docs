@@ -33,11 +33,11 @@ Get latest release here: <https://github.com/MoonModules/WLED/releases>
 
 More info:
 
-* [Release notes v0.14.0-b2](https://mm.kno.wled.ge/moonmodules/release-notes-v0.14.0-b2.md)
+* [Release notes v0.14.0-b2](https://mm.kno.wled.ge/moonmodules/release-notes-v0.14.0-daily)
 
-* [Release notes v0.14.0-b1](https://mm.kno.wled.ge/moonmodules/release-notes-v0.14.0-b1.md)
+* [Release notes v0.14.0-b1](https://mm.kno.wled.ge/moonmodules/release-notes-v0.14.0-b1)
 
-* [Release notes v0.14.0-b0](https://mm.kno.wled.ge/moonmodules/release-notes-v0.14.0-b0.md)
+* [Release notes v0.14.0-b0](https://mm.kno.wled.ge/moonmodules/release-notes-v0.14.0-b0)
 
 * [Installing and compiling](https://mm.kno.wled.ge/moonmodules/Installing-and-Compiling/)
 

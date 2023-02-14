@@ -1,11 +1,11 @@
 ---
-title: Release notes v0.14.0-b2
+title: Release notes v0.14.0-daily
 hide:
   # - navigation
   # - toc
 ---
 
-Version b2 has not been official released yet so this is work in progress
+Below are the ongoing updates which has not made it to a release yet (Next release will be v0.14.0-b2)
 
 ## 2D Ledmaps
 * segment names
