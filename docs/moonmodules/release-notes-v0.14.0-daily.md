@@ -26,12 +26,14 @@ Below are the ongoing updates which has not made it to a release yet (Next relea
 
 ## 2D setup: basic and advanced
 
-<video width="160" autoplay><source src="https://user-images.githubusercontent.com/1737159/218800542-0f8bb19e-4cd8-43ec-8c52-40b41a3b3b05.mov" type="video/mp4"></video>
+<video width="320" autoplay><source src="https://user-images.githubusercontent.com/1737159/218800542-0f8bb19e-4cd8-43ec-8c52-40b41a3b3b05.mov" type="video/mp4"></video>
 
 ## 2D setup: Panel visualization
 * Reset segments only bounds, keep effect etc.
 
 ## Grandient Random cycle palette
+
+<img width="257" alt="image" src="https://user-images.githubusercontent.com/1737159/218804182-8f30b1d9-42fb-4f25-b76a-ad4e4eb7ab08.png">
 
 ## Pins
 * default pins -1
@@ -43,7 +45,7 @@ Below are the ongoing updates which has not made it to a release yet (Next relea
 
 ## Generate presets
 
-<video width="160" autoplay><source src="https://user-images.githubusercontent.com/1737159/218799772-930c87f1-4abf-403e-8ed7-899008d23dba.mov" type="video/mp4"></video>
+<video width="320" autoplay><source src="https://user-images.githubusercontent.com/1737159/218799772-930c87f1-4abf-403e-8ed7-899008d23dba.mov" type="video/mp4"></video>
 
 ## Pin drop downs support read only and reserved pins
 January 14, 2023
