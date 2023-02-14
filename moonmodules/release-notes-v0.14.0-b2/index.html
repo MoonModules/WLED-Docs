@@ -11,17 +11,17 @@
       
       
       
-        <link rel="prev" href="../release-notes%20v0.14.0-b2/">
+        <link rel="prev" href="../what-is-moonmodules/">
       
       
-        <link rel="next" href="../release-notes%20v0.14.0-b0/">
+        <link rel="next" href="../release-notes-v0.14.0-b1/">
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
     
     
       
-        <title>Release notes v0.14.0-b1 - WLED MoonModules Project</title>
+        <title>Release notes v0.14.0-b2 - WLED MoonModules Project</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#drop-downs-for-pin-variables" class="md-skip">
+        <a href="#2d-ledmaps" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Release notes v0.14.0-b1
+              Release notes v0.14.0-b2
             
           </span>
         </div>
@@ -1564,20 +1564,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../release-notes%20v0.14.0-b2/" class="md-nav__link">
-        Release notes v0.14.0-b2
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -1588,12 +1574,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Release notes v0.14.0-b1
+          Release notes v0.14.0-b2
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Release notes v0.14.0-b1
+        Release notes v0.14.0-b2
       </a>
       
         
@@ -1610,128 +1596,79 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#drop-downs-for-pin-variables" class="md-nav__link">
-    Drop downs for pin variables
+  <a href="#2d-ledmaps" class="md-nav__link">
+    2D Ledmaps
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mmknowledge" class="md-nav__link">
-    mm.kno.wled.ge
+  <a href="#segment-visualization" class="md-nav__link">
+    Segment visualization
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usermod-specific-help" class="md-nav__link">
-    Usermod specific help
+  <a href="#2d-setup-basic-and-advanced" class="md-nav__link">
+    2D setup: basic and advanced
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ledmap2d" class="md-nav__link">
-    Ledmap2D
+  <a href="#2d-setup-panel-visualization" class="md-nav__link">
+    2D setup: Panel visualization
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#custom-effects-improvements" class="md-nav__link">
-    Custom Effects improvements
+  <a href="#grandient-random-cycle-palette" class="md-nav__link">
+    Grandient Random cycle palette
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#improved-lay-out-usermod-settings" class="md-nav__link">
-    Improved lay-out usermod settings
+  <a href="#pins" class="md-nav__link">
+    Pins
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#audioreactive-palettes" class="md-nav__link">
-    Audioreactive palettes
+  <a href="#audio-reactive-optimizations" class="md-nav__link">
+    Audio reactive optimizations
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#extended-mic-settings-in-platformio" class="md-nav__link">
-    Extended mic settings in platformIO
+  <a href="#generate-presets" class="md-nav__link">
+    Generate presets
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bin-aware-builds" class="md-nav__link">
-    Bin Aware Builds
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ota-latest-release" class="md-nav__link">
-    OTA latest release
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-circles-and-block-as-1d-expansion" class="md-nav__link">
-    Add Circles and Block as 1D expansion
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compatibility-for-sr013-presets" class="md-nav__link">
-    compatibility for SR/0.13 presets
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#renumbered-effect-ids-back-to-wled-sr-013-numbering" class="md-nav__link">
-    renumbered effect ID's back to WLED SR 0.13 numbering
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extra-hardware-info-on-info-tab" class="md-nav__link">
-    Extra hardware info on Info tab
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#refactored-json-mapping" class="md-nav__link">
-    Refactored JSON Mapping
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#games-usermod-additions" class="md-nav__link">
-    Games usermod additions
-  </a>
-  
-    <nav class="md-nav" aria-label="Games usermod additions">
+    <nav class="md-nav" aria-label="Generate presets">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#3d-to-2d-mapping" class="md-nav__link">
-    3D to 2D mapping
+  <a href="#pin-drop-downs-support-read-only-and-reserved-pins" class="md-nav__link">
+    Pin drop downs support read only and reserved pins
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3d-gyro" class="md-nav__link">
-    3D + Gyro
+  <a href="#generate-presets-and-playlists" class="md-nav__link">
+    Generate presets and playlists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c-and-spi-pins-make-over" class="md-nav__link">
+    I2C and SPI pins make over
   </a>
   
 </li>
@@ -1756,7 +1693,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../release-notes%20v0.14.0-b0/" class="md-nav__link">
+      <a href="../release-notes-v0.14.0-b1/" class="md-nav__link">
+        Release notes v0.14.0-b1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes-v0.14.0-b0/" class="md-nav__link">
         Release notes v0.14.0-b0
       </a>
     </li>
@@ -2540,128 +2491,79 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#drop-downs-for-pin-variables" class="md-nav__link">
-    Drop downs for pin variables
+  <a href="#2d-ledmaps" class="md-nav__link">
+    2D Ledmaps
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mmknowledge" class="md-nav__link">
-    mm.kno.wled.ge
+  <a href="#segment-visualization" class="md-nav__link">
+    Segment visualization
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usermod-specific-help" class="md-nav__link">
-    Usermod specific help
+  <a href="#2d-setup-basic-and-advanced" class="md-nav__link">
+    2D setup: basic and advanced
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ledmap2d" class="md-nav__link">
-    Ledmap2D
+  <a href="#2d-setup-panel-visualization" class="md-nav__link">
+    2D setup: Panel visualization
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#custom-effects-improvements" class="md-nav__link">
-    Custom Effects improvements
+  <a href="#grandient-random-cycle-palette" class="md-nav__link">
+    Grandient Random cycle palette
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#improved-lay-out-usermod-settings" class="md-nav__link">
-    Improved lay-out usermod settings
+  <a href="#pins" class="md-nav__link">
+    Pins
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#audioreactive-palettes" class="md-nav__link">
-    Audioreactive palettes
+  <a href="#audio-reactive-optimizations" class="md-nav__link">
+    Audio reactive optimizations
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#extended-mic-settings-in-platformio" class="md-nav__link">
-    Extended mic settings in platformIO
+  <a href="#generate-presets" class="md-nav__link">
+    Generate presets
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bin-aware-builds" class="md-nav__link">
-    Bin Aware Builds
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ota-latest-release" class="md-nav__link">
-    OTA latest release
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-circles-and-block-as-1d-expansion" class="md-nav__link">
-    Add Circles and Block as 1D expansion
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compatibility-for-sr013-presets" class="md-nav__link">
-    compatibility for SR/0.13 presets
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#renumbered-effect-ids-back-to-wled-sr-013-numbering" class="md-nav__link">
-    renumbered effect ID's back to WLED SR 0.13 numbering
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extra-hardware-info-on-info-tab" class="md-nav__link">
-    Extra hardware info on Info tab
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#refactored-json-mapping" class="md-nav__link">
-    Refactored JSON Mapping
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#games-usermod-additions" class="md-nav__link">
-    Games usermod additions
-  </a>
-  
-    <nav class="md-nav" aria-label="Games usermod additions">
+    <nav class="md-nav" aria-label="Generate presets">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#3d-to-2d-mapping" class="md-nav__link">
-    3D to 2D mapping
+  <a href="#pin-drop-downs-support-read-only-and-reserved-pins" class="md-nav__link">
+    Pin drop downs support read only and reserved pins
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3d-gyro" class="md-nav__link">
-    3D + Gyro
+  <a href="#generate-presets-and-playlists" class="md-nav__link">
+    Generate presets and playlists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c-and-spi-pins-make-over" class="md-nav__link">
+    I2C and SPI pins make over
   </a>
   
 </li>
@@ -2686,7 +2588,7 @@
                   
 
   
-    <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/moonmodules/release-notes v0.14.0-b1.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/moonmodules/release-notes-v0.14.0-b2.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2695,117 +2597,69 @@
 
 
 
-  <h1>Release notes v0.14.0-b1</h1>
+  <h1>Release notes v0.14.0-b2</h1>
 
-<h2 id="drop-downs-for-pin-variables">Drop downs for pin variables</h2>
-<p>December 23, 2022</p>
-<p><img width="150" alt="image" src="https://user-images.githubusercontent.com/1737159/209367375-48841ac7-abc5-4f3f-ab43-16d7cdfb3a06.png"></p>
+<p>Version b2 has not been official released yet so this is work in progress</p>
+<h2 id="2d-ledmaps">2D Ledmaps</h2>
 <ul>
-<li>show pins which are in use (not selectable)</li>
-<li>excludes pins which may not be used (e.g. for 4ld/mclk variable)</li>
-<li>use global pins option</li>
-<li>undefined option</li>
+<li>segment names</li>
+<li>default ledmaps</li>
+<li>show in segments</li>
+<li>persistant storage</li>
 </ul>
-<p>Currently implemented for AudioReactive and 4LineDisplay (tested) and all usermods which uses pin variables (testing in progress)</p>
-<h2 id="mmknowledge">mm.kno.wled.ge</h2>
-<p>December 21, 2022</p>
-<p><a href="https://github.com/MoonModules/WLED-Docs">MoonModules pages</a> (wich is a fork of upstream pages) is now linked to <a href="https://mm.kno.wled.ge">mm.kno.wled.ge</a> and is integrated in MoonModules WLED.</p>
-<h2 id="usermod-specific-help">Usermod specific help</h2>
-<p>December 19, 2022</p>
-<p><img width="282" alt="image" src="https://user-images.githubusercontent.com/91013628/208895794-27d9920e-2316-4c98-b21a-3319954985ce.png"></p>
-<p>This goes to <a href="https://mm.kno.wled.ge/soundreactive/Sound-Settings/">https://mm.kno.wled.ge/soundreactive/Sound-Settings/</a></p>
-<p>Also added in Weather usermod and four line display usermod (pages wip)</p>
-<h2 id="ledmap2d">Ledmap2D</h2>
-<p>December 5, 2022
-In 0.14 ledmaps are only supported for 1D.
-This fix makes it work for 2D in WLED MM.</p>
-<h2 id="custom-effects-improvements">Custom Effects improvements</h2>
-<p>November 29, 2022</p>
-<p>Custom Effect improvements:
-- Simplified <a href="https://github.com/MoonModules/WLED-Effects/tree/master/CustomEffects/wled">presets.json</a> (can be downloaded directly into WLED MM in Custom Effect editor screen)
-- some bug fixes to let Custom Effects run better on 2D</p>
-<p>And combining Custom Effects with <a href="#october-21-2022">1D expansions</a> gives great results and makes Custom Effects very well performing on large 2D matrices!!!</p>
-<p>This is color_fade_pulse (by @atuline) with Circles expansion:</p>
-<video width="160" autoplay><source src="https://user-images.githubusercontent.com/1737159/204777643-a93413a8-b430-4499-a9b9-64acd55a351c.mp4" type="video/mp4"></video>
+<h2 id="segment-visualization">Segment visualization</h2>
+<ul>
+<li>support mirror, reverse, transpose</li>
+<li>support grouping and spacing</li>
+<li>multi segment support</li>
+</ul>
+<h2 id="2d-setup-basic-and-advanced">2D setup: basic and advanced</h2>
+<h2 id="2d-setup-panel-visualization">2D setup: Panel visualization</h2>
+<ul>
+<li>Reset segments only bounds, keep effect etc.</li>
+</ul>
+<h2 id="grandient-random-cycle-palette">Grandient Random cycle palette</h2>
+<h2 id="pins">Pins</h2>
+<ul>
+<li>default pins -1</li>
+<li>Analog pins in dropdown</li>
+<li>D0-D8, RX, TX info in dropdowns</li>
+<li>Any gpio on 8266</li>
+</ul>
+<h2 id="audio-reactive-optimizations">Audio reactive optimizations</h2>
+<h1 id="generate-presets">Generate presets</h1>
+<h2 id="pin-drop-downs-support-read-only-and-reserved-pins">Pin drop downs support read only and reserved pins</h2>
+<p>January 14, 2023</p>
+<p><img width="144" alt="Screenshot 2023-01-14 at 18 42 14" src="https://user-images.githubusercontent.com/91013628/212558236-50c7da14-6e7c-489e-bc43-778979e9f844.png"></p>
+<p>For more information see https://mm.kno.wled.ge/usermods/globalpins/
+This page is shown if you press here: </p>
+<p><img width="200" src="https://user-images.githubusercontent.com/91013628/212558383-fa3f4171-fda7-4d02-b749-bfff03226952.jpeg"></p>
+<h2 id="generate-presets-and-playlists">Generate presets and playlists</h2>
+<p>January 12, 2023</p>
+<p>Generate presets of all effects and group them together in playlists for 1D or 2D, Volume or FFT, combinations or all</p>
+<video width="160" autoplay><source src="https://user-images.githubusercontent.com/91013628/212558544-1c42abef-9567-4431-b940-366b7ce3362f.mov" type="video/mp4"></video>
 
-<h2 id="improved-lay-out-usermod-settings">Improved lay-out usermod settings</h2>
-<p>November 20, 2022</p>
-<p>Grouping and pre-post texts in usermod settings (to make it more readable)</p>
-<p><img width="160" alt="image" src="https://user-images.githubusercontent.com/1737159/202906302-6b4411c8-7aee-4c12-a88c-0f1828232199.png"></p>
-<h2 id="audioreactive-palettes">Audioreactive palettes</h2>
-<p>November 19, 2022</p>
-<p>by NetMindz</p>
-<p><img width="296" alt="image" src="https://user-images.githubusercontent.com/1737159/202859807-b33ad565-ddf1-450e-9f0b-27d54b5dd0d8.png"></p>
-<video width="296" autoplay><source src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov" type="video/mp4"></video>
-
-<h2 id="extended-mic-settings-in-platformio">Extended mic settings in platformIO</h2>
-<p>November 18, 2022</p>
-<p><img width="692" alt="image" src="https://user-images.githubusercontent.com/1737159/202859001-665f245c-df4e-4c83-83d5-99d79cdc5801.png"></p>
-<p>allowing to create mic specific environments:</p>
-<p><img width="261" alt="image" src="https://user-images.githubusercontent.com/1737159/202859113-bb4139a2-ba0a-48ab-bf7a-2d9aa033d3aa.png"></p>
-<h2 id="bin-aware-builds">Bin Aware Builds</h2>
-<p>October 28, 2022</p>
-<p>Upload hardware specific configs based on generated filenames (=&gt; WLED install is aware of underlying hardware).</p>
-<p>Ultimate goal of bin awareness is that WLED itself says: hey! I found a new update for you, do you want to install?</p>
-<p><img width="334" alt="image" src="https://user-images.githubusercontent.com/1737159/199474001-0fc84cab-e34f-4236-8d37-1b7cee34e2ce.png"></p>
-<p>plus</p>
-<p><img width="657" alt="image" src="https://user-images.githubusercontent.com/1737159/199474203-b9802184-532e-40b6-949e-8aa8f2b0d529.png"></p>
-<p>(esp32mdev -&gt; esp32_4MB_min. esp32mdevmax -&gt; esp32_4MB_max / esp32_16MB_max)</p>
-<p>plus</p>
-<p><img width="234" alt="image" src="https://user-images.githubusercontent.com/91013628/200820664-90f75ba9-523c-485e-bea3-5abd9713c33b.png"></p>
-<p>(0.14.0. sequence of upstream commit . sequence of mm commit (need to be updated together with build date)</p>
-<p>=&gt;</p>
-<p><img width="422" alt="image" src="https://user-images.githubusercontent.com/91013628/200820550-abe14707-1f10-4c25-b20a-aa4a3770bfab.png"></p>
-<p>=&gt;</p>
-<p><img width="430" alt="image" src="https://user-images.githubusercontent.com/91013628/200820950-6d7be54f-c5fd-4b6a-97c0-6829c3201a13.png"></p>
-<p>(WLED install is aware of the filename of it's bin, WLEDMM_0.14.0.2.1_esp32_16MB.bin in this example)</p>
-<p>plus</p>
-<p><img width="400" alt="image" src="https://user-images.githubusercontent.com/91013628/200821356-36e51551-b055-493e-a3e4-8b332cad3eb2.png"></p>
-<p>(Serg and Wladi repo's should use the same names)</p>
-<h2 id="ota-latest-release">OTA latest release</h2>
-<p>October 25, 2022</p>
-<p>Manual OTA Update is showing the latest MoonModules/WLED release and clicking on the version icon jumps to the <a href="https://github.com/MoonModules/WLED/releases">release pages on Github</a>, links to Serg74 and Wladi builds are also shown on the release page, so Manual OTA Update will guide you to the version you need!</p>
-<p><img width="398" alt="image" src="https://user-images.githubusercontent.com/91013628/197806516-90f49798-66b7-4989-ae11-590446c19a4a.png"></p>
-<h2 id="add-circles-and-block-as-1d-expansion">Add Circles and Block as 1D expansion</h2>
-<p>October 21, 2022</p>
-<p>Add Circles and Block as 1D expansion and show virtualStrip effects with ⋮⋮</p>
-<p><img width="642" alt="Screenshot 2022-10-21 at 12 08 29" src="https://user-images.githubusercontent.com/91013628/197171416-266b1727-27cc-497c-b1f6-6953538d9dfc.png"></p>
-<p>Tetris effect with block expansion:</p>
-<video width="437" autoplay><source src="https://user-images.githubusercontent.com/91013628/197814095-829ebffa-0e56-40af-a2fb-6d58c772a559.mov" type="video/mp4"></video>
-
-<h2 id="compatibility-for-sr013-presets">compatibility for SR/0.13 presets</h2>
-<p>October 20, 2022</p>
-<p>Thanks to '<em>renumbered effect ID's back to WLED SR 0.13 numbering</em>': Add compatibility for SR/0.13 presets. This allows HB effects to be run on 0.14, however this shows that there are some shortcomings in 0.14: e.g. lissajoux not working as at should and overlapping segments not working (e.g. <a href="https://streamable.com/lze6gl">Akemi from Hell</a>): November update: Lissajoux, Akemi from Hell (and others) fixed, overlapping segments working now. Check this in Led Preferences:</p>
-<p><img width="452" alt="image" src="https://user-images.githubusercontent.com/1737159/202910638-2c40e2dc-1277-4bf0-ad5b-9a6e97121649.png"></p>
-<p>(To see them fully working: load them into WLEDSR 0.13!)</p>
-<video width="437" autoplay><source src="https://user-images.githubusercontent.com/91013628/196901131-a10f580c-2637-4c82-8054-abb5b8de4458.mov" type="video/mp4"></video>
-
-<p>To upload HR effects put effects / presets.json in <your wled ip>/edit</p>
-<p>To start creating your own multiple segment effects put base / presets.json in <your wled ip>/edit</p>
-<p>Presets.json files are <a href="https://github.com/MoonModules/WLED-Effects/tree/master/Presets/HB_PresetPack210808_32x32_16seg">here</a></p>
-<h2 id="renumbered-effect-ids-back-to-wled-sr-013-numbering">renumbered effect ID's back to WLED SR 0.13 numbering</h2>
-<p>October 16, 2022</p>
-<p><strong>Important update: renumbered effect ID's back to WLED SR 0.13 numbering</strong> so WLED (SR) 0.13 is compatible with MoonModules 0.14 for presets and sync between devices </p>
-<p><img width="437" alt="image" src="https://user-images.githubusercontent.com/91013628/196028158-c7ab7e2f-8a1c-4c5d-a253-19b11bfe1b6e.png"></p>
-<h2 id="extra-hardware-info-on-info-tab">Extra hardware info on Info tab</h2>
-<p>October 13, 2022</p>
-<p><img width="462" alt="image" src="https://user-images.githubusercontent.com/91013628/196035364-3c38bfc5-f366-4d41-8a3b-56dc8858019d.png"></p>
-<h2 id="refactored-json-mapping">Refactored JSON Mapping</h2>
-<p>October 1, 2022</p>
-<p>smaller memory footprint so larger mappings can be used, e.g. Snake32:</p>
-<video width="405" autoplay><source src="https://user-images.githubusercontent.com/91013628/193404268-fb1cccf2-56af-4045-b654-be84d5ef3c8c.mov" type="video/mp4"></video>
-
-<p>Files are here: <a href="https://github.com/MoonModules/WLED-Effects/tree/master/JSONMappings">JSONMappings</a></p>
-<h2 id="games-usermod-additions">Games usermod additions</h2>
-<p>September 27, 2022</p>
-<p>Added to games usermod:</p>
-<h3 id="3d-to-2d-mapping">3D to 2D mapping</h3>
-<p>Adding Frame3D class which takes a 3D coordinate and maps this to 2D matrix (using addEffect(), setPixelColor(floats) and drawLine() added in 0.14 version)</p>
-<p><img width="405" alt="image" src="https://user-images.githubusercontent.com/1737159/192524364-4e870d79-4caa-41ad-ac39-288d71543916.png">    =    <img width="248" alt="image" src="https://user-images.githubusercontent.com/1737159/192523682-3d8cd32d-c589-4fe2-b27e-aecb1d5fbbb0.png"></p>
-<h3 id="3d-gyro">3D + Gyro</h3>
-<p>Refactoring USERMOD_MPU6050_IMU (so that it works!) using latest ElectronicCats/mpu6050 library
-Embedding this usermod in games usermod and use yaw pitch and roll in Frame3D class</p>
-<p><img width="248" alt="image" src="https://user-images.githubusercontent.com/1737159/192523682-3d8cd32d-c589-4fe2-b27e-aecb1d5fbbb0.png">    +    <img width="248" alt="image" src="https://user-images.githubusercontent.com/1737159/192525144-8d8590bf-449f-4336-975e-fced3ea34830.png">    =     <video width="248"autoplay><source src="https://user-images.githubusercontent.com/1737159/192526130-64ba2903-4481-42af-a297-4f18b78ed460.mov" type="video/mp4"></video></p>
+<p><img width="221" alt="Screenshot 2023-01-13 at 15 29 50" src="https://user-images.githubusercontent.com/91013628/212558671-08aa50bd-4cef-4103-85bc-aeb8b37f8aa6.png"></p>
+<h2 id="i2c-and-spi-pins-make-over">I2C and SPI pins make over</h2>
+<p>Januari 9, 2023</p>
+<p>We were not happy how currently pins are managed. It raises questions in discord we could not answer so we decided to refactor it. It's not easy as a lot is interconnected but we made the first steps:</p>
+<ul>
+<li>Drop down for pin variables (see below)</li>
+<li>Rebuild the usermods (pins) settings screen so it works the same</li>
+<li>create _all bin files with a lot of usermods in it so we can test and improve</li>
+<li>do not reset ui variables if something is wrong (e.g. 4ld/type, enabled)</li>
+<li>use errorMessage instead and show errormessage in settings ui</li>
+<li>if global pins are -1, then there is no initialization of spi/i2c if usermods set pins to use global no initialisation</li>
+<li>HLD_PIN_* variables are used in platformio to specify defaults for global pins, no use of the recent introduced new variables I2CSDAPIN (etc) as causes more confusion, HLD_PIN serve these function and is used instead, </li>
+<li>HW_PIN_DATASPI and HW_PIN_MOSISPI both existed but is one pin, merged to HW_PIN_MOSISPI as MOSI and MISO is both data</li>
+<li>i2c_scl (etc) variables are used in usermods without if -1 then HLD_PIN check, i2c_scl (etc) most be proper initialized before it can be used.</li>
+<li>No hijacking of global vars (giving them a value) in usermods </li>
+<li>Don't register pins if usermod is not enabled</li>
+<li>create pinManager.joinWire and use as simplified way in usermods</li>
+</ul>
+<p>This will be work in progress the coming weeks to implement in usermods (AudioReactive and 4LD working, others likely working but must be tested)</p>
+<p>Overview of usermods available in _all bins:</p>
+<p><img width="224" alt="Screenshot 2023-01-08 at 15 13 00" src="https://user-images.githubusercontent.com/91013628/211351663-28e23710-b8e5-441b-8ec3-ff774b0dd106.png"></p>
 
 
 
