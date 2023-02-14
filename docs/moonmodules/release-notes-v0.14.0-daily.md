@@ -12,6 +12,7 @@ Below are the ongoing updates which has not made it to a release yet (Next relea
 * default ledmaps
 * show in segments
 * persistant storage
+* No reboot necessary if upload new ledmaps
 
 <video width="500" autoplay><source src="https://user-images.githubusercontent.com/1737159/218800190-8bf2a4a2-d058-4560-9bbd-157fbc746716.mov" type="video/mp4"></video>
 
