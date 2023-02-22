@@ -15,6 +15,9 @@ If you are updating an existing version of WLED, make sure to uncheck "Clean ins
 This installer is not yet available for ESPs with flash chips smaller than 4MB (e.g. ESP01)
 
 !!! tip
+    In case you want to flash WLED with audioreactive usermod: 
+    Several users reported that this alternative, unofficial installer site may work better: [https://wled-install.github.io/](https://wled-install.github.io/).
+    After using the standard WLED installer, microphone hardware sometimes cannot be initialized properly by WLED.
     For flashing the MoonModules version of WLED, we recommend using this installer site: [https://wled-install.github.io/](https://wled-install.github.io/)
 
 ### Flashing method 2: esptool
@@ -55,9 +58,12 @@ esptool.py erase_flash
 
 If you have a MagicHome controller, here is a [good video tutorial](https://www.youtube.com/watch?v=qgBAU39v07k) on how to flash it.
 
-<br />
-
 ### ESP8266 Flashing method 3: [ESP Home Flasher](https://github.com/esphome/esphome-flasher/releases) tool
+
+!!! warning
+    Don't use ESP Home Flasher for ESP32 boards.   
+    On ESP32, ESP Home Flasher will make the filesystem very small (61kB), which leads to issues making presets. 
+    Please consider using [WLED ESP Flasher](/basics/install-wled-flasher), or the web installer or esptool.
 
 !!! caution
     <strong>Don't use ESP Home Flasher with ESP32 boards.</strong>   
@@ -66,16 +72,14 @@ If you have a MagicHome controller, here is a [good video tutorial](https://www.
 
 This is a GUI-based tool recommended by some users as easier to use than esptool.
 For some boards, you might have to press some buttons after uploading:
-
 > Hold both buttons down, plug it in, start flashing, then when it tries to detect, let go of the button to the left of the USB as you look at it, then when it detects the board type, let go of the other button.
 
 If running Windows, you need a driver from here: <https://www.wemos.cc/en/latest/ch340_driver.html> before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.
 
-!!! tip
-    For offline installation on ESP32, you can use this [WLED ESP Flasher](/basics/install-wled-flasher) tool.
-    Please wait at least 90 seconds after installing, to be sure you don't interrupt WLED when formatting its flash filesystem.
 
-<br />
+!!! tip
+    For ESP32 boards, you can use this [WLED ESP Flasher](/basics/install-wled-flasher) instead of ESP Home Flasher.
+    Please wait at least 90 seconds after installing, to be sure you don't interrupt WLED when formatting its flash filesystem.
 
 ### Flashing method 4: OTA update
 
