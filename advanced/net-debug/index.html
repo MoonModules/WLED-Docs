@@ -11,17 +11,17 @@
       
       
       
-        <link rel="prev" href="../mapping/">
+        <link rel="prev" href="../custom-ap/">
       
       
-        <link rel="next" href="../custom-ap/">
+        <link rel="next" href="../../about/contributors/">
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
     
       
-        <title>Virtual LEDs via DDP - WLED MoonModules Project</title>
+        <title>Net debuf - WLED MoonModules Project</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Virtual LEDs via DDP
+              Net debuf
             
           </span>
         </div>
@@ -1207,6 +1207,34 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../virtual-leds/" class="md-nav__link">
+        Virtual LEDs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-ap/" class="md-nav__link">
+        Custom Access Point Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -1217,12 +1245,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Virtual LEDs
+          Net debuf=g
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Virtual LEDs
+        Net debuf=g
       </a>
       
         
@@ -1249,20 +1277,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../custom-ap/" class="md-nav__link">
-        Custom Access Point Configuration
-      </a>
     </li>
   
 
@@ -2436,7 +2450,7 @@
                   
 
   
-    <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/advanced/ddp.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/advanced/net-debug.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2444,15 +2458,15 @@
   
 
 
-  <h1>Virtual LEDs</h1>
+  <h1>Net debuf=g</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Virtual LEDs allow you to "attach" LEDs from multiple ESPs to a main, controlling ESP. These LEDs can be added to an ESP just like physical pins.</p>
-<p>On the controlling ESP, go to Config, LED Preferences. </p>
-<p>Select DDP RGB (Network) as the LED type and enter the Length (number of LEDs on that remote ESP), then enter the ESPs IP address.</p>
-<p>Multiple remote ESP's can be setup this way.</p>
-<p>Note: The controlling ESP must be running at least 0.13 firmware while the remotes can be older. As usual, best perfomance is obtained by using an ESP32 for the controlling device. You can use an ESP8266, but only with a small number of LEDs (&lt;300).</p>
-<p><img width="448" alt="image" src="https://user-images.githubusercontent.com/91013628/214262598-e7ce0907-ccad-4370-9d02-918efd20577c.png"></p>
+<p>Example to enable Net debug  , compile with the following flags 
+-D WLED_DEBUG 
+-D WLED_DEBUG_HOST='"192.168.x.y"' ;; to send debug messages over network to host 192.168.x.y - FQDN is also possible
+-D WLED_DEBUG_NET_PORT=7878 ;; port for network debugging. default = 7868</p>
+<p>To access net debug from the host type the following  netcat   example : 
+nc -l  7878  -u</p>
 
 
 
