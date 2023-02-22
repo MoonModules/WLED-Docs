@@ -2518,7 +2518,7 @@ For further buttons, the default action for short press is cycling effects, long
 <li>momentary push-buttons that are normally open and short GPIO pin to ground (active low)</li>
 <li>momentary push-buttons that are normally closed and release the connection from GPIO pin to GND (inverted, active high)</li>
 <li>switches (be careful with selection of GPIO for switch since some GPIOs will prevent successful boot of ESP if held LOW or HIGH at boot)</li>
-<li>PIR switch AKA motion detection sensor (they set GPIO HIGH when motion is detected, this type of buttons will also trigger MQTT message with /motion topic)</li>
+<li>PIR switch AKA motion detection sensor (they set GPIO HIGH when motion is detected, this type of buttons will also trigger MQTT message with /motion topic if "Publish on button press" is set on MQTT config)</li>
 <li>some GPIO pins on ESP32 can act as momentary touch buttons with no additional hardware</li>
 <li>analog "buttons" (also with inverted logic) those can be used as potentiometers or analog input buttons</li>
 </ul>
