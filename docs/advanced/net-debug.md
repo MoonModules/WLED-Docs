@@ -1,5 +1,5 @@
 ---
-title: Net debuf
+title: Net debug
 hide:
   # - navigation
   # - toc
