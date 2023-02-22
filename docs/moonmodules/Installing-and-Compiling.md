@@ -34,6 +34,7 @@ Max:
 * USERMOD_GAMES
 
 All:
+
 * Max
 * USERMOD_BATTERY ;; enable Battery usermod
 * USERMOD_BATTERY_USE_LIPO ;; use new "decharging curve" for LiPo cells
