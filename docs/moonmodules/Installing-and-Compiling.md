@@ -13,7 +13,7 @@ MoonModules introduces a new naming convention for bin(ary) files which contains
 * WLEDMM_ (to differentiate between WLEDSR and WLEDAC)
 * Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0.11
 * Hardware config / presets e.g. wemos_shield_esp32_4MB_ICS4343x
-* min or max config, use max where possible. 
+* min, max or all config, use max where possible, all if needed
 
 ### Configurations
 
@@ -32,6 +32,26 @@ Max:
 * USERMOD_WEATHER
 * USERMOD_MPU6050_IMU
 * USERMOD_GAMES
+
+All:
+* Max
+* USERMOD_BATTERY ;; enable Battery usermod
+* USERMOD_BATTERY_USE_LIPO ;; use new "decharging curve" for LiPo cells
+* USERMOD_BH1750
+* USERMOD_ANIMATED_STAIRCASE
+* USERMOD_RTC ;; experimental
+* ; -D USERMOD_SENSORSTOMQTT  ;; experimental ewowi causes error: fatal error: Adafruit_Sensor.h: No such file or directory
+* USERMOD_ANALOG_CLOCK
+* USERMOD_MULTI_RELAY
+* USERMOD_PIRSWITCH
+* USERMOD_PWM_FAN
+* ; -D USERMOD_PING_PONG_CLOCK //Removed as dots is confusing
+* USERMOD_BUZZER
+* USERMOD_SN_PHOTORESISTOR
+* USERMOD_BME280
+* USERMOD_DHT
+* USERMOD_VL53L0X_GESTURES
+* WLED_ENABLE_PIXART
 
 ### Examples
 
