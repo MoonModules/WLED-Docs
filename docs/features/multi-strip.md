@@ -45,6 +45,6 @@ There are a few tips and recomendations to keep in mind when designing your setu
 - ESP32 can calculate about 65k-85k LEDs per second (that means 1000 LEDs @~70fps, 2000 LEDs @~35fps, 4000 LEDs @~18fps)
 - 4 outputs seem to be the sweet spot. 
 
-### Virtual LEDs (DDP)
+### Virtual LEDs (DDP and Art-Net 🌜)
 
-See [Virtual Leds](/advanced/ddp)
+See [Virtual Leds](/advanced/virtual-leds)
