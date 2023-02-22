@@ -116,7 +116,7 @@ nav:
     - Mapping: advanced/mapping.md
     - Virtual LEDs: advanced/virtual-leds.md
     - Custom Access Point Configuration: advanced/custom-ap.md
-    - Net debuf=g: advanced/net-debug.md
+    - Net debug: advanced/net-debug.md
   - About: 
     - Contributors & Credits: about/contributors.md
     - Privacy Policy: about/privacy-policy.md
