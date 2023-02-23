@@ -17,7 +17,7 @@
         <link rel="next" href="../mappings/">
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ffa9267a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -2725,17 +2725,17 @@
 <li>WLEDMM_ (to differentiate between WLEDSR and WLEDAC)</li>
 <li>Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0.11</li>
 <li>Hardware config / presets e.g. wemos_shield_esp32_4MB_ICS4343x</li>
-<li>min, max or all config, use max where possible, all if needed</li>
+<li>S, M or XL config, use M where possible, XL if needed</li>
 </ul>
 <h3 id="configurations">Configurations</h3>
-<p>Min:</p>
+<p>S:</p>
 <ul>
 <li>USERMOD_AUDIOREACTIVE</li>
 <li>USERMOD_CUSTOMEFFECTS</li>
 </ul>
-<p>Max:</p>
+<p>M:</p>
 <ul>
-<li>Min</li>
+<li>S</li>
 <li>USERMOD_DALLASTEMPERATURE</li>
 <li>USERMOD_FOUR_LINE_DISPLAY</li>
 <li>USERMOD_ROTARY_ENCODER_UI</li>
@@ -2744,9 +2744,9 @@
 <li>USERMOD_MPU6050_IMU</li>
 <li>USERMOD_GAMES</li>
 </ul>
-<p>All:</p>
+<p>XL:</p>
 <ul>
-<li>Max</li>
+<li>M</li>
 <li>USERMOD_BATTERY ;; enable Battery usermod</li>
 <li>USERMOD_BATTERY_USE_LIPO ;; use new "decharging curve" for LiPo cells</li>
 <li>USERMOD_BH1750</li>
@@ -2767,11 +2767,11 @@
 </ul>
 <h3 id="examples">Examples</h3>
 <ul>
-<li>WLEDMM_0.14.0.10_wemos_shield_esp32_16MB_max.bin</li>
-<li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_max.bin</li>
-<li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_LineIn_max.bin</li>
-<li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_SPM1423_max.bin</li>
-<li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_max.bin</li>
+<li>WLEDMM_0.14.0.10_wemos_shield_esp32_16MB_M.bin</li>
+<li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_M.bin</li>
+<li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_LineIn_M.bin</li>
+<li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_SPM1423_M.bin</li>
+<li>WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_M.bin</li>
 </ul>
 <h3 id="bin-awareness">Bin awareness</h3>
 <p>Binaries can be downloaded or compiled yourself. See below.</p>
@@ -2796,8 +2796,8 @@
 <h3 id="compiling-from-ms-code-platform-io">Compiling from MS Code / Platform IO</h3>
 <h2 id="platformio-environments">PlatformIO Environments</h2>
 <ul>
-<li>Hardware: Choose the right environment depending on Shield, ESP32 flash size and mic type. Name of the environment reflects this e.g. wemos_shield_esp32_4MB_ICS4343x_max</li>
-<li>Bin aware: name of the binary contains fork (WLED, WLEDSR, WLEDMM), version and environment e.g WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_max.bin. This name is shown in the UI when oploading via OTA</li>
+<li>Hardware: Choose the right environment depending on Shield, ESP32 flash size and mic type. Name of the environment reflects this e.g. wemos_shield_esp32_4MB_ICS4343x_M</li>
+<li>Bin aware: name of the binary contains fork (WLED, WLEDSR, WLEDMM), version and environment e.g WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_M.bin. This name is shown in the UI when oploading via OTA</li>
 <li>Build or upload: Build only creates the bin (to be uploaded via OTA or ESPTOOL), upload directly loads it into an USB connected ESP32 board.</li>
 <li>Shield environments: Pins for Shield are already preconfigured</li>
 <li>For developers: See <a href="https://mm.kno.wled.ge/moonmodules/platformio-entries/">platformio-entries</a></li>
@@ -2809,7 +2809,7 @@
 <li>Also bin aware</li>
 <li>Bins</li>
 </ul>
-<p>Serg74: <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive">https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive</a>. Choose latest version. For Wemos Shield choose WLEDSR_0.13.3.4_wemos_shield_esp32_16MB_max.bin or WLEDSR_0.13.3.4_wemos_shield_esp32_4MB_max.bin (Pins pre-configured)</p>
+<p>Serg74: <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive">https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive</a>. Choose latest version. For Wemos Shield choose WLEDSR_0.13.3.4_wemos_shield_esp32_16MB_max.bin or WLEDSR_0.13.3.4_wemos_shield_esp32_4MB_M.bin (Pins pre-configured)</p>
 <p><img width="351" alt="image" src="https://user-images.githubusercontent.com/1737159/207881294-7fce1b1c-ad4f-4078-a71c-18287420a7df.png"></p>
 <ul>
 <li>To do: add microphones </li>
