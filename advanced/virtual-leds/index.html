@@ -1260,6 +1260,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2470,6 +2477,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2515,6 +2529,43 @@
 <p>For RGB LEDs, a full universe (170 RGB pixels) produces 510 channels  - channels 511 and 512 will not be transmitted. This is common practice  in Art-Net transmit and most (all?) implementations will expect this.</p>
 <p>Art-Net output follows xLights' implementation of packet sequence numbering and universe-channel alignment, and transmits in RGB order. The first pixel output data will always be 0:1:R, 0:2:G, 0:3:B for universe:channel:colorpart.</p>
 <p>This Art-Net implementation does ignore the "always specify length of data as an even number" part of the official specifications. If you encounter this issue, please file a bug report. Even Art-Net themselves say that this has been widely ignored and receivers should not expect an even value in the data length part of the packet.</p>
+<h3 id="background">Background</h3>
+<p>By Troy</p>
+<p>First there was DMX (DMX512). It was great for controlling lighting fixtures - "set light to red" sort of thing. "Pan head to the left". "Dim the lights."</p>
+<p>Then someone decided that DMX should work over the network rather than RS485 networks (usually over an XLR cable).</p>
+<p>So Art-Net and E1.31 were born. DDP is essentially the same thing but slightly better and newer.</p>
+<p>All of these are the same premise as DMX512 - send packets of 8-bit numbers  (up to 512 8-bit numbers) to remote systems.</p>
+<p>THEN a bunch of idiots (us) got into the game with massive LED panels.</p>
+<p>So to send LED data over the network, we still use a network form of DMX. E1.31, Art-Net, and DDP are all "network DMX".</p>
+<p>You think of an LED strip (or matrix) as a LOT of dimmable lights:</p>
+<p>You have a red dimmable light. 
+You have a green dimmable light. 
+You have a blue dimmable light.</p>
+<p>That's channels 1,2, and 3 - and they makes up one RGB LED.</p>
+<p>A DMX universe is 512 channels. You can fit 170 LEDs into 510 channels (170 LEDs each having 3 channels - R, G, and B) 
+And then you skip to the next universe and start at channel 1 again.</p>
+<p><img width="508" alt="image" src="https://user-images.githubusercontent.com/91013628/220875588-f5c6aa58-5e09-45e8-86f7-2d86e68d82a0.png"></p>
+<p>So when using Art-Net "Effect" mode in WLED, those 15 sliders in QLC+ send control data to those 15 parameters in the table. 
+Slider 1 is master brightness.
+Slider 2 is effect.
+9,10,11 are R,G,B primary color.
+etc.</p>
+<p>Could you use QLC+ to send data to a matrix or strip? absolutely
+You just need THREE sliders (R/G/B) for every LED.</p>
+<p><img width="982" alt="image" src="https://user-images.githubusercontent.com/91013628/220875991-d93083fd-6a56-41f1-aee0-d5a1e0f5e8c1.png"></p>
+<p>1,2,3 = pixel 1. (set to red)
+4,5,6 = pixel 2. (set to green)
+7,8,9 = pixel 3. (set to blue)
+10,11,12 = pixel 4. (set to white, all sliders up)</p>
+<p>With a panel of 768 pixels, you only need... 2304 sliders to set them all. 😄 
+This is with WLED set to "Multi RGB" in Art-Net.</p>
+<p>All of those "DMX mode" settings tell WLED how to interperate the incoming DMX data (thru whatever Network DMX protocol you're using)</p>
+<p>"Multi RGB" is for lighting lots of pixels.
+"Effect" is for controlling the WLED instance itself. 
+...and the others have their own special methods.
+Jinx -&gt; WLED works fine with any protocol, and WLED set to "Multi RGB"</p>
+<p>WLED -&gt; Jinx is... not exactly a thing, at least when using WLED network LED output. Jinx only takes "network DMX" as a remote control input, not LED input. </p>
+<p>DMX into WLED via a physical DMX wire (RS485): This would be equivalent to "Effect" (and will likely be based on that mapping) so that you could plug WLED boards into a DMX512 cable and have it "do a thing" when you push a slider on the lighting control board. (or more common now, the lighting control software) </p>
 
 
 
