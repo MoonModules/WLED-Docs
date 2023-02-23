@@ -13,18 +13,18 @@ MoonModules introduces a new naming convention for bin(ary) files which contains
 * WLEDMM_ (to differentiate between WLEDSR and WLEDAC)
 * Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0.11
 * Hardware config / presets e.g. wemos_shield_esp32_4MB_ICS4343x
-* min, max or all config, use max where possible, all if needed
+* S, M or XL config, use M where possible, XL if needed
 
 ### Configurations
 
-Min:
+S:
 
 * USERMOD_AUDIOREACTIVE
 * USERMOD_CUSTOMEFFECTS
 
-Max:
+M:
 
-* Min
+* S
 * USERMOD_DALLASTEMPERATURE
 * USERMOD_FOUR_LINE_DISPLAY
 * USERMOD_ROTARY_ENCODER_UI
@@ -33,9 +33,9 @@ Max:
 * USERMOD_MPU6050_IMU
 * USERMOD_GAMES
 
-All:
+XL:
 
-* Max
+* M
 * USERMOD_BATTERY ;; enable Battery usermod
 * USERMOD_BATTERY_USE_LIPO ;; use new "decharging curve" for LiPo cells
 * USERMOD_BH1750
@@ -56,11 +56,11 @@ All:
 
 ### Examples
 
-* WLEDMM_0.14.0.10_wemos_shield_esp32_16MB_max.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_max.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_LineIn_max.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_SPM1423_max.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_max.bin
+* WLEDMM_0.14.0.10_wemos_shield_esp32_16MB_M.bin
+* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_M.bin
+* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_LineIn_M.bin
+* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_SPM1423_M.bin
+* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_M.bin
 
 ### Bin awareness
 
@@ -99,8 +99,8 @@ Releases only
 ### Compiling from MS Code / Platform IO
 
 ## PlatformIO Environments
-* Hardware: Choose the right environment depending on Shield, ESP32 flash size and mic type. Name of the environment reflects this e.g. wemos_shield_esp32_4MB_ICS4343x_max
-* Bin aware: name of the binary contains fork (WLED, WLEDSR, WLEDMM), version and environment e.g WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_max.bin. This name is shown in the UI when oploading via OTA
+* Hardware: Choose the right environment depending on Shield, ESP32 flash size and mic type. Name of the environment reflects this e.g. wemos_shield_esp32_4MB_ICS4343x_M
+* Bin aware: name of the binary contains fork (WLED, WLEDSR, WLEDMM), version and environment e.g WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_M.bin. This name is shown in the UI when oploading via OTA
 * Build or upload: Build only creates the bin (to be uploaded via OTA or ESPTOOL), upload directly loads it into an USB connected ESP32 board.
 * Shield environments: Pins for Shield are already preconfigured
 * For developers: See [platformio-entries](https://mm.kno.wled.ge/moonmodules/platformio-entries/)
@@ -112,7 +112,7 @@ Releases only
 * Also bin aware
 * Bins
 
-Serg74: <https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive>. Choose latest version. For Wemos Shield choose WLEDSR_0.13.3.4_wemos_shield_esp32_16MB_max.bin or WLEDSR_0.13.3.4_wemos_shield_esp32_4MB_max.bin (Pins pre-configured)
+Serg74: <https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive>. Choose latest version. For Wemos Shield choose WLEDSR_0.13.3.4_wemos_shield_esp32_16MB_max.bin or WLEDSR_0.13.3.4_wemos_shield_esp32_4MB_M.bin (Pins pre-configured)
 
 <img width="351" alt="image" src="https://user-images.githubusercontent.com/1737159/207881294-7fce1b1c-ad4f-4078-a71c-18287420a7df.png">
 
