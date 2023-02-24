@@ -1265,6 +1265,33 @@
     Background
   </a>
   
+    <nav class="md-nav" aria-label="Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-art-netdmxe131-to-contol-the-wled-interface" class="md-nav__link">
+    Using Art-Net/DMX/E1.31 to contol the WLED interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-art-netdmxe131-to-contol-individual-leds" class="md-nav__link">
+    Using Art-Net/DMX/E1.31 to contol individual LEDs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    TODO
+  </a>
+  
 </li>
         
       </ul>
@@ -2482,6 +2509,33 @@
     Background
   </a>
   
+    <nav class="md-nav" aria-label="Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-art-netdmxe131-to-contol-the-wled-interface" class="md-nav__link">
+    Using Art-Net/DMX/E1.31 to contol the WLED interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-art-netdmxe131-to-contol-individual-leds" class="md-nav__link">
+    Using Art-Net/DMX/E1.31 to contol individual LEDs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    TODO
+  </a>
+  
 </li>
         
       </ul>
@@ -2524,6 +2578,9 @@
 <p>Art-Net is only implemented in MoonModules 0.14.0.b1.18.</p>
 <p>If your board supports Ethernet, use it instead of WiFi for the most stable performance. </p>
 <h3 id="ddp">DDP</h3>
+<p>Bascially the same info as AArt-Net. The Art-Net section contains details on where DDP differs. </p>
+<p>Generally speaking, DDP is the better protocol to use, if everything supports it. </p>
+<p>If you can't use DDP, Art-Net has a much wider adoption.</p>
 <h3 id="art-net">Art-Net</h3>
 <p>🌜</p>
 <p>Art-Net universe output starts at zero. This is not currently configurable in WLED. Zero is the commonly expected starting universe for Art-Net. Channel output starts at one and is not currently configurable in WLED. One is the expected first channel in Art-Net.</p>
@@ -2535,38 +2592,117 @@
 <p>First there was DMX (DMX512). It was great for controlling lighting fixtures - "set light to red" sort of thing. "Pan head to the left". "Dim the lights."</p>
 <p>Then someone decided that DMX should work over the network rather than RS485 networks (usually over an XLR cable).</p>
 <p>So Art-Net and E1.31 were born. DDP is essentially the same thing but slightly better and newer.</p>
-<p>All of these are the same premise as DMX512 - send packets of 8-bit numbers  (up to 512 8-bit numbers) to remote systems.</p>
+<p>All of these are the same premise as DMX512 - send packets of 8-bit numbers (up to 512 8-bit numbers, or 1440 variable bit numbers for DDP) to remote systems.</p>
 <p>THEN a bunch of idiots (us) got into the game with massive LED panels.</p>
-<p>So to send LED data over the network, we still use a network form of DMX. E1.31, Art-Net, and DDP are all "network DMX".</p>
+<p>To send LED data over the network, we still use a network form of DMX. E1.31, Art-Net, and DDP are all "network DMX".</p>
 <p>You think of an LED strip (or matrix) as a LOT of dimmable lights:</p>
 <p>You have a red dimmable light. 
 You have a green dimmable light. 
 You have a blue dimmable light.</p>
 <p>That's channels 1,2, and 3 - and they makes up one RGB LED.</p>
-<p>A DMX universe is 512 channels. You can fit 170 LEDs into 510 channels (170 LEDs each having 3 channels - R, G, and B) 
-And then you skip to the next universe and start at channel 1 again.</p>
+<p>A DMX universe is 512 channels. You can fit 170 LEDs into 510 channels (170 LEDs each having 3 channels - R, G, and B) </p>
+<p>...and then you skip to the next universe and start at channel 1 again.</p>
+<h4 id="using-art-netdmxe131-to-contol-the-wled-interface">Using Art-Net/DMX/E1.31 to contol the WLED interface</h4>
+<p>This is with WLED set to "Effect" in: Settings &gt; Sync Interfaces &gt; Network DMX Input &gt; DMX Mode &gt; "Effect"</p>
+<p>Using this table: </p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Master Dimmer</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Effect mode ID</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Effect speed</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Effect intensity</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Effect palette ID</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Effect option</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Red Primary</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Green Primary</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Blue Primary</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Red Secondary</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Green Secondary</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Blue Secondary</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Red Tertiary</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Green Tertiary</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Blue Tertiary</td>
+</tr>
+</tbody>
+</table>
 <p><img width="508" alt="image" src="https://user-images.githubusercontent.com/91013628/220875588-f5c6aa58-5e09-45e8-86f7-2d86e68d82a0.png"></p>
-<p>So when using Art-Net "Effect" mode in WLED, those 15 sliders in QLC+ send control data to those 15 parameters in the table. 
-Slider 1 is master brightness.
-Slider 2 is effect.
-9,10,11 are R,G,B primary color.
-etc.</p>
-<p>Could you use QLC+ to send data to a matrix or strip? absolutely
-You just need THREE sliders (R/G/B) for every LED.</p>
+<p>So when using Art-Net "Effect" mode in WLED, those 15 sliders in <a href="https://www.qlcplus.org/">QLC+</a> send control data to the 15 parameters in the table.</p>
+<ul>
+<li>Slider 1 is master brightness.</li>
+<li>Slider 2 is effect.</li>
+<li>9,10,11 are R,G,B primary color.</li>
+<li>etc.</li>
+</ul>
+<h4 id="using-art-netdmxe131-to-contol-individual-leds">Using Art-Net/DMX/E1.31 to contol individual LEDs</h4>
+<p>This is with WLED set to "Multi RGB" in: Settings &gt; Sync Interfaces &gt; Network DMX Input &gt; DMX Mode &gt; "Multi RGB"</p>
+<p>Could you use <a href="https://www.qlcplus.org/">QLC+</a> to send data to a matrix or strip? Absolutely! (But you shouldn't. Normally you will use something like <a href="https://xlights.org/">xLights</a> or <a href="http://www.live-leds.de/">Jinx</a> that "know" how to talk to massive amounts of LEDs over the network.)</p>
+<p>The catch is that you need THREE sliders (R/G/B) for every LED.</p>
 <p><img width="982" alt="image" src="https://user-images.githubusercontent.com/91013628/220875991-d93083fd-6a56-41f1-aee0-d5a1e0f5e8c1.png"></p>
 <p>1,2,3 = pixel 1. (set to red)
 4,5,6 = pixel 2. (set to green)
 7,8,9 = pixel 3. (set to blue)
 10,11,12 = pixel 4. (set to white, all sliders up)</p>
-<p>With a panel of 768 pixels, you only need... 2304 sliders to set them all. 😄 
-This is with WLED set to "Multi RGB" in Art-Net.</p>
-<p>All of those "DMX mode" settings tell WLED how to interperate the incoming DMX data (thru whatever Network DMX protocol you're using)</p>
+<p>With a panel of 768 pixels, you only need... 2304 sliders to set them all. 😄 </p>
+<p>All of the "DMX mode" settings tell WLED how to interperate the incoming DMX data (through whatever Network DMX protocol you're using)</p>
 <p>"Multi RGB" is for lighting lots of pixels.
 "Effect" is for controlling the WLED instance itself. 
-...and the others have their own special methods.
-Jinx -&gt; WLED works fine with any protocol, and WLED set to "Multi RGB"</p>
-<p>WLED -&gt; Jinx is... not exactly a thing, at least when using WLED network LED output. Jinx only takes "network DMX" as a remote control input, not LED input. </p>
-<p>DMX into WLED via a physical DMX wire (RS485): This would be equivalent to "Effect" (and will likely be based on that mapping) so that you could plug WLED boards into a DMX512 cable and have it "do a thing" when you push a slider on the lighting control board. (or more common now, the lighting control software) </p>
+...and the others have their own special methods, some combine both "Effect" and "Multi RGB" functionality. </p>
+<p>WLED -&gt; WLED works fine, of course. Mostly tested with the receiving WLED set to "Multi RGB". There's better ways to sync control between WLED (like... the "Sync" button)</p>
+<p><a href="https://xlights.org/">xLights</a> -&gt; WLED works fine with any protocol they both speak, and WLED set to "Multi RGB"</p>
+<p><a href="http://www.live-leds.de/">Jinx</a> -&gt; WLED works fine with any protocol they both speak, and WLED set to "Multi RGB". Jinx has the absolute worst mapping setup, but some of the coolest effects. </p>
+<p>WLED -&gt; <a href="http://www.live-leds.de/">Jinx</a> technically works, but Jinx only takes a few settings over "network DMX" to remote control the GUI. This will require some tinkering and perhaps building a custom WLED for yourself.</p>
+<h3 id="todo">TODO</h3>
+<p>I've proposed "DMX into WLED via a physical DMX wire (RS485)." This would be equivalent to "Effect" (and will likely be based on that mapping) so that you could plug WLED boards into a DMX512 cable and have it "do a thing" when you push a slider on the lighting control board/software. <strong>This feature does not currently exist, but is being worked on.</strong></p>
 
 
 
