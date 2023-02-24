@@ -7,6 +7,19 @@ hide:
 
 Below are the ongoing updates which has not made it to a release yet (Next release will be v0.14.0-b2)
 
+## Manage NetDebug / Serial logging in settings 
+24 Februari 2023
+
+No need to specify ip address and port in platformio.ini and therefor hardcode in bin/esp32. Go to Sync Interfaces / Net debug and specify there. Set output to network pressing Net Debug in the info tab.
+
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/91013628/221207210-dabf4dae-efd5-4c76-9c35-2629d9d88fa8.png">
+
+<img width="271" alt="image" src="https://user-images.githubusercontent.com/91013628/221207063-36e19f97-c6a8-44dd-be83-866dce3d8715.png">
+
+<video width="500" autoplay><source src="https://user-images.githubusercontent.com/91013628/221207891-dd302ef2-853d-45b0-92d8-4c144761cbe2.mov" type="video/mp4"></video>
+
+
+
 ## 2D Ledmaps
 * segment names
 * default ledmaps
