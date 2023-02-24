@@ -2617,11 +2617,13 @@
 <p>Below are the ongoing updates which has not made it to a release yet (Next release will be v0.14.0-b2)</p>
 <h2 id="manage-netdebug-serial-logging-in-settings">Manage NetDebug / Serial logging in settings</h2>
 <p>24 Februari 2023</p>
-<p>No need to specify ip address and port in platformio.ini and therefor hardcode in bin/esp32. Go to Sync Interfaces / Net debug and specify there. Set output to network pressing Net Debug in the info tab.</p>
+<p>No need to specify ip address and port in platformio.ini and therefor hardcode in bin/esp32. Go to Sync Interfaces / Net debug and specify there. Set output to network pressing Net Debug in the info tab (default off after reboot).</p>
 <p><img width="400" alt="image" src="https://user-images.githubusercontent.com/91013628/221207210-dabf4dae-efd5-4c76-9c35-2629d9d88fa8.png"></p>
 <p><img width="271" alt="image" src="https://user-images.githubusercontent.com/91013628/221207063-36e19f97-c6a8-44dd-be83-866dce3d8715.png"></p>
 <video width="500" autoplay><source src="https://user-images.githubusercontent.com/91013628/221207891-dd302ef2-853d-45b0-92d8-4c144761cbe2.mov" type="video/mp4"></video>
 
+<p>Bins WLEDMM_0.14.0-b2.19_esp32_4MB_M_debug and WLEDMM_0.14.0-b2.19_esp32_16MB_M_debug have NetDebug enabled by default.</p>
+<p>To do: check if NetDebug can be enabled in all bins (without performance/network consequences), also when WLED_DEBUG is off to catch Serial output.</p>
 <h2 id="2d-ledmaps">2D Ledmaps</h2>
 <ul>
 <li>segment names</li>
