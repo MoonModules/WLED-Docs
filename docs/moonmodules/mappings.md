@@ -12,8 +12,8 @@ There are a few steps between an effect and it's physical presentation on a numb
 This are the basic steps:
 
 * The effect creates for each segment frame a number of pixels using setPixelColor where pixel(0) is left (2D top left) and pixel(length) is right (2D: pixel(widthxheight), bottom right)
-* Segments are mapped to a strip (2D: Matrix) again from left (top) to right (bottom). This is a logical mapping because the real wiring can be different (normally not in strips, but in matrix panels they are)
-*  Logical strip (or matrix) is mapped to how they physically look. E.g. for matrix panels: where is the first pixel (top/bottom/left/right), how is the orientation (horizontal / vertical) and is it serpentine (or not). There can be multiple panels.
+* Segments are mapped to a strip (2D: Matrix) again from left (top) to right (bottom). This is a logical mapping because the real wiring can be different (normally not in strips, but in matrix panels they are) - specify in segments tab
+*  Logical strip (or matrix) is mapped to how they physically look. E.g. for matrix panels: where is the first pixel (top/bottom/left/right), how is the orientation (horizontal / vertical) and is it serpentine (or not). There can be multiple panels. - Specify in settings / 2D configuration
 
 Optionally there can also be:
 
