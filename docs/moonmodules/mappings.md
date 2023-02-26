@@ -25,6 +25,7 @@ Remarks
 
 * Physical ledmaps not implemented yet. Will be in 2D settings (new alternative next to basic and advanced).
 * All mappings use ledmap<x>.json style mappings. JSON Mapping supports 2D coordinates, the others not. Will be harmonized
+* Peek should show Logical ledmaps, not physical ledmaps (except the now show pixels). Currently now show pixels are shown (not shown ;-) ) ledmaps are not shown in peek yet
 
 ## Mappings
 Below is in processing order
