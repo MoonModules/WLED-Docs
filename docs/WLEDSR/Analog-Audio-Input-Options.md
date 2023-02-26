@@ -45,7 +45,7 @@ If the LED's are active when the ambient volume is low while running volume only
 
 Microphone Wiring Example (MAX9814) | Line In Wiring Example
 --- | ---
-![Simple Mic Schematic](https://github.com/atuline/WLED/blob/assets/media/WLED_Simple_Mic_Wiring.png) | ![Line In Schematic](https://github.com/atuline/WLED/blob/assets/media/WLED_Line_In_Wiring.png)
+![Simple Mic Schematic](https://raw.githubusercontent.com/atuline/WLED/assets/media/WLED_Simple_Mic_Wiring.png) | ![Line In Schematic](https://raw.githubusercontent.com/atuline/WLED/assets/media/WLED_Line_In_Wiring.png)
 
 Some folks have mentioned that they don't need this line-in circuit, which is fine. Here's an explanation of that circuit.
 
@@ -62,7 +62,7 @@ The left and right channels of the TRS Jack are connected together to sample bot
 
 Connect the output of the capacitor to the ADC pin for your board.
 
-![Dual Input Wiring](https://github.com/atuline/WLED/blob/assets/media/WLED_Reactive_Adv_Wiring.png)
+![Dual Input Wiring](https://raw.githubusercontent.com/atuline/WLED/assets/media/WLED_Reactive_Adv_Wiring.png)
 
 ### Pins Used
 On the ESP32, the default ADC pin used is GPI36 (also known as VP), while the ESP8266 uses A0. Power is connected to the 3.3V pin. On ESP32 The ADC pin can be configured on the sound settings page; any GPIO associated with `ADC1` (i.e. GPIO32 to GPI39) can be used.
