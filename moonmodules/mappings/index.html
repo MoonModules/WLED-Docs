@@ -1722,13 +1722,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#physical-to-busses" class="md-nav__link">
-    Physical to Busses
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2526,13 +2519,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#physical-to-busses" class="md-nav__link">
-    Physical to Busses
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2571,6 +2557,24 @@
   <h1>Mappings</h1>
 
 <h2 id="introduction">Introduction</h2>
+<p>There are a few steps between an effect and it's physical presentation on a number of leds.</p>
+<p>This are the basic steps:</p>
+<ul>
+<li>The effect creates for each segment frame a number of pixels using setPixelColor where pixel(0) is left (2D top left) and pixel(length) is right (2D: pixel(widthxheight), bottom right)</li>
+<li>Segments are mapped to a strip (2D: Matrix) again from left (top) to right (bottom). This is a logical mapping because the real wiring can be different (normally not in strips, but in matrix panels they are)</li>
+<li>Logical strip (or matrix) is mapped to how they physically look. E.g. for matrix panels: where is the first pixel (top/bottom/left/right), how is the orientation (horizontal / vertical) and is it serpentine (or not). There can be multiple panels.</li>
+</ul>
+<p>Optionally there can also be:</p>
+<ul>
+<li>JSON Mapping: Mapping of 1D effects to 2D. Expand1D</li>
+<li>Logical ledmaps: Reshuffles leds to create a certain effect. Where do you want pixel x to light up, x from top left to bottom right maptable[i] = map[i]</li>
+<li>Phyisical ledmaps: e.g. for custom setup using led strips, cubes or circles etc in a 2D layout. Where is pixel x, x from first to last pixel: maptable[map[i]] = i</li>
+</ul>
+<p>Remarks</p>
+<ul>
+<li>Physical ledmaps not implemented yet. Will be in 2D settings (new alternative next to basic and advanced).</li>
+<li>All mappings use ledmap<x>.json style mappings. JSON Mapping supports 2D coordinates, the others not. Will be harmonized</li>
+</ul>
 <h2 id="mappings">Mappings</h2>
 <p>Below is in processing order</p>
 <h3 id="json-mapping">JSON mapping</h3>
@@ -2590,8 +2594,6 @@ Both for 1 and 2D</p>
 <h3 id="logical-to-physical">Logical to Physical</h3>
 <p>Takes into account Panel setup and Led panel layout as defined in 2D Configuration (e.g. 1st panel, 1st led, serpentine)</p>
 <p>Code: uses customMappingTable</p>
-<h3 id="physical-to-busses">Physical to Busses</h3>
-<p>One or multiple GPIO ports</p>
 <h2 id="fork-specific-info">Fork specific info</h2>
 <table>
 <thead>
@@ -2623,12 +2625,6 @@ Both for 1 and 2D</p>
 </tr>
 <tr>
 <td>Logical to Physical</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Physical to Busses</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
