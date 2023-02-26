@@ -7,6 +7,25 @@ hide:
 
 ## Introduction
 
+There are a few steps between an effect and it's physical presentation on a number of leds.
+
+This are the basic steps:
+
+* The effect creates for each segment frame a number of pixels using setPixelColor where pixel(0) is left (2D top left) and pixel(length) is right (2D: pixel(widthxheight), bottom right)
+* Segments are mapped to a strip (2D: Matrix) again from left (top) to right (bottom). This is a logical mapping because the real wiring can be different (normally not in strips, but in matrix panels they are)
+*  Logical strip (or matrix) is mapped to how they physically look. E.g. for matrix panels: where is the first pixel (top/bottom/left/right), how is the orientation (horizontal / vertical) and is it serpentine (or not). There can be multiple panels.
+
+Optionally there can also be:
+
+* JSON Mapping: Mapping of 1D effects to 2D. Expand1D
+* Logical ledmaps: Reshuffles leds to create a certain effect. Where do you want pixel x to light up, x from top left to bottom right maptable[i] = map[i]
+* Phyisical ledmaps: e.g. for custom setup using led strips, cubes or circles etc in a 2D layout. Where is pixel x, x from first to last pixel: maptable[map[i]] = i
+
+Remarks
+
+* Physical ledmaps not implemented yet. Will be in 2D settings (new alternative next to basic and advanced).
+* All mappings use ledmap<x>.json style mappings. JSON Mapping supports 2D coordinates, the others not. Will be harmonized
+
 ## Mappings
 Below is in processing order
 
@@ -36,8 +55,6 @@ Takes into account Panel setup and Led panel layout as defined in 2D Configurati
 
 Code: uses customMappingTable
 
-### Physical to Busses
-One or multiple GPIO ports
 
 ## Fork specific info
 
@@ -47,5 +64,4 @@ JSON Mapping|No|Yes|No JSON mapping yet although it's based on an idea from AirC
 Segment to Logical|Yes|Yes|Yes
 Ledmaps|Yes|Yes|Ledmaps only for 1D, 2D not implemented (PR pending)
 Logical to Physical|Yes|Yes|Yes
-Physical to Busses|Yes|Yes|Yes
 
