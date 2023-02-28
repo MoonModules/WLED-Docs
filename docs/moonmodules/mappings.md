@@ -18,8 +18,8 @@ This are the basic steps:
 Optionally there can also be:
 
 * JSON Mapping: Mapping of 1D effects to 2D. Expand1D
-* Logical ledmaps: Reshuffles leds to create a certain effect. Where do you want pixel x to light up, x from top left to bottom right maptable[i] = map[i]
-* Phyisical ledmaps: e.g. for custom setup using led strips, cubes or circles etc in a 2D layout. Where is pixel x, x from first to last pixel: maptable[map[i]] = i
+* Logical ledmaps: Reshuffles leds to create a certain effect. **Where do you want pixel x to light up**, x from top left to bottom right maptable[i] = map[i]
+* Phyisical ledmaps: e.g. for custom setup using led strips, cubes or circles etc in a 2D layout. **Where is pixel x**, x from first to last pixel: maptable[map[i]] = i
 
 Remarks
 
