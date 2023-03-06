@@ -49,7 +49,7 @@ It could be formatted any of the three ways demonstrated above.
 
 ### 0.14 AC
 * In 2D, physical mapping of map coordinates to panels (see 2D settings page) is done using ledmaps (using customMappingTable)
-* Custom Ledmaps therefore only possible in 1D not in 2D
+* Custom Ledmaps therefore only possible in 1D not in 2D (changed in recent build: custom ledmaps overwrite panel setup)
 * If ledmap files are uploaded you need to reboot in order for them to become effective !!!
 * A ledmap can be applied in a preset or 'global' (global is in segments tab)
 * A ledmap is specified in a dropdown which can have the following values: 
@@ -61,3 +61,12 @@ It could be formatted any of the three ways demonstrated above.
 
 ### 0.14 MM ☾
 * Support of ledmaps in 2D using the customMappingTable both for physical mapping and for ledmapping (The map isn't in 2D coordinates, it's just linear remapping) 
+* Ledmap properties:
+
+<img width="222" alt="image" src="https://user-images.githubusercontent.com/91013628/223077405-2c37bec0-3d94-4ff8-9725-fdfca886f559.png">
+
+   - n (name) is not used yet
+   - width and height define the total width and height of the 2D coordinate space
+   - physical is experimental. See https://mm.kno.wled.ge/moonmodules/mappings/
+
+* Repository of ledmap examples: https://github.com/MoonModules/WLED-Effects/tree/master/Ledmaps containing irregular 2D shapes (clouds and cube) and rings remapping (rings)
