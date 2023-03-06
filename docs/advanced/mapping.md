@@ -66,7 +66,7 @@ It could be formatted any of the three ways demonstrated above.
 <img width="222" alt="image" src="https://user-images.githubusercontent.com/91013628/223077405-2c37bec0-3d94-4ff8-9725-fdfca886f559.png">
 
    - n (name) is not used yet
-   - width and height define the total width and height of the 2D coordinate space
-   - physical is experimental. See https://mm.kno.wled.ge/moonmodules/mappings/
+   - width and height define the total width and height of the 2D coordinate space (this overrides 2D configuration settings)
+   - physical is experimental. See [MoonModules/Mappings](https://mm.kno.wled.ge/moonmodules/mappings/)
 
-* Repository of ledmap examples: https://github.com/MoonModules/WLED-Effects/tree/master/Ledmaps containing irregular 2D shapes (clouds and cube) and rings remapping (rings)
+* Repository of ledmap examples: [https://github.com/MoonModules/WLED-Effects/tree/master/Ledmaps] containing irregular 2D shapes (clouds and cube) and rings remapping (rings). For testing the different ledmaps upload presets.json in this folder to /edit
