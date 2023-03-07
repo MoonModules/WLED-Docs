@@ -23,7 +23,7 @@ New option to the GEQ effect: smooth bars. It's intended for matrices with >24 c
 
 See [Advanced/Mapping/0.14 MM](https://mm.kno.wled.ge/advanced/mapping/#014-mm)
 
-Example:
+Example: Ring Map
 
 <video width="350" autoplay><source src="https://user-images.githubusercontent.com/91013628/223500900-33834029-28c6-4872-9018-141d7db684e2.mov" type="video/mp4"></video>
 
