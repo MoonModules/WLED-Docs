@@ -16,6 +16,12 @@ New option to the GEQ effect: smooth bars. It's intended for matrices with >24 c
 
 <video width="350" autoplay><source src="https://user-images.githubusercontent.com/91013628/223497688-44ec61ff-ca7d-46fa-ac68-b3cf71f0e7f2.mov" type="video/mp4"></video>
 
+## Ring ledmaps
+1 March 2023
+
+
+
+
 ## Manage NetDebug / Serial logging in settings 
 24 Februari 2023
 
