@@ -7,6 +7,15 @@ hide:
 
 Below are the ongoing updates which has not made it to a release yet (Next release will be v0.14.0-b2)
 
+## Smooth Bars
+7 March 2023
+
+New option to the GEQ effect: smooth bars. It's intended for matrices with >24 columns, where you would see a "staircase" effect because we only have 16 frequency channels. With the new option enabled, it looks like more channels are availeable and stairs are smoothed out.
+
+<img width="275" alt="image" src="https://user-images.githubusercontent.com/91013628/223497924-955b42ee-d3f3-49de-bd44-45461f80bc01.png">
+
+<video width="500" autoplay><source src="https://user-images.githubusercontent.com/91013628/223497688-44ec61ff-ca7d-46fa-ac68-b3cf71f0e7f2.mov" type="video/mp4"></video>
+
 ## Manage NetDebug / Serial logging in settings 
 24 Februari 2023
 
