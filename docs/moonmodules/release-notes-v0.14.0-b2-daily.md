@@ -43,9 +43,10 @@ No need to specify ip address and port in platformio.ini and therefor hardcode i
 
 <video width="500" autoplay><source src="https://user-images.githubusercontent.com/91013628/221207891-dd302ef2-853d-45b0-92d8-4c144761cbe2.mov" type="video/mp4"></video>
 
-Bins WLEDMM_0.14.0-b2.19_esp32_4MB_M_debug and WLEDMM_0.14.0-b2.19_esp32_16MB_M_debug have NetDebug enabled by default.
+~~Bins WLEDMM_0.14.0-b2.19_esp32_4MB_M_debug and WLEDMM_0.14.0-b2.19_esp32_16MB_M_debug have NetDebug enabled by default.
+To do: check if NetDebug can be enabled in all bins (without performance/network consequences), also when WLED_DEBUG is off to catch Serial output.~~
 
-To do: check if NetDebug can be enabled in all bins (without performance/network consequences), also when WLED_DEBUG is off to catch Serial output.
+March 8: All _M and _XL bins have NetDebug enabled by default (but not WLED_DEBUG): User info (using USER_PRINT) can be send to network 
 
 ## 2D Ledmaps
 * segment names
