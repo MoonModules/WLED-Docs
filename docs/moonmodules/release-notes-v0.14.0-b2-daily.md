@@ -27,6 +27,11 @@ Example: Ring Map
 
 <video width="350" autoplay><source src="https://user-images.githubusercontent.com/91013628/223500900-33834029-28c6-4872-9018-141d7db684e2.mov" type="video/mp4"></video>
 
+## Aditional info in info tab 
+27 Februari 2023
+
+<img width="273" alt="image" src="https://user-images.githubusercontent.com/91013628/223709946-c1d587e9-aadf-4da6-8ee2-49445abc7150.png">
+
 ## Manage NetDebug / Serial logging in settings 
 24 Februari 2023
 
