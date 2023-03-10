@@ -38,6 +38,8 @@ From excel/vba <img width="181" alt="image" src="https://user-images.githubuserc
 
 Files are here: [JSONMappings](https://github.com/MoonModules/WLED-Effects/tree/master/JSONMappings)
 
+json files need to be uploaded to /edit. E.g. if filename is candle33.json, the name of the segment must be candle33 and expand1D must be jmap in order to run the mapping.
+  
 ### Segment to Logical
 Maps segments to a matrix where (0,0) is always topleft and (width, height) always bottom right.
 Non serpentine
