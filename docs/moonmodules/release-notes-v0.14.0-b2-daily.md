@@ -16,6 +16,10 @@ New option to the GEQ effect: smooth bars. It's intended for matrices with >24 c
 
 <video width="350" autoplay><source src="https://user-images.githubusercontent.com/91013628/223497688-44ec61ff-ca7d-46fa-ac68-b3cf71f0e7f2.mov" type="video/mp4"></video>
 
+and also smooth colors:
+
+<video width="350" autoplay><source src="https://user-images.githubusercontent.com/91013628/224488373-65144627-77f7-4a76-bfa9-5d8a73935639.mov" type="video/mp4"></video>
+
 ## Ledmap properties
 1 March 2023
 
