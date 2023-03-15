@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-# MPU-6050 Six-Axis (Gyro + Accelerometer) Driver
+## MPU-6050 Six-Axis (Gyro + Accelerometer) Driver
 
 v2 of this usermod enables connection of a MPU-6050 IMU sensor to
 work with effects controlled by the orientation or motion of the WLED Device.
@@ -23,7 +23,7 @@ As a memento to a long trip I was on, I built an icosahedron globe. I put lights
 I wanted to integrate an IMU to allow either on-board, or off-board effects that would
 react to the globes orientation. See the blog post on building it <https://www.robopenguins.com/icosahedron-travel-globe/> or a video demo <https://youtu.be/zYjybxHBsHM> .
 
-## Adding Dependencies
+### Adding Dependencies
 
 I2Cdev and MPU6050 must be installed.
 
@@ -46,7 +46,7 @@ lib_deps =
     ElectronicCats/MPU6050 @ 0.6.0
 ```
 
-## Wiring
+### Wiring
 
 The connections needed to the MPU6050 are as follows:
 ```
@@ -63,7 +63,7 @@ The connections needed to the MPU6050 are as follows:
 You could probably modify the code not to need an interrupt, but I used the
 setup directly from the example.
 
-## JSON API
+### JSON API
 
 This code adds:
 ```json
@@ -82,7 +82,7 @@ This code adds:
 ```
 to the info object
 
-## Usermod installation
+### Usermod installation
 
 <!-- 1. Copy the file `usermod_mpu6050_imu.h` to the `wled00` directory. -->
 2. Register the usermod by adding `#include "usermod_mpu6050_imu.h"` in the top and `registerUsermod(new MPU6050Driver());` in the bottom of `usermods_list.cpp`.
@@ -105,3 +105,6 @@ Example **usermods_list.cpp**:
 
 ### WLED SR
 
+### WLED MM
+
+Repaired / Updated in WLED MM (AC uses old unmaintained library)
