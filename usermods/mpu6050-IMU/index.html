@@ -11,17 +11,17 @@
       
       
       
-        <link rel="prev" href="../First-Time-Setup/">
+        <link rel="prev" href="../BME280/">
       
       
-        <link rel="next" href="../2D-Support/">
+        <link rel="next" href="../Rotary-Encoder/">
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>Running Sound Reactive WLED - WLED MoonModules Project</title>
+        <title>Usermod PU-6050 - WLED MoonModules Project</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#captive-portal" class="md-skip">
+        <a href="#mpu-6050-six-axis-gyro-accelerometer-driver" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Running Sound Reactive WLED
+              Usermod PU-6050
             
           </span>
         </div>
@@ -309,13 +309,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../usermods/4LineDisplay/" class="md-tabs__link">
+      <a href="../4LineDisplay/" class="md-tabs__link md-tabs__link--active">
         Usermods
       </a>
     </li>
@@ -373,8 +375,6 @@
         
   
   
-    
-  
 
 
   
@@ -386,7 +386,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Home/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../WLEDSR/Home/" class="md-tabs__link">
         WLED SR
       </a>
     </li>
@@ -1332,14 +1332,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
       
       
       
@@ -1348,7 +1350,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Usermods
@@ -1361,7 +1363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/4LineDisplay/" class="md-nav__link">
+      <a href="../4LineDisplay/" class="md-nav__link">
         Four Line Display
       </a>
     </li>
@@ -1375,7 +1377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/Autosave/" class="md-nav__link">
+      <a href="../Autosave/" class="md-nav__link">
         Autosave
       </a>
     </li>
@@ -1389,7 +1391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/Battery/" class="md-nav__link">
+      <a href="../Battery/" class="md-nav__link">
         Battery
       </a>
     </li>
@@ -1403,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/BH1750/" class="md-nav__link">
+      <a href="../BH1750/" class="md-nav__link">
         BH1750
       </a>
     </li>
@@ -1417,7 +1419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/BME280/" class="md-nav__link">
+      <a href="../BME280/" class="md-nav__link">
         BME280
       </a>
     </li>
@@ -1429,11 +1431,93 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../usermods/mpu6050-IMU/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          MPU6050
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         MPU6050
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-dependencies" class="md-nav__link">
+    Adding Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wiring" class="md-nav__link">
+    Wiring
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-api" class="md-nav__link">
+    JSON API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usermod-installation" class="md-nav__link">
+    Usermod installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork-specific-info" class="md-nav__link">
+    Fork specific info
+  </a>
+  
+    <nav class="md-nav" aria-label="Fork specific info">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wled-sr" class="md-nav__link">
+    WLED SR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1445,7 +1529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/Rotary-Encoder/" class="md-nav__link">
+      <a href="../Rotary-Encoder/" class="md-nav__link">
         Rotary Encoder
       </a>
     </li>
@@ -1459,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/staircase/" class="md-nav__link">
+      <a href="../staircase/" class="md-nav__link">
         Animated staircase
       </a>
     </li>
@@ -1473,7 +1557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/Temperature/" class="md-nav__link">
+      <a href="../Temperature/" class="md-nav__link">
         Temperature
       </a>
     </li>
@@ -1487,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/MultiRelay/" class="md-nav__link">
+      <a href="../MultiRelay/" class="md-nav__link">
         MultiRelay
       </a>
     </li>
@@ -1501,7 +1585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/PIRsensorSwitch/" class="md-nav__link">
+      <a href="../PIRsensorSwitch/" class="md-nav__link">
         PIRsensorSwitch
       </a>
     </li>
@@ -1515,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/Weather/" class="md-nav__link">
+      <a href="../Weather/" class="md-nav__link">
         Weather
       </a>
     </li>
@@ -1529,7 +1613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usermods/pinmanager/" class="md-nav__link">
+      <a href="../pinmanager/" class="md-nav__link">
         Pin Manager
       </a>
     </li>
@@ -1864,16 +1948,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
       
       
       
@@ -1882,7 +1964,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
           WLED SR
@@ -1893,16 +1975,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
       
       
       
@@ -1911,7 +1991,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_11_1">
           <span class="md-nav__icon md-icon"></span>
           Basics
@@ -1924,7 +2004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Home/" class="md-nav__link">
+      <a href="../../WLEDSR/Home/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1938,7 +2018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Installing-and-Compiling/" class="md-nav__link">
+      <a href="../../WLEDSR/Installing-and-Compiling/" class="md-nav__link">
         Installing and Compiling
       </a>
     </li>
@@ -1952,7 +2032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../First-Time-Setup/" class="md-nav__link">
+      <a href="../../WLEDSR/First-Time-Setup/" class="md-nav__link">
         First Time Setup
       </a>
     </li>
@@ -1964,90 +2044,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Running Sound Reactive WLED
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Running-Sound-Reactive-WLED/" class="md-nav__link">
         Running Sound Reactive WLED
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#captive-portal" class="md-nav__link">
-    Captive Portal
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initial-sound-reactive-settings" class="md-nav__link">
-    Initial Sound Reactive Settings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initial-2d-settings-esp32-only" class="md-nav__link">
-    Initial 2D Settings - ESP32 Only
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initial-udp-sync-settings" class="md-nav__link">
-    Initial UDP Sync Settings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connect-to-wled" class="md-nav__link">
-    Connect to WLED
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-a-bootup-effects-sequence" class="md-nav__link">
-    Configure a bootup effects sequence
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reset-the-device" class="md-nav__link">
-    Reset the device
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2059,7 +2060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2D-Support/" class="md-nav__link">
+      <a href="../../WLEDSR/2D-Support/" class="md-nav__link">
         2D Support
       </a>
     </li>
@@ -2073,7 +2074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LED-Preferences/" class="md-nav__link">
+      <a href="../../WLEDSR/LED-Preferences/" class="md-nav__link">
         2D LED Preferences
       </a>
     </li>
@@ -2087,7 +2088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../UDP-Sound-Sync/" class="md-nav__link">
+      <a href="../../WLEDSR/UDP-Sound-Sync/" class="md-nav__link">
         UDP Sound Sync
       </a>
     </li>
@@ -2101,7 +2102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Reactive-Animations/" class="md-nav__link">
+      <a href="../../WLEDSR/Reactive-Animations/" class="md-nav__link">
         Sound Reactive Animations
       </a>
     </li>
@@ -2115,7 +2116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Non-Reactive-Animations/" class="md-nav__link">
+      <a href="../../WLEDSR/Non-Reactive-Animations/" class="md-nav__link">
         Non-Reactive Animations
       </a>
     </li>
@@ -2129,7 +2130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Digital-Microphone-Hookup/" class="md-nav__link">
+      <a href="../../WLEDSR/Digital-Microphone-Hookup/" class="md-nav__link">
         Digital Microphone Hookup
       </a>
     </li>
@@ -2143,7 +2144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Analog-Audio-Input-Options/" class="md-nav__link">
+      <a href="../../WLEDSR/Analog-Audio-Input-Options/" class="md-nav__link">
         Analog Audio Input Options
       </a>
     </li>
@@ -2157,7 +2158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Using-my-PC-for-the-Sound/" class="md-nav__link">
+      <a href="../../WLEDSR/Using-my-PC-for-the-Sound/" class="md-nav__link">
         Using my PC for the Sound
       </a>
     </li>
@@ -2171,7 +2172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../News/" class="md-nav__link">
+      <a href="../../WLEDSR/News/" class="md-nav__link">
         News
       </a>
     </li>
@@ -2219,7 +2220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../My--device--is-not-working/" class="md-nav__link">
+      <a href="../../WLEDSR/My--device--is-not-working/" class="md-nav__link">
         It's Not Working
       </a>
     </li>
@@ -2233,7 +2234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Noise-and-Spikes/" class="md-nav__link">
+      <a href="../../WLEDSR/Noise-and-Spikes/" class="md-nav__link">
         Noise and Spikes
       </a>
     </li>
@@ -2247,7 +2248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Connectivity-Issues/" class="md-nav__link">
+      <a href="../../WLEDSR/Connectivity-Issues/" class="md-nav__link">
         Connectivity Issues
       </a>
     </li>
@@ -2295,7 +2296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../WLED-Programming-Notes/" class="md-nav__link">
+      <a href="../../WLEDSR/WLED-Programming-Notes/" class="md-nav__link">
         WLED Programming Notes
       </a>
     </li>
@@ -2309,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Modifying-Sound-Reactive-WLED/" class="md-nav__link">
+      <a href="../../WLEDSR/Modifying-Sound-Reactive-WLED/" class="md-nav__link">
         Modifying Sound Reactive WLED
       </a>
     </li>
@@ -2323,7 +2324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Future-Directions/" class="md-nav__link">
+      <a href="../../WLEDSR/Future-Directions/" class="md-nav__link">
         Future Directions
       </a>
     </li>
@@ -2337,7 +2338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Adding-a-Sound-Settings-page-to-the-UI/" class="md-nav__link">
+      <a href="../../WLEDSR/Adding-a-Sound-Settings-page-to-the-UI/" class="md-nav__link">
         Adding a new Settings Page
       </a>
     </li>
@@ -2351,7 +2352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../On-Lossy-Colours/" class="md-nav__link">
+      <a href="../../WLEDSR/On-Lossy-Colours/" class="md-nav__link">
         On Lossy Colours
       </a>
     </li>
@@ -2365,7 +2366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Adding-Sliders/" class="md-nav__link">
+      <a href="../../WLEDSR/Adding-Sliders/" class="md-nav__link">
         Sliders in WLED
       </a>
     </li>
@@ -2379,7 +2380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Testing/" class="md-nav__link">
+      <a href="../../WLEDSR/Testing/" class="md-nav__link">
         Testing
       </a>
     </li>
@@ -2441,7 +2442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Other-Links/" class="md-nav__link">
+      <a href="../../WLEDSR/Other-Links/" class="md-nav__link">
         Other
       </a>
     </li>
@@ -2479,6 +2480,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2487,51 +2490,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#captive-portal" class="md-nav__link">
-    Captive Portal
+  <a href="#adding-dependencies" class="md-nav__link">
+    Adding Dependencies
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-sound-reactive-settings" class="md-nav__link">
-    Initial Sound Reactive Settings
+  <a href="#wiring" class="md-nav__link">
+    Wiring
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-2d-settings-esp32-only" class="md-nav__link">
-    Initial 2D Settings - ESP32 Only
+  <a href="#json-api" class="md-nav__link">
+    JSON API
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-udp-sync-settings" class="md-nav__link">
-    Initial UDP Sync Settings
+  <a href="#usermod-installation" class="md-nav__link">
+    Usermod installation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connect-to-wled" class="md-nav__link">
-    Connect to WLED
+  <a href="#fork-specific-info" class="md-nav__link">
+    Fork specific info
+  </a>
+  
+    <nav class="md-nav" aria-label="Fork specific info">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wled-sr" class="md-nav__link">
+    WLED SR
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-a-bootup-effects-sequence" class="md-nav__link">
-    Configure a bootup effects sequence
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reset-the-device" class="md-nav__link">
-    Reset the device
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2550,7 +2552,7 @@
                   
 
   
-    <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/WLEDSR/Running-Sound-Reactive-WLED.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/usermods/mpu6050-IMU.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2558,55 +2560,81 @@
   
 
 
-  <h1>Running Sound Reactive WLED</h1>
+<h1 id="mpu-6050-six-axis-gyro-accelerometer-driver">MPU-6050 Six-Axis (Gyro + Accelerometer) Driver</h1>
+<p>v2 of this usermod enables connection of a MPU-6050 IMU sensor to
+work with effects controlled by the orientation or motion of the WLED Device.</p>
+<p>The MPU6050 has a built in "Digital Motion Processor" which does the "heavy lifting"
+integrating the gyro and accelerometer measurements to get potentially more
+useful gravity vector and orientation output.</p>
+<p>It is fairly straightforward to comment out variables being read from the device if they're not needed. Saves CPU/Memory/Bandwidth.</p>
+<p><em>Story:</em></p>
+<p>As a memento to a long trip I was on, I built an icosahedron globe. I put lights inside to indicate cities I travelled to.</p>
+<p>I wanted to integrate an IMU to allow either on-board, or off-board effects that would
+react to the globes orientation. See the blog post on building it <a href="https://www.robopenguins.com/icosahedron-travel-globe/">https://www.robopenguins.com/icosahedron-travel-globe/</a> or a video demo <a href="https://youtu.be/zYjybxHBsHM">https://youtu.be/zYjybxHBsHM</a> .</p>
+<h2 id="adding-dependencies">Adding Dependencies</h2>
+<p>I2Cdev and MPU6050 must be installed.</p>
+<p>To install them, add ElectronicCats/MPU6050 @ 0.6.0 to lib_deps in the platformio.ini file.</p>
+<!-- You also need to change lib_compat_mode from strict to soft in platformio.ini (This ignores that I2Cdevlib-MPU6050 doesn't list platform compatibility) -->
 
-<h3 id="captive-portal">Captive Portal</h3>
-<p>When you first connect to a WLED device in AP mode, there is some really annoying behavior on the captive portal implementation in Android. The captive portal is the limited browser you are forwarded to in order to login to a web site. What happens is that if you go into 'Effects', you can't scroll up. In order to get around that, click the three dots at the top right of the page, select 'Use Network as is', then open up Chrome and navigate to the site at 4.3.2.1.</p>
-<h3 id="initial-sound-reactive-settings">Initial Sound Reactive Settings</h3>
-<p>On the <em>"Sound Settings"</em> page, configure the Squelch for a value (default is 10) to reduce your background noise for volume reactive effects. Volume reactive effects start with a single '*'. Typically, values between 4 and 20 should suffice. The higher the number, the greater the background noise is suppressed.   </p>
-<p>Configure the Gain setting (default is 60) to change the "perceived volume" of the input signal. More info on <a href="https://mm.kno.wled.ge/WLEDSR/Sound-Settings#squelch">Squelch and Gain here</a>.</p>
-<h3 id="initial-2d-settings-esp32-only">Initial 2D Settings - ESP32 Only</h3>
-<p>When changing any values in the LED settings page, you'll need to update the 2D settings. If not using a 2D matrix, you can set them to 1 x <number of LED's> or vice versa.  If using a 2D matrix, configure these values for width x height. A value of less than 4 in either dimension will not work with some of the 2D animations.</p>
-<p>The serpentine parameter configures whether the LED's are wired up in a continuous/serpentine layout or top to bottom and repeat.</p>
-<h3 id="initial-udp-sync-settings">Initial UDP Sync Settings</h3>
-<p>Devices can be configured as 'disabled', 'transmit' or 'receive' <a href="https://mm.kno.wled.ge/WLEDSR/UDP-Sound-Sync">UDP sound</a>. This is completely independent of the 'Sync' button, which synchronizes effects. </p>
-<p>As a result, you can run multiple types of sound reactive animations when <a href="https://mm.kno.wled.ge/WLEDSR/UDP-Sound-Sync">UDP Sound Sync</a> is enabled. This feature provides a subset of the sound and FFT data to several 'slave' devices. As a result, some FFT enabled routines will not function in this mode. You must RESET the ESP32 after you enable/disable this on the Sync settings page.</p>
-<h2 id="connect-to-wled">Connect to WLED</h2>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>lib_compat_mode = soft
+lib_deps =
+    FastLED@3.3.2
+    NeoPixelBus@2.5.7
+    ESPAsyncTCP@1.2.0
+    ESPAsyncUDP@697c75a025
+    AsyncTCP@1.0.3
+    Esp Async WebServer@1.2.0
+    IRremoteESP8266@2.7.3
+    ElectronicCats/MPU6050 @ 0.6.0
+</code></pre></div>
+<h2 id="wiring">Wiring</h2>
+<p>The connections needed to the MPU6050 are as follows:
+<div class="highlight"><pre><span></span><code>  VCC     VU (5V USB)   Not available on all boards so use 3.3V if needed.
+  GND     G             Ground
+  SCL     D1 (GPIO05)   I2C clock
+  SDA     D2 (GPIO04)   I2C data
+  XDA     not connected
+  XCL     not connected
+  AD0     not connected
+  INT     D8 (GPIO15)   Interrupt pin
+</code></pre></div></p>
+<p>You could probably modify the code not to need an interrupt, but I used the
+setup directly from the example.</p>
+<h2 id="json-api">JSON API</h2>
+<p>This code adds:
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;u&quot;</span><span class="p">:{</span>
+<span class="w">  </span><span class="nt">&quot;IMU&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">&quot;Quat&quot;</span><span class="p">:</span><span class="w">        </span><span class="p">[</span><span class="err">w</span><span class="p">,</span><span class="w"> </span><span class="err">x</span><span class="p">,</span><span class="w"> </span><span class="err">y</span><span class="p">,</span><span class="w"> </span><span class="err">z</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;Euler&quot;</span><span class="p">:</span><span class="w">       </span><span class="p">[</span><span class="err">psi</span><span class="p">,</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="kc">ta</span><span class="p">,</span><span class="w"> </span><span class="err">phi</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;Gyro&quot;</span><span class="p">:</span><span class="w">        </span><span class="p">[</span><span class="err">x</span><span class="p">,</span><span class="w"> </span><span class="err">y</span><span class="p">,</span><span class="w"> </span><span class="err">z</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;Accel&quot;</span><span class="p">:</span><span class="w">       </span><span class="p">[</span><span class="err">x</span><span class="p">,</span><span class="w"> </span><span class="err">y</span><span class="p">,</span><span class="w"> </span><span class="err">z</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;RealAccel&quot;</span><span class="p">:</span><span class="w">   </span><span class="p">[</span><span class="err">x</span><span class="p">,</span><span class="w"> </span><span class="err">y</span><span class="p">,</span><span class="w"> </span><span class="err">z</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;WorldAccel&quot;</span><span class="p">:</span><span class="w">  </span><span class="p">[</span><span class="err">x</span><span class="p">,</span><span class="w"> </span><span class="err">y</span><span class="p">,</span><span class="w"> </span><span class="err">z</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;Gravity&quot;</span><span class="p">:</span><span class="w">     </span><span class="p">[</span><span class="err">x</span><span class="p">,</span><span class="w"> </span><span class="err">y</span><span class="p">,</span><span class="w"> </span><span class="err">z</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;Orientation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">yaw</span><span class="p">,</span><span class="w"> </span><span class="err">pi</span><span class="kc">t</span><span class="err">ch</span><span class="p">,</span><span class="w"> </span><span class="err">roll</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+to the info object</p>
+<h2 id="usermod-installation">Usermod installation</h2>
+<!-- 1. Copy the file `usermod_mpu6050_imu.h` to the `wled00` directory. -->
 <ol>
-<li>Open up settings on your phone or computer.</li>
-<li>Navigate to your Wi-Fi settings.</li>
-<li>Look for the WLED SSID, default is "WLED-AP".</li>
-<li>Enter the password, the default is "wled1234".</li>
-<li>Once connected, you should automatically be re-directed to your LED strip.</li>
-<li>This gets you to the limited captive portal 'browser'.</li>
-<li>If not, open up a browser and navigate to 4.3.2.1.</li>
+<li>Register the usermod by adding <code>#include "usermod_mpu6050_imu.h"</code> in the top and <code>registerUsermod(new MPU6050Driver());</code> in the bottom of <code>usermods_list.cpp</code>.</li>
 </ol>
-<h2 id="configure-a-bootup-effects-sequence">Configure a bootup effects sequence</h2>
-<ol>
-<li>From the main screen, click on "TO THE CONTROLS!"</li>
-<li>Select the "Effects" tab.</li>
-<li>Select an effect mode, i.e. "Bpm".</li>
-<li>Adjust overall brightness, speed, and intensity/fade rate.</li>
-<li>Select the "Colors" tab.</li>
-<li>Select one of the palettes, such as "Beach".</li>
-<li>Select the "Favorites" tab.</li>
-<li>Select the "Saving mode" checkbox.</li>
-<li>Save to slot "1".</li>
-<li>Check the "Preset" cycle.</li>
-<li>Select the Config cog at the top right of the application display.</li>
-<li>Select "LED Preference".</li>
-<li>Check "Set current preset cycle setting as boot default" checkbox.</li>
-<li>Click on "Save" at the bottom of the screen.</li>
-</ol>
-<h2 id="reset-the-device">Reset the device</h2>
-<ol>
-<li>Log in to the device. If you cannot log in, then you need to Reflash the device, which may default to AP mode.</li>
-<li>Select the Config cog at the top right of the application display.</li>
-<li>Select "Security and Updates".</li>
-<li>Check "Factory reset".</li>
-<li>Click on "Save &amp; reboot".</li>
-<li>Reverts to the initial AP Mode and all other settings are gone.</li>
-</ol>
+<p>Example <strong>usermods_list.cpp</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;wled.h&quot;</span>
+
+<span class="cp">#ifdef USERMOD_MPU6050_IMU</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../usermods/mpu6050_imu/usermod_mpu6050_imu.h&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifdef USERMOD_MPU6050_IMU</span>
+<span class="w">  </span><span class="n">usermods</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MPU6050Driver</span><span class="p">());</span>
+<span class="cp">#endif</span>
+</code></pre></div>
+<h2 id="fork-specific-info">Fork specific info</h2>
+<h3 id="wled-sr">WLED SR</h3>
 
 
 
