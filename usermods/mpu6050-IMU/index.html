@@ -1439,8 +1439,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           MPU6050
@@ -1457,8 +1455,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1467,30 +1463,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#mpu-6050-six-axis-gyro-accelerometer-driver" class="md-nav__link">
+    MPU-6050 Six-Axis (Gyro + Accelerometer) Driver
+  </a>
+  
+    <nav class="md-nav" aria-label="MPU-6050 Six-Axis (Gyro + Accelerometer) Driver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#adding-dependencies" class="md-nav__link">
     Adding Dependencies
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#wiring" class="md-nav__link">
     Wiring
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#json-api" class="md-nav__link">
     JSON API
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usermod-installation" class="md-nav__link">
     Usermod installation
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1505,6 +1514,13 @@
           <li class="md-nav__item">
   <a href="#wled-sr" class="md-nav__link">
     WLED SR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wled-mm" class="md-nav__link">
+    WLED MM
   </a>
   
 </li>
@@ -2480,8 +2496,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2490,30 +2504,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#mpu-6050-six-axis-gyro-accelerometer-driver" class="md-nav__link">
+    MPU-6050 Six-Axis (Gyro + Accelerometer) Driver
+  </a>
+  
+    <nav class="md-nav" aria-label="MPU-6050 Six-Axis (Gyro + Accelerometer) Driver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#adding-dependencies" class="md-nav__link">
     Adding Dependencies
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#wiring" class="md-nav__link">
     Wiring
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#json-api" class="md-nav__link">
     JSON API
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usermod-installation" class="md-nav__link">
     Usermod installation
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2528,6 +2555,13 @@
           <li class="md-nav__item">
   <a href="#wled-sr" class="md-nav__link">
     WLED SR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wled-mm" class="md-nav__link">
+    WLED MM
   </a>
   
 </li>
@@ -2560,7 +2594,9 @@
   
 
 
-<h1 id="mpu-6050-six-axis-gyro-accelerometer-driver">MPU-6050 Six-Axis (Gyro + Accelerometer) Driver</h1>
+  <h1>MPU6050</h1>
+
+<h2 id="mpu-6050-six-axis-gyro-accelerometer-driver">MPU-6050 Six-Axis (Gyro + Accelerometer) Driver</h2>
 <p>v2 of this usermod enables connection of a MPU-6050 IMU sensor to
 work with effects controlled by the orientation or motion of the WLED Device.</p>
 <p>The MPU6050 has a built in "Digital Motion Processor" which does the "heavy lifting"
@@ -2571,7 +2607,7 @@ useful gravity vector and orientation output.</p>
 <p>As a memento to a long trip I was on, I built an icosahedron globe. I put lights inside to indicate cities I travelled to.</p>
 <p>I wanted to integrate an IMU to allow either on-board, or off-board effects that would
 react to the globes orientation. See the blog post on building it <a href="https://www.robopenguins.com/icosahedron-travel-globe/">https://www.robopenguins.com/icosahedron-travel-globe/</a> or a video demo <a href="https://youtu.be/zYjybxHBsHM">https://youtu.be/zYjybxHBsHM</a> .</p>
-<h2 id="adding-dependencies">Adding Dependencies</h2>
+<h3 id="adding-dependencies">Adding Dependencies</h3>
 <p>I2Cdev and MPU6050 must be installed.</p>
 <p>To install them, add ElectronicCats/MPU6050 @ 0.6.0 to lib_deps in the platformio.ini file.</p>
 <!-- You also need to change lib_compat_mode from strict to soft in platformio.ini (This ignores that I2Cdevlib-MPU6050 doesn't list platform compatibility) -->
@@ -2588,7 +2624,7 @@ lib_deps =
     IRremoteESP8266@2.7.3
     ElectronicCats/MPU6050 @ 0.6.0
 </code></pre></div>
-<h2 id="wiring">Wiring</h2>
+<h3 id="wiring">Wiring</h3>
 <p>The connections needed to the MPU6050 are as follows:
 <div class="highlight"><pre><span></span><code>  VCC     VU (5V USB)   Not available on all boards so use 3.3V if needed.
   GND     G             Ground
@@ -2601,7 +2637,7 @@ lib_deps =
 </code></pre></div></p>
 <p>You could probably modify the code not to need an interrupt, but I used the
 setup directly from the example.</p>
-<h2 id="json-api">JSON API</h2>
+<h3 id="json-api">JSON API</h3>
 <p>This code adds:
 <div class="highlight"><pre><span></span><code><span class="nt">&quot;u&quot;</span><span class="p">:{</span>
 <span class="w">  </span><span class="nt">&quot;IMU&quot;</span><span class="p">:{</span>
@@ -2617,7 +2653,7 @@ setup directly from the example.</p>
 <span class="p">}</span>
 </code></pre></div>
 to the info object</p>
-<h2 id="usermod-installation">Usermod installation</h2>
+<h3 id="usermod-installation">Usermod installation</h3>
 <!-- 1. Copy the file `usermod_mpu6050_imu.h` to the `wled00` directory. -->
 <ol>
 <li>Register the usermod by adding <code>#include "usermod_mpu6050_imu.h"</code> in the top and <code>registerUsermod(new MPU6050Driver());</code> in the bottom of <code>usermods_list.cpp</code>.</li>
@@ -2635,6 +2671,8 @@ to the info object</p>
 </code></pre></div>
 <h2 id="fork-specific-info">Fork specific info</h2>
 <h3 id="wled-sr">WLED SR</h3>
+<h3 id="wled-mm">WLED MM</h3>
+<p>Repaired / Updated in WLED MM (AC uses old unmaintained library)</p>
 
 
 
