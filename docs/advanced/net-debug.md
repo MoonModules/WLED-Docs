@@ -23,3 +23,11 @@ nc -l 1878 -u
 Debug can be switched on and off in the Info tab:
 
 <img width="440" alt="image" src="https://user-images.githubusercontent.com/91013628/220674439-e3f73a68-4557-499b-b240-e46bdac1d561.png">
+
+## Fork Specific info
+
+### WLED MM
+
+No need to specify ip address and port in platformio.ini and therefor hardcode in bin/esp32. Go to Sync Interfaces / Net debug and specify there. Set output to network pressing Net Debug in the info tab (default off after reboot).
+
+See [release notes v0.14.0-b2 daily/manage netdebug serial logging in settings](https://mm.kno.wled.ge/moonmodules/release-notes-v0.14.0-b2-daily/#manage-netdebug-serial-logging-in-settings)
