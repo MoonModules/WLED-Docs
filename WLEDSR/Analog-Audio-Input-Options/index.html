@@ -2561,7 +2561,7 @@
   <h1>Analog Audio Input Options</h1>
 
 <h3 id="microphone-input">Microphone Input</h3>
-<p>Generally we recommend using <a href="https://mm.kno.wled.ge/WLEDSR/Digital-Microphone-Hookup">I2S digital sound input</a> - like INMP441, SPH0645,  ICS-43434, or PDM I2S microphones. 
+<p>Generally we recommend using <a href="/WLEDSR/Digital-Microphone-Hookup">I2S digital sound input</a> - like INMP441, SPH0645,  ICS-43434, or PDM I2S microphones. 
 Additionally there are solutions for line-in via I2S. For example, boards/shields with "es7243" chip should work already (we have a special driver for these), and we're investigating "es8388".</p>
 <p><br/></p>
 <p>Below are a number of popular Arduino compatible analog microphones that have been tested.</p>
@@ -2597,11 +2597,11 @@ Additionally there are solutions for line-in via I2S. For example, boards/shield
 </tbody>
 </table>
 <p>See also </p>
-<p>&rArr; <a href="https://mm.kno.wled.ge/WLEDSR/First-Time-Setup#sound-settings-getting-started-with-common-microphones">Sound setting examples for common microphones</a></p>
-<p>&rArr; <a href="https://mm.kno.wled.ge/WLEDSR/Noise-and-Spikes#both-platforms">noise and spikes on analog microphones</a></p>
+<p>&rArr; <a href="/WLEDSR/First-Time-Setup#sound-settings-getting-started-with-common-microphones">Sound setting examples for common microphones</a></p>
+<p>&rArr; <a href="/WLEDSR/Noise-and-Spikes#both-platforms">noise and spikes on analog microphones</a></p>
 <p>If you are using the <a href="https://learn.adafruit.com/adafruit-agc-electret-microphone-amplifier-max9814/">MAX9814</a>, you need to connect gain to vdd to set the gain to 40dB as the default 60db has far too much background noise. </p>
 <p>Important: there are some inexpensive sound sensors you can buy from Aliexpress or elsewhere (such as LM393, KY-038 or KY-037). Typically these have an on/off output only (detecting "sound" or "silence"), sometimes there is an additional "analog data out" with very low quality. They may or may not work adequately. For more information on our microphone test results, see our <a href="https://github.com/atuline/WLED/blob/assets/docs/Microphones.pdf">Arduino Compatible Microphones document</a>.</p>
-<p>If the LED's are active when the ambient volume is low while running volume only effects beginning with a single '*', you can increase the background noise filtering (or squelch) by navigating to the 'Config | Sound Settings' and <a href="https://mm.kno.wled.ge/WLEDSR/Sound-Settings#how-to">increase the Squelch value</a>. You can also make it more sensitive by lowering that Squelch value. In addition, there is a gain setting, which is required especially for the much lower signal level provided by the line-in configuration. Gain, Squelch and AGC are affecting all soundreactive, volumereactive and frequency (FFT) reactive effects.</p>
+<p>If the LED's are active when the ambient volume is low while running volume only effects beginning with a single '*', you can increase the background noise filtering (or squelch) by navigating to the 'Config | Sound Settings' and <a href="/WLEDSR/Sound-Settings#how-to">increase the Squelch value</a>. You can also make it more sensitive by lowering that Squelch value. In addition, there is a gain setting, which is required especially for the much lower signal level provided by the line-in configuration. Gain, Squelch and AGC are affecting all soundreactive, volumereactive and frequency (FFT) reactive effects.</p>
 <p><strong>Note 1:</strong> Do NOT connect input devices to 5V (or Vin). The power should be connected to the 3.3V pin.</p>
 <p><strong>Note 2:</strong> A piezo vibration sensor (from aliexpress) was successfully hooked up and tested.</p>
 <p><strong>Note 3:</strong> On the ESP32, the default ADC pin is GPI36 (also known as VP), while the ESP8266 uses A0. On ESP32, any GPIO related to ADC1 can be used - see next note.</p>
@@ -2641,7 +2641,7 @@ Additionally there are solutions for line-in via I2S. For example, boards/shield
 <h3 id="problems-encountered">Problems Encountered</h3>
 <ul>
 <li>
-<p><strong>Noise</strong> - <a href="https://mm.kno.wled.ge/WLEDSR/First-Time-Setup#noise-and-spikes">Some recommendations to reduce noise</a></p>
+<p><strong>Noise</strong> - <a href="/WLEDSR/First-Time-Setup#noise-and-spikes">Some recommendations to reduce noise</a></p>
 </li>
 <li>
 <p><strong>Spikes</strong> - We've often seen spikes when using an analog microphone in conjunction with WLED. There's an article that should shed light on the issue at <a href="https://electronics.stackexchange.com/questions/368867/esp32-microcontroller-generates-noise-on-microphone">ESP32 microcontroller generates noise on microphone</a>.</p>

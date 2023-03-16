@@ -2643,17 +2643,17 @@
 <p>GPI&nbsp; 38 =&gt; ADC1_CH2</p>
 <p>GPI&nbsp; 39 =&gt; ADC1_CH3, VN</p>
 <p>Do NOT use any of the pins from ADC2, as they will conflict with the WiFi and with I2S sampling.</p>
-<p>Remember to <a href="https://mm.kno.wled.ge/WLEDSR/Sound-Settings#press-reset-key-after-changing-sound-source">press Reset</a> after saving your new analog input configuration.</p>
+<p>Remember to <a href="/WLEDSR/Sound-Settings#press-reset-key-after-changing-sound-source">press Reset</a> after saving your new analog input configuration.</p>
 <p><br/></p>
-<p>We have observed problems when using "analog buttons" (potentiometer) together with ADC analog sound input. It seems that different drivers (I2S-ADC for sound, analogRead() for potentiometer) are getting into conflict - more details in the related <a href="https://github.com/espressif/arduino-esp32/issues/4782">bug report for espressif software</a>. If you plan to attach a potentiometer to your WLED device, we recommend to use an <a href="https://mm.kno.wled.ge/WLEDSR/Digital-Microphone-Hookup">I2S digital microphone</a> to avoid these problems.</p>
-<p>More information about analog inputs on our <a href="https://mm.kno.wled.ge/WLEDSR/Analog-Audio-Input-Options">analog microphones</a> page.</p>
+<p>We have observed problems when using "analog buttons" (potentiometer) together with ADC analog sound input. It seems that different drivers (I2S-ADC for sound, analogRead() for potentiometer) are getting into conflict - more details in the related <a href="https://github.com/espressif/arduino-esp32/issues/4782">bug report for espressif software</a>. If you plan to attach a potentiometer to your WLED device, we recommend to use an <a href="/WLEDSR/Digital-Microphone-Hookup">I2S digital microphone</a> to avoid these problems.</p>
+<p>More information about analog inputs on our <a href="/WLEDSR/Analog-Audio-Input-Options">analog microphones</a> page.</p>
 <p><br/></p>
 <h2 id="squelch">Squelch</h2>
 <p>Adjust this value on the Sound Settings page so that the leds are only activated above a certain 'background noise' level.</p>
 <p>In order to accommodate a wide range of audio inputs, ambient environments and string lengths, we have added user configurable squelch (noise reduction/suppression) and gain controls on the LED settings page for the volume reactive animations.</p>
 <p>See also </p>
-<p>&rArr; <a href="https://mm.kno.wled.ge/WLEDSR/Squelch-and-Gain">Squelch and Gain</a></p>
-<p>&rArr; <a href="https://mm.kno.wled.ge/WLEDSR/First-Time-Setup#sound-settings-getting-started-with-common-microphones">Sound setting examples for common microphones</a></p>
+<p>&rArr; <a href="/WLEDSR/Squelch-and-Gain">Squelch and Gain</a></p>
+<p>&rArr; <a href="/WLEDSR/First-Time-Setup#sound-settings-getting-started-with-common-microphones">Sound setting examples for common microphones</a></p>
 <h2 id="gain">Gain</h2>
 <p>Line-in signals are typically much lower than that of some of the microphones. Rather than use an auto gain function, you can manually adjust the gain from 1 to 255, which translates to 0.1 up to almost 6.5 gain. That's equivalent to a range of <em>-20dB</em> up to <em>+16dB</em>.</p>
 <p>In addition, the 'Intensity' and "input level" sliders can sometimes adjust an animation to simulate increased gain.</p>
@@ -2667,7 +2667,7 @@
 <li>In a quiet environment, increase and occasionally save the "squelch" incrementally until the led's are no longer flashing.</li>
 <li>Once that's done, set "gain" to 40. Make noise appropriate to your 'noisy' environment and number of led's. Then adjust/save the gain so that the led's are responding appropriately.</li>
 <li>Note that some of the animations allow further sensitivity adjustment with the 'Intensity' setting.</li>
-<li>Check out the '<a href="https://mm.kno.wled.ge/WLEDSR/Reactive-Animations">Sound Reactive Animations</a>' page to see what controls are available for each animation.</li>
+<li>Check out the '<a href="/WLEDSR/Reactive-Animations">Sound Reactive Animations</a>' page to see what controls are available for each animation.</li>
 </ol>
 <h2 id="voltage-fluctuation">Voltage Fluctuation</h2>
 <p>From faulty microphones to flaky wiring, to WiFi related issues, particularly in AP mode, getting reliable and spike free sound sampling with WLED and in particular analog sampling has been a challenge. Digital microphones such as the INMP441, the ICS-43434 provide the best results.</p>
@@ -2675,13 +2675,13 @@
 <p><img alt="WLEDSR-Sound-Setings-Part2" src="https://user-images.githubusercontent.com/91616163/177542281-1a2ab7b7-48db-4e5e-8658-cd68fd8ead38.png" /></p>
 <p>Currently the following I2S options are available:</p>
 <p><img alt="WLEDSR-Sound-Setings-Digital_Part2" src="https://user-images.githubusercontent.com/91616163/177543015-2e862675-274d-45fa-822e-bea763ad9432.png" /></p>
-<p>Some more information can be found on our <a href="https://mm.kno.wled.ge/WLEDSR/Digital-Microphone-Hookup">I2S digital microphones</a> page.</p>
+<p>Some more information can be found on our <a href="/WLEDSR/Digital-Microphone-Hookup">I2S digital microphones</a> page.</p>
 <p><em>to be extended soon</em></p>
 <h3 id="i2s-line-in">I2S Line-in</h3>
-<p>There are solutions available for line-in via I2S. For example, boards/shields with "es7243" chip should work already (we have a special driver for these), and we're investigating "es8388". Please check our <a href="https://mm.kno.wled.ge/WLEDSR/Digital-Microphone-Hookup#some-i2s-audio-boards">I2S digital microphone hookup - I2S audio boards/modules</a> page for more information.
+<p>There are solutions available for line-in via I2S. For example, boards/shields with "es7243" chip should work already (we have a special driver for these), and we're investigating "es8388". Please check our <a href="/WLEDSR/Digital-Microphone-Hookup#some-i2s-audio-boards">I2S digital microphone hookup - I2S audio boards/modules</a> page for more information.
 <br/></p>
 <h2 id="agc-improved-autonomous-gain-control">AGC - improved Autonomous Gain Control</h2>
-<p>We have recently improved the AGC (automatic gain control) algorithm in WLED-SR. It's not enabled by default, however we encourage you to give it a try - all sound reactive effects now support AGC, including 2D and frequency-reactive effects. The only prerequisite for using AGC is that you first adjust "Squelch" to define 'silence' (ambient noise level) in your environment - <a href="https://mm.kno.wled.ge/WLEDSR/Sound-Settings/_edit#how-to">see previous section</a>.</p>
+<p>We have recently improved the AGC (automatic gain control) algorithm in WLED-SR. It's not enabled by default, however we encourage you to give it a try - all sound reactive effects now support AGC, including 2D and frequency-reactive effects. The only prerequisite for using AGC is that you first adjust "Squelch" to define 'silence' (ambient noise level) in your environment - <a href="/WLEDSR/Sound-Settings/_edit#how-to">see previous section</a>.</p>
 <p><img alt="WLEDSR-Sound-Setings-AGC_only" src="https://user-images.githubusercontent.com/91616163/177599946-055ee5f1-34b9-4a23-a408-4d21500c31e7.png" /></p>
 <p>AGC will automatically perform sound input amplification, based on current sound loudness. 
 For example, if you play music and then increase the speaker volume, WLED-SR will adjust internal gain factors to follow your music. Forget about manually changing "gain" settings. Just relax and let WLED-SR do it autonomously.</p>
