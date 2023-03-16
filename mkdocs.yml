@@ -114,7 +114,7 @@ nav:
     - Custom Features: advanced/custom-features.md
     - ESP32 Recovery: advanced/esp32-recovery.md
     - Mapping: advanced/mapping.md
-    - Virtual LEDs: advanced/virtual-leds.md
+    - Virtual LEDs: advanced/ddp.md
     - Custom Access Point Configuration: advanced/custom-ap.md
     - Net debug: advanced/net-debug.md
   - About: 
