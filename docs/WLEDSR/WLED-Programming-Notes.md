@@ -5,13 +5,13 @@ This version of WLED contains sound reactive routines, which are prefaced with a
 
 Contents:
 
-* [HTTP API Links](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#http-api-links), [Updating FX.h](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#updating-fxh-line-numbers-will-vary), [Updating FX.cpp](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#updating-fxcpp)
-* [WLED Support Functions](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#wled-support-functions)
-* [Important WLED variables](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#important-wled-variables), [Important Structures](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#important-structures)
-* [Delays in WLED](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#delays), [Displaying LEDs](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#displaying-the-leds), [FastLED](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#fastled), [2D Functionality](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#2d-functionality)
-* [Variable Length Arrays](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#on-variable-length-arrays), [Using CRGB Color Space](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#using-crgb-color-space), [Using CHSV Colour Space](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#proposed---using-chsv-colour-space)
-* [Non-Dynamically Created Variable Arrays](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#how-to-use-a-non-dynamically-created-variable-array)
-* [Sound Reactive EEPROM Layout](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#sound-reactive-eeprom-layout)
+* [HTTP API Links](/WLEDSR/WLED-Programming-Notes#http-api-links), [Updating FX.h](/WLEDSR/WLED-Programming-Notes#updating-fxh-line-numbers-will-vary), [Updating FX.cpp](/WLEDSR/WLED-Programming-Notes#updating-fxcpp)
+* [WLED Support Functions](/WLEDSR/WLED-Programming-Notes#wled-support-functions)
+* [Important WLED variables](/WLEDSR/WLED-Programming-Notes#important-wled-variables), [Important Structures](/WLEDSR/WLED-Programming-Notes#important-structures)
+* [Delays in WLED](/WLEDSR/WLED-Programming-Notes#delays), [Displaying LEDs](/WLEDSR/WLED-Programming-Notes#displaying-the-leds), [FastLED](/WLEDSR/WLED-Programming-Notes#fastled), [2D Functionality](/WLEDSR/WLED-Programming-Notes#2d-functionality)
+* [Variable Length Arrays](/WLEDSR/WLED-Programming-Notes#on-variable-length-arrays), [Using CRGB Color Space](/WLEDSR/WLED-Programming-Notes#using-crgb-color-space), [Using CHSV Colour Space](/WLEDSR/WLED-Programming-Notes#proposed---using-chsv-colour-space)
+* [Non-Dynamically Created Variable Arrays](/WLEDSR/WLED-Programming-Notes#how-to-use-a-non-dynamically-created-variable-array)
+* [Sound Reactive EEPROM Layout](/WLEDSR/WLED-Programming-Notes#sound-reactive-eeprom-layout)
 
 Caveat: Some information on this page is in our 'dev' branch only and not yet ready for prime time.
 

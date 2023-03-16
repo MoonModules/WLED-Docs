@@ -25,7 +25,7 @@ and also smooth colors:
 
 <img width="222" alt="image" src="https://user-images.githubusercontent.com/91013628/223077405-2c37bec0-3d94-4ff8-9725-fdfca886f559.png">
 
-See [Advanced/Mapping/0.14 MM](https://mm.kno.wled.ge/advanced/mapping/#014-mm)
+See [Advanced/Mapping/0.14 MM](/advanced/mapping/#014-mm)
 
 Example: Ring Map
 

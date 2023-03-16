@@ -23,12 +23,12 @@ If you'd like some help with your device, these are the types of things we would
 * Are you compiling from IDE? We are no longer supporting the Arduino IDE.
 * Make sure your microphone is powered by the 3V pin and NOT Vin or 5V . . and that your LED's are NOT connected to that 3V pin either (source: experience).
 * If you had previously used a 5V pin for your microphone, you may have blown that analog pin.
-* Have you gone through [initial settings](https://mm.kno.wled.ge/WLEDSR/Running-Sound-Reactive-WLED)?
-* Is your audio all wired up OK? [See here](https://mm.kno.wled.ge/WLEDSR/Analog-Audio-Input-Options).
+* Have you gone through [initial settings](/WLEDSR/Running-Sound-Reactive-WLED)?
+* Is your audio all wired up OK? [See here](/WLEDSR/Analog-Audio-Input-Options).
 * Which microphone/input are you using and how is it configured?
 * Leave the MAX4466 gain untouched. It works fine out of the box.
-* Have you tested that microphone with a [basic analog sound sampling sketch](https://mm.kno.wled.ge/WLEDSR/Analog-Sound-Sampling-Sketch-Example)?
-* You have an INMP441 or ICS-43434? Try the [basic digital sound sampling sketch](https://mm.kno.wled.ge/WLEDSR/Digital-Sound-Sampling-Sketch-Example).
+* Have you tested that microphone with a [basic analog sound sampling sketch](/WLEDSR/Analog-Sound-Sampling-Sketch-Example)?
+* You have an INMP441 or ICS-43434? Try the [basic digital sound sampling sketch](/WLEDSR/Digital-Sound-Sampling-Sketch-Example).
 * What are the results of that sketch? Does it respond to your speech? A MAX4466 and INMP401 should average about 1875 on an ESP32, a MAX9814 about 1350 for all gain settings.
 * Try a different pin when using that sketch if you're still not seeing good results.
 * Have spares of everything. They're cheap and they break. (source: experience)

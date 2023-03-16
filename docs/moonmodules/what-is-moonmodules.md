@@ -33,15 +33,15 @@ Get latest release here: <https://github.com/MoonModules/WLED/releases>
 
 More info:
 
-* [Release notes v0.14.0-daily](https://mm.kno.wled.ge/moonmodules/release-notes-v0.14.0-daily)
+* [Release notes v0.14.0-daily](/moonmodules/release-notes-v0.14.0-daily)
 
-* [Release notes v0.14.0-b1](https://mm.kno.wled.ge/moonmodules/release-notes-v0.14.0-b1)
+* [Release notes v0.14.0-b1](/moonmodules/release-notes-v0.14.0-b1)
 
-* [Release notes v0.14.0-b0](https://mm.kno.wled.ge/moonmodules/release-notes-v0.14.0-b0)
+* [Release notes v0.14.0-b0](/moonmodules/release-notes-v0.14.0-b0)
 
-* [Installing and compiling](https://mm.kno.wled.ge/moonmodules/Installing-and-Compiling/)
+* [Installing and compiling](/moonmodules/Installing-and-Compiling/)
 
-* [Fork comparison](https://mm.kno.wled.ge/moonmodules/fork-comparison/)
+* [Fork comparison](/moonmodules/fork-comparison/)
 
 WLED AC:
 

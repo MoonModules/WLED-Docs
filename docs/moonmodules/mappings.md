@@ -50,7 +50,7 @@ Both for 1 and 2D
 
 Code: uses customMappingTable
 
-See also [Advanced/Mappings](https://mm.kno.wled.ge/advanced/mapping/)
+See also [Advanced/Mappings](/advanced/mapping/)
 
 ### Logical to Physical
 Takes into account Panel setup and Led panel layout as defined in 2D Configuration (e.g. 1st panel, 1st led, serpentine)
