@@ -63,6 +63,6 @@ Code: uses customMappingTable
 |---|---|---|---|
 JSON Mapping|No|Yes|No JSON mapping yet although it's based on an idea from AirCoookie 
 Segment to Logical|Yes|Yes|Yes
-Ledmaps|Yes|Yes|Ledmaps only for 1D, 2D not implemented (PR pending)
+Ledmaps|Yes|Yes|Yes
 Logical to Physical|Yes|Yes|Yes
 
