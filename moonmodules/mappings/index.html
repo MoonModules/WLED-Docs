@@ -1723,15 +1723,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ledmaps" class="md-nav__link">
-    Ledmaps
+  <a href="#panel-layout" class="md-nav__link">
+    Panel layout
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#logical-to-physical" class="md-nav__link">
-    Logical to Physical
+  <a href="#ledmaps" class="md-nav__link">
+    Ledmaps
   </a>
   
 </li>
@@ -2520,15 +2520,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ledmaps" class="md-nav__link">
-    Ledmaps
+  <a href="#panel-layout" class="md-nav__link">
+    Panel layout
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#logical-to-physical" class="md-nav__link">
-    Logical to Physical
+  <a href="#ledmaps" class="md-nav__link">
+    Ledmaps
   </a>
   
 </li>
@@ -2600,14 +2600,17 @@
 <h3 id="segment-to-logical">Segment to Logical</h3>
 <p>Maps segments to a matrix where (0,0) is always topleft and (width, height) always bottom right.
 Non serpentine</p>
-<h3 id="ledmaps">Ledmaps</h3>
-<p>Shuffles leds
-Both for 1 and 2D</p>
-<p>Code: uses customMappingTable</p>
-<p>See also <a href="/advanced/mapping/">Advanced/Mappings</a></p>
-<h3 id="logical-to-physical">Logical to Physical</h3>
+<h3 id="panel-layout">Panel layout</h3>
 <p>Takes into account Panel setup and Led panel layout as defined in 2D Configuration (e.g. 1st panel, 1st led, serpentine)</p>
 <p>Code: uses customMappingTable</p>
+<h3 id="ledmaps">Ledmaps</h3>
+<ul>
+<li>Shuffles leds</li>
+<li>Both for 1 and 2D</li>
+<li>Ledmaps override panel layout !!</li>
+</ul>
+<p>Code: uses customMappingTable</p>
+<p>See also <a href="/advanced/mapping/">Advanced/Mappings</a></p>
 <h2 id="fork-specific-info">Fork specific info</h2>
 <table>
 <thead>
@@ -2638,7 +2641,7 @@ Both for 1 and 2D</p>
 <td>Yes</td>
 </tr>
 <tr>
-<td>Logical to Physical</td>
+<td>Panel layout</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
