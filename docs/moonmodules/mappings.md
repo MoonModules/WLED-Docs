@@ -17,14 +17,13 @@ This are the basic steps:
 
 Optionally there can also be:
 
-* JSON Mapping: Mapping of 1D effects to 2D. Expand1D
-* Logical ledmaps: Reshuffles leds to create a certain effect. **Where do you want pixel x to light up**, x from top left to bottom right maptable[i] = map[i]
-* Phyisical ledmaps: e.g. for custom setup using led strips, cubes or circles etc in a 2D layout. **Where is pixel x**, x from first to last pixel: maptable[map[i]] = i
+* JSON Mapping: Mapping of 1D effects to 2D. Expand1D (Logical mapping)
+* Ledmaps: e.g. for custom setup using led strips, cubes or circles etc in a 2D layout. (Phyisical mapping)
 
 Remarks
 
 * All mappings use ledmap<x>.json style mappings. JSON Mapping supports 2D coordinates, the others not. Will be harmonized
-* Peek should show Logical ledmaps, not physical ledmaps (except the now show pixels). Currently now show pixels are shown (not shown ;-) ) ledmaps are not shown in peek yet
+* Peek should show Logical ledmaps, not physical ledmaps (except the now show pixels). 
 
 ## Mappings
 Below is in processing order
