@@ -43,19 +43,19 @@ json files need to be uploaded to /edit. E.g. if filename is candle33.json, the 
 Maps segments to a matrix where (0,0) is always topleft and (width, height) always bottom right.
 Non serpentine
 
-### Ledmaps
-Shuffles leds
-Both for 1 and 2D
-
-Code: uses customMappingTable
-
-See also [Advanced/Mappings](/advanced/mapping/)
-
-### Logical to Physical
+### Panel layout
 Takes into account Panel setup and Led panel layout as defined in 2D Configuration (e.g. 1st panel, 1st led, serpentine)
 
 Code: uses customMappingTable
 
+### Ledmaps
+* Shuffles leds
+* Both for 1 and 2D
+* Ledmaps override panel layout !!
+
+Code: uses customMappingTable
+
+See also [Advanced/Mappings](/advanced/mapping/)
 
 ## Fork specific info
 
@@ -64,5 +64,5 @@ Code: uses customMappingTable
 JSON Mapping|No|Yes|No JSON mapping yet although it's based on an idea from AirCoookie 
 Segment to Logical|Yes|Yes|Yes
 Ledmaps|Yes|Yes|Yes
-Logical to Physical|Yes|Yes|Yes
+Panel layout|Yes|Yes|Yes
 
