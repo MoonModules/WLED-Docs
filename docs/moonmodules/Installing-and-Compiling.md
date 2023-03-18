@@ -112,7 +112,7 @@ Releases only
 * Also bin aware
 * Bins
 
-Serg74: <https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive>. Choose latest version. For Wemos Shield choose WLEDSR_0.13.3.4_wemos_shield_esp32_16MB_max.bin or WLEDSR_0.13.3.4_wemos_shield_esp32_4MB_M.bin (Pins pre-configured)
+Serg74: <https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/%40Atuline>. Choose latest version. For Wemos Shield choose WLEDSR_0.13.3.4_wemos_shield_esp32_16MB_max.bin or WLEDSR_0.13.3.4_wemos_shield_esp32_4MB_M.bin (Pins pre-configured)
 
 <img width="351" alt="image" src="https://user-images.githubusercontent.com/1737159/207881294-7fce1b1c-ad4f-4078-a71c-18287420a7df.png">
 
@@ -122,7 +122,7 @@ Serg74: <https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmwa
 * Not bin aware
 * Bins
 
-Serg74 <https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield>. Select folder for WLED AC 0.13.3 or 0.14 beta
+Serg74 <https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/%40Aircoookie>. Select folder for WLED AC 0.13.3 or 0.14 beta (preferred)
 
 <img width="338" alt="image" src="https://user-images.githubusercontent.com/1737159/207881529-fb190549-24e7-46ab-8d41-13ddf80d3be7.png">
 
