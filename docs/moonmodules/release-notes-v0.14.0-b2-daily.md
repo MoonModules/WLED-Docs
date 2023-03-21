@@ -7,6 +7,27 @@ hide:
 
 Below are the ongoing updates which has not made it to a release yet (Next release will be v0.14.0-b2)
 
+## Athom WLED Music Controller support
+21 March 2023
+
+* athom_music_esp32_4MB_M bin
+* show flashsize in info tab and /getflash
+* support of their ir-remote (24-key music)
+* Legacy PDM type to support their Mic characteristics
+* Not supported yet: mac addres in AP name (need to experiment with WLED_AP_SSID_UNIQUE)
+
+## Sound reactive experimental settings
+17 March 2023
+
+<img width="296" alt="image" src="https://user-images.githubusercontent.com/91013628/226622390-2edb114a-4696-4b55-a43e-9e02b209badf.png">
+
+more info will follow...
+
+## File System in settings menu
+17 March 2023
+
+<img width="296" alt="image" src="https://user-images.githubusercontent.com/91013628/226621773-f885a71e-b267-4a62-a4b1-bd7804e32a36.png">
+
 ## GEQ Smooth Bars
 7 March 2023
 
