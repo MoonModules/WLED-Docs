@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-Below are the ongoing updates which has not made it to a release yet (Next release will be v0.14.0-b2)
+Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next release will be v0.14.0-b2)
 
 ## Athom WLED Music Controller support
 21 March 2023
@@ -14,8 +14,8 @@ Below are the ongoing updates which has not made it to a release yet (Next relea
 
 * show flashsize in info tab and /getflash
 * support of their ir-remote (24-key music)
-* Legacy PDM type to support their Mic characteristics
-* Support of 4 line display modification
+* Legacy PDM type to support their Mic characteristics, tuned by Softhack007
+* Support of 4 line display modification (see picture)
 * athom_music_esp32_4MB_M.bin fully preconfigured for Athom pins and 4LD usermod
 * Not supported yet: mac addres in AP name (need to experiment with WLED_AP_SSID_UNIQUE)
 * Customize IR remote to 0.14
