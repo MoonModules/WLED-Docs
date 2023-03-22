@@ -12,10 +12,11 @@ Below are the ongoing updates which has not made it to a release yet (Next relea
 
 <img width="296" alt="image" src="https://user-images.githubusercontent.com/91013628/226930209-da5a4ff1-9f82-430c-959b-ad8da033f284.jpeg">
 
-* athom_music_esp32_4MB_M bin
 * show flashsize in info tab and /getflash
 * support of their ir-remote (24-key music)
 * Legacy PDM type to support their Mic characteristics
+* Support of 4 line display modification
+* athom_music_esp32_4MB_M.bin fully preconfigured for Athom pins and 4LD usermod
 * Not supported yet: mac addres in AP name (need to experiment with WLED_AP_SSID_UNIQUE)
 * Customize IR remote to 0.14
 
