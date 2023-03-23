@@ -34,7 +34,13 @@ simplify sort to better align with quick load labels (sort first) and ir remotes
 
 <img width="296" alt="image" src="https://user-images.githubusercontent.com/91013628/226622390-2edb114a-4696-4b55-a43e-9e02b209badf.png">
 
-more info will follow...
+* MicLevel: a new idea how to prevent intermediate "dropouts" when playing music. Its not perfect, but will stabilize effects. The idea (picture below) is to "freeze" the level threshold (red line) at the first volume "dropdown". After freezing, the Volume signal will have a stable "baseline". Freezing is unlocked after 8 seconds of silence. Freeze makes a huge difference on GEQ (surprised). Made it a lot more "stable
+
+<img width="296" alt="image" src="https://user-images.githubusercontent.com/91013628/227313906-b1061313-6395-47a9-9ec2-fccedf277421.png">
+
+* FreqDist: set to rightshift to move the frequency bands a bit to the right in case most activity is on the left side.
+
+* FreqRMS: set to "on" to activate a different method for averaging higher frequencies, called "RMS" - it preserves peaks better. Downside: could lead to "overshooting" in GEQ, as our mic profiles are not adjusted to it yet.
 
 ## File System in settings menu
 17 March 2023
