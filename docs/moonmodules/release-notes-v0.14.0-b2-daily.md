@@ -7,6 +7,13 @@ hide:
 
 Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next release will be v0.14.0-b2)
 
+## Better sort of presets
+23 March 2023
+
+simplify sort to better align with quick load labels (sort first) and ir remotes using id (sort after presets)
+
+<img width="296" alt="image" src="https://user-images.githubusercontent.com/91013628/227312121-701e8bd7-b556-46ca-af54-9cd44c08d527.PNG">
+
 ## Athom WLED Music Controller support
 21 March 2023
 
