@@ -2747,7 +2747,18 @@
 <h2 id="sound-reactive-experimental-settings">Sound reactive experimental settings</h2>
 <p>17 March 2023</p>
 <p><img width="296" alt="image" src="https://user-images.githubusercontent.com/91013628/226622390-2edb114a-4696-4b55-a43e-9e02b209badf.png"></p>
-<p>more info will follow...</p>
+<ul>
+<li>MicLevel: a new idea how to prevent intermediate "dropouts" when playing music. Its not perfect, but will stabilize effects. The idea (picture below) is to "freeze" the level threshold (red line) at the first volume "dropdown". After freezing, the Volume signal will have a stable "baseline". Freezing is unlocked after 8 seconds of silence. Freeze makes a huge difference on GEQ (surprised). Made it a lot more "stable</li>
+</ul>
+<p><img width="296" alt="image" src="https://user-images.githubusercontent.com/91013628/227313906-b1061313-6395-47a9-9ec2-fccedf277421.png"></p>
+<ul>
+<li>
+<p>FreqDist: set to rightshift to move the frequency bands a bit to the right in case most activity is on the left side.</p>
+</li>
+<li>
+<p>FreqRMS: set to "on" to activate a different method for averaging higher frequencies, called "RMS" - it preserves peaks better. Downside: could lead to "overshooting" in GEQ, as our mic profiles are not adjusted to it yet.</p>
+</li>
+</ul>
 <h2 id="file-system-in-settings-menu">File System in settings menu</h2>
 <p>17 March 2023</p>
 <p><img width="296" alt="image" src="https://user-images.githubusercontent.com/91013628/226621773-f885a71e-b267-4a62-a4b1-bd7804e32a36.png"></p>
