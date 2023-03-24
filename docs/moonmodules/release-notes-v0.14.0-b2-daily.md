@@ -7,6 +7,11 @@ hide:
 
 Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next release will be v0.14.0-b2)
 
+## Tablet PC Mode support and UI graphics refactor
+24 March 2023
+
+<video width="400" autoplay><source src="https://user-images.githubusercontent.com/91013628/227546178-48805893-187f-474c-b23b-afb789de6646.mov" type="video/mp4"></video>
+
 ## Better sort of presets
 23 March 2023
 
