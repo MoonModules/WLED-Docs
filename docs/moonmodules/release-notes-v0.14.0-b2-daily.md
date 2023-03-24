@@ -117,9 +117,11 @@ March 8: All _M and _XL bins have NetDebug enabled by default (but not WLED_DEBU
 ## 2D setup: Panel visualization
 * Reset segments only bounds, keep effect etc.
 
-## Grandient Random cycle palette
+## Gradient Random cycle palette
 
 <img width="257" alt="image" src="https://user-images.githubusercontent.com/1737159/218804182-8f30b1d9-42fb-4f25-b76a-ad4e4eb7ab08.png">
+
+The first one will change colors smoothly, the second one will change colors every 5 seconds.
 
 ## Pins
 * default pins -1
