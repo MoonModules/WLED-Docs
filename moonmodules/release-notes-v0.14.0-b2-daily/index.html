@@ -1680,8 +1680,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#manage-netdebug-serial-logging-in-settings" class="md-nav__link">
-    Manage NetDebug / Serial logging in settings
+  <a href="#manage-netdebug-netprint-in-settings" class="md-nav__link">
+    Manage NetDebug / NetPrint in settings
   </a>
   
 </li>
@@ -2632,8 +2632,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#manage-netdebug-serial-logging-in-settings" class="md-nav__link">
-    Manage NetDebug / Serial logging in settings
+  <a href="#manage-netdebug-netprint-in-settings" class="md-nav__link">
+    Manage NetDebug / NetPrint in settings
   </a>
   
 </li>
@@ -2799,16 +2799,17 @@
 <h2 id="aditional-info-in-info-tab">Aditional info in info tab</h2>
 <p>27 Februari 2023</p>
 <p><img width="273" alt="image" src="https://user-images.githubusercontent.com/91013628/223709946-c1d587e9-aadf-4da6-8ee2-49445abc7150.png"></p>
-<h2 id="manage-netdebug-serial-logging-in-settings">Manage NetDebug / Serial logging in settings</h2>
+<h2 id="manage-netdebug-netprint-in-settings">Manage NetDebug / NetPrint in settings</h2>
 <p>24 Februari 2023</p>
-<p>No need to specify ip address and port in platformio.ini and therefor hardcode in bin/esp32. Go to Sync Interfaces / Net debug and specify there. Set output to network pressing Net Debug in the info tab (default off after reboot).</p>
+<p>NetDebug is called NetPrint in WLEDMM as it is not only used for debut as we have USER_PRINT. It just prints to the network, hence the name.</p>
+<p>No need to specify ip address and port in platformio.ini and therefor hardcode in bin/esp32 (but can be set to default). Go to Sync Interfaces / Net Print and specify there. Set output to network pressing Net Print in the info tab (<del>default off after reboot</del> value is saved in cfg.json - bug: not always set correctly after reboot - wip).</p>
 <p><img width="400" alt="image" src="https://user-images.githubusercontent.com/91013628/221207210-dabf4dae-efd5-4c76-9c35-2629d9d88fa8.png"></p>
 <p><img width="271" alt="image" src="https://user-images.githubusercontent.com/91013628/221207063-36e19f97-c6a8-44dd-be83-866dce3d8715.png"></p>
 <video width="500" autoplay><source src="https://user-images.githubusercontent.com/91013628/221207891-dd302ef2-853d-45b0-92d8-4c144761cbe2.mov" type="video/mp4"></video>
 
-<p><del>Bins WLEDMM_0.14.0-b2.19_esp32_4MB_M_debug and WLEDMM_0.14.0-b2.19_esp32_16MB_M_debug have NetDebug enabled by default.
-To do: check if NetDebug can be enabled in all bins (without performance/network consequences), also when WLED_DEBUG is off to catch Serial output.</del></p>
-<p>March 8: All _M and _XL bins have NetDebug enabled by default (but not WLED_DEBUG): User info (using USER_PRINT) can be send to network </p>
+<p><del>Bins WLEDMM_0.14.0-b2.19_esp32_4MB_M_debug and WLEDMM_0.14.0-b2.19_esp32_16MB_M_debug have NetPrint enabled by default.
+To do: check if NetPrint can be enabled in all bins (without performance/network consequences), also when WLED_DEBUG is off to catch Serial output.</del></p>
+<p>March 8: All _M and _XL bins have NetPrint enabled by default (but not WLED_DEBUG): User info (using USER_PRINT) can be send to network </p>
 <h2 id="2d-ledmaps">2D Ledmaps</h2>
 <ul>
 <li>segment names</li>
