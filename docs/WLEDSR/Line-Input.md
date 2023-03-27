@@ -15,6 +15,8 @@ Many I2S ADC boards expect an additional MCLK signal ("Main Clock" aka "System C
 
 ##  
  <img src="https://user-images.githubusercontent.com/91616163/193432590-176d20e8-2432-4eca-86f9-86cda91aa873.jpg" width="40%" height="40%" /> &nbsp; &nbsp; 
+ 
+ Buy: [AliExpress](https://www.aliexpress.com/item/32989916894.html)
 
 * Remove jumper from MLCK
 * DIP SWITCH - SLAVE
