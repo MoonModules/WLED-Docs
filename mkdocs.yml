@@ -153,6 +153,8 @@ nav:
     - Introduction: soundreactive/introduction.md
     - Sound Settings: soundreactive/Sound-Settings.md
     - Sound Reactive Palettes: soundreactive/Sound-Reactive-Palettes.md
+    - Digital Microphone Hookup: WLEDSR/Digital-Microphone-Hookup.md
+    - Line Input: soundreactive/Line-Input.md
   - WLED SR 0.13:
     - Basics:
       - Introduction: WLEDSR/Home.md
@@ -168,7 +170,6 @@ nav:
 
       - Digital Microphone Hookup: WLEDSR/Digital-Microphone-Hookup.md
       - Analog Audio Input Options: WLEDSR/Analog-Audio-Input-Options.md
-      - Line input (check check): WLEDSR/Line-Input.md
       - Using my PC for the Sound: WLEDSR/Using-my-PC-for-the-Sound.md
       - News: WLEDSR/News.md
 

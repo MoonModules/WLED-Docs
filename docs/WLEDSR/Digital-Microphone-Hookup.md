@@ -75,7 +75,7 @@ Here's the first board I've seen with the ICS-43434 at: https://www.tindie.com/p
 
 ### I2S ADC for Line-In
 
-It is recomended to capture audio using a digital input for Line-In rather than the analog solution, see this guide [Line-Input](Line-Input)
+It is recomended to capture audio using a digital input for Line-In rather than the analog solution, see this guide [Line-Input](/soundreactive/Line-Input)
 
 <p> &nbsp; </p>
 
