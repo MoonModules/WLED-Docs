@@ -18,6 +18,8 @@ Many I2S ADC boards expect an additional MCLK signal ("Main Clock" aka "System C
 ##  TI PCM1808
 <img src="https://user-images.githubusercontent.com/91616163/193432571-fb48bbff-e611-4235-bb47-5418f88c2c8d.jpg" width="20%" height="20%" />   &nbsp; &nbsp;
 
+Buy: [Amazon](https://a.co/d/3IHJWjV) or [AliExpress](https://a.aliexpress.com/_EydzFDt) 
+
 Top side: Right audio input, Audio Ground, Left audio input. 
 
 Right side: The I2S connections -
@@ -31,7 +33,7 @@ Right side: The I2S connections -
 
 Left side: Format, Mode selector 0, Mode selector 1, ground, 3.3v input, and 5v input.
 
-In WLED it's "Generic I2S with Mclk". You have 3 choices of what MCLK pin you can use - 0, 1, and 3. Pin 0 highly recommended as 1 ans 3 may already be in use
+In WLED it's "Generic I2S with Mclk". You have 3 choices of what MCLK pin you can use - 0, 1, and 3. Pin 0 highly recommended as 1 as 3 may already be in use
 
 5v seems to NEED to be connected. You can connect it to 3.3v but it will glitch randomly. Put that pin on 5v for best function. 3.3v and ground are connected to the same pins on the right side, so you just need to connect one of each, on either side. 
 
