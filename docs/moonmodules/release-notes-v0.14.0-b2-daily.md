@@ -81,10 +81,12 @@ Example: Ring Map
 
 <img width="273" alt="image" src="https://user-images.githubusercontent.com/91013628/223709946-c1d587e9-aadf-4da6-8ee2-49445abc7150.png">
 
-## Manage NetDebug / Serial logging in settings 
+## Manage NetDebug / NetPrint in settings 
 24 Februari 2023
 
-No need to specify ip address and port in platformio.ini and therefor hardcode in bin/esp32. Go to Sync Interfaces / Net debug and specify there. Set output to network pressing Net Debug in the info tab (default off after reboot).
+NetDebug is called NetPrint in WLEDMM as it is not only used for debut as we have USER_PRINT. It just prints to the network, hence the name.
+
+No need to specify ip address and port in platformio.ini and therefor hardcode in bin/esp32 (but can be set to default). Go to Sync Interfaces / Net Print and specify there. Set output to network pressing Net Print in the info tab (~~default off after reboot~~ value is saved in cfg.json - bug: not always set correctly after reboot - wip).
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/91013628/221207210-dabf4dae-efd5-4c76-9c35-2629d9d88fa8.png">
 
@@ -92,10 +94,10 @@ No need to specify ip address and port in platformio.ini and therefor hardcode i
 
 <video width="500" autoplay><source src="https://user-images.githubusercontent.com/91013628/221207891-dd302ef2-853d-45b0-92d8-4c144761cbe2.mov" type="video/mp4"></video>
 
-~~Bins WLEDMM_0.14.0-b2.19_esp32_4MB_M_debug and WLEDMM_0.14.0-b2.19_esp32_16MB_M_debug have NetDebug enabled by default.
-To do: check if NetDebug can be enabled in all bins (without performance/network consequences), also when WLED_DEBUG is off to catch Serial output.~~
+~~Bins WLEDMM_0.14.0-b2.19_esp32_4MB_M_debug and WLEDMM_0.14.0-b2.19_esp32_16MB_M_debug have NetPrint enabled by default.
+To do: check if NetPrint can be enabled in all bins (without performance/network consequences), also when WLED_DEBUG is off to catch Serial output.~~
 
-March 8: All _M and _XL bins have NetDebug enabled by default (but not WLED_DEBUG): User info (using USER_PRINT) can be send to network 
+March 8: All _M and _XL bins have NetPrint enabled by default (but not WLED_DEBUG): User info (using USER_PRINT) can be send to network 
 
 ## 2D Ledmaps
 * segment names
