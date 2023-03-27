@@ -150,10 +150,10 @@ nav:
   - 2D: 
     - WIP: 2D/wip.md
   - Sound Reactive: 
-    - Introduction: soundreactive/wip.md
+    - Introduction: soundreactive/introduction.md
     - Sound Settings: soundreactive/Sound-Settings.md
     - Sound Reactive Palettes: soundreactive/Sound-Reactive-Palettes.md
-  - WLED SR:
+  - WLED SR 0.13:
     - Basics:
       - Introduction: WLEDSR/Home.md
       - Installing and Compiling: WLEDSR/Installing-and-Compiling.md
@@ -168,6 +168,7 @@ nav:
 
       - Digital Microphone Hookup: WLEDSR/Digital-Microphone-Hookup.md
       - Analog Audio Input Options: WLEDSR/Analog-Audio-Input-Options.md
+      - Line input (check check): WLEDSR/Line-Input.md
       - Using my PC for the Sound: WLEDSR/Using-my-PC-for-the-Sound.md
       - News: WLEDSR/News.md
 
