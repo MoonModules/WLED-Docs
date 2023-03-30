@@ -11,7 +11,7 @@ See [ScottrBaileys GIF visualizer](https://github.com/scottrbailey/WLED-Utils/bl
 
 | Effect | Description | Sliders
 | --- | --- | ---
-| ⚙️ Custom effect (New) |Define your own effects, see [here](https://github.com/ewoudwijma/ARTI/wiki/WLED-Custom-effects)|No controls (yet)
+| ⚙️ ARTI-FX |Define your own effects, see [here](https://github.com/ewoudwijma/ARTI/wiki/WLED-Custom-effects)|No controls (yet)
 | Flow Stripe |Strip with rotating colours.|**Speed:** Controls a speed timer <br/>**Intensity:** Controls another timer
 | Perlin Move |Using Perlin Noise for movement.|**Speed:** Speed of elements<br/>**Intensity:** # of pixels<br />**FFT Low:** Fade rate
 | Wavesins | Beat waves and phase shifting. Looks OK in 2D'ish as well. |**Speed:** Speed<br/>**Intensity:** Varying brightness<br/>**FFT Low:** Starting colour<br/>**FFT High:** Range of colours<br/>**FFT Custom:** More fun to adjust

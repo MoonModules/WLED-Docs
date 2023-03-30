@@ -72,7 +72,7 @@ seg.palette = myPaletteId;
 ```
 Keep in mind that this will not cause interface updates as of 0.8.6. For that, you still need to use `colorUpdated(NOTIFIER_CALL_MODE_DIRECT_CHANGE)`
 
-### Create custom effects
+### Create ARTI-FX
 
 It is possible to create your own effects and add them to the FX library.
 The relevant files for that are `FX.cpp` and `FX.h`.

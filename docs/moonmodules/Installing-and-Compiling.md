@@ -20,7 +20,7 @@ MoonModules introduces a new naming convention for bin(ary) files which contains
 S:
 
 * USERMOD_AUDIOREACTIVE
-* USERMOD_CUSTOMEFFECTS
+* USERMOD_ARTIFX
 
 M:
 

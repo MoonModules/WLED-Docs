@@ -1,5 +1,5 @@
 ---
-title: Custom Effects
+title: ARTI-FX
 hide:
   # - navigation
   # - toc
@@ -8,50 +8,50 @@ hide:
 
 ![unknown](https://user-images.githubusercontent.com/91616163/197343053-f7deb257-5fd3-40f2-8ffd-31c06f02f12a.png)
 
-## Custom effects
+## ARTI-FX
 
-Custom effects are effects which are not compiled in the WLED repository but specified by a file (program file) which is interpreted in real time.
+ARTI-FX are effects which are not compiled in the WLED repository but specified by a file (program file) which is interpreted in real time.
 
 The big advantage of this is that effects are not limited by what is made by WLED programmers but anybody can create effects without releasing a new version of WLED. Furthermore any change in the effect code is instantly shown on leds allowing fast developing of effects.
 
 A disadvantage is that the file needs to be loaded, examined and then run in real-time which is 'per definition' slower then pre-compiled code, although performance is promising already and will get better over time.
 
 ## Quick start
-To get your first Custom Effect running, perform the following steps
+To get your first ARTI-FX running, perform the following steps
 
-* In tab effects, select '⚙️ Custom Effect'
+* In tab effects, select '⚙️ ARTI-FX'
 
-![Custom effect](https://github.com/MoonModules/WLED-Effects/blob/master/Images//CustomEffect.PNG?raw=true)
+![ARTI-FX](https://github.com/MoonModules/WLED-Effects/blob/master/Images/ARTIFX.PNG?raw=true)
 
-* In tab Segments, give the segment a name, this will be the name of the Custom Effect
+* In tab Segments, give the segment a name, this will be the name of the ARTI-FX
 
 ![Segment name](https://github.com/MoonModules/WLED-Effects/blob/master/Images/SegmentName.jpg?raw=true)
 
-* Click on Custom Effect Editor
+* Click on ARTI-FX Editor
 
-![Segment name](https://github.com/MoonModules/WLED-Effects/blob/master/Images/CustomEffectsEditor.PNG?raw=true)
+![Segment name](https://github.com/MoonModules/WLED-Effects/blob/master/Images/ARTIFXEditor.PNG?raw=true)
 
-* Click on Download wled.json to enable Custom Effects for WLED (needed each time a new version of CE is published)
+* Click on Download wled.json to enable ARTI-FX for WLED (needed each time a new version of CE is published)
 * Click on Load template to get a 'hello world' example
 * Press save and the template will be executed
 
 ## Running examples
 
-Custom Effects examples are stored in [Github repository](https://github.com/MoonModules/WLED-Effects/tree/master/CustomEffects/wled)
+ARTI-FX examples are stored in [Github repository](https://github.com/MoonModules/WLED-Effects/tree/master/ARTIFX/wled)
 
 If you develop effects which you want to share, ask for access on Github.
 
-These effects can be loaded easily within WLED: Give a Custom Effects segment name the same name as an effect in this repository (case sensitive, without .wled), click on Custom Effect Editor and click Download 'effect'.wled and press Save.
+These effects can be loaded easily within WLED: Give a ARTI-FX segment name the same name as an effect in this repository (case sensitive, without .wled), click on ARTI-FX Editor and click Download 'effect'.wled and press Save.
 
-Alternatively, if you want all the effects in this folder at once, go to the Custom Effect Editor and click Download presets.json (Segment stop is set to 50! This will overwrite any existing presets you have). Refresh the WLED page or reboot to see the new presets.
+Alternatively, if you want all the effects in this folder at once, go to the ARTI-FX Editor and click Download presets.json (Segment stop is set to 50! This will overwrite any existing presets you have). Refresh the WLED page or reboot to see the new presets.
 
 ![Examples presets](https://github.com/MoonModules/WLED-Effects/blob/master/Images//ExamplesPreset.PNG?raw=true)
 
-## Create your own Custom Effects
+## Create your own ARTI-FX
 
-A Custom Effects program typically looks like this:
+A ARTI-FX program typically looks like this:
 
-![Example](https://github.com/MoonModules/WLED-Effects/blob/master/Images/Custom%20Effects%20program%20example.PNG?raw=true)
+![Example](https://github.com/MoonModules/WLED-Effects/blob/master/Images/ARTIFX%20program%20example.PNG?raw=true)
 
 A program contains structures like if statements, for loops, assignments, calls (e.g. renderFrame) etc., commands like setPixelcolor and variables like ledCount.
 
@@ -98,7 +98,7 @@ A function has parameters (even empty parameters) e.g. setPixelColor(x,y), varia
     "custom3Slider": {"return":"uint8"},
     "sampleAvg": {"return": "double"},
 
-#### Custom Effects
+#### ARTI-FX
     "counter": {"return": "uint32"},
 
     "shift": {"delta": "int"},

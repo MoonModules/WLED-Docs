@@ -24,7 +24,7 @@ We do our best to perform upstream merges with the original WLED. Our fork inclu
 * Multiple panels of 2D led's.
 * 2D segments.
 * Dynamic naming and visibility of sliders.
-* An interpreter - for creating your own custom effects.
+* An interpreter - for creating your own effects (ARTI-FX).
 * Configuration setting for 2D, panels, noise squelch, gain, and UDP sound synchronization.
 
 
@@ -34,7 +34,7 @@ We do our best to perform upstream merges with the original WLED. Our fork inclu
 * **Sound reactive ESP32 FFT, 2D:** Andreas Pleschutznig (aka apleschu)
 * **General contributor, documentation, versioning, keep us up to date:** Chris Reese (aka THATDONFC)
 * **General contributor, UDP Sound Sync, INMP441 I2S:** Chris Hultin (aka spedione)
-* **Panels, 2D, segments, animations, custom effects (interpreter) and code cleanup:** Ewoud Wijma (aka ewowi)
+* **Panels, 2D, segments, animations, ARTI-FX (interpreter) and code cleanup:** Ewoud Wijma (aka ewowi)
 * **Sound processing, FFT, and code cleanup:** Frank Möhle (aka softhack007)
 * **I2S Sound input and processing:** Florian Heilmann (aka Haribo / FHeilmann)
 

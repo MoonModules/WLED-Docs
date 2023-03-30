@@ -36,14 +36,14 @@ December 5, 2022
 In 0.14 ledmaps are only supported for 1D.
 This fix makes it work for 2D in WLED MM.
 
-## Custom Effects improvements
+## ARTI-FX improvements
 November 29, 2022
 
-Custom Effect improvements:
-- Simplified [presets.json](https://github.com/MoonModules/WLED-Effects/tree/master/CustomEffects/wled) (can be downloaded directly into WLED MM in Custom Effect editor screen)
-- some bug fixes to let Custom Effects run better on 2D
+ARTI-FX improvements:
+- Simplified [presets.json](https://github.com/MoonModules/WLED-Effects/tree/master/ARTIFX/wled) (can be downloaded directly into WLED MM in ARTI-FX editor screen)
+- some bug fixes to let ARTI-FX run better on 2D
 
-And combining Custom Effects with [1D expansions](#october-21-2022) gives great results and makes Custom Effects very well performing on large 2D matrices!!!
+And combining ARTI-FX with [1D expansions](#october-21-2022) gives great results and makes ARTI-FX very well performing on large 2D matrices!!!
 
 This is color_fade_pulse (by @atuline) with Circles expansion:
 

@@ -72,7 +72,7 @@ each usermod <img width="166" alt="image" src="https://user-images.githubusercon
 ## September 1
 
 ## August 31
-### Custom Effects
+### ARTI-FX
 
 <img width="296" alt="image" src="https://user-images.githubusercontent.com/1737159/188725863-3c133079-f6a5-4885-82d8-d603f3c95f3e.png"> + 
 <img width="210" alt="image" src="https://user-images.githubusercontent.com/1737159/188725973-0d3ad535-bb9f-459c-848d-8b11f80bd3cc.png"> = 

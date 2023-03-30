@@ -16,7 +16,7 @@ Audio reactive | Core | Usermod | Usermod
 Microphone Profiles | No | Yes | No | 
 Audio dynamics limiter | No | Yes | Yes
 High Definition audio analysis, 32 channel GEQ | No |  Yes (WIP) for ESP32 and ESP32-S3 | No
-Custom Effects | Yes | Yes | No
+ARTI-FX | Yes | Yes | No
 Expand 1D effects | No | Yes (+ JMap, Circle and Block) | Yes
 Extended hw info | basic | Yes | No
 JSON Mapping on 1D effects | No | Yes | No
