@@ -9,6 +9,7 @@ hide:
 ![unknown](https://user-images.githubusercontent.com/91616163/197343053-f7deb257-5fd3-40f2-8ffd-31c06f02f12a.png)
 
 ## ARTI-FX
+pka Custom Effects
 
 ARTI-FX are effects which are not compiled in the WLED repository but specified by a file (program file) which is interpreted in real time.
 
