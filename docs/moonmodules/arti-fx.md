@@ -37,6 +37,7 @@ To get your first ARTI-FX running, perform the following steps
 * Click on Download wled.json to enable ARTI-FX for WLED (needed each time a new version of CE is published)
 * Click on Load template to get a 'hello world' example
 * Press save and the template will be executed
+* Extra Download: 🥚: [HBaas Base presets](https://github.com/MoonModules/WLED-Effects/tree/master/Presets/HB_PresetPack210808_32x32_16seg), 🥚: [HBaas Effects presets](https://github.com/MoonModules/WLED-Effects/tree/master/Presets/HB_PresetPack210808_32x32_16seg), 🥚:[Ledmap presets](https://github.com/MoonModules/WLED-Effects/tree/master/Ledmaps)
 
 ## Running examples
 
