@@ -7,6 +7,16 @@ hide:
 
 Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next release will be v0.14.0-b2)
 
+## Example mapping library for Rings, Cubes and Clouds
+2 April 2023
+
+<img width="243" alt="Screenshot 2023-04-02 at 12 13 30" src="https://user-images.githubusercontent.com/1737159/229347274-350d5b16-acc5-4405-9317-6918db1f252a.png">
+<img width="243" alt="Screenshot 2023-04-02 at 12 15 56" src="https://user-images.githubusercontent.com/1737159/229347280-05a5bcbf-40a4-4675-b7f6-899622391a17.png">
+<img width="243" alt="Screenshot 2023-04-02 at 12 19 27" src="https://user-images.githubusercontent.com/1737159/229347281-119a9ad7-170b-45b1-bd45-745eee49b5f3.png">
+<img width="243" alt="Screenshot 2023-04-02 at 12 20 12" src="https://user-images.githubusercontent.com/1737159/229347282-8df447cf-e994-4ed5-8b8b-6b60a8de52d0.png">
+
+Get them here, upload the presets.json to have them all as presets: [MoonModules/WLED-Effects/Ledmaps](https://github.com/MoonModules/WLED-Effects/tree/master/Ledmaps)
+
 ## Tablet PC Mode support and UI graphics refactor
 24 March 2023
 
