@@ -35,6 +35,8 @@ More info:
 
 * [Release notes v0.14.0-b2-daily](/moonmodules/release-notes-v0.14.0-b2-daily)
 
+* [Release notes v0.14.0-b15](/moonmodules/release-notes-v0.14.0-b15)
+
 * [Release notes v0.14.0-b1](/moonmodules/release-notes-v0.14.0-b1)
 
 * [Release notes v0.14.0-b0](/moonmodules/release-notes-v0.14.0-b0)

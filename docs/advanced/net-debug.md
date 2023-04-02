@@ -30,4 +30,4 @@ Debug can be switched on and off in the Info tab:
 
 No need to specify ip address and port in platformio.ini and therefor hardcode in bin/esp32. Go to Sync Interfaces / Net debug and specify there. Set output to network pressing Net Debug in the info tab (default off after reboot).
 
-See [release notes v0.14.0-b2 daily/manage netdebug serial logging in settings](/moonmodules/release-notes-v0.14.0-b2-daily/#manage-netdebug-serial-logging-in-settings)
+See [release notes v0.14.0-b15/manage netdebug serial logging in settings](/moonmodules/release-notes-v0.14.0-b15/#manage-netdebug-serial-logging-in-settings)
