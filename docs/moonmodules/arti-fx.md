@@ -6,7 +6,8 @@ hide:
 ---
 
 
-![unknown](https://user-images.githubusercontent.com/91616163/197343053-f7deb257-5fd3-40f2-8ffd-31c06f02f12a.png)
+<img width="216" alt="image" src="https://user-images.githubusercontent.com/1737159/229341586-5759849f-0c53-487d-80ee-5e99a6216bbf.png">
+
 
 ## ARTI-FX
 pka Custom Effects
@@ -22,15 +23,16 @@ To get your first ARTI-FX running, perform the following steps
 
 * In tab effects, select '⚙️ ARTI-FX'
 
-![ARTI-FX](https://github.com/MoonModules/WLED-Effects/blob/master/Images/ARTIFX.PNG?raw=true)
+<img width="235" alt="image" src="https://user-images.githubusercontent.com/1737159/229341657-7ff5961f-de24-49a1-82bd-6c1da0a3c0ef.png">
 
 * In tab Segments, give the segment a name, this will be the name of the ARTI-FX
 
-![Segment name](https://github.com/MoonModules/WLED-Effects/blob/master/Images/SegmentName.jpg?raw=true)
+<img width="241" alt="image" src="https://user-images.githubusercontent.com/1737159/229341716-77e47591-420e-4a42-b7c3-b1c7f41ccf64.png">
 
 * Click on ARTI-FX Editor
 
-![Segment name](https://github.com/MoonModules/WLED-Effects/blob/master/Images/ARTIFXEditor.PNG?raw=true)
+<img width="383" alt="image" src="https://user-images.githubusercontent.com/1737159/229341770-9aa7460d-5454-4ca5-9672-7171d0fdfba4.png">
+
 
 * Click on Download wled.json to enable ARTI-FX for WLED (needed each time a new version of CE is published)
 * Click on Load template to get a 'hello world' example
@@ -44,9 +46,9 @@ If you develop effects which you want to share, ask for access on Github.
 
 These effects can be loaded easily within WLED: Give a ARTI-FX segment name the same name as an effect in this repository (case sensitive, without .wled), click on ARTI-FX Editor and click Download 'effect'.wled and press Save.
 
-Alternatively, if you want all the effects in this folder at once, go to the ARTI-FX Editor and click Download presets.json (Segment stop is set to 50! This will overwrite any existing presets you have). Refresh the WLED page or reboot to see the new presets.
+Alternatively, if you want all the effects in this folder at once, go to the ARTI-FX Editor and click Download presets.json (This will overwrite any existing presets you have). Refresh the WLED page or reboot to see the new presets.
 
-![Examples presets](https://github.com/MoonModules/WLED-Effects/blob/master/Images//ExamplesPreset.PNG?raw=true)
+<img width="215" alt="image" src="https://user-images.githubusercontent.com/1737159/229341865-8009037d-a577-4cb3-9e13-db615c0a9f71.png">
 
 ## Create your own ARTI-FX
 
