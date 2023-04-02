@@ -15,6 +15,13 @@ hide:
 
 Get them here, upload the presets.json to have them all as presets: [MoonModules/WLED-Effects/Ledmaps](https://github.com/MoonModules/WLED-Effects/tree/master/Ledmaps)
 
+## MM Usermods have their own icon
+2 April 2023
+
+<img width="235" alt="Screenshot 2023-04-02 at 10 31 36" src="https://user-images.githubusercontent.com/1737159/229347988-bfc99373-bac6-4ad7-ba2a-69f9aaea1e88.png">
+
+And (therefore) shown on top
+
 ## Tablet PC Mode support and UI graphics refactor
 24 March 2023
 
