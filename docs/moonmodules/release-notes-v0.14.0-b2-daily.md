@@ -15,6 +15,9 @@ By @Troy and @Netmindz
 
 Can be found in these boards:
 
-![IMG_2387](https://user-images.githubusercontent.com/1737159/230074117-97d75509-5511-47d2-a0c5-87ad622085c1.jpeg)
+<img width="243" src="https://user-images.githubusercontent.com/1737159/230074117-97d75509-5511-47d2-a0c5-87ad622085c1.jpeg">
 
-![IMG_2388](https://user-images.githubusercontent.com/1737159/230074148-a88e43d5-2218-4f6c-811a-dc092608a8e2.jpeg)
+[LyraT v4.3](https://espressif-docs.readthedocs-hosted.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html)
+
+<img width="243" src="https://user-images.githubusercontent.com/1737159/230074148-a88e43d5-2218-4f6c-811a-dc092608a8e2.jpeg">
+(?)
