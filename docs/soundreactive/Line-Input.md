@@ -5,7 +5,7 @@ Looking to add line-in with I2S support? You might want to try I2S ADC boards th
 * [CirrusLogic CS5343](https://www.cirrus.com/products/cs5343-44/)
 * [AKM AK5720](https://www.akm.com/eu/en/products/audio/audio-adc/ak5720et/) ([datasheet](https://www.akm.com/content/dam/documents/products/audio/audio-adc/ak5720vt/ak5720vt-en-datasheet.pdf))
 * [Ti PCM1808](https://www.ti.com/product/PCM1808) or [Ti PCM1802](https://www.ti.com/product/PCM1802)
-
+* ES8388
 
 Many I2S ADC boards expect an additional MCLK signal ("Main Clock" aka "System Clock" aka "Master Clock" aka "Memory Clock").  MCLK is sometimes labelled SCLK for "system clock". For these boards with 4 data pins, use our `Generic I2S with MCLK` input driver, and connect MCLK pin to GPIO pin 0, 1, or 3 on ESP32.
 
@@ -49,3 +49,9 @@ MD1 and MD0 set master/slave modes. It defaults to slave (both pins are internal
 FMY (format, FMT in the spec sheet - I assume the "Y" is a typo on the silkscreen) is a bit more interesting. By default it's pulled low internally, which the docs claim to be "I2S, 24-bit" - which will work fine as a default.
 
 ...however, pulling FMY "high" (connected to 3.3v) seems to make everything better in WLED.  According to the spec sheet, this moves the entire 24 bit sequence one pulse earlier ("left justified") and the responsiveness seems to be better overall in WLED.  The GEQ visual output is more "balanced" with the highs being better represented. The format of the 24 bits is unchanged - both are MSB first - but it seems to be better in WLED when the pin is pulled high.
+
+## ES8388
+
+ESP-Audio-Kit [LyraT v4.3](https://espressif-docs.readthedocs-hosted.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html)
+
+<img width="243" src="https://user-images.githubusercontent.com/1737159/230074117-97d75509-5511-47d2-a0c5-87ad622085c1.jpeg">
