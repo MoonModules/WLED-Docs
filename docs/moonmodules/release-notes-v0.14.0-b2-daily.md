@@ -10,6 +10,8 @@ Below are the ongoing updates in WLEDMM which has not made it to a release yet (
 ## Support for pixelArt in ARTI-FX
 5 April 2023
 
+ARTI-FX can show multiple frames, each stored as a separate json file in <ip>/edit
+
 <video width="400" autoplay><source src="https://user-images.githubusercontent.com/1737159/230075460-6652b18e-23ab-4138-a49c-e919b0bcb639.mov" type="video/mp4"></video>
 
 Program can be found here: https://github.com/MoonModules/WLED-Effects/blob/master/ARTIFX/wled/mario.wled
