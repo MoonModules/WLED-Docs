@@ -149,6 +149,7 @@ nav:
     - Platformio entries: moonmodules/platformio-entries.md
     - Preset API commands: moonmodules/preset-api-commands.md
     - Contribute to docs: moonmodules/contribute-docs.md
+    - Contribute to development: moonmodules/contribute-dev.md
   - 2D: 
     - WIP: 2D/wip.md
   - Sound Reactive: 
