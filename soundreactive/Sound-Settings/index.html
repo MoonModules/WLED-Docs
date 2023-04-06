@@ -1985,6 +1985,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sync" class="md-nav__link">
+    Sync
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2669,6 +2676,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sync" class="md-nav__link">
+    Sync
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2748,7 +2762,7 @@
 <p>Some more information can be found on our <a href="/WLEDSR/Digital-Microphone-Hookup">I2S digital microphones</a> page.</p>
 <p><em>to be extended soon</em></p>
 <h3 id="i2s-line-in">I2S Line-in</h3>
-<p>There are solutions available for line-in via I2S. For example, boards/shields with "es7243" chip should work already (we have a special driver for these), and we're investigating "es8388". Please check our <a href="/WLEDSR/Digital-Microphone-Hookup#some-i2s-audio-boards">I2S digital microphone hookup - I2S audio boards/modules</a> page for more information.
+<p>There are solutions available for line-in via I2S. For example, boards/shields with "es7243" chip should work already (we have a special driver for these), and the "es8388" used in some of the AudioDevKit boards. Please check our <a href="/soundreactive/Line-Input/">Line-Input</a> page for more information.
 <br/></p>
 <h2 id="agc-improved-autonomous-gain-control">AGC - improved Autonomous Gain Control</h2>
 <p>We have recently improved the AGC (automatic gain control) algorithm in WLED-SR. It's not enabled by default, however we encourage you to give it a try - all sound reactive effects now support AGC, including 2D and frequency-reactive effects. The only prerequisite for using AGC is that you first adjust "Squelch" to define 'silence' (ambient noise level) in your environment - <a href="/WLEDSR/Sound-Settings/_edit#how-to">see previous section</a>.</p>
@@ -2760,6 +2774,9 @@ For example, if you play music and then increase the speaker volume, WLED-SR wil
 * <strong>Normal</strong> - AGC tries to smoothly follow changes in sound input volume. Recommended as a balanced option for general use.
 * <strong>Vivid</strong>  - AGC will quickly adjust to changes in sound input volume. Recommended in case you want "more blinken from your LEDs".
 * <strong>Lazy</strong>   - AGC will take some more time before internal gain is adjusted. Recommended for GEQ effects, or when listening to music that features strong "dynamics".</p>
+<h2 id="sync">Sync</h2>
+<p>It is possible to fit a mic or line-in connection to a single WLED device and then send the results of the audio processing to other WLED devices on the same network. Just set the device with the input to Send and the other devices to Receive</p>
+<p>NOTE: if you see issues with delay or no data at all, you may se better performance if you disable Wi-Fi Multimedia (WMM) Mode QoS on your wifi router</p>
 <p><em>to be extended soon</em></p>
 
 
