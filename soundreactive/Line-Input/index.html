@@ -1975,6 +1975,19 @@
     ES8388
   </a>
   
+    <nav class="md-nav" aria-label="ES8388">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin-config" class="md-nav__link">
+    Pin Config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2565,6 +2578,19 @@
     ES8388
   </a>
   
+    <nav class="md-nav" aria-label="ES8388">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin-config" class="md-nav__link">
+    Pin Config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2628,8 +2654,27 @@ https://digilent.com/reference/pmod/pmodi2s2/start</p>
 <p>FMY (format, FMT in the spec sheet - I assume the "Y" is a typo on the silkscreen) is a bit more interesting. By default it's pulled low internally, which the docs claim to be "I2S, 24-bit" - which will work fine as a default.</p>
 <p>...however, pulling FMY "high" (connected to 3.3v) seems to make everything better in WLED.  According to the spec sheet, this moves the entire 24 bit sequence one pulse earlier ("left justified") and the responsiveness seems to be better overall in WLED.  The GEQ visual output is more "balanced" with the highs being better represented. The format of the 24 bits is unchanged - both are MSB first - but it seems to be better in WLED when the pin is pulled high.</p>
 <h2 id="es8388">ES8388</h2>
-<p>ESP-Audio-Kit <a href="https://espressif-docs.readthedocs-hosted.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html">LyraT v4.3</a></p>
-<p><img width="243" src="https://user-images.githubusercontent.com/1737159/230074117-97d75509-5511-47d2-a0c5-87ad622085c1.jpeg"></p>
+<ul>
+<li>
+<p><a href="https://docs.espressif.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html">ESP32 Lyra-T V4.3</a> 
+<img src="https://user-images.githubusercontent.com/91616163/193413089-6f71193c-d8db-4185-9de3-c8b4005431c1.jpg" width="40%" height="40%" /></p>
+</li>
+<li>
+<p><a href="https://docs.ai-thinker.com/en/esp32-audio-kit">Ai-Thinker ESP32 Audio Kit v2.2</a> 
+<img src="https://user-images.githubusercontent.com/91616163/193413239-e3fd9567-a64d-464c-bdc6-2a2ce69c0df5.png" width="40%" height="40%" />
+Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
+</li>
+</ul>
+<h3 id="pin-config">Pin Config</h3>
+<p>For both the LyraT v4.3 and the AiThinker v2.2 use the following pin config</p>
+<ul>
+<li>IS2 SD = 35</li>
+<li>I2S WS = 25</li>
+<li>I2S SCK = 5</li>
+<li>I2S MCLK = 0</li>
+<li>I2C SDA = 18</li>
+<li>I2C SCL = 23  </li>
+</ul>
 
 
 
