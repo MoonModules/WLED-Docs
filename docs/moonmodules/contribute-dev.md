@@ -12,7 +12,7 @@ This page Work In Progress
 <img width="400" alt="Screenshot 2022-10-25 at 17 40 14" src="https://user-images.githubusercontent.com/91013628/197819274-b2e318ba-9039-4de1-8296-6673a09d08e9.png">
 
 ## Core branches
-* **mdev**: Main development branch. [merge with care!!!](#Merge_from_upstream)
+* **mdev**: Main development branch. [merge from upstream](#Merge-from-upstream)
 * **dev/acmain/main**: Do not commit or merge directly to this branch -> easier to keep up to date with upstream
 
 ### General coding standards
