@@ -88,7 +88,7 @@ It is recomended to capture audio using a digital input for Line-In rather than 
 <p> &nbsp; </p>
 
 ### ES8388 based boards - not yet supported
-with I2S on-board microphone and I2S Line-In (**SR WLED support not available yet**, but being developed)
+with I2S on-board microphone and I2S Line-In (**SR WLED support not available yet**, but is supported in MoonModules)
 
 * [ESP32 Lyra-T V4.3](https://docs.espressif.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html) 
 <img src="https://user-images.githubusercontent.com/91616163/193413089-6f71193c-d8db-4185-9de3-c8b4005431c1.jpg" width="40%" height="40%" />
