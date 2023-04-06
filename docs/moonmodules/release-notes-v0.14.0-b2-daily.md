@@ -10,6 +10,8 @@ Below are the ongoing updates in WLEDMM which has not made it to a release yet (
 ## Support for pixelArt in ARTI-FX
 5 April 2023
 
+Idea by @Stiw47
+
 ARTI-FX can show multiple frames, each stored as a separate json file in <ip>/edit
 
 <video width="400" autoplay><source src="https://user-images.githubusercontent.com/1737159/230075460-6652b18e-23ab-4138-a49c-e919b0bcb639.mov" type="video/mp4"></video>
@@ -25,7 +27,10 @@ And don't forget to upload latest wledv033.json to <ip>/edit (https://github.com
 
 ## Add ES8388 as Sound Reactive Input type
 5 April 2023
+  
 By @Troy and @Netmindz
+
+<img width="168" alt="image" src="https://user-images.githubusercontent.com/91013628/230325351-fe984cbe-625a-4f51-94d5-d5d79c821259.png">
 
 Can be found in these boards:
 [LyraT v4.3](https://espressif-docs.readthedocs-hosted.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html)
