@@ -52,9 +52,12 @@ FMY (format, FMT in the spec sheet - I assume the "Y" is a typo on the silkscree
 
 ## ES8388
 
+This audio chip reqires I2C commants to initialize properly for just about any use. These have been hard-coded and will be used when type "ES8388" is selected, and will select line-in use.
+
+On-board microphones are not currently supported - line-in is much better regardless, if you can use it. 
+
 * [ESP32 Lyra-T V4.3](https://docs.espressif.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html) 
 <img src="https://user-images.githubusercontent.com/91616163/193413089-6f71193c-d8db-4185-9de3-c8b4005431c1.jpg" width="40%" height="40%" />
-
 
 * [Ai-Thinker ESP32 Audio Kit v2.2](https://docs.ai-thinker.com/en/esp32-audio-kit) 
 <img src="https://user-images.githubusercontent.com/91616163/193413239-e3fd9567-a64d-464c-bdc6-2a2ce69c0df5.png" width="40%" height="40%" />
@@ -62,11 +65,24 @@ Note: the underside of ESP32 overhang shows ESP32-A1S 2974
 
 ### Pin Config
 
-For both the LyraT v4.3 and the AiThinker v2.2 use the following pin config
+The LyraT v4.3 and some AiThinker v2.2 boards use the following pin config:
 
+* Type: ES8388
 * IS2 SD = 35
 * I2S WS = 25
 * I2S SCK = 5
 * I2S MCLK = 0
 * I2C SDA = 18
 * I2C SCL = 23  
+
+Other revisions of the AiThinker v2.2 boards use the following pins:
+
+Note: the underside of ESP32 overhang shows ESP32-A1S B221 and B238 on two boards with this config - the "B" or "B2" may be hints as to revision. 
+
+* Type: ES8388
+* IS2 SD = 35
+* I2S WS = 25
+* I2S SCK = 27
+* I2S MCLK = 0
+* I2C SDA = 33
+* I2C SCL = 32  
