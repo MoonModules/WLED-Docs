@@ -17,6 +17,7 @@ This page Work In Progress
 
 ### General coding standards
 * Use WLEDMM in comments so our changes can be found back
+* Add 🌜character on UI items which are MM specific so users can see where MM differs from AC
 
 ## Work from other repos:
 * Fork
