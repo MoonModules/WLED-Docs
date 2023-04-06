@@ -101,7 +101,7 @@ Some more information can be found on our [I2S digital microphones](/WLEDSR/Digi
 _to be extended soon_
 
 ### I2S Line-in
-There are solutions available for line-in via I2S. For example, boards/shields with "es7243" chip should work already (we have a special driver for these), and we're investigating "es8388". Please check our [I2S digital microphone hookup - I2S audio boards/modules](/WLEDSR/Digital-Microphone-Hookup#some-i2s-audio-boards) page for more information.
+There are solutions available for line-in via I2S. For example, boards/shields with "es7243" chip should work already (we have a special driver for these), and the "es8388" used in some of the AudioDevKit boards. Please check our [Line-Input](/soundreactive/Line-Input/) page for more information.
 <br/>
 
 ## AGC - improved Autonomous Gain Control
@@ -118,5 +118,11 @@ Currently WLED-SR offers four different AGC presets that can be selected in soun
 * **Vivid**  - AGC will quickly adjust to changes in sound input volume. Recommended in case you want "more blinken from your LEDs".
 * **Lazy**   - AGC will take some more time before internal gain is adjusted. Recommended for GEQ effects, or when listening to music that features strong "dynamics".
 
+
+## Sync
+
+It is possible to fit a mic or line-in connection to a single WLED device and then send the results of the audio processing to other WLED devices on the same network. Just set the device with the input to Send and the other devices to Receive
+
+NOTE: if you see issues with delay or no data at all, you may se better performance if you disable Wi-Fi Multimedia (WMM) Mode QoS on your wifi router
 
 _to be extended soon_
