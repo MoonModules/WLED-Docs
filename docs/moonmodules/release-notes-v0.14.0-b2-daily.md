@@ -38,7 +38,7 @@ ARTI-FX can show multiple frames, each stored as a separate json file in <ip>/ed
 
 Program can be found here: https://github.com/MoonModules/WLED-Effects/blob/master/ARTIFX/wled/mario.wled
 
-<img width="314" alt="Screenshot 2023-04-05 at 13 33 28" src="https://user-images.githubusercontent.com/1737159/230075763-6186f8bd-e915-4f63-a7bb-6ea9e3dd2249.png">
+<img width="314" alt="image" src="https://user-images.githubusercontent.com/91013628/230597209-11415a56-b85e-48c9-87cd-f83742fa87d1.png">
 
 As ARTIFX does not support strings, jsonToPixels only contains a sequence number, the name of the json files is combination of segment name (that should be called mario), sequence number and ".json")
 See https://github.com/MoonModules/WLED-Effects/blob/master/ARTIFX/wled/presets.json for how to add mario in presets 
