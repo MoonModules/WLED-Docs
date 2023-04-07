@@ -65,7 +65,7 @@ It could be formatted any of the three ways demonstrated above.
 
 <img width="222" alt="image" src="https://user-images.githubusercontent.com/91013628/223077405-2c37bec0-3d94-4ff8-9725-fdfca886f559.png">
 
-   - n (name) is not used yet
+   - n (name) and physical is not used yet
    - width and height define the total width and height of the 2D coordinate space (this overrides 2D configuration settings)
 
 * Repository of ledmap examples: [WLED-Effects/Ledmaps](https://github.com/MoonModules/WLED-Effects/tree/master/Ledmaps) containing irregular 2D shapes (clouds and cube) and rings remapping (rings). For testing the different ledmaps upload presets.json in this folder to /edit
