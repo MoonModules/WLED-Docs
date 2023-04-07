@@ -37,4 +37,13 @@ Can be found in these boards:
 
 <img width="243" src="https://user-images.githubusercontent.com/1737159/230074117-97d75509-5511-47d2-a0c5-87ad622085c1.jpeg">
 
-
+## DMX Input
+ 
+6 April 2023
+  
+By @Netmindz
+  
+Do you have existing tranditional wired DMX setup and just want to attach you WLED device like any other fixture? Well now you can.
+Same behaviour as existing DMX over ip (ArtNet / e1.31), but now with the stability and realiability without the need to use Ethernet.
+  
+Note: only currently on the _v4 builds due the esp_dmx library needing the 2.x ESP32-Arduino platform
