@@ -28,5 +28,6 @@ ESP32-S3 | No | Yes | Experimental
 ESP32-S2 and ESP32-C3 | No | Experimental | Experimental
 ESP8266 | No | Yes but no Audio Reactive | Yes but no Audio Reactive
 Bin Awareness | Yes | Yes | No
-Audioreactive palettes | No | Yes | No
+Audioreactive palettes | Yes | Yes | No
 Extended mic settings in platformIO | No | Yes | No
+DMX Input | No | Yes | No
