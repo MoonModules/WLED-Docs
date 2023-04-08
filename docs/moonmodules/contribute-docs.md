@@ -20,19 +20,21 @@ You can contribute to the contents on this site as follows:
 ### Edit using github
 
 * Clone your fork (https://github.com/yourfork/WLED-Docs.git)
-<img width="340" alt="image" src="https://user-images.githubusercontent.com/91013628/208883588-b5178d04-275e-4b0e-9405-48e95f9462b4.png">
+<img width="340" src="https://user-images.githubusercontent.com/91013628/208883588-b5178d04-275e-4b0e-9405-48e95f9462b4.png">
 * Create a branch in your fork if you want to create a pull request for changes in that branch only
 * Make edits in your fork / branch (https://github.com/yourfork/WLED-Docs/)
 * Commit
 
 ### Edit in website
 
-Go to https://yourfork.github.io/WLED-Docs
+Go to https://yourfork.github.io/WLED-Docs or https://mm.kno.wled.ge/moonmodules/contribute-docs/ if you have contributor rights
 
 * Navigate to the page you want to edit
 * Press edit icon
-<img width="58" alt="image" src="https://user-images.githubusercontent.com/91013628/208883428-325acace-7d36-4454-9894-259089ec5473.png">
-* Commit
+<img width="58" src="https://user-images.githubusercontent.com/91013628/208883428-325acace-7d36-4454-9894-259089ec5473.png">
+* Edit the file 
+* Images can be added by dragging them to the page (see earlier added images and videos for the syntax to be used, use width="xxx" to adjust the size)
+* Commit (see workflow after commit)
 
 ## Workflow after commit
 
