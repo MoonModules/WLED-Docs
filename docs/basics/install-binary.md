@@ -15,8 +15,6 @@ If you are updating an existing version of WLED, make sure to uncheck "Clean ins
 This installer is not yet available for ESPs with flash chips smaller than 4MB (e.g. ESP01)
 
 !!! tip
-    In case you want to flash WLED with audioreactive usermod: 
-    Several users reported that this alternative, unofficial installer site may work better: [https://wled-install.github.io/](https://wled-install.github.io/).
     After using the standard WLED installer, microphone hardware sometimes cannot be initialized properly by WLED.
     For flashing the MoonModules version of WLED, we recommend using this installer site: [https://wled-install.github.io/](https://wled-install.github.io/)
 
@@ -41,6 +39,8 @@ This step only has to be done once, to update afterwards the bootloader does not
 ```bash
 esptool.py write_flash 0x0 ./esp32_bootloader_v4.bin
 ```
+!!! caution
+This boolader file is only for "classic ESP32" boards. You need a different bootloader for esp32-S3/-S2/-C3.
 
 Now you can flash the actual firmware binary. Keep in mind the bootloader needs to have a flash offset of 0, but the firmware 0x10000.
 
@@ -62,11 +62,6 @@ If you have a MagicHome controller, here is a [good video tutorial](https://www.
 
 !!! warning
     Don't use ESP Home Flasher for ESP32 boards.   
-    On ESP32, ESP Home Flasher will make the filesystem very small (61kB), which leads to issues making presets. 
-    Please consider using [WLED ESP Flasher](/basics/install-wled-flasher), or the web installer or esptool.
-
-!!! caution
-    <strong>Don't use ESP Home Flasher with ESP32 boards.</strong>   
     On ESP32, ESP Home Flasher will make the filesystem very small (61kB), which leads to issues making presets. 
     Please consider using [WLED ESP Flasher](/basics/install-wled-flasher), or the web installer or esptool.
 
