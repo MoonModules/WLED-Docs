@@ -33,11 +33,13 @@ Go to https://yourfork.github.io/WLED-Docs or https://mm.kno.wled.ge/moonmodules
 * Press edit icon
 
 <img width="200" alt="Screenshot 2023-04-08 at 19 59 06" src="https://user-images.githubusercontent.com/91013628/230736309-48fd2b8b-30b4-4225-8928-769fab7934ee.png">
+
 * Edit the file
 
 <img width="200" alt="Screenshot 2023-04-08 at 20 01 33" src="https://user-images.githubusercontent.com/91013628/230736317-8f8db851-8780-4517-8c56-74b3eedf3afb.png">
 
 * Images can be added by dragging them to the page (see earlier added images and videos for the syntax to be used, use width="xxx" to adjust the size)
+
 * Commit (see workflow after commit)
 
 <img width="200" alt="Screenshot 2023-04-08 at 20 02 06" src="https://user-images.githubusercontent.com/91013628/230736334-5696898c-19f8-46ae-9be5-05faac19f762.png">
