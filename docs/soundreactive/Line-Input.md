@@ -52,7 +52,7 @@ FMY (format, FMT in the spec sheet - I assume the "Y" is a typo on the silkscree
 
 ## ES8388
 
-This audio chip reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" is selected
+This audio chip reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" is selected.
 
 The on-board microphones are not currently supported - line-in is much better regardless. 
 
