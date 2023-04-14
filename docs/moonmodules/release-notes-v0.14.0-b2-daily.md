@@ -16,6 +16,14 @@ Also supported by ARTI-FX
 
 More info follows
 
+## Audio Palette Updates
+
+14 April 2023
+
+By @Netmindz
+
+Fix issues with Audio Responsive Hue being single color and add new Audio Responsive Ramp palette. AR Ramp is designed for use with effects like Fire that expect the palette to start with black, then ramp up
+
 ## DMX Input
  
 6 April 2023
