@@ -2654,8 +2654,8 @@ https://digilent.com/reference/pmod/pmodi2s2/start</p>
 <p>FMY (format, FMT in the spec sheet - I assume the "Y" is a typo on the silkscreen) is a bit more interesting. By default it's pulled low internally, which the docs claim to be "I2S, 24-bit" - which will work fine as a default.</p>
 <p>...however, pulling FMY "high" (connected to 3.3v) seems to make everything better in WLED.  According to the spec sheet, this moves the entire 24 bit sequence one pulse earlier ("left justified") and the responsiveness seems to be better overall in WLED.  The GEQ visual output is more "balanced" with the highs being better represented. The format of the 24 bits is unchanged - both are MSB first - but it seems to be better in WLED when the pin is pulled high.</p>
 <h2 id="es8388">ES8388</h2>
-<p>This audio chip reqires I2C commants to initialize properly for just about any use. These have been hard-coded and will be used when type "ES8388" is selected, and will select line-in use.</p>
-<p>On-board microphones are not currently supported - line-in is much better regardless, if you can use it. </p>
+<p>This audio chip reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" is selected</p>
+<p>The on-board microphones are not currently supported - line-in is much better regardless. </p>
 <ul>
 <li>
 <p><a href="https://docs.espressif.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html">ESP32 Lyra-T V4.3</a> 
