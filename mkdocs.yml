@@ -112,6 +112,7 @@ nav:
     - Wiring Protips: advanced/wiring.md
     - Long Data Lines: advanced/longdata.md
     - Compiling WLED: advanced/compiling-wled.md
+    - WLED Build Flags: advanced/buildflags.md
     - Custom Features: advanced/custom-features.md
     - ESP32 Recovery: advanced/esp32-recovery.md
     - Mapping: advanced/mapping.md
