@@ -194,7 +194,7 @@ For non-numeric entries use **both** types of quotes like `-D SERVERNAME='"WLED-
 | WLED_DISABLE_OTA | Disables the feature to Update over the webinterface |
 | WLED_DISABLE_ALEXA | Disables Alexa support |
 | WLED_DISABLE_HUESYNC | Disables the HUE support |
-| WLED_DISABLE_INFRARED | Disables Infrared support - also useful to add `lib_ignore = IRremoteESP8266` to platformio.ini or your override file |
+| WLED_DISABLE_INFRARED | Disables Infrared support - also useful to add `lib_ignore = IRremoteESP8266` to your platformio.ini or platformio_override.ini file |
 | WLED_DISABLE_WEBSOCKETS | Disables the websockets (?) |
 | WLED_DISABLE_MQTT | Disables MQTT support |
 | WLED_DISABLE_SOUND | Disables Sound Features |
