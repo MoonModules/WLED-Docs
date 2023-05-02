@@ -18,19 +18,19 @@ Flags/funcions specific to WLED MoonModules are denoted with the ☾ icon.
 
 ### In "my_config.h" or in the C/C++ code
 
-For entries with no parameter, prefix with <tt>#define</tt> like <tt>#define WLED_DEBUG</tt>
+For entries with no parameter, prefix with `#define` like `#define WLED_DEBUG`
 
-For entries with a numeric parameter, use the syntax of <tt>#define LEDPIN 16</tt>
+For entries with a numeric parameter, use the syntax of `#define LEDPIN 16`
 
-For non-numeric entries use quotes like <tt>#define WLED_AP_SSID "MY-WLED-AP"</tt>
+For non-numeric entries use quotes like `#define WLED_AP_SSID "MY-WLED-AP"`
 
 ### In "platformio.ini" or "platformio_override.ini"
 
-For items with no parameter, prefix with <tt>-D</tt> like <tt>-D WLED_DEBUG</tt>
+For items with no parameter, prefix with `-D` like `-D WLED_DEBUG`
 
-For entries with a numeric parameter, use the syntax of <tt>-D LEDPIN=16</tt>
+For entries with a numeric parameter, use the syntax of `-D LEDPIN=16`
 
-For non-numeric entries use **both** types of quotes like <tt>-D SERVERNAME='"WLED-C3"'</tt>
+For non-numeric entries use **both** types of quotes like `-D SERVERNAME='"WLED-C3"'`
 
 ## The Long List of Flags
 
