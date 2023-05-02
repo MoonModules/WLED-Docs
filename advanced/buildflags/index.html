@@ -3423,7 +3423,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 <tbody>
 <tr>
 <td>BOARD_HAS_PSRAM</td>
-<td>Enables PSRAM during compilation</td>
+<td>Enables PSRAM during compilation. Board needs to have PSRAM, not all of them do.</td>
 </tr>
 <tr>
 <td>WLED_USE_PSRAM</td>
@@ -3431,7 +3431,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>WLED_USE_PSRAM_JSON</td>
-<td>☾ Uses PSRAM only for JSON decoding functions. Does not slow down LEDs.</td>
+<td>☾ Uses PSRAM only for the JSON decoding buffer. Does not slow down LEDs. This setting also increases JSON_BUFFER_SIZE from 24576 to 60000 when enabled on ESP32 (and 48000 on ESP32-S2 and -C3), allowing for bigger LED remapping files.</td>
 </tr>
 </tbody>
 </table>
