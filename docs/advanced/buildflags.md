@@ -38,6 +38,7 @@ For non-numeric entries use **both** types of quotes like `-D SERVERNAME='"WLED-
 
 | Flag | Description |
 | --- | --- |
+| WLED_RELEASE_NAME | Sets the internal rekease name of the build. Also used to set bin filenames in PlatformIO |
 | WLED_MAX_USERMODS | defaults to 4 on esp8266 and 6 on ESP32 |
 | WLED_MAX_BUSSES | defaults to 3 on esp8266, 10 on esp32 without AR, 8 on esp32 with AR, 6 on ESP32S3, 6 esp32S2 with AR, 7 on esp32s2 without AR, 3 on ESP32C3 |
 | WLED_MAX_BUTTONS | defaults to 2 on esp8266 and 4 on esp32 |
