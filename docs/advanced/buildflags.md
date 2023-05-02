@@ -59,41 +59,41 @@ For non-numeric entries use **both** types of quotes like `-D SERVERNAME='"WLED-
 | HW_PIN_MISOSPI | defaults to MISO |
 | WLED_USE_REAL_MATH | use math and not lookuptables |
 | DEFAULT_LED_TYPE | defaults to TYPE WS2812_RGB |
-| PIXEL_COUNTS | defaults to DEFAULT_LED_COUNT !!!!! |
-| DATA_PINS | defaults to LEDPIN !!!!! |
+| PIXEL_COUNTS | defaults to DEFAULT_LED_COUNT |
+| DATA_PINS | defaults to LEDPIN |
 | DEFAULT_LED_COLOR_ORDER | defaults to COL_ORDER_GRB |
 | WLED_WATCHDOG_TIMEOUT | set the whatchdog timout in milliseconds, default to 0 (deactivated) |
-| WLED_DISABLE_BROWNOUT_DET |
+| WLED_DISABLE_BROWNOUT_DET | disables ESP32 brownout detector (off by default) |
 | CLIENT_SSID | Sets the default WiFi SSID to connect to |
 | CLIENT_PASS | Sets the default WiFi password to connect with |
 | WLED_AP_SSID | Sets the name of the internal WiFI AP |
 | WLED_AP_PASS | Set the default password for the internal WiFi AP | 
-| SPIFFS_EDITOR_AIRCOOOKIE |
+| SPIFFS_EDITOR_AIRCOOOKIE | If you are not using the Aircoookie fork of the ESPAsyncWebserver library and using upstream,  puts your WiFi password at risk of being served by the filesystem. Comment out this error message to build regardless. |
 | WLED_VERSION | defaults to "dev" |
 | BTNPIN | Sets the first button pin GPIO |
 | RLYPIN | Sets the relay GPIO |
 | RLYMDE | 1=active high, 0= active low |
 | IRPIN | Sets the IR receiver GPIO |
 | SERVERNAME | defaults to "WLED" |
-| WLED_DEBUG_HOST |
+| WLED_DEBUG_HOST | to send debug messages over network to host 192.168.x.y - FQDN is also possible |
 | WLED_DEBUG_PORT | defaults to 7868 |
-| WLED_AP_SSID_UNIQUE |
+| WLED_AP_SSID_UNIQUE | Adds the MAC address to the WLED AP SSID if enabled, so everything doen't show up as "WLED-AP" |
 | WLED_DEBUG | Turns on debug messages to the serial console |
-| LED_BUILTIN |
-| WLED_USE_IC_CCT |
-| WLED_MAX_CCT_BLEND |
-| WLED_ADD_EEPROM_SUPPORT |
-| ESP32_DATA_IDLE_HIGH |
-| WLED_ENABLE_SIMPLE_UI |
-| WLED_ENABLE_MQTT |
-| WLED_ENABLE_JSONLIVE |
-| WLED_DEBUG_FS |
-| WLED_DEBUG_IMPROV |
-| WLED_ENABLE_LOXONE |
-| WLED_ENABLE_WEBSOCETS |
-| WLED_ENABLE_ADALIGHT |
-| WLED_DEBUG_NTP |
-| WLED_ENABLE_PIXART |
+| LED_BUILTIN | Fix for turning off onboard LED breaking bus |
+| WLED_USE_IC_CCT | ...something about how LED strips with warm+cool white LEDS work |
+| WLED_MAX_CCT_BLEND | How warm and cool white RGBWW LEDs are managed | 
+| WLED_ADD_EEPROM_SUPPORT | Enable saving key settings to EEPROM (actually 512 bytes of Flash memory, not literal EEPROM) |
+| ESP32_DATA_IDLE_HIGH | If enabled, RMT idle level is set to HIGH when off to prevent leakage current when using an N-channel MOSFET to toggle LED power |
+| WLED_ENABLE_SIMPLE_UI | Enables a simplified web UI. Used mostly on small devices like the ES8266 | 
+| WLED_ENABLE_MQTT | Enables WLED to send internals and usermod data via [MQTT](https://mqtt.org/) |
+| WLED_ENABLE_JSONLIVE | peek LED output via /json/live (WS binary peek is always enabled) |
+| WLED_DEBUG_FS | filesystem specific debugging |
+| WLED_DEBUG_IMPROV | Debugging for Improv serial |
+| WLED_ENABLE_LOXONE |  Enable [Loxone](https://www.loxone.com/) support |
+| WLED_ENABLE_WEBSOCKETS | Enable websockets |
+| WLED_ENABLE_ADALIGHT | Enables [AdaLight](https://learn.adafruit.com/adalight-diy-ambient-tv-lighting/overview) support |
+| WLED_DEBUG_NTP | Enable NTP debugging |
+| WLED_ENABLE_PIXART | Enable new PixArt support |
 
 ### PSRAM 
 
@@ -109,35 +109,35 @@ For non-numeric entries use **both** types of quotes like `-D SERVERNAME='"WLED-
 
 | Flag | Description |
 | --- | --- |
-| ARTI_DEBUG |
-| ARTI_ANDBG |
-| ARTI_RUNLOG |
-| ARTI_PRINT |
-| ARTI_ERRORWARNING |
-| ARTI_MEMORY |
-| OPTIMIZED_TREE |
+| ARTI_DEBUG | Enables ArtiFX debug |
+| ARTI_ANDBG | ArtiFX debugging |
+| ARTI_RUNLOG | if set on arduino this will create massive amounts of output (as ran in a loop) |
+| ARTI_PRINT | will show the printf calls |
+| ARTI_ERRORWARNING | shows lexer, parser, analyzer and interpreter errors |
+| ARTI_MEMORY | to do analyses of memory usage, trace memoryleaks (works only on arduino) |
+| OPTIMIZED_TREE | Optimized tree function for ArtiFX |
 
 ### Pinmanager ☾
 
 | Flag | Description |
 | --- | --- |
-| SOC_ADC_CHANNEL_NUM |
-| MPU6050_INT_GPIO |
+| SOC_ADC_CHANNEL_NUM | Sets ADC0 or ADC1 for I2C functions |
+| MPU6050_INT_GPIO | Sets the interrupt pin for the MPU6050. Also uses I2C. Does not work when Four Line Display is enabled. |
 
 ### Internals ☾
 
 | Flag | Description |
 | --- | --- |
-| WLED_DEBUG_MATH | |
+| WLED_DEBUG_MATH | Prints out results of some more complex math functions to the serial console. |
 
 ### MoonModules Usermods ☾
 
 | Flag | Description |
 | --- | --- |
-| USERMOD_MPU6050_IMU | Enabled Motion Processing Unit - MPU6050 |
-| ARTIFX | Runtime effects scripting interperter |
-| WEATHER | Weather display usermod |
-| USERMOD_GAMES | Effects/games that use the MPU6050 chip |
+| USERMOD_MPU6050_IMU | Enables the Motion Processing Unit - MPU6050 |
+| ARTIFX | Enables the runtime effects scripting interperter |
+| WEATHER | Enables the weather display usermod |
+| USERMOD_GAMES | Enables effects/games that use the MPU6050 chip |
 | USERMOD_FASTLED | Enables extra effects with a Creative Commons license. Do not enable this if using WLED in a for-profit manner. |
 
 ## Generic WLED Flags
@@ -159,7 +159,7 @@ For non-numeric entries use **both** types of quotes like `-D SERVERNAME='"WLED-
 | USERMOD_BME280 | usermod_bme280.h |
 | USERMOD_FOUR_LINE_DISPLAY | usermod_v2_four_line_display.h |
 | USERMOD_ROTARY_ENCODER_UI | usermod_v2_rotary_encoder_ui.h |
-| USE_ALT_DISPlAY | Alt versions of the two above instead of normal |
+| USE_ALT_DISPlAY | Alt versions of the two above instead of normal. You likely want to use this if you are using the above two features. |
 | USERMOD_AUTO_SAVE | usermod_v2_auto_save.h |
 | USERMOD_DHT | usermod_dht.h |
 | USERMOD_VL53L0X_GESTURES | usermod_vl53l0x_gestures.h |
@@ -185,45 +185,46 @@ For non-numeric entries use **both** types of quotes like `-D SERVERNAME='"WLED-
 | USERMOD_ADS1115 | usermod_ads1115.h |
 | USERMOD_BOBLIGHT | boblight.h |
 | USERMOD_PWM_OUTPUTS | usermod_pwm_outputs.h |
-| SD_ADAPTER | |
+| SD_ADAPTER | usermod_sd_card.h |
 | USERMOD_KLIPPER_PERCENTAGE | usermod_v2_klipper_percentage.h
 
 ### Disable Features
 
 | Flag | Description
 | --- | ---
-| WLED_DISABLE_OTA | Disables the feature to Update over the webinterface |
-| WLED_DISABLE_ALEXA | Disables Alexa support |
-| WLED_DISABLE_HUESYNC | Disables the HUE support |
+| WLED_DISABLE_OTA | Disables the feature to update firmware over the web interface. OTA is not possible for boards with 2MB flash only (like some Ai-Thinker ESP32-C3-12F models). |
+| WLED_DISABLE_ALEXA | Disables [Amazon Alexa](https://g.co/kgs/7HHsPQ) support |
+| WLED_DISABLE_HUESYNC | Disables the [Philips Hue](https://www.philips-hue.com/) support |
 | WLED_DISABLE_INFRARED | Disables Infrared support - also useful to add `lib_ignore = IRremoteESP8266` to your platformio.ini or platformio_override.ini file |
-| WLED_DISABLE_WEBSOCKETS | Disables the websockets (?) |
-| WLED_DISABLE_MQTT | Disables MQTT support |
-| WLED_DISABLE_SOUND | Disables Sound Features |
+| WLED_DISABLE_WEBSOCKETS | Disables the websockets |
+| WLED_DISABLE_MQTT | Disables MQTT support. Warning: This may break your build unless you disable several other things as well. |
+| WLED_DISABLE_SOUND | Disables sound features... but why would you do that? :D |
 | WLED_DISABLE_2D | Disables 2D Features |
-| WLED_DISABLE_LOXONE | Disable Loxone Support (?) |
+| WLED_DISABLE_LOXONE | Disable [Loxone](https://www.loxone.com/) support |
 
-### Audio buildflags
+### Audio Responsive build flags
 
 | Flag | Description |
 | --- | --- |
-| SR_SQUELCH |
-| SR_GAIN | |
-| AUDIOPIN | Analogaudiopin |
-| SR_DMTYPE | 0=none/disabled/analog ; 1=generic I2S |
-| I2S_SDPIN | |
-| I2S_WSPIN | |
-| I2S_CKPIN | |
-| I2S_USE_16BIT_SAMPLES | If I2S input is already 16 bit |
-| ES7243_SDAPIN | |
-| ES7243_SCLPIN | |
-| ES7243_ADDR | |
-| MCLK_PIN | |
-| SR_DEBUG | |
-| UM_AUDIOREACTIVE_USE_NEW_FFT | |
-| MIC_LOGGER | |
-| FFT_SAMPLING_LOG | |
-| I2S_USE_RIGHT_CHANNEL | |
-| I2S_SAMPLE_DOWNSCALE_TO_16BIT | |
+| SR_SQUELCH | Sets the default squelch setting. Recommend 10 |
+| SR_GAIN | Sets the defauly gain setting. Recommend 40 |
+| AUDIOPIN | Analog audio pin |
+| SR_DMTYPE | 0=none/disabled/analog ; 1=generic I2S |sd/data/dout
+| I2S_SDPIN | Default I2S sd/data/dout input pin | pin
+| I2S_WSPIN | Default I2S ws/clk/lrck pin |
+| I2S_CKPIN | Default I2S sck/bclk pin |
+| MCLK_PIN | Default I2S master clock/mclk pin |
+| I2S_USE_16BIT_SAMPLES | Use if I2S input are already 16-bit. Likely not the case for most setups. |
+| ES7243_SDAPIN | I2C SDA pin for ES7243 boards |
+| ES7243_SCLPIN | I2C SCL pin for ES7243 boards |
+| ES7243_ADDR | Sets the ES7243 I2c address. Default is usually correct. |
+| ES8388_ADDR | Sets the ES8388 I2C address. Default is usually correct. |
+| SR_DEBUG | Turns on sound-reactive specific debug messages |
+| UM_AUDIOREACTIVE_USE_NEW_FFT | Turns on the new FFT code. ☾ Should be the default currently in most builds. |
+| MIC_LOGGER | Turns on mic logging for debug purposes. You may be able to graph this output. |
+| FFT_SAMPLING_LOG | FFT sampling debug log.|
+| I2S_USE_RIGHT_CHANNEL | Tells I2S to use the right channel. Defaults to the left. |
+| I2S_SAMPLE_DOWNSCALE_TO_16BIT | Enabled by default unless `I2S_USE_16BIT_SAMPLES` is defined. |
 
 ### Battery usermod
 
@@ -272,21 +273,21 @@ For non-numeric entries use **both** types of quotes like `-D SERVERNAME='"WLED-
 | USERMOD_DHT_MEASUREMENT_INTERVAL | the frequency to check sensorin milliseconds, 1 minute |
 | USERMOD_DHT_FIRST_MEASUREMENT_AT | how many seconds after boot to take first measurementin milliseconds, 90 seconds |
 | USERMOD_DHT_PIN | defaults to 21 onm ESP32 and 4 on esp8266 |
-| USERMOD_DHT_MQTT | |
-| USERMOD_DHT_STATS | |
-| USERMOD_DHT_CELSIUS | |
+| USERMOD_DHT_MQTT | Publish measurements to the MQTT broker |
+| USERMOD_DHT_STATS | For debug, report delay stats |
+| USERMOD_DHT_CELSIUS | Display temperatures in Celcius |
 
 ### BME280 usermod
 
 | Flag | Description |
 | --- | --- |
-| Celsius | Display in Celcius (the correct unit of measurment) |
+| Celsius | Display temperatures in Celcius |
 
 ### Enclosure usermod
 
 | Flag | Description |
 | --- | --- |
-| Celsius | Display in Celcius |
+| Celsius | Display temperatures in Celcius |
 
 ### MQTTSWITCH usermod
 
@@ -315,7 +316,7 @@ For non-numeric entries use **both** types of quotes like `-D SERVERNAME='"WLED-
 | --- | --- |
 | PIR_SENSOR_PIN | defaults to GPIO23 on ESP32 and GPIO13 on ESP8266 |
 | PIR_SENSOR_OFF_SEC | in milliseconds, defaults to 600ms |
-| USERMOD_PIR_SENSOR_SWITCH | |
+| USERMOD_PIR_SENSOR_SWITCH | Enables PIR Usermod |
 
 ### PWM Fan usermod
 
@@ -345,30 +346,37 @@ For non-numeric entries use **both** types of quotes like `-D SERVERNAME='"WLED-
 
 | Flag | Description |
 | --- | --- |
-| WLED_USE_SD_MMC |
-| WLED_USE_SD_SPI |
-| SD_ADAPTER |
+| WLED_USE_SD_MMC | Use when SD card is connected via MMC |
+| WLED_USE_SD_SPI | Use when SD card is connected via SPI. Use the usermode page to set SPI pins |
+| SD_ADAPTER | Enables SD card functionality. |
 
 ### ST7790 usermod
 
 | Flag | Description |
 | --- | --- |
-| USER_SETUP_LOADED | |
-| ST7789_DRIVER | |
+| USER_SETUP_LOADED | Detects if an external user setup file for the display was used in the library code itself |
+| ST7789_DRIVER | Enables ST7789 driver |
 | TFT_WIDTH | TFT display width |
 | TFT_HEIGHT | TFT display height |
 | TFT_MOSI | Display MOSI pin |
 | TFT_SCLK | Display SCLK pin |
 | TFT_DC | Display DC pin |
 | TFT_RST | Display reset pin |
-| LOAD_GLCD | |
+| LOAD_GLCD | Font 1. Original Adafruit 8 pixel font needs ~1820 bytes in FLASH. Default enabled. |
+| LOAD_FONT2 | Font 2. Small 16 pixel high font, needs ~3534 bytes in FLASH, 96 characters |
+| LOAD_FONT4 | Font 4. Medium 26 pixel high font, needs ~5848 bytes in FLASH, 96 characters |
+| LOAD_FONT6 | Font 6. Large 48 pixel font, needs ~2666 bytes in FLASH, only characters 1234567890:-.apm |
+| LOAD_FONT7 | Font 7. 7 segment 48 pixel font, needs ~2438 bytes in FLASH, only characters 1234567890:. |
+| LOAD_FONT8 | Font 8. Large 75 pixel font needs ~3256 bytes in FLASH, only characters 1234567890:-. | 
+| LOAD_FONT8N | Font 8. Alternative to Font 8 above, slightly narrower, so 3 digits fit a 160 pixel TFT | 
+| LOAD_GFXFF | FreeFonts. Include access to the 48 Adafruit_GFX free fonts FF1 to FF48 and custom fonts | 
 | TFT_BL | Display backlight pin |
 
 ### Stairway whipe usermod
 
 | Flag | Description |
 | --- | --- |
-| STAIRCASE_WIPE_OFF |
+| STAIRCASE_WIPE_OFF | If enabled, fade out versus doing a reverse wipe in the effect | 
 
 ### Temperature usermod
 
