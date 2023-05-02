@@ -1338,8 +1338,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#audio-buildflags" class="md-nav__link">
-    Audio buildflags
+  <a href="#audio-responsive-build-flags" class="md-nav__link">
+    Audio Responsive build flags
   </a>
   
 </li>
@@ -2953,8 +2953,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#audio-buildflags" class="md-nav__link">
-    Audio buildflags
+  <a href="#audio-responsive-build-flags" class="md-nav__link">
+    Audio Responsive build flags
   </a>
   
 </li>
@@ -3272,11 +3272,11 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>PIXEL_COUNTS</td>
-<td>defaults to DEFAULT_LED_COUNT !!!!!</td>
+<td>defaults to DEFAULT_LED_COUNT</td>
 </tr>
 <tr>
 <td>DATA_PINS</td>
-<td>defaults to LEDPIN !!!!!</td>
+<td>defaults to LEDPIN</td>
 </tr>
 <tr>
 <td>DEFAULT_LED_COLOR_ORDER</td>
@@ -3288,7 +3288,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>WLED_DISABLE_BROWNOUT_DET</td>
-<td></td>
+<td>disables ESP32 brownout detector (off by default)</td>
 </tr>
 <tr>
 <td>CLIENT_SSID</td>
@@ -3308,7 +3308,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>SPIFFS_EDITOR_AIRCOOOKIE</td>
-<td></td>
+<td>If you are not using the Aircoookie fork of the ESPAsyncWebserver library and using upstream,  puts your WiFi password at risk of being served by the filesystem. Comment out this error message to build regardless.</td>
 </tr>
 <tr>
 <td>WLED_VERSION</td>
@@ -3336,7 +3336,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>WLED_DEBUG_HOST</td>
-<td></td>
+<td>to send debug messages over network to host 192.168.x.y - FQDN is also possible</td>
 </tr>
 <tr>
 <td>WLED_DEBUG_PORT</td>
@@ -3344,7 +3344,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>WLED_AP_SSID_UNIQUE</td>
-<td></td>
+<td>Adds the MAC address to the WLED AP SSID if enabled, so everything doen't show up as "WLED-AP"</td>
 </tr>
 <tr>
 <td>WLED_DEBUG</td>
@@ -3352,63 +3352,63 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>LED_BUILTIN</td>
-<td></td>
+<td>Fix for turning off onboard LED breaking bus</td>
 </tr>
 <tr>
 <td>WLED_USE_IC_CCT</td>
-<td></td>
+<td>...something about how LED strips with warm+cool white LEDS work</td>
 </tr>
 <tr>
 <td>WLED_MAX_CCT_BLEND</td>
-<td></td>
+<td>How warm and cool white RGBWW LEDs are managed</td>
 </tr>
 <tr>
 <td>WLED_ADD_EEPROM_SUPPORT</td>
-<td></td>
+<td>Enable saving key settings to EEPROM (actually 512 bytes of Flash memory, not literal EEPROM)</td>
 </tr>
 <tr>
 <td>ESP32_DATA_IDLE_HIGH</td>
-<td></td>
+<td>If enabled, RMT idle level is set to HIGH when off to prevent leakage current when using an N-channel MOSFET to toggle LED power</td>
 </tr>
 <tr>
 <td>WLED_ENABLE_SIMPLE_UI</td>
-<td></td>
+<td>Enables a simplified web UI. Used mostly on small devices like the ES8266</td>
 </tr>
 <tr>
 <td>WLED_ENABLE_MQTT</td>
-<td></td>
+<td>Enables WLED to send internals and usermod data via <a href="https://mqtt.org/">MQTT</a></td>
 </tr>
 <tr>
 <td>WLED_ENABLE_JSONLIVE</td>
-<td></td>
+<td>peek LED output via /json/live (WS binary peek is always enabled)</td>
 </tr>
 <tr>
 <td>WLED_DEBUG_FS</td>
-<td></td>
+<td>filesystem specific debugging</td>
 </tr>
 <tr>
 <td>WLED_DEBUG_IMPROV</td>
-<td></td>
+<td>Debugging for Improv serial</td>
 </tr>
 <tr>
 <td>WLED_ENABLE_LOXONE</td>
-<td></td>
+<td>Enable <a href="https://www.loxone.com/">Loxone</a> support</td>
 </tr>
 <tr>
-<td>WLED_ENABLE_WEBSOCETS</td>
-<td></td>
+<td>WLED_ENABLE_WEBSOCKETS</td>
+<td>Enable websockets</td>
 </tr>
 <tr>
 <td>WLED_ENABLE_ADALIGHT</td>
-<td></td>
+<td>Enables <a href="https://learn.adafruit.com/adalight-diy-ambient-tv-lighting/overview">AdaLight</a> support</td>
 </tr>
 <tr>
 <td>WLED_DEBUG_NTP</td>
-<td></td>
+<td>Enable NTP debugging</td>
 </tr>
 <tr>
 <td>WLED_ENABLE_PIXART</td>
-<td></td>
+<td>Enable new PixArt support</td>
 </tr>
 </tbody>
 </table>
@@ -3447,31 +3447,31 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 <tbody>
 <tr>
 <td>ARTI_DEBUG</td>
-<td></td>
+<td>Enables ArtiFX debug</td>
 </tr>
 <tr>
 <td>ARTI_ANDBG</td>
-<td></td>
+<td>ArtiFX debugging</td>
 </tr>
 <tr>
 <td>ARTI_RUNLOG</td>
-<td></td>
+<td>if set on arduino this will create massive amounts of output (as ran in a loop)</td>
 </tr>
 <tr>
 <td>ARTI_PRINT</td>
-<td></td>
+<td>will show the printf calls</td>
 </tr>
 <tr>
 <td>ARTI_ERRORWARNING</td>
-<td></td>
+<td>shows lexer, parser, analyzer and interpreter errors</td>
 </tr>
 <tr>
 <td>ARTI_MEMORY</td>
-<td></td>
+<td>to do analyses of memory usage, trace memoryleaks (works only on arduino)</td>
 </tr>
 <tr>
 <td>OPTIMIZED_TREE</td>
-<td></td>
+<td>Optimized tree function for ArtiFX</td>
 </tr>
 </tbody>
 </table>
@@ -3486,11 +3486,11 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 <tbody>
 <tr>
 <td>SOC_ADC_CHANNEL_NUM</td>
-<td></td>
+<td>Sets ADC0 or ADC1 for I2C functions</td>
 </tr>
 <tr>
 <td>MPU6050_INT_GPIO</td>
-<td></td>
+<td>Sets the interrupt pin for the MPU6050. Also uses I2C. Does not work when Four Line Display is enabled.</td>
 </tr>
 </tbody>
 </table>
@@ -3505,7 +3505,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 <tbody>
 <tr>
 <td>WLED_DEBUG_MATH</td>
-<td></td>
+<td>Prints out results of some more complex math functions to the serial console.</td>
 </tr>
 </tbody>
 </table>
@@ -3520,19 +3520,19 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 <tbody>
 <tr>
 <td>USERMOD_MPU6050_IMU</td>
-<td>Enabled Motion Processing Unit - MPU6050</td>
+<td>Enables the Motion Processing Unit - MPU6050</td>
 </tr>
 <tr>
 <td>ARTIFX</td>
-<td>Runtime effects scripting interperter</td>
+<td>Enables the runtime effects scripting interperter</td>
 </tr>
 <tr>
 <td>WEATHER</td>
-<td>Weather display usermod</td>
+<td>Enables the weather display usermod</td>
 </tr>
 <tr>
 <td>USERMOD_GAMES</td>
-<td>Effects/games that use the MPU6050 chip</td>
+<td>Enables effects/games that use the MPU6050 chip</td>
 </tr>
 <tr>
 <td>USERMOD_FASTLED</td>
@@ -3604,7 +3604,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>USE_ALT_DISPlAY</td>
-<td>Alt versions of the two above instead of normal</td>
+<td>Alt versions of the two above instead of normal. You likely want to use this if you are using the above two features.</td>
 </tr>
 <tr>
 <td>USERMOD_AUTO_SAVE</td>
@@ -3708,7 +3708,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>SD_ADAPTER</td>
-<td></td>
+<td>usermod_sd_card.h</td>
 </tr>
 <tr>
 <td>USERMOD_KLIPPER_PERCENTAGE</td>
@@ -3727,15 +3727,15 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 <tbody>
 <tr>
 <td>WLED_DISABLE_OTA</td>
-<td>Disables the feature to Update over the webinterface</td>
+<td>Disables the feature to update firmware over the web interface. OTA is not possible for boards with 2MB flash only (like some Ai-Thinker ESP32-C3-12F models).</td>
 </tr>
 <tr>
 <td>WLED_DISABLE_ALEXA</td>
-<td>Disables Alexa support</td>
+<td>Disables <a href="https://g.co/kgs/7HHsPQ">Amazon Alexa</a> support</td>
 </tr>
 <tr>
 <td>WLED_DISABLE_HUESYNC</td>
-<td>Disables the HUE support</td>
+<td>Disables the <a href="https://www.philips-hue.com/">Philips Hue</a> support</td>
 </tr>
 <tr>
 <td>WLED_DISABLE_INFRARED</td>
@@ -3743,15 +3743,15 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>WLED_DISABLE_WEBSOCKETS</td>
-<td>Disables the websockets (?)</td>
+<td>Disables the websockets</td>
 </tr>
 <tr>
 <td>WLED_DISABLE_MQTT</td>
-<td>Disables MQTT support</td>
+<td>Disables MQTT support. Warning: This may break your build unless you disable several other things as well.</td>
 </tr>
 <tr>
 <td>WLED_DISABLE_SOUND</td>
-<td>Disables Sound Features</td>
+<td>Disables sound features... but why would you do that? :D</td>
 </tr>
 <tr>
 <td>WLED_DISABLE_2D</td>
@@ -3759,11 +3759,11 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>WLED_DISABLE_LOXONE</td>
-<td>Disable Loxone Support (?)</td>
+<td>Disable <a href="https://www.loxone.com/">Loxone</a> support</td>
 </tr>
 </tbody>
 </table>
-<h3 id="audio-buildflags">Audio buildflags</h3>
+<h3 id="audio-responsive-build-flags">Audio Responsive build flags</h3>
 <table>
 <thead>
 <tr>
@@ -3774,15 +3774,15 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 <tbody>
 <tr>
 <td>SR_SQUELCH</td>
-<td></td>
+<td>Sets the default squelch setting. Recommend 10</td>
 </tr>
 <tr>
 <td>SR_GAIN</td>
-<td></td>
+<td>Sets the defauly gain setting. Recommend 40</td>
 </tr>
 <tr>
 <td>AUDIOPIN</td>
-<td>Analogaudiopin</td>
+<td>Analog audio pin</td>
 </tr>
 <tr>
 <td>SR_DMTYPE</td>
@@ -3790,59 +3790,63 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>I2S_SDPIN</td>
-<td></td>
+<td>Default I2S sd/data/dout input pin</td>
 </tr>
 <tr>
 <td>I2S_WSPIN</td>
-<td></td>
+<td>Default I2S ws/clk/lrck pin</td>
 </tr>
 <tr>
 <td>I2S_CKPIN</td>
-<td></td>
-</tr>
-<tr>
-<td>I2S_USE_16BIT_SAMPLES</td>
-<td>If I2S input is already 16 bit</td>
-</tr>
-<tr>
-<td>ES7243_SDAPIN</td>
-<td></td>
-</tr>
-<tr>
-<td>ES7243_SCLPIN</td>
-<td></td>
-</tr>
-<tr>
-<td>ES7243_ADDR</td>
-<td></td>
+<td>Default I2S sck/bclk pin</td>
 </tr>
 <tr>
 <td>MCLK_PIN</td>
-<td></td>
+<td>Default I2S master clock/mclk pin</td>
+</tr>
+<tr>
+<td>I2S_USE_16BIT_SAMPLES</td>
+<td>Use if I2S input are already 16-bit. Likely not the case for most setups.</td>
+</tr>
+<tr>
+<td>ES7243_SDAPIN</td>
+<td>I2C SDA pin for ES7243 boards</td>
+</tr>
+<tr>
+<td>ES7243_SCLPIN</td>
+<td>I2C SCL pin for ES7243 boards</td>
+</tr>
+<tr>
+<td>ES7243_ADDR</td>
+<td>Sets the ES7243 I2c address. Default is usually correct.</td>
+</tr>
+<tr>
+<td>ES8388_ADDR</td>
+<td>Sets the ES8388 I2C address. Default is usually correct.</td>
 </tr>
 <tr>
 <td>SR_DEBUG</td>
-<td></td>
+<td>Turns on sound-reactive specific debug messages</td>
 </tr>
 <tr>
 <td>UM_AUDIOREACTIVE_USE_NEW_FFT</td>
-<td></td>
+<td>Turns on the new FFT code. ☾ Should be the default currently in most builds.</td>
 </tr>
 <tr>
 <td>MIC_LOGGER</td>
-<td></td>
+<td>Turns on mic logging for debug purposes. You may be able to graph this output.</td>
 </tr>
 <tr>
 <td>FFT_SAMPLING_LOG</td>
-<td></td>
+<td>FFT sampling debug log.</td>
 </tr>
 <tr>
 <td>I2S_USE_RIGHT_CHANNEL</td>
-<td></td>
+<td>Tells I2S to use the right channel. Defaults to the left.</td>
 </tr>
 <tr>
 <td>I2S_SAMPLE_DOWNSCALE_TO_16BIT</td>
-<td></td>
+<td>Enabled by default unless <code>I2S_USE_16BIT_SAMPLES</code> is defined.</td>
 </tr>
 </tbody>
 </table>
@@ -3993,15 +3997,15 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>USERMOD_DHT_MQTT</td>
-<td></td>
+<td>Publish measurements to the MQTT broker</td>
 </tr>
 <tr>
 <td>USERMOD_DHT_STATS</td>
-<td></td>
+<td>For debug, report delay stats</td>
 </tr>
 <tr>
 <td>USERMOD_DHT_CELSIUS</td>
-<td></td>
+<td>Display temperatures in Celcius</td>
 </tr>
 </tbody>
 </table>
@@ -4016,7 +4020,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 <tbody>
 <tr>
 <td>Celsius</td>
-<td>Display in Celcius (the correct unit of measurment)</td>
+<td>Display temperatures in Celcius</td>
 </tr>
 </tbody>
 </table>
@@ -4031,7 +4035,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 <tbody>
 <tr>
 <td>Celsius</td>
-<td>Display in Celcius</td>
+<td>Display temperatures in Celcius</td>
 </tr>
 </tbody>
 </table>
@@ -4111,7 +4115,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>USERMOD_PIR_SENSOR_SWITCH</td>
-<td></td>
+<td>Enables PIR Usermod</td>
 </tr>
 </tbody>
 </table>
@@ -4195,15 +4199,15 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 <tbody>
 <tr>
 <td>WLED_USE_SD_MMC</td>
-<td></td>
+<td>Use when SD card is connected via MMC</td>
 </tr>
 <tr>
 <td>WLED_USE_SD_SPI</td>
-<td></td>
+<td>Use when SD card is connected via SPI. Use the usermode page to set SPI pins</td>
 </tr>
 <tr>
 <td>SD_ADAPTER</td>
-<td></td>
+<td>Enables SD card functionality.</td>
 </tr>
 </tbody>
 </table>
@@ -4218,11 +4222,11 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 <tbody>
 <tr>
 <td>USER_SETUP_LOADED</td>
-<td></td>
+<td>Detects if an external user setup file for the display was used in the library code itself</td>
 </tr>
 <tr>
 <td>ST7789_DRIVER</td>
-<td></td>
+<td>Enables ST7789 driver</td>
 </tr>
 <tr>
 <td>TFT_WIDTH</td>
@@ -4250,7 +4254,35 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 </tr>
 <tr>
 <td>LOAD_GLCD</td>
-<td></td>
+<td>Font 1. Original Adafruit 8 pixel font needs ~1820 bytes in FLASH. Default enabled.</td>
+</tr>
+<tr>
+<td>LOAD_FONT2</td>
+<td>Font 2. Small 16 pixel high font, needs ~3534 bytes in FLASH, 96 characters</td>
+</tr>
+<tr>
+<td>LOAD_FONT4</td>
+<td>Font 4. Medium 26 pixel high font, needs ~5848 bytes in FLASH, 96 characters</td>
+</tr>
+<tr>
+<td>LOAD_FONT6</td>
+<td>Font 6. Large 48 pixel font, needs ~2666 bytes in FLASH, only characters 1234567890:-.apm</td>
+</tr>
+<tr>
+<td>LOAD_FONT7</td>
+<td>Font 7. 7 segment 48 pixel font, needs ~2438 bytes in FLASH, only characters 1234567890:.</td>
+</tr>
+<tr>
+<td>LOAD_FONT8</td>
+<td>Font 8. Large 75 pixel font needs ~3256 bytes in FLASH, only characters 1234567890:-.</td>
+</tr>
+<tr>
+<td>LOAD_FONT8N</td>
+<td>Font 8. Alternative to Font 8 above, slightly narrower, so 3 digits fit a 160 pixel TFT</td>
+</tr>
+<tr>
+<td>LOAD_GFXFF</td>
+<td>FreeFonts. Include access to the 48 Adafruit_GFX free fonts FF1 to FF48 and custom fonts</td>
 </tr>
 <tr>
 <td>TFT_BL</td>
@@ -4269,7 +4301,7 @@ Organized and updated by: <a href="https://discordapp.com/users/7015247731249643
 <tbody>
 <tr>
 <td>STAIRCASE_WIPE_OFF</td>
-<td></td>
+<td>If enabled, fade out versus doing a reverse wipe in the effect</td>
 </tr>
 </tbody>
 </table>
