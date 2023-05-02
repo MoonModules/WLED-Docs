@@ -138,7 +138,7 @@ For non-numeric entries use **both** types of quotes like `-D SERVERNAME='"WLED-
 | ARTIFX | Runtime effects scripting interperter |
 | WEATHER | Weather display usermod |
 | USERMOD_GAMES | Effects/games that use the MPU6050 chip |
-| USERMOD_FASTLED | Enable extra effects with Creative Commons license |
+| USERMOD_FASTLED | Enables extra effects with a Creative Commons license. Do not enable this if using WLED in a for-profit manner. |
 
 ## Generic WLED Flags
 
