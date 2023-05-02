@@ -99,9 +99,9 @@ For non-numeric entries use **both** types of quotes like `-D SERVERNAME='"WLED-
 
 | Flag | Description |
 | --- | --- |
-| BOARD_HAS_PSRAM | Enables PSRAM during compilation |
+| BOARD_HAS_PSRAM | Enables PSRAM during compilation. Board needs to have PSRAM, not all of them do. |
 | WLED_USE_PSRAM | Uses PSRAM for several functions. Often slows down LEDs. |
-| WLED_USE_PSRAM_JSON | ☾ Uses PSRAM only for JSON decoding functions. Does not slow down LEDs. |
+| WLED_USE_PSRAM_JSON | ☾ Uses PSRAM only for the JSON decoding buffer. Does not slow down LEDs. This setting also increases JSON_BUFFER_SIZE from 24576 to 60000 when enabled on ESP32 (and 48000 on ESP32-S2 and -C3), allowing for bigger LED remapping files. |
 
 ## MoonModules ☾ Specific Flags
 
