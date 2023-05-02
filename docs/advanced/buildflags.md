@@ -1,3 +1,10 @@
+---
+title: WLED Build Flags
+hide:
+  # - navigation
+  # - toc
+---
+
 # WLED MoonModules Build Flags
 
 Version at time of page update: WLEDMM 0.14.0-b15.23 - commit 244a613
