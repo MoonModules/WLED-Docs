@@ -12,7 +12,7 @@ Version at time of page update: WLEDMM 0.14.0-b15.23 - commit 244a613
 Sourced by: <a href="https://discordapp.com/users/365874439801274391">Sören#5281</a><br />
 Organized and updated by: <a href="https://discordapp.com/users/701524773124964383">Troy#2642</a>
 
-Flags/funcions specific to WLED MoonModules are denoted with the ☾ icon.
+Flags/functions specific to WLED MoonModules are denoted with the ☾ icon.
 
 ## Basic Usage
 
