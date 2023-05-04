@@ -68,7 +68,8 @@ Can be found in these boards:
 ## Git Log
   
 git log mdev --pretty=format:"%h - %an, %ad : %s" --date=format-local:"%Y-%m-%d" --since="2023-04-02"
-  
+
+```
 c0a0f66a - Frank, 2023-04-30 : trying to revive github ci build for new MCUs (#38)
 62910038 - netmindz, 2023-04-28 : Merge pull request #37 from netmindz/mdev
 d4bdb303 - netmindz, 2023-04-24 : Update FX.cpp
@@ -167,3 +168,4 @@ d17a41f7 - Blaž Kristan, 2023-04-02 : Merge pull request #3155 from werkstrom/p
 27e89151 - Ewoud, 2023-04-02 : Versioning: 0.14.0-b15 (use the .21 extension on future commits)
 567daf99 - Henrik, 2023-04-02 : Merge branch 'Aircoookie:main' into patch-1
 eead626d - Ewoud, 2023-04-02 : 0.14.0-b15.21 release!
+```
