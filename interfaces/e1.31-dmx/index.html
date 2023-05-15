@@ -17,7 +17,7 @@
         <link rel="next" href="../http-api/">
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -2847,6 +2847,7 @@ You will need to switch to DDP mode in Sync settings and reboot once.  </p>
 <li>E1.31 priority handling. <a href="https://wiki.openlighting.org/index.php/HTP">HTP</a> for multiple senders with same priority is not implemented!</li>
 </ul>
 <p><strong>Note:</strong> WLED &gt; 0.14.0-b1 implements a basic priority handling. To enable it set E1.31 port priority UI config &gt; 0. Packages &lt; config priority will always be skipped. Higher priority senders will overrule lower priority package senders (timeout 3 seconds). Non-zero start code and E1.31 preview data is ignored. </p>
+<p><strong>Note:</strong> If you see issued with lag, you may see better performance if you disable Wi-Fi Multimedia (WMM) Mode QoS on your router</p>
 <h3 id="general-recommendations">General Recommendations</h3>
 <ul>
 <li>For a fluent 25ms (40fps) or more framerate, it is recommended to use no more than 3 universes (510 LEDs).</li>
@@ -3143,7 +3144,7 @@ Master Dimmer, LED 0 Red, LED 0 Green, ...</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       

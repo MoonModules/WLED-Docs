@@ -17,7 +17,7 @@
         <link rel="next" href="../e1.31-dmx/">
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -2660,9 +2660,6 @@
    Yes, you just remove the //, which enables the line and therefore DMX support.</p>
 </li>
 <li>
-<p>change either the DMX output pin (sendPin in src/dependencies/ESPDMX.cpp) or the LED output pin (LEDPIN in NpbWrapper.h) to something other than 2. If both are set to the same setting, you might experience slight flickering on your DMX output.</p>
-</li>
-<li>
 <p>Once you successfully uploaded the sketch to your board, you'll find a new entry "DMX Output" in your settings menu.</p>
 </li>
 <li>
@@ -2670,10 +2667,10 @@
 </li>
 </ol>
 <h4 id="hardware-setup">hardware setup</h4>
-<p>The DMX output uses a MAX485 transceiver connected to the TX-pin of the ESP8266.</p>
+<p>The DMX output required the use of a MAX485 transceiver connected to the TX-pin of the ESP in order to produce DMX output.</p>
 <p>I am currently working on an open source PCB design to go along with this feature.</p>
-<p>Until then, i can recommend <a href="https://robertoostenveld.nl/art-net-to-dmx512-with-esp8266/">this</a> tutorial by <a href="https://robertoostenveld.nl/">Robert Oostenveld</a>. Only the hardware side, of course.</p>
-<p>If you need to use another pin for output than the TX-pin, you'll need to change this in the ESP-Dmx library itself. This setting is located in ESP-Dmx/src/ESPDMX.cpp on line 29.</p>
+<p>For information about the use of DMX with ESP8266, you might like to read <a href="https://robertoostenveld.nl/art-net-to-dmx512-with-esp8266/">this</a> tutorial by <a href="https://robertoostenveld.nl/">Robert Oostenveld</a>. Note this is just background information about the hardware and you do not need any of the code listed here when using WLED output.</p>
+<p>If you need to use another pin for output than the TX-pin, you'll need to change this in the ESP-Dmx library itself. This setting is located in src/dependencies/dmx/ESPDMX.cpp on line 31.</p>
 <h4 id="questions">questions</h4>
 <p>If you have further questions about this feature, you can reach me via github (@jwingefeld), ICQ (30914656) or via WLED Discord (JvPeek).</p>
 
@@ -2793,7 +2790,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
