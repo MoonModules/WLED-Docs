@@ -8,7 +8,7 @@ hide:
 ## Introduction
 MoonModules introduces a new naming convention for bin(ary) files which contains configs and presets for used hardware. It also shows the used hardware in the bin name including shield esp flash memory size, audio input.
 
-### Naming convention:
+### Naming convention
 
 * WLEDMM_ (to differentiate between WLEDSR and WLEDAC)
 * Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0.11
