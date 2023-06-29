@@ -7,6 +7,14 @@ hide:
 
 Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next release will be v0.14.0-b2)
 
+## AnimARTrix Usermod - 2D effects
+
+29 Jun 2023
+
+By @Netmindz
+
+Usermod to allow access to the [AnimARTrix](https://github.com/StefanPetrick/animartrix) 2D effects by [@StefanPetrick](https://github.com/StefanPetrick), all the effect names are prefixed with Z to group them at the bottom of the list
+
 ## Audio Palette Updates
 
 14 April 2023
