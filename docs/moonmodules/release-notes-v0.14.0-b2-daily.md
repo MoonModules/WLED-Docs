@@ -24,6 +24,7 @@ Refactor of the Nodes popup
 
 * Set on/off
 * Show more info of instance
+* DDP all: add all found nodes as Led outputs (see led preferences screen), by this the leds of others nodes as added as leds to your node and you can control them from this one node. Note: Might not scale up to 10's of nodes due to network traffic 
 
 ## Audio Palette Updates
 
