@@ -15,6 +15,16 @@ By @Netmindz
 
 Usermod to allow access to the [AnimARTrix](https://github.com/StefanPetrick/animartrix) 2D effects by [@StefanPetrick](https://github.com/StefanPetrick), all the effect names are prefixed with Z to group them at the bottom of the list
 
+## WLED Instances
+May 2023
+
+Refactor of the Nodes popup
+
+<img width="1042" alt="image" src="https://github.com/MoonModules/WLED-Docs/assets/91013628/8e156fd5-9afb-42fc-ac63-215788bd6c11">
+
+* Set on/off
+* Show more info of instance
+
 ## Audio Palette Updates
 
 14 April 2023
