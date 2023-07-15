@@ -4,6 +4,7 @@ hide:
   # - navigation
   # - toc
 ---
+## What are all these acronyms?
 
 WLED MM 0.14 (🌜) = WLED AC 0.14 + Extra features
 
@@ -15,15 +16,19 @@ WLED AC 0.14 has been made mainly by @Aircoookie , @blazoncek , @softhack007 and
 
 WLED MM is mainly maintained by @softhack007 and @ewowi and can be considered similar to what AMG is doing to Mercedes (see [amg.wled.me](http://amg.wled.me/)).
 
-WLED MM is compatible with WLED AC (it's running on average 1 day to 1 week behind WLED AC latest build). 
+## compatibility
+WLED MM is compatible with WLED AC (it's running on average 1 day to 1 week behind WLED AC latest build) for all features that can also be found in WLED AC. 
 
 Consider WLED MM as a possible next version of WLED AC (we submit PR's on a regular basis). 
 
-The reason WLED MM is created is that we have many ideas how to improve WLED AC but we need a playground to develop those ideas. 
+## why?
+The reason WLED MM is created is that we have many ideas how to improve WLED AC but we need a "playground" to develop and mature those ideas. 
 
 WLED MM releases and daily builds are made to deploy - and are deployed - on live situations, not test bench only.
 Many features added to MM came from live situation feedback.
 Although new builds may have errors, in practice they tend to be better then earlier versions. 
+
+## What's new?
 
 Our latest work can be found here: [mdev](https://github.com/MoonModules/WLED/tree/mdev). 
 
@@ -31,7 +36,7 @@ You can compile it yourself using PlatformIO.ini entry esp32_4MB_max or get a bu
 
 Get latest release here: <https://github.com/MoonModules/WLED/releases>
 
-More info:
+### More info:
 
 * [Release notes v0.14.0-b3-daily](/moonmodules/release-notes-v0.14.0-b3-daily)
 
@@ -55,7 +60,7 @@ WLED MM:
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/91013628/214047693-d9eb1e96-e006-46d8-96b6-4be18b9c03e4.png">
 
-WLED AC:
+WLED SR:
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/91013628/223692910-78d2fb50-5bcb-420b-ad47-6c4f672237a2.JPG">
 
