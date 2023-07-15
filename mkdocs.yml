@@ -139,7 +139,8 @@ nav:
       - Pin Manager: usermods/pinmanager.md
   - MoonModules: 
     - What is MoonModules: moonmodules/what-is-moonmodules.md
-    - Release notes v0.14.0-b2-daily: moonmodules/release-notes-v0.14.0-b2-daily.md
+    - Release notes v0.14.0-b3-daily: moonmodules/release-notes-v0.14.0-b3-daily.md
+    - Release notes v0.14.0-b25: moonmodules/release-notes-v0.14.0-b25.md
     - Release notes v0.14.0-b15: moonmodules/release-notes-v0.14.0-b15.md
     - Release notes v0.14.0-b1: moonmodules/release-notes-v0.14.0-b1.md
     - Release notes v0.14.0-b0: moonmodules/release-notes-v0.14.0-b0.md

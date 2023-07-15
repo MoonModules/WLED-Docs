@@ -1,5 +1,5 @@
 ---
-title: Release notes v0.14.0-b2-daily
+title: Release notes v0.14.0-b25
 hide:
   # - navigation
   # - toc
