@@ -27,7 +27,7 @@ Instead of dimming down, the preview always shows at max brightness - even when 
 
 By @Netmindz
 
-Usermod to allow access to the [AnimARTrix](https://github.com/StefanPetrick/animartrix) 2D effects by [@StefanPetrick](https://github.com/StefanPetrick), all the effect names are prefixed with Z to group them at the bottom of the list
+Usermod to allow access to the [AnimARTrix](https://github.com/StefanPetrick/animartrix) 2D effects by [@StefanPetrick](https://github.com/StefanPetrick), all the effect names are prefixed with Y to group them at the bottom of the list. Animation speed can be controled by slider.
 
 ## WLED Instances
 May 2023
@@ -48,7 +48,7 @@ Refactor of the Nodes popup
 Some effects will run up to 60% faster now.
 A lot of minor speedups to effect core routines were added. Additionally, FastLED color handling code was updated to release 3.6.0.
 
-* up to 220 FPS were measured with 160 LEDs per pin; for max speed, use 2-4 LED pins with your fixture (ws2812b).
+* up to 220 FPS were measured with 160 LEDs per pin; for max speed, use 2-4 LED pins with your fixture (ws2812b), each driving 150-300 LEDs.
 * soundreactive effects were optimized to support high FPS.
 * At high FPS (>100), soundreactive effects seem to "flow" with the music now. Try to set the speed slider to 255 in `pixelwave`, `freqmatrix` or `DJ Light`.
 
