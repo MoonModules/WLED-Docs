@@ -43,7 +43,7 @@ Refactor of the Nodes popup
 ## Under-the-hood: Speedups, Bugfixes and improved Stability
 
 ### Effect core speedups
-1 July 2023
+1 July 2023 (audio fastpath, part 1)
 
 Some effects will run up to 60% faster now.
 A lot of minor speedups to effect core routines were added. Additionally, FastLED color handling code was updated to release 3.6.0.
@@ -69,7 +69,7 @@ Auto Brightness Limiter bugfixes (from WLED AC) are included in this release.
 ### Improved Stability
 1 June 2023
 
-By @Troy and @Softhack007
+By @Troy and @Softhack007 and @ewowi
 
 WLEDMM internal memory handling was optimized and improved for reliability. Loading of ledmaps was optimized to prevent repeated reading of the same file.
 As a consequence, large setups (>2500 LEDs) and big ledmaps.json files will work much better.
