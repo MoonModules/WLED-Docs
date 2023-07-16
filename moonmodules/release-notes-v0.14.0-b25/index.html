@@ -2817,7 +2817,8 @@ A lot of minor speedups to effect core routines were added. Additionally, FastLE
 <p>1 June 2023</p>
 <p>By @Troy and @Softhack007 and @ewowi</p>
 <p>WLEDMM internal memory handling was optimized and improved for reliability. Loading of ledmaps was optimized to prevent repeated reading of the same file.
-As a consequence, large setups (&gt;2500 LEDs) and big ledmaps.json files will work much better.</p>
+As a consequence, large setups (&gt;2500 LEDs) and big ledmaps.json files will work much better.
+We recommend using an ESP32 board with PSRAM for large setups, as JSON files will be processed in external PSRAM if available (<a href="https://github.com/MoonModules/WLED/releases/download/v0.14.0.b25/WLEDMM_0.14.0-b25.29_esp32_4MB_PSRAM_S.bin">PSRAM  enabled firmware build</a> needed).</p>
 <h3 id="peak-unlimited">Peak unlimited</h3>
 <p>May 16</p>
 <p>by @ewowi</p>
