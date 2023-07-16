@@ -74,6 +74,14 @@ By @Troy and @Softhack007
 WLEDMM internal memory handling was optimized and improved for reliability. Loading of ledmaps was optimized to prevent repeated reading of the same file.
 As a consequence, large setups (>2500 LEDs) and big ledmaps.json files will work much better.
 
+
+### Peak unlimited
+May 16
+
+by @ewowi
+
+Instead of scaling down on pixels when having lots of leds we lower the peak frame rate so we have WYPIWYG (what you peak is what you get)
+
 ## Audio Palette Updates
 
 14 April 2023
