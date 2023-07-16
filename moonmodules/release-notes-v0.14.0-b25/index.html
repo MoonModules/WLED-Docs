@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#moonmodules-v0140-b25-release-july-15th-2023" class="md-skip">
+        <a href="#full-bright-preview" class="md-skip">
           Skip to content
         </a>
       
@@ -1648,8 +1648,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Release notes v0.14.0-b25
@@ -1665,8 +1663,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2633,8 +2629,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2762,7 +2756,9 @@
   
 
 
-<h1 id="moonmodules-v0140-b25-release-july-15th-2023">MoonModules v0.14.0-b25, release July 15th 2023</h1>
+  <h1>Release notes v0.14.0-b25</h1>
+
+<p><a href="https://github.com/MoonModules/WLED/releases/tag/v0.14.0.b25">MoonModules v0.14.0-b25, release July 15th 2023</a></p>
 <p>This WLED MM release is based on latest stable dev of WLED AC (June 2, 2023). We have also added a few stability patches that arrived in WLED AC after June 2nd. 
 As WLED AC is undergoing a lot of changes, MoonModules built in a longer delay then normal to keep up with upstream until latest upstream is well tested.</p>
 <p>Below an overview of major MoonModules specific changes and new features.</p>
@@ -2788,10 +2784,12 @@ As WLED AC is undergoing a lot of changes, MoonModules built in a longer delay t
 <h3 id="effect-core-speedups">Effect core speedups</h3>
 <p>1 July 2023</p>
 <p>Some effects will run up to 60% faster now.
-A lot of minor speedups to effect core routines were added. Additionally, FastLED color handling code was updated to release 3.6.0.
-* up to 220 FPS were measured with 160 LEDs per pin; for max speed, use 2-4 LED pins with your fixture (ws2812b).
-* soundreactive effects were optimized to support high FPS.
-* At high FPS (&gt;100), soundreactive effects seem to "flow" with the music now. Try to set the speed slider to 255 in <code>pixelwave</code>, <code>freqmatrix</code> or <code>DJ Light</code>.</p>
+A lot of minor speedups to effect core routines were added. Additionally, FastLED color handling code was updated to release 3.6.0.</p>
+<ul>
+<li>up to 220 FPS were measured with 160 LEDs per pin; for max speed, use 2-4 LED pins with your fixture (ws2812b).</li>
+<li>soundreactive effects were optimized to support high FPS.</li>
+<li>At high FPS (&gt;100), soundreactive effects seem to "flow" with the music now. Try to set the speed slider to 255 in <code>pixelwave</code>, <code>freqmatrix</code> or <code>DJ Light</code>.</li>
+</ul>
 <p>
 <img width="60%" alt="Configuring high FPS" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/b4d3070b-e7d7-414c-a9b9-5034895c9e5f"> &nbsp;
 <img width="50%" alt="Sound Flows" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/7aee247e-cbd6-41c6-a0d1-333c0d58041c">
