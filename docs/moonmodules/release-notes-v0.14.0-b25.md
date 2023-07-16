@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-# MoonModules v0.14.0-b25, release July 15th 2023
+[MoonModules v0.14.0-b25, release July 15th 2023](https://github.com/MoonModules/WLED/releases/tag/v0.14.0.b25)
 
 This WLED MM release is based on latest stable dev of WLED AC (June 2, 2023). We have also added a few stability patches that arrived in WLED AC after June 2nd. 
 As WLED AC is undergoing a lot of changes, MoonModules built in a longer delay then normal to keep up with upstream until latest upstream is well tested.
@@ -47,6 +47,7 @@ Refactor of the Nodes popup
 
 Some effects will run up to 60% faster now.
 A lot of minor speedups to effect core routines were added. Additionally, FastLED color handling code was updated to release 3.6.0.
+
 * up to 220 FPS were measured with 160 LEDs per pin; for max speed, use 2-4 LED pins with your fixture (ws2812b).
 * soundreactive effects were optimized to support high FPS.
 * At high FPS (>100), soundreactive effects seem to "flow" with the music now. Try to set the speed slider to 255 in `pixelwave`, `freqmatrix` or `DJ Light`.
