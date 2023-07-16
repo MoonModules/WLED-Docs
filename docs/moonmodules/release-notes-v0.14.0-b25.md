@@ -94,7 +94,7 @@ By @Softhack007
 
 In contrast to "volume", sound pressure level changes with the real loudness, as measured by your microphone. It will climb when you turn music louder, and fall when you turn volume down. You need an I2S digital microphone for soundpressure. 
 
-Currently ARTI-FX, and the Waverly and Gravimeter effect support sound pressure. More effects to come.
+ARTI-FX, and the Waverly and Gravimeter effects already support sound pressure. More effects to come.
 Currently SoundPressure is **not** transmitted to networked devices with "UDP sound sync".
 
 
