@@ -73,6 +73,7 @@ By @Troy and @Softhack007 and @ewowi
 
 WLEDMM internal memory handling was optimized and improved for reliability. Loading of ledmaps was optimized to prevent repeated reading of the same file.
 As a consequence, large setups (>2500 LEDs) and big ledmaps.json files will work much better.
+We recommend using an ESP32 board with PSRAM for large setups, as JSON files will be processed in external PSRAM if available ([PSRAM  enabled firmware build](https://github.com/MoonModules/WLED/releases/download/v0.14.0.b25/WLEDMM_0.14.0-b25.29_esp32_4MB_PSRAM_S.bin) needed).
 
 
 ### Peak unlimited
