@@ -5,7 +5,21 @@ hide:
   # - toc
 ---
 
-Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next release will be v0.14.0-b2)
+# MoonModules v0.14.0-b25, release July 15th 2023
+
+This WLED MM release is based on latest stable dev of WLED AC (June 2, 2023). We have also added a few stability patches that arrived in WLED AC after June 2nd. 
+As WLED AC is undergoing a lot of changes, MoonModules built in a longer delay then normal to keep up with upstream until latest upstream is well tested.
+
+Below an overview of major MoonModules specific changes and new features.
+
+## Full Bright Preview
+7 July 2023
+
+By @Softhack007
+
+Instead of dimming down, the preview always shows at max brightness - even when the global brightness slider for your LEDs is set to a low value. 
+
+<img width="40%" alt="Full Bright Preview" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/fe32af8f-c4b7-4932-bc1d-a24567547e98"> 
 
 ## AnimARTrix Usermod - 2D effects
 
@@ -20,11 +34,44 @@ May 2023
 
 Refactor of the Nodes popup
 
-<img width="1042" alt="image" src="https://github.com/MoonModules/WLED-Docs/assets/91013628/8e156fd5-9afb-42fc-ac63-215788bd6c11">
+<img width="1042" alt="New Nodes Popup" src="https://github.com/MoonModules/WLED-Docs/assets/91013628/8e156fd5-9afb-42fc-ac63-215788bd6c11">
 
 * Set on/off
 * Show more info of instance
 * DDP all: add all found nodes as Led outputs (see led preferences screen), by this the leds of others nodes as added as leds to your node and you can control them from this one node. Note: Might not scale up to 10's of nodes due to network traffic 
+
+## Under-the-hood: Speedups, Bugfixes and improved Stability
+
+### Effect core speedups
+1 July 2023
+
+Some effects will run up to 60% faster now.
+A lot of minor speedups to effect core routines were added. Additionally, FastLED color handling code was updated to release 3.6.0.
+* up to 220 FPS were measured with 160 LEDs per pin; for max speed, use 2-4 LED pins with your fixture (ws2812b).
+* soundreactive effects were optimized to support high FPS.
+* At high FPS (>100), soundreactive effects seem to "flow" with the music now. Try to set the speed slider to 255 in `pixelwave`, `freqmatrix` or `DJ Light`.
+
+<p>
+<img width="60%" alt="Configuring high FPS" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/b4d3070b-e7d7-414c-a9b9-5034895c9e5f"> &nbsp;
+<img width="50%" alt="Sound Flows" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/7aee247e-cbd6-41c6-a0d1-333c0d58041c">
+</p>
+
+
+### Auto Brightness Limiter works again
+30 June 2023
+
+By @Softhack007
+
+Auto Brightness Limiter bugfixes (from WLED AC) are included in this release. 
+
+
+### Improved Stability
+1 June 2023
+
+By @Troy and @Softhack007
+
+WLEDMM internal memory handling was optimized and improved for reliability. Loading of ledmaps was optimized to prevent repeated reading of the same file.
+As a consequence, large setups (>2500 LEDs) and big ledmaps.json files will work much better.
 
 ## Audio Palette Updates
 
@@ -39,9 +86,15 @@ Fix issues with Audio Responsive Hue being single color and add new Audio Respon
 
 By @Softhack007
 
-Also supported by ARTI-FX
+<p>
+<img width="40%" alt="Gravimeter-Soundpressure" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/37b8b8c2-bc6c-4904-a3ed-3911e93b6b08"> 
+<img width="40%" alt="Waverly-Soundpressure" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/b212d861-faf8-4dd7-a665-42e044d7f2e5"> 
+</p>
 
-More info follows
+In contrast to "volume", sound pressure level changes with the real loudness, as measured by your microphone. It will climb when you turn music louder, and fall when you turn volume down. You need an I2S digital microphone for soundpressure. 
+
+Currently ARTI-FX, and the Waverly and Gravimeter effect support sound pressure. More effects to come.
+
 
 ## DMX Input
  
