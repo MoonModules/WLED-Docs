@@ -2596,10 +2596,12 @@
 <h2 id="some-_s-builds-are-optimized-for-speed">Some <code>_S</code> builds are optimized for speed</h2>
 <p>July 21st, 2023</p>
 <p>By @Softhack007</p>
-<p>Some MoonModules builds are now utilizing compiler option -O2 "optimize for speed", instead of -Os "optimize for size". 
-As the firmware size grows with this option, only a few <code>_S</code> firmware binaries for esp32 are currently build with this higher optimization level:
-  - <code>esp32_4MB_S</code> (flash usage 87.4% --&gt; 98.8%)
-  - <code>esp32_16MB_V4_S</code> (flash usage 73.3% --&gt; 82.9%)</p>
+<p>Some MoonModules builds are now utilizing compiler option -O2 "optimize for speed", instead of -Os "optimize for size".</p>
+<p>As the firmware size grows with this option, only a few <code>_S</code> firmware binaries for esp32 are currently build with this higher optimization level:</p>
+<ul>
+<li><code>esp32_4MB_S</code> (flash usage 87.4% --&gt; 98.8%)</li>
+<li><code>esp32_16MB_V4_S</code> (flash usage 73.3% --&gt; 82.9%)</li>
+</ul>
 <p>More firmware build may follow. </p>
 <p>First tests show 20%-35% higher FPS (framerates) in effects!</p>
 <p>Known issue: USERMOD_ANIMARTRIX aborts with internal compiler error when building with <code>-O2</code>:
