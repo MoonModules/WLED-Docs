@@ -17,6 +17,7 @@ Some MoonModules builds are now utilizing compiler option -O2 "optimize for spee
 As the firmware size grows with this option, only a few `_S` firmware binaries for esp32 are currently build with this higher optimization level:
   - `esp32_4MB_S` (flash usage 87.4% --> 98.8%)
   - `esp32_16MB_V4_S` (flash usage 73.3% --> 82.9%)
+
 More firmware build may follow. 
 
 First tests show 20%-35% higher FPS (framerates) in effects!
