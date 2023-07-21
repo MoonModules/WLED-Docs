@@ -20,7 +20,6 @@ As the firmware size grows with this option, only a few `_S` firmware binaries f
 * `esp32_4MB_S` (flash usage 87.4% --> 98.8%)
 * `esp32_16MB_V4_S` (flash usage 73.3% --> 82.9%)
 
-More firmware build may follow. 
 
 
 
