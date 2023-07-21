@@ -13,7 +13,7 @@ July 21st, 2023
 
 By @Softhack007
 
-Some MoonModules builds are now utilizing compiler option -O2 "optimize for speed", instead of the dedault -Os "optimize for size". 
+Some MoonModules builds are now utilizing compiler option -O2 "optimize for speed", instead of -Os "optimize for size". 
 As the firmware size grows with this option, only a few `_S` firmware binaries for esp32 are currently build with this higher optimization level:
   - `esp32_4MB_S` (flash usage 87.4% --> 98.8%)
   - `esp32_16MB_V4_S` (flash usage 73.3% --> 82.9%)
