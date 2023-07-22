@@ -1,5 +1,7 @@
 # I2S ADC for Line-In
 
+If you want the best experience, then Line-In using I2S will give the best quality. As you are getting a clean audio feed, then the squelch value should be set to 1
+
 Looking to add line-in with I2S support? You might want to try I2S ADC boards that use one of these chips: 
 * [CirrusLogic WM8782](https://www.cirrus.com/products/wm8782/)
 * [CirrusLogic CS5343](https://www.cirrus.com/products/cs5343-44/)
