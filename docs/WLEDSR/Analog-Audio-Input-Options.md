@@ -10,10 +10,10 @@ Below are a number of popular Arduino compatible analog microphones that have be
 Model | Compatibility | Notes
 --- | --- | ---
 *MAX9814* | Good+ | Best to set the gain to 40dB.
-*MAX9812* | Good | Only 20dB gain, but worked OK.
-*MAX4466* | Fair | Is very sensitive to 3.3V noise and voltage dropout due to Wifi activity. Avoid powering your LED stripe from ESP32, as the stripe causes a lot of noise on the 3.3V/5V power lines.
+*MAX9812* | Fair | Only 20dB gain, but worked OK.
+*MAX4466* | bad | Is very sensitive to 3.3V noise and voltage dropout due to Wifi activity. Avoid powering your LED strip from ESP32, as the strip causes a lot of noise on the 3.3V/5V power lines.
 *INMP401* | Good | Some Chinese ones are not reliable.
-
+*Clap Sensors* (LM393, KY-038, KY-037) | unusable | these sensors may have an "analogue output" but the signal quality is extremely poor. Don't use them as a microphone, they were designed for other purposes.
 
 See also 
 
@@ -22,6 +22,8 @@ See also
 &rArr; [noise and spikes on analog microphones](/WLEDSR/Noise-and-Spikes#both-platforms)
 
 If you are using the [MAX9814](https://learn.adafruit.com/adafruit-agc-electret-microphone-amplifier-max9814/), you need to connect gain to vdd to set the gain to 40dB as the default 60db has far too much background noise. 
+
+### Don't waste your money on cheapest hardware
 
 Important: there are some inexpensive sound sensors you can buy from Aliexpress or elsewhere (such as LM393, KY-038 or KY-037). Typically these have an on/off output only (detecting "sound" or "silence"), sometimes there is an additional "analog data out" with very low quality. They may or may not work adequately. For more information on our microphone test results, see our [Arduino Compatible Microphones document](https://github.com/atuline/WLED/blob/assets/docs/Microphones.pdf).
 
