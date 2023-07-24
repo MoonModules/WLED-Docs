@@ -2205,6 +2205,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dont-waste-your-money-on-cheapest-hardware" class="md-nav__link">
+    Don't waste your money on cheapest hardware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-following-schematics-are-provided-as-an-example-only-there-are-many-ways-to-achieve-the-same-results-these-are-only-a-few-of-those-ways" class="md-nav__link">
     The following schematics are provided as an example only. There are many ways to achieve the same results. These are only a few of those ways.
   </a>
@@ -2598,6 +2605,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dont-waste-your-money-on-cheapest-hardware" class="md-nav__link">
+    Don't waste your money on cheapest hardware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-following-schematics-are-provided-as-an-example-only-there-are-many-ways-to-achieve-the-same-results-these-are-only-a-few-of-those-ways" class="md-nav__link">
     The following schematics are provided as an example only. There are many ways to achieve the same results. These are only a few of those ways.
   </a>
@@ -2685,18 +2699,23 @@ Additionally there are solutions for line-in via I2S. For example, boards/shield
 </tr>
 <tr>
 <td><em>MAX9812</em></td>
-<td>Good</td>
+<td>Fair</td>
 <td>Only 20dB gain, but worked OK.</td>
 </tr>
 <tr>
 <td><em>MAX4466</em></td>
-<td>Fair</td>
-<td>Is very sensitive to 3.3V noise and voltage dropout due to Wifi activity. Avoid powering your LED stripe from ESP32, as the stripe causes a lot of noise on the 3.3V/5V power lines.</td>
+<td>bad</td>
+<td>Is very sensitive to 3.3V noise and voltage dropout due to Wifi activity. Avoid powering your LED strip from ESP32, as the strip causes a lot of noise on the 3.3V/5V power lines.</td>
 </tr>
 <tr>
 <td><em>INMP401</em></td>
 <td>Good</td>
 <td>Some Chinese ones are not reliable.</td>
+</tr>
+<tr>
+<td><em>Clap Sensors</em> (LM393, KY-038, KY-037)</td>
+<td>unusable</td>
+<td>these sensors may have an "analogue output" but the signal quality is extremely poor. Don't use them as a microphone, they were designed for other purposes.</td>
 </tr>
 </tbody>
 </table>
@@ -2704,6 +2723,7 @@ Additionally there are solutions for line-in via I2S. For example, boards/shield
 <p>&rArr; <a href="/WLEDSR/First-Time-Setup#sound-settings-getting-started-with-common-microphones">Sound setting examples for common microphones</a></p>
 <p>&rArr; <a href="/WLEDSR/Noise-and-Spikes#both-platforms">noise and spikes on analog microphones</a></p>
 <p>If you are using the <a href="https://learn.adafruit.com/adafruit-agc-electret-microphone-amplifier-max9814/">MAX9814</a>, you need to connect gain to vdd to set the gain to 40dB as the default 60db has far too much background noise. </p>
+<h3 id="dont-waste-your-money-on-cheapest-hardware">Don't waste your money on cheapest hardware</h3>
 <p>Important: there are some inexpensive sound sensors you can buy from Aliexpress or elsewhere (such as LM393, KY-038 or KY-037). Typically these have an on/off output only (detecting "sound" or "silence"), sometimes there is an additional "analog data out" with very low quality. They may or may not work adequately. For more information on our microphone test results, see our <a href="https://github.com/atuline/WLED/blob/assets/docs/Microphones.pdf">Arduino Compatible Microphones document</a>.</p>
 <p>If the LED's are active when the ambient volume is low while running volume only effects beginning with a single '*', you can increase the background noise filtering (or squelch) by navigating to the 'Config | Sound Settings' and <a href="/WLEDSR/Sound-Settings#how-to">increase the Squelch value</a>. You can also make it more sensitive by lowering that Squelch value. In addition, there is a gain setting, which is required especially for the much lower signal level provided by the line-in configuration. Gain, Squelch and AGC are affecting all soundreactive, volumereactive and frequency (FFT) reactive effects.</p>
 <p><strong>Note 1:</strong> Do NOT connect input devices to 5V (or Vin). The power should be connected to the 3.3V pin.</p>
