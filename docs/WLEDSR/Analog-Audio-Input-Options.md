@@ -27,7 +27,11 @@ If you are using the [MAX9814](https://learn.adafruit.com/adafruit-agc-electret-
 
 Important: there are some inexpensive sound sensors you can buy from Aliexpress or elsewhere (such as LM393, KY-038 or KY-037). Typically these have an on/off output only (detecting "sound" or "silence"), sometimes there is an additional "analog data out" with very low quality. They may or may not work adequately. For more information on our microphone test results, see our [Arduino Compatible Microphones document](https://github.com/atuline/WLED/blob/assets/docs/Microphones.pdf).
 
+### Use Squelch
+
 If the LED's are active when the ambient volume is low while running volume only effects beginning with a single '*', you can increase the background noise filtering (or squelch) by navigating to the 'Config | Sound Settings' and [increase the Squelch value](/WLEDSR/Sound-Settings#how-to). You can also make it more sensitive by lowering that Squelch value. In addition, there is a gain setting, which is required especially for the much lower signal level provided by the line-in configuration. Gain, Squelch and AGC are affecting all soundreactive, volumereactive and frequency (FFT) reactive effects.
+
+### good to know
 
 **Note 1:** Do NOT connect input devices to 5V (or Vin). The power should be connected to the 3.3V pin.
 
@@ -43,6 +47,8 @@ If the LED's are active when the ambient volume is low while running volume only
 
 ***
 
+## Wiring
+ 
 ### The following schematics are provided as an example only. There are many ways to achieve the same results. These are only a few of those ways.
 
 Microphone Wiring Example (MAX9814) | Line In Wiring Example
@@ -56,6 +62,7 @@ The 680 ohm resistors provide termination so that you don't get reflection on th
 **Note 1:** If you are just using a single L or R channel for the line-in, disconnect the capacitor for the other channel, or the resultant sample will be significantly reduced in amplitude.
 
 **Note 2:** Providing a 'T' connector so that you can hear the music as it goes into the circuit is highly recommended. In the author's case, there was considerable static when the ESP32 was powered by the computer's USB port, but was fine when the ESP32 was powered by a USB powerbank.
+
 
 ### Dual Input Wiring
 The following diagram shows one way of connecting a 3.5mm jack and an analog microphone to the ESP8266/32 while being able to change your desired input with a simple SPDT switch.
