@@ -2212,44 +2212,71 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#use-squelch" class="md-nav__link">
+    Use Squelch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-to-know" class="md-nav__link">
+    good to know
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wiring" class="md-nav__link">
+    Wiring
+  </a>
+  
+    <nav class="md-nav" aria-label="Wiring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#the-following-schematics-are-provided-as-an-example-only-there-are-many-ways-to-achieve-the-same-results-these-are-only-a-few-of-those-ways" class="md-nav__link">
     The following schematics are provided as an example only. There are many ways to achieve the same results. These are only a few of those ways.
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#dual-input-wiring" class="md-nav__link">
     Dual Input Wiring
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#pins-used" class="md-nav__link">
     Pins Used
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#squelch" class="md-nav__link">
     Squelch
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#gain" class="md-nav__link">
     Gain
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#problems-encountered" class="md-nav__link">
     Problems Encountered
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2612,44 +2639,71 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#use-squelch" class="md-nav__link">
+    Use Squelch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-to-know" class="md-nav__link">
+    good to know
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wiring" class="md-nav__link">
+    Wiring
+  </a>
+  
+    <nav class="md-nav" aria-label="Wiring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#the-following-schematics-are-provided-as-an-example-only-there-are-many-ways-to-achieve-the-same-results-these-are-only-a-few-of-those-ways" class="md-nav__link">
     The following schematics are provided as an example only. There are many ways to achieve the same results. These are only a few of those ways.
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#dual-input-wiring" class="md-nav__link">
     Dual Input Wiring
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#pins-used" class="md-nav__link">
     Pins Used
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#squelch" class="md-nav__link">
     Squelch
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#gain" class="md-nav__link">
     Gain
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#problems-encountered" class="md-nav__link">
     Problems Encountered
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2725,13 +2779,16 @@ Additionally there are solutions for line-in via I2S. For example, boards/shield
 <p>If you are using the <a href="https://learn.adafruit.com/adafruit-agc-electret-microphone-amplifier-max9814/">MAX9814</a>, you need to connect gain to vdd to set the gain to 40dB as the default 60db has far too much background noise. </p>
 <h3 id="dont-waste-your-money-on-cheapest-hardware">Don't waste your money on cheapest hardware</h3>
 <p>Important: there are some inexpensive sound sensors you can buy from Aliexpress or elsewhere (such as LM393, KY-038 or KY-037). Typically these have an on/off output only (detecting "sound" or "silence"), sometimes there is an additional "analog data out" with very low quality. They may or may not work adequately. For more information on our microphone test results, see our <a href="https://github.com/atuline/WLED/blob/assets/docs/Microphones.pdf">Arduino Compatible Microphones document</a>.</p>
+<h3 id="use-squelch">Use Squelch</h3>
 <p>If the LED's are active when the ambient volume is low while running volume only effects beginning with a single '*', you can increase the background noise filtering (or squelch) by navigating to the 'Config | Sound Settings' and <a href="/WLEDSR/Sound-Settings#how-to">increase the Squelch value</a>. You can also make it more sensitive by lowering that Squelch value. In addition, there is a gain setting, which is required especially for the much lower signal level provided by the line-in configuration. Gain, Squelch and AGC are affecting all soundreactive, volumereactive and frequency (FFT) reactive effects.</p>
+<h3 id="good-to-know">good to know</h3>
 <p><strong>Note 1:</strong> Do NOT connect input devices to 5V (or Vin). The power should be connected to the 3.3V pin.</p>
 <p><strong>Note 2:</strong> <del>A piezo vibration sensor (from aliexpress) was successfully hooked up and tested.</del> This piezo hack is not possible any more, as piezo impulses would be filtered out as random noise.</p>
 <p><strong>Note 3:</strong> On the ESP32, the default ADC pin is GPI36 (also known as VP), while the ESP8266 uses A0. On ESP32, any GPIO related to ADC1 can be used - see next note.</p>
 <p><strong>Note 4:</strong> If your ESP32 doesn't have pin 36, any of the other ADC1 (and not ADC2) pins should work.</p>
 <p><strong>Note 5:</strong> On the ESP32, the ADC and I2S pins are defined in audio_reactive.h. You can also select them in the sound settings UI.</p>
 <hr />
+<h2 id="wiring">Wiring</h2>
 <h3 id="the-following-schematics-are-provided-as-an-example-only-there-are-many-ways-to-achieve-the-same-results-these-are-only-a-few-of-those-ways">The following schematics are provided as an example only. There are many ways to achieve the same results. These are only a few of those ways.</h3>
 <table>
 <thead>
