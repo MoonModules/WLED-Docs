@@ -2674,7 +2674,7 @@
 <h2 id="setup">Setup</h2>
 <p>Before configuring UDP Sound Sync, make sure you have gone into the WiFi Preferences and clicked on 'Disable WiFi sleep' at the bottom of the page. It has caused us innumerable problems in the past.</p>
 <p>In order to configure UDP sound sync, the ‘master’ needs to be an ESP32 configured as normal, but with Sync Mode set to Send</p>
-<p>For devices without an audio input (either ESP32s or ESP8266s), Audio Reactive must be enabled but with the Sync Mode set to Receive. Make sure the UDP port is the same on all devices.</p>
+<p>For devices without an audio input (either ESP32 or ESP8266), Audio Reactive must be enabled but with the Sync Mode set to Receive. Make sure the UDP port is the same on all devices.</p>
 <p>In order to change the UDP Sync Mode (Disabled/Transmit/Receive), you need to power-cycle the ESP32/ESP8266.</p>
 <h2 id="technical">Technical</h2>
 <p>When an ESP32 is configured for audio transmission, it will connect to a UDP Multicast address, and begin sending a single UDP Multicast packet containing the data used to generate sound-reactive animations out to any other devices that are configured to receive on the same network.  The following information is transmitted:</p>
