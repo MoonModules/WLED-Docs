@@ -157,9 +157,10 @@ nav:
   - Sound Reactive: 
     - Introduction: soundreactive/introduction.md
     - Sound Settings: soundreactive/Sound-Settings.md
-    - Sound Reactive Palettes: soundreactive/Sound-Reactive-Palettes.md
     - Digital Microphone Hookup: WLEDSR/Digital-Microphone-Hookup.md
     - Line Input: soundreactive/Line-Input.md
+    - Audio Sync: soundreactive/sync.md
+    - Sound Reactive Palettes: soundreactive/Sound-Reactive-Palettes.md
   - WLED SR 0.13:
     - Basics:
       - Introduction: WLEDSR/Home.md
