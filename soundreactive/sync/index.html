@@ -1959,9 +1959,74 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Audio Sync
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Audio Sync
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical" class="md-nav__link">
+    Technical
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v1-format-used-in-sr-wled-up-to-013x" class="md-nav__link">
+    V1 format, used in SR WLED up to 0.13.x
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v2-format-wled-version-0140-including-moonmodules-fork" class="md-nav__link">
+    V2 Format - WLED version &gt;= 0.14.0 (including MoonModules fork)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-else" class="md-nav__link">
+    What else ?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2529,6 +2594,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical" class="md-nav__link">
+    Technical
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v1-format-used-in-sr-wled-up-to-013x" class="md-nav__link">
+    V1 format, used in SR WLED up to 0.13.x
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v2-format-wled-version-0140-including-moonmodules-fork" class="md-nav__link">
+    V2 Format - WLED version &gt;= 0.14.0 (including MoonModules fork)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-else" class="md-nav__link">
+    What else ?
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2551,10 +2665,69 @@
 
 
 <h1 id="sound-sync">Sound Sync</h1>
-<p>If you have more than one device or wish to use <a href="Line-Input">Line Input</a> but your audio source is not right next where your LEDs are, then Audio Sync is the feature you need, no need for multiple mics or long cables</p>
+<p>If you have more than one device or wish to use <a href="Line-Input">Line Input</a> but your audio source is not right next where your LEDs are, then Audio Sync is the feature you need, no need for multiple mics or long cables. Sound Sync is different from direct LEDs control using protocols like E1.31, DMX, DDP or AdaLight.</p>
 <p>For the WLED instance that you wish to be the source, simply set the Sync mode in the Audio Reactive module to Send and then use Recieve on all the WLED instances you wish to use the data</p>
 <p>You might have a setup something like this or just a simple wired line-in rather than Bluetooth or Chromecast</p>
 <p><img src="https://media.discordapp.net/attachments/853969074311659570/1120723508717158510/WLED_Audio_Routing_Diagram.png"/></p>
+<p>UDP Sound Sync is a feature to synchronize (share) the sound input of a 'master' device with one or more 'slave' devices. </p>
+<p>UDP Sound Sync does not sync the actual animations, but rather transmits summary audio sampling information to several devices that still run their own animations locally. In a nutshell, it means that several devices can share a single audio source.</p>
+<h2 id="setup">Setup</h2>
+<p>Before configuring UDP Sound Sync, make sure you have gone into the WiFi Preferences and clicked on 'Disable WiFi sleep' at the bottom of the page. It has caused us innumerable problems in the past.</p>
+<p>In order to configure UDP sound sync, the ‘master’ needs to be an ESP32 configured as normal, but with Sync Mode set to Send</p>
+<p>For devices without an audio input (either ESP32s or ESP8266s), Audio Reactive must be enabled but with the Sync Mode set to Receive. Make sure the UDP port is the same on all devices.</p>
+<p>In order to change the UDP Sync Mode (Disabled/Transmit/Receive), you need to power-cycle the ESP32/ESP8266.</p>
+<h2 id="technical">Technical</h2>
+<p>When an ESP32 is configured for audio transmission, it will connect to a UDP Multicast address, and begin sending a single UDP Multicast packet containing the data used to generate sound-reactive animations out to any other devices that are configured to receive on the same network.  The following information is transmitted:</p>
+<h3 id="v1-format-used-in-sr-wled-up-to-013x">V1 format, used in SR WLED up to 0.13.x</h3>
+<div class="highlight"><pre><span></span><code><span class="cp">#define UDP_SYNC_HEADER &quot;00001&quot;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">audioSyncPacket</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">header</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UDP_SYNC_HEADER</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">myVals</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span><span class="w">     </span><span class="c1">//  32 Bytes</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">sampleAgc</span><span class="p">;</span><span class="w">          </span><span class="c1">//  04 Bytes</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">sampleRaw</span><span class="p">;</span><span class="w">          </span><span class="c1">//  04 Bytes</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">sampleAvg</span><span class="p">;</span><span class="w">        </span><span class="c1">//  04 Bytes</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">samplePeak</span><span class="p">;</span><span class="w">        </span><span class="c1">//  01 Bytes</span>
+<span class="w">  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">fftResult</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="w">  </span><span class="c1">//  16 Bytes - FFT results, one byte per GEQ channel</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">FFT_Magnitude</span><span class="p">;</span><span class="w">   </span><span class="c1">//  08 Bytes</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">FFT_MajorPeak</span><span class="p">;</span><span class="w">   </span><span class="c1">//  08 Bytes</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>UDP_SYNC_HEADER is a versioning number that's defined in audio_reactive.h</p>
+<h3 id="v2-format-wled-version-0140-including-moonmodules-fork">V2 Format - WLED version &gt;= 0.14.0 (including MoonModules fork)</h3>
+<div class="highlight"><pre><span></span><code><span class="cp">#define UDP_SYNC_HEADER_V2 &quot;00002&quot;</span>
+<span class="c1">// new &quot;V2&quot; AC 0.14.0 audiosync struct - 40 Bytes</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">audioSyncPacket_v2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">char</span><span class="w">    </span><span class="n">header</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UDP_SYNC_HEADER_V2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 06 bytes, last byte is &#39;\0&#39; as string terminator.</span>
+<span class="w">      </span><span class="kt">float</span><span class="w">   </span><span class="n">sampleRaw</span><span class="p">;</span><span class="w">      </span><span class="c1">//  04 Bytes  - either &quot;sampleRaw&quot; or &quot;rawSampleAgc&quot; depending on soundAgc setting</span>
+<span class="w">      </span><span class="kt">float</span><span class="w">   </span><span class="n">sampleSmth</span><span class="p">;</span><span class="w">     </span><span class="c1">//  04 Bytes  - either &quot;sampleAvg&quot; or &quot;sampleAgc&quot; depending on soundAgc setting</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">samplePeak</span><span class="p">;</span><span class="w">     </span><span class="c1">//  01 Bytes  - 0 no peak; &gt;=1 peak detected. In future, this will also provide peak Magnitude</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">reserved1</span><span class="p">;</span><span class="w">      </span><span class="c1">//  01 Bytes  - reserved for future extensions like loudness</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">fftResult</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="w">  </span><span class="c1">//  16 Bytes  - FFT results, one byte per GEQ channel</span>
+<span class="w">      </span><span class="kt">float</span><span class="w">  </span><span class="n">FFT_Magnitude</span><span class="p">;</span><span class="w">   </span><span class="c1">//  04 Bytes  - magnitude of strongest peak in FFT</span>
+<span class="w">      </span><span class="kt">float</span><span class="w">  </span><span class="n">FFT_MajorPeak</span><span class="p">;</span><span class="w">   </span><span class="c1">//  04 Bytes  - frequency of strongest peak in FFT</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>The V2 format expects that AGC is performed by the sender, so there is no need to transmit "AGC" and "non-AGC" samples separately. To save bandwidth, the <code>myvals[]</code> array was removed, and all numbers are either <code>float</code> or <code>uint8_t</code>.</p>
+<p>SR-WLED 0.13.3 still sends out V1 format, however it is able to receive and decode V2 format, too.</p>
+<h2 id="what-else">What else ?</h2>
+<p>You might want to take a look at <a href="https://github.com/netmindz/WLED-sync">this</a> library, which allows to <a href="https://github.com/netmindz/WLED-sync">send and receive WLED Audio Sync data</a> independent from WLED.</p>
+<p>When an ESP32 or ESP8266 is configured to receive audio data from another device, the receiver will disable any onboard microphone sampling and FFT processing, in favor of audio data received from the network.  Any time a UDP Multicast packet is received from a transmitter, it will be treated as a discrete microphone sample and stored in memory the same way it would be if it were a local microphone.</p>
+<ul>
+<li>
+<p>An ESP8266 will not be able to use any FFT data transmitted from an ESP32, as a result of the differences in hardware and software.</p>
+</li>
+<li>
+<p>The UDP &nbsp;<em>Multicast</em>&nbsp; IP is <code>239.0.0.1</code>, and the default UDP port is <code>11988</code>.</p>
+</li>
+<li>
+<p>UDP port can be changed in WLED config pages, for example to have several groups of devices by assigning different UDP ports to each group.</p>
+</li>
+<li>
+<p>UDP multicast is generally not very reliable with typical "consumer-grade hardware". Some users found that creating a "port forwarding rule" on their local Wifi router helps. For example, you could create a "dynamic port forwarding rule" for UDP port 11988.</p>
+</li>
+</ul>
+<p>UDP Sound sync brought to you by @spedione on Discord.</p>
+<p>Reference: <a href="https://github.com/Aircoookie/WLED/wiki/UDP-Realtime-Control">https://github.com/Aircoookie/WLED/wiki/UDP-Realtime-Control</a></p>
 
 
 
