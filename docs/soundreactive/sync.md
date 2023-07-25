@@ -23,9 +23,9 @@ Before configuring UDP Sound Sync, make sure you have gone into the WiFi Prefere
 
 In order to configure UDP sound sync, the ‘master’ needs to be an ESP32 configured as normal, but with Sync Mode set to Send
 
-For devices without an audio input (either ESP32 or ESP8266), Audio Reactive must be enabled but with the Sync Mode set to Receive. Make sure the UDP port is the same on all devices.
+For devices without an audio input, Audio Reactive must be enabled but with the Sync Mode set to Receive. Make sure the UDP port is the same on all devices.
 
-In order to change the UDP Sync Mode (Disabled/Transmit/Receive), you need to power-cycle the ESP32/ESP8266.
+In order to change the UDP Sync Mode (Disabled/Transmit/Receive), you need to power-cycle the ESP32.
 
 ## Technical
 
@@ -76,7 +76,7 @@ SR-WLED 0.13.3 still sends out V1 format, however it is able to receive and deco
 You might want to take a look at [this](https://github.com/netmindz/WLED-sync) library, which allows to [send and receive WLED Audio Sync data](https://github.com/netmindz/WLED-sync) independent from WLED.
 
 
-When an ESP32 or ESP8266 is configured to receive audio data from another device, the receiver will *disable* any onboard microphone sampling and FFT processing, in favor of audio data received from the network.  Any time a UDP Multicast packet is received from a transmitter, it will be treated as a discrete microphone sample and stored in memory the same way it would be if it were a local microphone.
+When configured to receive audio data from another device, the receiver will *disable* any onboard microphone sampling and FFT processing, in favor of audio data received from the network.  Any time a UDP Multicast packet is received from a transmitter, it will be treated as a discrete microphone sample and stored in memory the same way it would be if it were a local microphone.
 
 * The UDP &nbsp;<em>Multicast</em>&nbsp; IP is `239.0.0.1`, and the default UDP port is `11988`.
 * UDP port can be changed in WLED config pages, for example to have several groups of devices by assigning different UDP ports to each group.
