@@ -76,17 +76,11 @@ SR-WLED 0.13.3 still sends out V1 format, however it is able to receive and deco
 You might want to take a look at [this](https://github.com/netmindz/WLED-sync) library, which allows to [send and receive WLED Audio Sync data](https://github.com/netmindz/WLED-sync) independent from WLED.
 
 
-When an ESP32 or ESP8266 is configured to receive audio data from another device, the receiver will disable any onboard microphone sampling and FFT processing, in favor of audio data received from the network.  Any time a UDP Multicast packet is received from a transmitter, it will be treated as a discrete microphone sample and stored in memory the same way it would be if it were a local microphone.
-
-* An ESP8266 will not be able to use any FFT data transmitted from an ESP32, as a result of the differences in hardware and software.
+When an ESP32 or ESP8266 is configured to receive audio data from another device, the receiver will *disable* any onboard microphone sampling and FFT processing, in favor of audio data received from the network.  Any time a UDP Multicast packet is received from a transmitter, it will be treated as a discrete microphone sample and stored in memory the same way it would be if it were a local microphone.
 
 * The UDP &nbsp;<em>Multicast</em>&nbsp; IP is `239.0.0.1`, and the default UDP port is `11988`.
 * UDP port can be changed in WLED config pages, for example to have several groups of devices by assigning different UDP ports to each group.
-
-* UDP multicast is generally not very reliable with typical "consumer-grade hardware". Some users found that creating a "port forwarding rule" on their local Wifi router helps. For example, you could create a "dynamic port forwarding rule" for UDP port 11988.
+* UDP multicast can sometimes have issues with some Wifi routers, if you have issues, please try with a different Wifi
 
 
 UDP Sound sync brought to you by @spedione on Discord.
-
-Reference: <https://github.com/Aircoookie/WLED/wiki/UDP-Realtime-Control>
-
