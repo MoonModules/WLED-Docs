@@ -23,7 +23,7 @@ Before configuring UDP Sound Sync, make sure you have gone into the WiFi Prefere
 
 In order to configure UDP sound sync, the ‘master’ needs to be an ESP32 configured as normal, but with Sync Mode set to Send
 
-For devices without an audio input (either ESP32s or ESP8266s), Audio Reactive must be enabled but with the Sync Mode set to Receive. Make sure the UDP port is the same on all devices.
+For devices without an audio input (either ESP32 or ESP8266), Audio Reactive must be enabled but with the Sync Mode set to Receive. Make sure the UDP port is the same on all devices.
 
 In order to change the UDP Sync Mode (Disabled/Transmit/Receive), you need to power-cycle the ESP32/ESP8266.
 
