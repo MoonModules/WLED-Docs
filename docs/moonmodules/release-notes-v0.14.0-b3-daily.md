@@ -1,4 +1,4 @@
----
+tha ---
 title: Release notes v0.14.0-b3-daily
 hide:
   # - navigation
@@ -19,8 +19,8 @@ As the firmware size grows with this option, only a few `_S` firmware binaries f
 
 * `esp32_4MB_S` (flash usage 87.4% --> 98.8%)
 * `esp32_16MB_V4_S` (flash usage 73.3% --> 82.9%)
-
-
+* `esp32_16MB_S` (includes animartix)
+* `esp32S3_8MB_S` for -S3 (up to 45% faster than normal build!)
 
 
 First tests show 20%-35% higher FPS (framerates) in effects!
