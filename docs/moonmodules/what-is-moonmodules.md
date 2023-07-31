@@ -64,3 +64,8 @@ WLED SR:
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/91013628/223692910-78d2fb50-5bcb-420b-ad47-6c4f672237a2.JPG">
 
+The Future ???
+
+![image](https://github.com/MoonModules/WLED-Docs/assets/1737159/ffcc34e9-3c37-42d1-a977-c4df0fd76369)
+
+
