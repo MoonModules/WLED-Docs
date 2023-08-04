@@ -291,7 +291,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../advanced/home-automation/" class="md-tabs__link">
+      <a href="../../advanced/audio-reactive/" class="md-tabs__link">
         Advanced
       </a>
     </li>
@@ -535,8 +535,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../basics/compatible-led-strips/" class="md-nav__link">
+        LED strips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/compatible-controllers/" class="md-nav__link">
+        Controllers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../basics/compatible-hardware/" class="md-nav__link">
-        Hardware
+        Other Hardware
       </a>
     </li>
   
@@ -1124,7 +1152,7 @@
   
     <li class="md-nav__item">
       <a href="../infrared/" class="md-nav__link">
-        Infrared
+        Remote Control
       </a>
     </li>
   
@@ -1263,6 +1291,20 @@
           Advanced
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/audio-reactive/" class="md-nav__link">
+        Audio Reactive WLED
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -2881,7 +2923,7 @@ You will need to switch to DDP mode in Sync settings and reboot once.  </p>
 <li>For a fluent 25ms (40fps) or more framerate, it is recommended to use no more than 3 universes (510 LEDs).</li>
 <li>Using multiple E1.31 sources to control a single WLED controller will impact performance. If possible it's recommended to avoid this.</li>
 <li>Configure WLED to connect to <a href="/features/settings#wifi-settings">a WiFi Network</a>. It was observed that sending E1.31 from a computer to WLED when accessed as access point (WLED-AP) may not work, see <a href="https://wled.discourse.group/t/sending-e1-31-when-in-ap-mode-may-not-work/407">forum post</a>.</li>
-<li>When using an ESP32, disabling WiFi sleep in the WiFi settings of WLED can reduce/eliminate visual stuttering/lag of effects, and significantly reduce ping times. Note: disabling WiFi will increase power consumption.</li>
+<li>When using an ESP32, disabling WiFi sleep in the WiFi settings of WLED can reduce/eliminate visual stuttering/lag of effects, and significantly reduce ping times. Note: disabling WiFi sleep will increase power consumption.</li>
 </ul>
 <h3 id="using-ledfx">Using LedFX</h3>
 <p>We highly recommend the <a href="https://github.com/LedFx/LedFx">LedFx project</a> in combination with WLED!

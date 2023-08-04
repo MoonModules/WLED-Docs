@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../getting-started/">
+        <link rel="prev" href="../compatible-controllers/">
       
       
         <link rel="next" href="../compatible-software/">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Compatible Hardware - WLED MoonModules Project</title>
+        <title>Other Hardware - WLED MoonModules Project</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Compatible Hardware
+              Other Hardware
             
           </span>
         </div>
@@ -291,7 +291,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../advanced/home-automation/" class="md-tabs__link">
+      <a href="../../advanced/audio-reactive/" class="md-tabs__link">
         Advanced
       </a>
     </li>
@@ -537,6 +537,34 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../compatible-led-strips/" class="md-nav__link">
+        LED strips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compatible-controllers/" class="md-nav__link">
+        Controllers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -547,12 +575,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Hardware
+          Other Hardware
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Hardware
+        Other Hardware
       </a>
       
         
@@ -1087,7 +1115,7 @@
   
     <li class="md-nav__item">
       <a href="../../interfaces/infrared/" class="md-nav__link">
-        Infrared
+        Remote Control
       </a>
     </li>
   
@@ -1226,6 +1254,20 @@
           Advanced
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/audio-reactive/" class="md-nav__link">
+        Audio Reactive WLED
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -2774,7 +2816,7 @@
   
 
 
-  <h1>Hardware</h1>
+  <h1>Other Hardware</h1>
 
 <div class="admonition note">
 <p>Still under construction, feel free to add to the list!</p>
@@ -3254,6 +3296,10 @@ The default PWM frequency for dimming is 880 Hz on ESP8266 and 19531 Hz for ESP3
 <td><a href="https://www.tindie.com/products/jasoncoon/wemos-d1-mini-esp8266-level-shifter-mini-shield/">Wemos D1 mini Level Shifter Shield</a></td>
 <td>A level shifter shield (74HCT125) - by Evil Genius Labs LLC.</td>
 </tr>
+<tr>
+<td><a href="https://www.google.com/search?q=wizmote">WIZmote remote control</a></td>
+<td>Remote control using radio network. Compatible with WLED (vesions 0.14.0-beta3 and above). No additional receiver required.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="compatible-pc-rgb-fans-and-argb-accessories">Compatible PC RGB Fans and ARGB accessories</h2>
@@ -3293,11 +3339,11 @@ The default PWM frequency for dimming is 880 Hz on ESP8266 and 19531 Hz for ESP3
 </thead>
 <tbody>
 <tr>
-<td>SN74AHCT125N</td>
-<td>Aircoookie's recommended levelshifter. Used on the QuinLed Dig-Uno and <a href="https://github.com/srg74/WLED-wemos-shield">WLED Wemos shield</a>.</td>
+<td>SN74AHCT125</td>
+<td>Aircoookie's recommended levelshifter. Often used in DIY and commercial controllers.</td>
 </tr>
 <tr>
-<td>74AHCT32</td>
+<td>SN74AHCT32</td>
 <td>Same pinout as above can be used. This is just an OR gate, but any AHCT gate can be used if inputs are connected appropriately. ;)</td>
 </tr>
 <tr>
@@ -3309,19 +3355,25 @@ The default PWM frequency for dimming is 880 Hz on ESP8266 and 19531 Hz for ESP3
 <td>Modern bus transceiver with voltage translation <a href="https://github.com/lizardsystems/yawl-controller">Yet Another WLED Controller</a></td>
 </tr>
 <tr>
-<td>TXS0102</td>
-<td>A bidirectional levelshifter that works well with WLED.</td>
+<td>TXS0102, TXS0108</td>
+<td>Bidirectional levelshifters that may work fine with WLED (if possible, 74AHCT gates should be preferred as they support both longer data lines and faster protocols)</td>
 </tr>
 <tr>
-<td><a href="https://www.pixelcontroller.com/store/controllers/53-falcon-picap.html">F-Amp</a></td>
+<td><a href="https://pixelcontroller.com/store/accessories/54-famp-xconnect.html">F-Amp</a></td>
 <td>Level shifter/data booster</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>I2C shifters are generally too slow for WLED, so don't use them.</p>
+<p>I2C shifters are generally too slow for addressable LEDs, so don't use them.</p>
 </div>
+<p>Further reading:
+<a href="https://electricfiredesign.com/2021/03/12/logic-level-shifters-for-driving-led-strips/">Logic Level Shifters for Driving LED Strips</a></p>
+<p>How to connect Levelshifters:
+<img alt="74AHCT125 one output" src="../../assets/images/content/pic1.jpg" />
+<img alt="74AHCT125 two outputs" src="../../assets/images/content/pic2.jpg" />
+<img alt="TXS0108" src="../../assets/images/content/pic3.jpg" /></p>
 <h2 id="usbttl-adapters">USB/TTL adapters</h2>
 <table>
 <thead>
@@ -3372,16 +3424,24 @@ The default PWM frequency for dimming is 880 Hz on ESP8266 and 19531 Hz for ESP3
 <td>I2C &amp; SPI display, can be used with <em>4 Line Display</em> usermod.</td>
 </tr>
 <tr>
-<td><a href="https://www.aliexpress.com/wholesale?catId=0&amp;SearchText=5v+relay+module">5V relay</a></td>
-<td>Relay module. Some will require 5V to trigger so you will need level-shifted output (similar as for LEDs) for proper functionality or a circuit with transistor or MOSFET.</td>
-</tr>
-<tr>
 <td>DS18B20</td>
 <td>Recommended temperature sensor for use with WLED. Compatible with the <a href="https://github.com/Aircoookie/WLED/tree/master/usermods/Temperature">Temperature usermod</a></td>
 </tr>
 <tr>
 <td><a href="https://www.tindie.com/products/27112/">Display shield</a></td>
 <td>Various configurations. Compatible with the <a href="https://www.tindie.com/products/27056/">ESP32 WLED dev board</a> also can be used with ESP32 mini dev boards.</td>
+</tr>
+<tr>
+<td><a href="https://shop.myhome-control.de/Relais-Board-fuer-WLED-Controller-12V/HW10011">12V Relay &amp; Fuse board</a></td>
+<td>Integrates two relays and two 10 A fuses. Suitable for WLED setups with 12 V LED Strips.</td>
+</tr>
+<tr>
+<td><a href="https://www.aliexpress.com/wholesale?catId=0&amp;SearchText=5v+relay+module">5V relay</a></td>
+<td>Relay module. Some will require 5V to trigger so you will need level-shifted output (similar as for LEDs) for proper functionality or a circuit with transistor or MOSFET.</td>
+</tr>
+<tr>
+<td><a href="https://shop.myhome-control.de/Relais-Board-fuer-WLED-Controller-5V/HW10005">5V Relay &amp; Fuse board</a></td>
+<td>Integrates two relays and two 10 A fuses. Suitable for WLED setups with 5V LED Strips.</td>
 </tr>
 </tbody>
 </table>

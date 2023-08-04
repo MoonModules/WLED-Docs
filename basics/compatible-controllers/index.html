@@ -1,0 +1,3173 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Ewoud Wijma (ewowi)">
+      
+      
+      
+        <link rel="prev" href="../compatible-led-strips/">
+      
+      
+        <link rel="next" href="../compatible-hardware/">
+      
+      <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Compatible controllers - WLED MoonModules Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/global.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#controllers-with-wled-pre-installed" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<p class="cx-announce">
+  <span class="md-announce">
+    <a href="https://discord.gg/KuqP7NE">
+      Join us on <span class="twemoji discord"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> <span><strong> Discord </strong></span> for support and updates!
+    </a>
+  </span>
+</p>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="WLED MoonModules Project" class="md-header__button md-logo" aria-label="WLED MoonModules Project" data-md-component="logo">
+      
+  <img src="../../assets/images/ui/akemi/001_cheerful.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WLED MoonModules Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Compatible controllers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Light Mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Dark Mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MoonModules/WLED" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    WLED
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Welcome
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/" class="md-tabs__link md-tabs__link--active">
+        Basics
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../features/effects/" class="md-tabs__link">
+        Features
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../interfaces/blynk/" class="md-tabs__link">
+        Interfaces
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../advanced/audio-reactive/" class="md-tabs__link">
+        Advanced
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/contributors/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../usermods/4LineDisplay/" class="md-tabs__link">
+        Usermods
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../moonmodules/what-is-moonmodules/" class="md-tabs__link">
+        MoonModules
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../2D/wip/" class="md-tabs__link">
+        2D
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../soundreactive/introduction/" class="md-tabs__link">
+        Sound Reactive
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../WLEDSR/Home/" class="md-tabs__link">
+        WLED SR 0.13
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="WLED MoonModules Project" class="md-nav__button md-logo" aria-label="WLED MoonModules Project" data-md-component="logo">
+      
+  <img src="../../assets/images/ui/akemi/001_cheerful.png" alt="logo">
+
+    </a>
+    WLED MoonModules Project
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MoonModules/WLED" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    WLED
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Compatibility
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Compatibility
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compatible-led-strips/" class="md-nav__link">
+        LED strips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Controllers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Controllers
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#controllers-with-wled-pre-installed" class="md-nav__link">
+    Controllers with WLED pre-installed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controllers-wled-can-be-installed-to" class="md-nav__link">
+    Controllers WLED can be installed to
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wled-shields-to-be-use-with-esp8266esp32-controllr-boards" class="md-nav__link">
+    WLED shields to be use with ESP8266/ESP32 controllr boards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-products-wled-can-be-installed-to" class="md-nav__link">
+    Other products WLED can be installed to
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raw-esp8266esp32-boards" class="md-nav__link">
+    Raw ESP8266/ESP32 boards
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compatible-hardware/" class="md-nav__link">
+        Other Hardware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compatible-software/" class="md-nav__link">
+        Software
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-binary/" class="md-nav__link">
+        Install WLED Binary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-gui/" class="md-nav__link">
+        Install using ESP GUI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/compiling-wled/" class="md-nav__link">
+        Compiling WLED
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/effects/" class="md-nav__link">
+        Effects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/palettes/" class="md-nav__link">
+        Palettes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/macros/" class="md-nav__link">
+        Macros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/presets/" class="md-nav__link">
+        Presets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/segments/" class="md-nav__link">
+        Segments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/settings/" class="md-nav__link">
+        Settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/multi-strip/" class="md-nav__link">
+        Multi-strip Support
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/relay-control/" class="md-nav__link">
+        Relay Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/subpages/" class="md-nav__link">
+        Web GUI Sitemap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/cct/" class="md-nav__link">
+        White handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/pixel-art-converter/" class="md-nav__link">
+        Pixel Art Converter
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Interfaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Interfaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/blynk/" class="md-nav__link">
+        Blynk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/dmx-output/" class="md-nav__link">
+        DMX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/e1.31-dmx/" class="md-nav__link">
+        E1.31 (DMX) / Art-Net
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/http-api/" class="md-nav__link">
+        HTTP Request API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/infrared/" class="md-nav__link">
+        Remote Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/json-api/" class="md-nav__link">
+        JSON API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/mqtt/" class="md-nav__link">
+        MQTT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/philips-hue/" class="md-nav__link">
+        Philips Hue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/serial/" class="md-nav__link">
+        Serial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/udp-notifier/" class="md-nav__link">
+        WLED UDP Sync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/udp-realtime/" class="md-nav__link">
+        UDP Realtime / tpm2.net
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/websocket/" class="md-nav__link">
+        Websocket
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Advanced
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/audio-reactive/" class="md-nav__link">
+        Audio Reactive WLED
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/home-automation/" class="md-nav__link">
+        Home Automation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/remote-access-ifttt/" class="md-nav__link">
+        Remote Access / IFTTT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/wiring/" class="md-nav__link">
+        Wiring Protips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/longdata/" class="md-nav__link">
+        Long Data Lines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/compiling-wled/" class="md-nav__link">
+        Compiling WLED
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/buildflags/" class="md-nav__link">
+        WLED Build Flags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/custom-features/" class="md-nav__link">
+        Custom Features
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/esp32-recovery/" class="md-nav__link">
+        ESP32 Recovery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/mapping/" class="md-nav__link">
+        Mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/ddp/" class="md-nav__link">
+        Virtual LEDs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/custom-ap/" class="md-nav__link">
+        Custom Access Point Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/net-debug/" class="md-nav__link">
+        Net debug
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contributors/" class="md-nav__link">
+        Contributors & Credits
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/privacy-policy/" class="md-nav__link">
+        Privacy Policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/roadmap/" class="md-nav__link">
+        Upcoming Features
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Usermods
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Usermods
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/4LineDisplay/" class="md-nav__link">
+        Four Line Display
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/Autosave/" class="md-nav__link">
+        Autosave
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/Battery/" class="md-nav__link">
+        Battery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/BH1750/" class="md-nav__link">
+        BH1750
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/BME280/" class="md-nav__link">
+        BME280
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/mpu6050-IMU/" class="md-nav__link">
+        MPU6050
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/Rotary-Encoder/" class="md-nav__link">
+        Rotary Encoder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/staircase/" class="md-nav__link">
+        Animated staircase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/Temperature/" class="md-nav__link">
+        Temperature
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/MultiRelay/" class="md-nav__link">
+        MultiRelay
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/PIRsensorSwitch/" class="md-nav__link">
+        PIRsensorSwitch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/Weather/" class="md-nav__link">
+        Weather
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usermods/pinmanager/" class="md-nav__link">
+        Pin Manager
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          MoonModules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          MoonModules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/what-is-moonmodules/" class="md-nav__link">
+        What is MoonModules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/release-notes-v0.14.0-b3-daily/" class="md-nav__link">
+        Release notes v0.14.0-b3-daily
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/release-notes-v0.14.0-b25/" class="md-nav__link">
+        Release notes v0.14.0-b25
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/release-notes-v0.14.0-b15/" class="md-nav__link">
+        Release notes v0.14.0-b15
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/release-notes-v0.14.0-b1/" class="md-nav__link">
+        Release notes v0.14.0-b1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/release-notes-v0.14.0-b0/" class="md-nav__link">
+        Release notes v0.14.0-b0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/fork-comparison/" class="md-nav__link">
+        Fork comparison
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/Installing-and-Compiling/" class="md-nav__link">
+        Installing and Compiling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/mappings/" class="md-nav__link">
+        Mappings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/arti-fx/" class="md-nav__link">
+        ARTI-FX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/platformio-entries/" class="md-nav__link">
+        Platformio entries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/preset-api-commands/" class="md-nav__link">
+        Preset API commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/contribute-docs/" class="md-nav__link">
+        Contribute to docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moonmodules/contribute-dev/" class="md-nav__link">
+        Contribute to development
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          2D
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          2D
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D/wip/" class="md-nav__link">
+        WIP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          Sound Reactive
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Sound Reactive
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../soundreactive/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../soundreactive/Sound-Settings/" class="md-nav__link">
+        Sound Settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Digital-Microphone-Hookup/" class="md-nav__link">
+        Digital Microphone Hookup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../soundreactive/Line-Input/" class="md-nav__link">
+        Line Input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../soundreactive/sync/" class="md-nav__link">
+        Audio Sync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../soundreactive/Sound-Reactive-Palettes/" class="md-nav__link">
+        Sound Reactive Palettes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          WLED SR 0.13
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          WLED SR 0.13
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+          Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Home/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Installing-and-Compiling/" class="md-nav__link">
+        Installing and Compiling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/First-Time-Setup/" class="md-nav__link">
+        First Time Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Running-Sound-Reactive-WLED/" class="md-nav__link">
+        Running Sound Reactive WLED
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/2D-Support/" class="md-nav__link">
+        2D Support
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/LED-Preferences/" class="md-nav__link">
+        2D LED Preferences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/UDP-Sound-Sync/" class="md-nav__link">
+        UDP Sound Sync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Reactive-Animations/" class="md-nav__link">
+        Sound Reactive Animations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Non-Reactive-Animations/" class="md-nav__link">
+        Non-Reactive Animations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Digital-Microphone-Hookup/" class="md-nav__link">
+        Digital Microphone Hookup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Analog-Audio-Input-Options/" class="md-nav__link">
+        Analog Audio Input Options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Using-my-PC-for-the-Sound/" class="md-nav__link">
+        Using my PC for the Sound
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/News/" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+          Technicals
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Technicals
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/My--device--is-not-working/" class="md-nav__link">
+        It's Not Working
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Noise-and-Spikes/" class="md-nav__link">
+        Noise and Spikes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Connectivity-Issues/" class="md-nav__link">
+        Connectivity Issues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+          Coding and Testing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          Coding and Testing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/WLED-Programming-Notes/" class="md-nav__link">
+        WLED Programming Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Modifying-Sound-Reactive-WLED/" class="md-nav__link">
+        Modifying Sound Reactive WLED
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Future-Directions/" class="md-nav__link">
+        Future Directions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Adding-a-Sound-Settings-page-to-the-UI/" class="md-nav__link">
+        Adding a new Settings Page
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/On-Lossy-Colours/" class="md-nav__link">
+        On Lossy Colours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Adding-Sliders/" class="md-nav__link">
+        Sliders in WLED
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Testing/" class="md-nav__link">
+        Testing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+          Links
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          Links
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/FastLED/FastLED/wiki/Basic-usage" class="md-nav__link">
+        FastLED Wiki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WLEDSR/Other-Links/" class="md-nav__link">
+        Other
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#controllers-with-wled-pre-installed" class="md-nav__link">
+    Controllers with WLED pre-installed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controllers-wled-can-be-installed-to" class="md-nav__link">
+    Controllers WLED can be installed to
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wled-shields-to-be-use-with-esp8266esp32-controllr-boards" class="md-nav__link">
+    WLED shields to be use with ESP8266/ESP32 controllr boards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-products-wled-can-be-installed-to" class="md-nav__link">
+    Other products WLED can be installed to
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raw-esp8266esp32-boards" class="md-nav__link">
+    Raw ESP8266/ESP32 boards
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/MoonModules/WLED-Docs/edit/main/docs/basics/compatible-controllers.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>Controllers</h1>
+
+<p>Currently (as of summer 2023) only the microcontrollers from Espressif, types ESP8266 and ESP32 (with dual core) are fully supported. Some of the newer types like ESP32-C3, ESP32-S2 and ESP32-S3 are experimentally supported, but productive use is not recommended yet because some bugs are suspected. In addition, the installation of these newer types is not that easy: there are several hardware variations/boards for which the SW must be specially compiled. It should also be mentioned that some ESP32-C3 boards (so-called C3 mini V1.0.0) are still being sold on the market where WLAN does not work properly.</p>
+<p>To try out WLED with 5V addressable strip a simple microcontroller board like ESP8266 D1 mini or ESP32 D1 mini is sufficient. The simplest setup might be like:
+<img alt="Simple WLED setup" src="../../assets/images/content/pic10.jpg" /></p>
+<p>However, there are a few other things to keep in mind for a proper setup:
+1. A level shifter is required for reliable data transmission from the controller to the LED strip (this is mandatory, especially with 12V or 24V LED strips). Then you have to solder something together or you can buy a ready-made WLED controller right away.
+2. For safety reasons, the correct cabling (length, cross-section, contacts) and the fuses to be integrated must be considered. Especially with LED strips, it gets more complicated because you need the so-called intermediate feeds. These must be planned and implemented correctly. <a href="https://wled-calculator.github.io/">LED power, wiring and fuse calculator</a> can be used as an starting point.
+<img alt="Advanced WLED setup" src="../../assets/images/content/pic11.jpg" />
+3. LED strips can get quite warm during operation and even overheat in the event of a fault. Again, for safety reasons, you have to protect the area around it: you shouldn't just lay LED strips like that, ideally you should integrate them into aluminum profiles or something similar. In normal operation, these act like a heat sink and thus extend the service life of the LEDs. In the event of a fault, they can protect the surroundings.
+4. To save energy while LEDs are off, you might integarte relays that switch the voltage of LEDs off completely.</p>
+<p>In the following some third-party controllers are listed. Please use a decent and neutral description when adding things to this list.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Lists are in alphabetical order. The position of an item in the list does not indicate how good it is or if it will fit your use case.
+Please carefully compare all items in the category you are interested in, and you should find the one that suits your needs best in just a few minutes! </p>
+</div>
+<h2 id="controllers-with-wled-pre-installed">Controllers with WLED pre-installed</h2>
+<div class="admonition check">
+<p class="admonition-title">Info</p>
+<p>Unless otherwise noted, controllers feature everything you need for most WLED setups, except a power supply, wiring and fuses, and of course the LEDs themselves!</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.tindie.com/products/bong69/8-port-led-distro/">8 Port LED Distro</a></td>
+<td>This is an 8 port ESP32 based LED distro board running WLED. Distributing both power and data in 1 board. The WT32-ETH01 provides support for Wi-Fi or ethernet connections. It can be used with either 5v or 12v or 24v LED pixels. Also includes a USB-C port for programming, level shifter, 5 amp fuse on every port, multiple voltage inputs with no jumpers to set and phoenix connectors for easy wiring.</td>
+</tr>
+<tr>
+<td><a href="https://smartlight.me/led-strips/adressable-led-strips/controller-slwf-02">A1-SLWF-02 WLED controller</a></td>
+<td>WLED dedicatedly designed Controller that supports 5V-12V addressable strips from Ukrainian developers. Based on ESP8266. Slim design, sensor button, powered either by type-C or screw-terminal. Screwdriver included. <a href="https://smartlight.me/led-strips/adressable-led-strips/controller-slwf-02">Worldwide delivery</a>.</td>
+</tr>
+<tr>
+<td><a href="https://shop.myhome-control.de/ABC-WLED-Controller-V31-ESP8266/HW10002">ABC! WLED Controller / ESP8266</a></td>
+<td>Commercial controller for 5V LED strips. Based on ESP8266 uC. Two outputs. Ready to use. Additional <a href="https://shop.myhome-control.de/Relais-Board-fuer-WLED-Controller-5V/HW10005">Relay&amp;Fuse board</a> available. (<a href="https://shop.myhome-control.de/ABC-WLED-Controller-V31-ESP8266/HW10002">German shop &amp; shipping only within Germany.</a>). A similar one is available at <a href="https://wled.shop/produkt/wladis-wled-controller-v31/">WLED.SHOP</a></td>
+</tr>
+<tr>
+<td><a href="https://shop.myhome-control.de/ABC-WLED-Controller-V41-ESP32/HW10003.1">ABC! WLED Controller / ESP32</a></td>
+<td>Commercial controller for 5V LED strips. Based on ESP32 uC. Two outputs. Option for digital microphone or <a href="https://shop.myhome-control.de/Line-In-zu-I2S-Adapter-fuer-WLED-Controller/HW10013">line-in-to-I2S Adapter</a> for sound reactive WLED. Ready to use. Additional <a href="https://shop.myhome-control.de/Relais-Board-fuer-WLED-Controller-5V/HW10005">Relay&amp;Fuse board</a> available. (<a href="https://shop.myhome-control.de/ABC-WLED-Controller-V41-ESP32/HW10003.1">German shop &amp; shipping only within Germany.</a>). A similar one is available at <a href="https://wled.shop/produkt/wladis-wled-controller-v40-esp32/">WLED.SHOP</a>.</td>
+</tr>
+<tr>
+<td><a href="https://shop.myhome-control.de/ABC-WLED-Controller-Board-5-24V/HW10015">ABC! WLED Controller V43 / ESP32 based / 5V-24V</a></td>
+<td>Commercial controller board for 5V / 12V / 24V LED strips from creator of <a href="https://wled-calculator.github.io/">LED power, wiring and fuse calculator</a>. Based on ESP32 uC. Preflashed SW. Up to four outputs. Option for digital microphone or <a href="https://shop.myhome-control.de/Line-In-zu-I2S-Adapter-fuer-WLED-Controller/HW10013">line-in-to-I2S Adapter</a> for sound reactive WLED. Automatic 5V/12V/24V recognition (no jumper/switch etc. required). <a href="https://shop.myhome-control.de/Ethernet-Adapter-fuer-WLED-Controller/HW10016">Ethernet adapter</a> is available . Enclosure is available too.  <a href="https://shop.myhome-control.de/ABC-WLED-Controller-Board-5-24V/HW10015">German shop &amp; shipping only within Germany.</a> Worldwide shipping available soon at <a href="https://wled.shop/">WLED.SHOP</a>.</td>
+</tr>
+<tr>
+<td><a href="https://shop.myhome-control.de/ABC-WLED-Controller-Board-mini-5V-12V-ESP32/HW10014">ABC! WLED mini Controller V70 / ESP32 based / 5V-12V</a></td>
+<td>Commercial controller board for 5V / 12V LED strips from creator of <a href="https://wled-calculator.github.io/">LED power, wiring and fuse calculator</a>. Based on ESP32 uC. Preflashed SW. Up to four outputs. Option for digital microphone or <a href="https://shop.myhome-control.de/Line-In-zu-I2S-Adapter-fuer-WLED-Controller/HW10013">line-in-to-I2S Adapter</a> for sound reactive WLED. Automatic 5V/12V recognition (no jumper/switch etc. required). Enclosure is available.  <a href="https://shop.myhome-control.de/ABC-WLED-Controller-Board-5-24V/HW10015">German shop &amp; shipping only within Germany.</a>.</td>
+</tr>
+<tr>
+<td><a href="https://www.aliexpress.com/item/1005002198527735.html">Athom Light Strip Controller</a></td>
+<td>Simple controller with enclosure for reliably driving 3 pin 5V LEDs. Uses 2M ESP8266.</td>
+</tr>
+<tr>
+<td><a href="https://www.athom.tech/blank-1/wled-high-power-led-strip-controller">Athom High Power Addressable LED Strip Controller</a></td>
+<td>Higher power options than the above system. Supports optional clock output.</td>
+</tr>
+<tr>
+<td><a href="https://www.athom.tech/blank-1/wled-esp32-music-addressable-led-strip-controller">Athom LS8P ESP32 Music Controller</a></td>
+<td>ESP32 based controller with dual output, microphone and IR. Comes with WLED preinstalled</td>
+</tr>
+<tr>
+<td><a href="https://www.athom.tech/blank-1/wled-rgbw-light-strip-controller">Athom RGBW Light Strip Controller</a></td>
+<td>Has outputs for individual color channels.</td>
+</tr>
+<tr>
+<td><a href="https://www.cadsbi-shop.de/shop/led-beleuchtungscontroller/cadsbi-motion-smart/">Cadsbi Motion Smart</a></td>
+<td>Ready to use solution with 3 output ports, an external antenna, in a high quality metal enclosure</td>
+</tr>
+<tr>
+<td><a href="https://shop.codm.de/automation/pixel/30/wlan-pixel-controller">cod.m Wi-Fi Pixel Controller</a></td>
+<td>Fully completed control PCB with level shifter, terminals and case - pre-flashed with WLED!</td>
+</tr>
+<tr>
+<td><a href="https://www.maltepoeggel.de/?site=pixelcontroller">ESP8266 Pixel Controller</a></td>
+<td>DIY board for 5V/12V LED strips with TTL or RS485 output using a Wemos D1 mini, integrated fuse, pluggable terminal block, 3D printed module case</td>
+</tr>
+<tr>
+<td><a href="https://www.espthings.io/AL01">ESPthings.io ET-AL01</a></td>
+<td>DIY board for 5 Analog channels and/or up to 5 Digital LED channels (or a combination of the latter as required), Integrated level shifter, 5v/12/24v compatibility, 4x pull-up/down GPIO, serial interface and power distribution terminals. Can be used with Wemos D1-style ESP8266 or ESP32 boards.</td>
+</tr>
+<tr>
+<td><a href="https://www.tindie.com/products/28276/">ESP32 WLED pico board</a></td>
+<td>ESP32 WLED pico board,super small form factor, ready to buy on <a href="https://www.tindie.com/products/28276/">Tindie</a> and <a href="https://www.tindie.com/products/moonmodules/esp32-pico-board-with-digital-microphone/">Tindie EU</a>. Integrated level shifter, exposed pins for extending functionality , on board I2S microphone, <a href="https://github.com/srg74/WLED-ESP32-pico/tree/main/Firmware">Firmware is here</a>. Project page is <a href="https://github.com/srg74/WLED-ESP32-pico">here</a></td>
+</tr>
+<tr>
+<td><a href="https://iot4.eu/product/iot4wled/">IOT4WLED</a></td>
+<td>Ready to use hardware for WLED!</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Planet-Laterna/Laterna">Laterna</a></td>
+<td>Based on an ESP32 for digital LED and RBG/RGBW LED strips with support for 5V, 12V and 24V LED strips. (Up to 4 channels)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Planet-Laterna/Laterna-mini-V3">Laterna Mini V3</a></td>
+<td>Small ESP32 based controller with optional digital microphone integrated for digital 5V LED strips.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Planet-Laterna/Laterna_Stick">Laterna Stick</a></td>
+<td>USB Stick like ESP32 based controller for digital 5V LED strips.</td>
+</tr>
+<tr>
+<td><a href="https://stanleyprojects.com/projects/ledbox_v2/">LedBox V2</a></td>
+<td>LedBox V2 by StanleyProjects is a fully contained, sound reactive, ESP32 based module for controlling 5-12V addressable LED strips (WS2812, SK6812, etc.), supporting both 3-(VDD,DAT,GND) and 4-(VDD,DAT,CLK,GND) pin configuration. It includes a digital MEMS microphone, button and IR control, and a safety resettable fuse, all in a compact 3D printable case. The board comes all setup, flashed with <a href=https://github.com/atuline/WLED>sound reactive WLED fork</a>, and can be purchased <a href="https://www.tindie.com/products/stanleyprojects/ledbox-v2/">here</a>.</td>
+</tr>
+<tr>
+<td><a href="https://luminxa.com/product/luminxa-2-2-2/">Luminxa v2.2.2</a></td>
+<td>ESP32</td>
+</tr>
+<tr>
+<td><a href="https://tindie.com/products/mcqn_ltd/my-babys-got-led/">My Baby's Got LED</a></td>
+<td><a href="https://certification.oshwa.org/uk000030.html">Certified open hardware</a>. Easy plug-and-play WLED board for those that don't want to figure out the hardware - you won't even need a screwdriver to get started. PC power supply (<a href="https://en.wikipedia.org/wiki/ATX#:~:text=An%20ATX%20power%20supply%20provides,the%20original%2020-pin%20version.">ATX</a>) powers three 5V injection points on 8A fuses. For sale now on <a href="https://tindie.com/products/mcqn_ltd/my-babys-got-led/">Tindie</a>! Full details on <a href="https://github.com/mcqn/my-babys-got-led">the github repo</a> and <a href="https://mcqn.com/ibal223/">maker's website</a>.</td>
+</tr>
+<tr>
+<td><a href="https://quinled.info/quinled-dig2go/">QuinLED Dig2go</a></td>
+<td>Designed to be the quickest and easiest 5v addressable LEDs controller available! Powered simply by using a USB-C input (just like your phone!) for a true plug and play experience. Recommended for small projects up to 15W and very complete with built-in "power cut" circuit when the LEDs are off to minimize idle power consumption, LED data level-shifter, built in protection circuits (including fuses), IR receiver, high quality digital microphone with audio reactive effects and even has some easy to use expansion ports for extra buttons or for instance an I2C screen! All of this is housed in a high-quality custom plastic case (not 3D printed) and small enough to fit in the palm of your hand! Comes ready to go, pre-flashed with WLED and even combined with power supply and/or LED strip in different bundles! <a href="https://dig2go.info/dig2go-buying-page/">Buy here!</a></td>
+</tr>
+<tr>
+<td><a href="https://quinled.info/quinled-dig-uno/">QuinLED Dig-Uno</a></td>
+<td><strong>2021 updated version!</strong> DIY/Pre-Assembled board for digital LED driving. Integrated level shifters, temperature sensor option, Auto 5v-24v compatibility, pull-up/down GPIO and safety features such as a onboard fuse. Recommended to use (and comes with) with <a href="https://quinled.info/quinled-esp32/">custom QuinLED-ESP32</a>. Pre-assembled and pre-flashed with WLED <a href="https://quinled.info/pre-assembled-quinled-dig-uno/">available to buy!</a>. Aircoookie's personal recommendation for medium-size WLED projects.</td>
+</tr>
+<tr>
+<td><a href="https://quinled.info/quinled-dig-quad/">QuinLED Dig-Quad</a></td>
+<td><strong>2021 updated version!</strong> DIY/Pre-Assembled board for 4 (5) channel digital LED driving. Integrated level shifters, temperature sensor option, Auto 5v-24v compatibility, pull-up/down GPIO and power distribution terminals with 5x onboard fuses for easy LED power injection. Recommended to use (and comes with) with <a href="https://quinled.info/quinled-esp32/">custom QuinLED-ESP32</a>. Pre-assembled and pre-flashed with WLED <a href="https://quinled.info/pre-assembled-quinled-dig-quad/">available to buy!</a>. Aircoookie's personal recommendation for large-size WLED projects with advanced power and output requirements.</td>
+</tr>
+<tr>
+<td><a href="https://quinled.info/quinled-dig-octa/">QuinLED Dig-Octa</a></td>
+<td>The Dig-Octa system is for your medium to very large projects! It comes fully pre-assembled and is the ideal board to drive 5v-24v digitally addressable LEDs. The system is composed of brain- and power-boards and is designed to be fully stackable in various configurations of both types of boards, to perfectly adapt to your needs. Some features are: 8 LED data-channels, built-in level-shifters and resistor switchers, Ethernet and external antenna WiFi, auto 5v-24v compatibility, high current handling (up to 50A to 100A!), fully fused inputs and outputs, dedicated relay circuit, I2C temperature sensor, and much more! Comes pre-flashed with WLED and is highly recommended for medium to very large projects. <a href="https://quinled.info/quinled-dig-octa-available-here/">Buy here!</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wladwnt/wled">Simple WLED Board</a></td>
+<td>Very simple DIY board, minimum of required components, option for 5V/12V LEDs. Easy to solder (no SMT components). Simple to understand connection schematics and pictures. Can be used with ESP8266 or ESP32 in D1 mini Format.</td>
+</tr>
+<tr>
+<td><a href="https://sjmautoprod.com/RGB-Controllers/rgbwX-Wi-Fi-Controllers.html">sjm autoprod rgbw, rgbw2+, rgbw4</a></td>
+<td>Complete, fully-sealed, analog and digital controllers for vehicular use. rgbw has one RGBW channel, rgbw2+ has two analog, RGBW channels plus two/four addressable outputs (requires external 5V source for 5V LEDs). rgbw4 has four analog RGBW channels. 2+ and 4 support 12V or PWM/analog inputs and have internal PTC "fuses".</td>
+</tr>
+<tr>
+<td><a href="https://github.com/stanoba/wifi-desk-lamp">WiFi Controlled Desk Lamp</a></td>
+<td>Open source PCB for WLED</td>
+</tr>
+<tr>
+<td><a href="https://github.com/srg74/WLED-ESP32-universal-controller">WLED ESP32 universal controller</a></td>
+<td>ready to buy on <a href="https://www.tindie.com/products/27056/">Tindie</a>, 100% compatible with WLED project. Integrated level shifter, 2 outputs for LEDs strips, 1 fused out for LED strip, relay for energy-saving, temperature sensor, PWM fan header, USB port for re-programing. Headers for shields to extend functionality. Available <a href="https://www.tindie.com/stores/serg74/">shields for controller is here</a>,  <a href="https://github.com/srg74/WLED-ESP32-universal-controller/tree/main/Firmware">Firmware is here</a>.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/mini_shield">WLED Wemos mini shield</a></td>
+<td>shield board, ready to buy on <a href="https://www.tindie.com/products/22680/">Tindie</a> also <a href="https://www.tindie.com/products/28777/">Tindie EU</a>. Integrated level shifter, 2 outputs for LEDs strips, 1 fused out for LED strip, resettable fuse for the development board, exposed I2C interface for display or sensors. Exposed pins Digital microphones. Works with Wemos D1 mini and D1-style ESP32 boards. <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield">Firmware is here</a>.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/srg74/Controller-for-WLED-firmware">WLED waterproof controller with external antenna</a></td>
+<td>DIY board, designed for use outside permanently and for longer range Wi-Fi connection. No SMD components means it is easier to solder for DIYers. 100% compatible with WLED project. Level shifter, fuse for LED strip, resettable fuse for Wi-Fi module, exposed I2C interface for display or sensors, relay for energy-saving and 1-wire temperature sensor. Build around ESP-07S module. <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield">Firmware is here</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/lizardsystems/yawl-controller">Yet Another WLED Controller</a></td>
+<td>Small and simple device for 5V addressable LED strips with minimum components and fully assembled by PCB manufacturing service in standard case. <a href="https://github.com/lizardsystems/yawl-controller/tree/main/firmware/WLED">Firmware is here</a></td>
+</tr>
+<tr>
+<td><a href="https://highset.in/eshop/WLED-India/wled-controller-India">HighSet WLED Controller India</a></td>
+<td>ESp32 Based Ready to use WLED device for 5V Pixel LEDs with Shift Resistor Pre-Installed &amp; 4 Outputs in Premium Quality Sealed Enclosure, Customized Orders also Welcomed.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="controllers-wled-can-be-installed-to">Controllers WLED can be installed to</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the controller does not have a USB port and no firmware supporting wireless updates pre-installed, installing WLED to it requires an FTDI flasher and in some cases, soldering.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Chip</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://forkineye.com/espixelstick-v3/">ESPixelStick v3</a></td>
+<td>ESP8266</td>
+<td>The ESPixelStick V3 is a WiFi Pixel and DMX single output controller built around the ESP8266 platform. It utilizes industry standard E1.31 sACN and DDP protocols for control of up to 680 WS2811 pixels (4 Universes) or 63 GECE Pixels.  The output passes through a built-in RS485 transceiver, allowing for driving DMX and differential Renard inputs (or using a differential receiver for long-distance between board and first pixel). The on board switching regulator allows you to power the ESPixelStick with 5V-24V -- Just match the voltage of the pixels you are using, no voltage configuration is required.  Note: Does <em><strong>not</strong></em> come preconfigured with WLED, you must flash the ESP8266 yourself.</td>
+</tr>
+<tr>
+<td><a href="https://www.amazon.de/dp/B07KW1W68R">SP108e v2</a></td>
+<td>ESP8285</td>
+<td>Hardware-Modification required and different versions exists! 8285-based 2M Controller that supports addressable RGBWW LED strips, also with CLK line (like ATA102). 5-24v DC input, 85mm x 45mm x 23mm. Vendors list spledapps 'Led Shop' as the supporting mobile application. Board is silk screened with 'SP108e'. No pads are exposed and a second processor is used to control the LEDs. Pin7 of that processor needs to be grounded to hold it in reset state. Then you can connect GPIO0 to GND and TX, RX, VCC, GND for flashing. Connect GPIO2 to R4 for DATA out and GPIO13 to R3 for CLK out. Flashed via PlatformIO, esptool. OTA updates work. Pics of pinout here: <a href="https://github.com/psxde/sp108e-led-controller/raw/main/sp108ev2_inside.png">https://github.com/psxde/sp108e-led-controller/raw/main/sp108ev2_inside.png</a></td>
+</tr>
+<tr>
+<td>SP501e</td>
+<td>ESP8285</td>
+<td>8285-based 1M Controller that supports both Addressable and PWM-based RGBWW LED strips. <em>Note that recent versions have 2M.</em> 5-24v DC input, 55mm x 26mm, sold under BTF lighting, RGBZone, etc. Vendors all list 'Fairynest' as the supporting mobile application. Board is silk screened with 'SP5XXe' but no other markings. Serial pads are exposed on the back-side of the board with GND and GPIO0 right next to each other and thus Flash access fairly straight forward. GPIO 0 must be pulled to GND at boot and throughout the flashing process.  I/O configuration: LEDPIN is 'GPIO3' for addressable (note this pin is limited to approx. 250 LEDs), BTNPIN is GPIO 1. PWM pin out for RGBWW: CW: 14, WW: 12, B: 13, R: 15 and G: 4. Flashed via PlatformIO, ESPHome and Tasmotizer. Pics of board here: <a href="https://github.com/Operation760/SP501e-RGB-LED-Controller-/blob/master/SP501e_top_bottom_traced.jpg">https://github.com/Operation760/SP501e-RGB-LED-Controller-/blob/master/SP501e_top_bottom_traced.jpg</a>  Flashing Connections: <a href="https://github.com/tonyn0/sp501e-flashing/blob/main/sp501e%20flash.png">https://github.com/tonyn0/sp501e-flashing/blob/main/sp501e%20flash.png</a></td>
+</tr>
+<tr>
+<td><a href="https://www.aliexpress.com/item/32820185063.html">SP511e</a></td>
+<td>ESP8285</td>
+<td>An ESP8285 2MB controller with 3 case buttons, built in mic, IR receiver, 38 key remote, and dual outputs. The dual outputs are connected to the same data pin. There is a step-by-step guide for <a href="https://github.com/scottrbailey/WLED-Utils/blob/gh-pages/sp511e_wled.md">Installing WLED on SP511E Controller</a>.</td>
+</tr>
+<tr>
+<td><a href="https://www.electrodragon.com/product/esp-led-strip-board">ESP LED Strip WIFI Control Board [ESP Version]</a></td>
+<td>ESP8266</td>
+<td>Controller for addressable or analog LEDs (RGBW), 6-27VDC input, no level shifter, reset and boot buttons, enclosure. NOTE: Although this uses high-current transistors, they used jumpers on two of the connections so you are limited to their current rating (3A?).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wled-shields-to-be-use-with-esp8266esp32-controllr-boards">WLED shields to be use with ESP8266/ESP32 controllr boards</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://shop.myhome-control.de/ABC-WLED-Basis-Board-fuer-5V-und-12V-LED-universell/HW10008">ABC! WLED Shield, all-purpose, for ESP8266/ESP32</a></td>
+<td>Commercial WLED Shield for 5V/12V LED strips. To be used with ESP8266 or ESP32 in D1 mini format. Two outputs. Option for digital microphone or <a href="https://shop.myhome-control.de/Line-In-zu-I2S-Adapter-fuer-WLED-Controller/HW10013">line-in-to-I2S Adapter</a> for sound reactive WLED (with ESP32 only!). Automatic 5V/12V recognition (no jumper/switch etc. required). Enclosure is available too. German shop &amp; shipping currently only within Germany.</td>
+</tr>
+<tr>
+<td><a href="https://www.tindie.com/products/24901/">ESP-01 WLED shield</a></td>
+<td>shield board for ESP-01 board, ready to buy on <a href="https://www.tindie.com/products/24901/">Tindie</a>. Integrated level shifter, 3 outputs for various configurations, mosfet for 1 analog channel, <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield">Firmware is here</a>.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/srg74/WLED-wemos-shield">WLED Wemos shield</a></td>
+<td>shield board, ready to buy on <a href="https://www.tindie.com/products/22307/">Tindie</a> also <a href="https://www.tindie.com/products/28787/">Tindie EU</a> or DIY 100% compatible with WLED project and WLED <a href="https://github.com/atuline/WLED">sound reactive fork</a>. Integrated level shifter, 4 outputs for LEDs strips, 1 fused out for LED strip, resettable fuse for the development board, exposed I2C interface for display or sensors, relay for energy-saving and 1-wire temperature sensor. Exposed pins for Analog and Digital microphones. Works with Wemos D1 mini and D1-style ESP32 boards. <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield">Firmware is here</a>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="other-products-wled-can-be-installed-to">Other products WLED can be installed to</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Chip</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.walmart.com/ip/Merkury-Innovations-A21-Smart-Light-Bulb-75W-Color-LED-2-Pack/669037420">Merkury MI-BW210-999W</a></td>
+<td>ESP8285</td>
+<td>Tuya Style WiFi Led light bulb, Warm White + RGB. There are two versions of this same bulb sold in the same packaging only way to check is to look at the bulb, EBEQPW92 uses PWM led control and is compatible with WLED however EBEQPW06 uses an SM16716 chip and is not currently compatible with WLED. Managed to flash using tuya-convert and a custom WLED build with the following analog pinout: B:4, G:5, R:13, W:14. Extras disabled to allow OTA, OTA only way to flash this, programming headers are not internally available.</td>
+</tr>
+<tr>
+<td><a href="https://shelly.cloud/wifi-smart-shelly-rgbw-2/">Shelly RGBW2</a></td>
+<td>ESP8266</td>
+<td>For "analog" LED use only! Runs on 12-24VDC. One button and one input. Pins: R=12, G=15, B=14, W=4. <em>Finished, commercial product that can be flashed.</em> <a href="https://tasmota.github.io/docs/devices/Shelly-RGBW2/#serial-connection">More info and flashing docs</a></td>
+</tr>
+<tr>
+<td><a href="https://www.athom.tech/blank-1/15w-color-bulb">Athom 15W bulb</a></td>
+<td>ESP8266 (2M flash)</td>
+<td>15W bulb with RGB, warm white, and cold white LEDs. Compatible with all voltages, available form factors E27, B22 and <a href="https://www.aliexpress.com/item/1005003512212258.html">GU10</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="raw-esp8266esp32-boards">Raw ESP8266/ESP32 boards</h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>While these can work like the controllers above without extra hardware, you might get flickering without adding an external levelshifter. Using them without a controller board/shield is only recommended if you like tinkering with electronic projects.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Chip</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://learn.adafruit.com/adafruit-feather-huzzah-esp8266">Adafruit Feather Huzzah</a></td>
+<td>ESP8266</td>
+<td>General-purpose ESP8266 Board with USB, battery connector, etc.</td>
+</tr>
+<tr>
+<td><a href="https://acrobotic.com/products/acr-00024">D1 mini-style ESP32</a></td>
+<td>ESP32</td>
+<td>A nice compact ESP32 development board. D1 mini compatible layout.</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/product-detail/en/espressif-systems/ESP32-DEVKITC-32D/1965-1000-ND/9356990">ESP32 DevKitC v4</a></td>
+<td>ESP32</td>
+<td>The original ESP32 Development Board made by Espressif Systems.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/srg74/WLED/wiki/H803WiFi">H803 WiFi</a></td>
+<td>ESP8266</td>
+<td>ESP8266EX based controller with level shifter inside. Data pin GPIO1 Clock pin GPIO14. Tested with WS2813 strip and <a href="https://github.com/srg74/WLED/tree/H803WF">Firmware fork is here</a>.</td>
+</tr>
+<tr>
+<td>NodeMCU-32s</td>
+<td>ESP32</td>
+<td>The most common ESP32 development board. Works well, depending on the board you might have to press the "Boot" button while USB flashing</td>
+</tr>
+<tr>
+<td><a href="https://heltec.org/project/wifi-kit-8/">Heltec WiFi Kit 8</a></td>
+<td>ESP8266</td>
+<td>Another alternative of ESP8266 board. OLED display 128X32 pixel, battery charger on board. Almost the same functionality and price as the Wemos board. Plus it can be used in projects with external batteries.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/nodemcu/nodemcu-devkit-v1.0">NodeMCU</a></td>
+<td>ESP8266</td>
+<td>Another popular ESP8266 development board. A bit bigger than the D1 and has pins pre-soldered. There are multiple versions with slight differences, not all are tested.</td>
+</tr>
+<tr>
+<td>ESP-01</td>
+<td>ESP8266</td>
+<td>One of the first and cheapest ESP8266 boards available. <strong><em>Not recommended for general WLED installs</em></strong> (needs external USB/serial chip, voltage converter, only has 1mb of flash, so soon no wireless updates possible)</td>
+</tr>
+<tr>
+<td><a href="https://www.olimex.com/Products/IoT/ESP32/ESP32-POE">Olimex ESP32 POE</a></td>
+<td>ESP32</td>
+<td>Ethernet (PoE) and WiFi, though usage of the ethernet port requires a custom compile. The PoE should not be used to power LEDs due to a maximum throughput of 4W. For most installations, standard ethernet should be used, supplying power through the 5V pin.</td>
+</tr>
+<tr>
+<td><a href="https://quinled.info/quinled-esp32/">QuinLED-ESP32</a></td>
+<td>Custom design D1 Mini32 formfactor ESP32 module</td>
+<td>Fed up with the bad quality of generic ESP32 modules on the market, designed my own "beefed up" version. Available in multiple versions: QuinLED-ESP32-AB (Antenna Board), QuinLED-ESP32-AE (Antenna External), QuinLED-ESP32-ABE (Antenna Board + Ethernet). Aircoookie's recommendation for running WLED.</td>
+</tr>
+<tr>
+<td><a href="https://www.itead.cc/sonoff-re5v1c.html">RE5V1C</a></td>
+<td>ESP8285</td>
+<td>5v DC input - onboard 10A relay</td>
+</tr>
+<tr>
+<td><a href="https://www.tindie.com/products/22968/">TwilightLord-ESP32</a></td>
+<td>ESP32</td>
+<td>ESP32 Dev Board with latest WROOM-32E module, USB Type-C, 800mA LDO, 8MB flash and PTC fused. D1 Mini32 form factor and compatible pin out.<a href="https://www.tindie.com/products/23037/">16MB Flash version also available</a></td>
+</tr>
+<tr>
+<td><a href="https://www.tindie.com/products/28858/">ESP32 mini dev board 16mb by SerKo (aka Serg)</a></td>
+<td>ESP32</td>
+<td>ESP32 Dev Board with latest WROOM-32E module, USB Type-C, PTC fused, over-voltage protection. D1 Mini32 form factor and compatible <a href="https://github.com/srg74/WLED-wemos-shield/blob/master/resources/ESP32_mini/Resources/ESP32_mini_board_pinout.pdf">pin out</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.wemos.cc/en/latest/d1/d1_mini.html">Wemos D1 mini</a></td>
+<td>ESP8266</td>
+<td>An affordable ESP8266 development board. Aircoookie's recommendation for running WLED if you want an ESP8266 board. Current version: 3.1.0</td>
+</tr>
+<tr>
+<td><a href="https://docs.wemos.cc/en/latest/d1/d1_mini_pro.html">Wemos D1 mini Pro</a></td>
+<td>ESP8266</td>
+<td>A newer development board with an external antenna connector. Works very well with WLED. Recommended if your signal strength is too low with another board. Current version: 2.0.0. Version 1.0.0 has the same form factor as the D1 mini.</td>
+</tr>
+<tr>
+<td><a href="https://www.aliexpress.com/wholesale?&amp;SearchText=wt32-eth01">WT32-ETH01</a></td>
+<td>ESP32</td>
+<td><strong>Under development!</strong> Ethernet (non-PoE) and WiFi enabled alternative to the Olimex boards, for 1/4 the cost. Features no PoE, and requires initial flashing of a custom compiled image using a FTDI or similar USB to serial converter.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/K9JBvgNG" target="_blank" rel="noopener" title="Discord SR" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://wled.discourse.group/" target="_blank" rel="noopener" title="Forum" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M225.9 32C103.3 32 0 130.5 0 252.1 0 256 .1 480 .1 480l225.8-.2c122.7 0 222.1-102.3 222.1-223.9C448 134.3 348.6 32 225.9 32zM224 384c-19.4 0-37.9-4.3-54.4-12.1L88.5 392l22.9-75c-9.8-18.1-15.4-38.9-15.4-61 0-70.7 57.3-128 128-128s128 57.3 128 128-57.3 128-128 128z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://gitpod.io/#https://github.com/MoonModules/WLED" target="_blank" rel="noopener" title="Gitpod" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.instagram.com/wled_project/" target="_blank" rel="noopener" title="www.instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/results?search_query=WLED" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://wled.teemill.com/" target="_blank" rel="noopener" title="wled.teemill.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M211.8 0c7.8 0 14.3 5.7 16.7 13.2C240.8 51.9 277.1 80 320 80s79.2-28.1 91.5-66.8C413.9 5.7 420.4 0 428.2 0h12.6c22.5 0 44.2 7.9 61.5 22.3l126.2 105.1c6.6 5.5 10.7 13.5 11.4 22.1s-2.1 17.1-7.8 23.6l-56 64c-11.4 13.1-31.2 14.6-44.6 3.5L480 197.7V448c0 35.3-28.7 64-64 64H224c-35.3 0-64-28.7-64-64V197.7l-51.5 42.9c-13.3 11.1-33.1 9.6-44.6-3.5l-56-64c-5.7-6.5-8.5-15-7.8-23.6s4.8-16.6 11.4-22.1L137.7 22.3C155 7.9 176.7 0 199.2 0h12.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://paypal.me/aircoookie/" target="_blank" rel="noopener" title="paypal.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m47.6 300.4 180.7 168.7c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9l180.7-168.7c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141-45.6-7.6-92 7.3-124.6 39.9l-12 12-12-12c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../../assets/js/newtab.js"></script>
+        
+      
+    
+  </body>
+</html>
