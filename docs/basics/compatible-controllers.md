@@ -1,45 +1,27 @@
 ---
-title: Other Hardware
+title: Compatible controllers
 hide:
   # - navigation
   # - toc
 ---
 
-!!! note ""
-    Still under construction, feel free to add to the list!
+Currently (as of summer 2023) only the microcontrollers from Espressif, types ESP8266 and ESP32 (with dual core) are fully supported. Some of the newer types like ESP32-C3, ESP32-S2 and ESP32-S3 are experimentally supported, but productive use is not recommended yet because some bugs are suspected. In addition, the installation of these newer types is not that easy: there are several hardware variations/boards for which the SW must be specially compiled. It should also be mentioned that some ESP32-C3 boards (so-called C3 mini V1.0.0) are still being sold on the market where WLAN does not work properly.
 
-This page lists some third-party hardware and/or tools that are working with WLED!
+To try out WLED with 5V addressable strip a simple microcontroller board like ESP8266 D1 mini or ESP32 D1 mini is sufficient. The simplest setup might be like:
+![Simple WLED setup](../assets/images/content/pic10.jpg)
 
-Please use a decent and neutral description when adding things to this list.
+However, there are a few other things to keep in mind for a proper setup:
+1. A level shifter is required for reliable data transmission from the controller to the LED strip (this is mandatory, especially with 12V or 24V LED strips). Then you have to solder something together or you can buy a ready-made WLED controller right away.
+2. For safety reasons, the correct cabling (length, cross-section, contacts) and the fuses to be integrated must be considered. Especially with LED strips, it gets more complicated because you need the so-called intermediate feeds. These must be planned and implemented correctly. [LED power, wiring and fuse calculator](https://wled-calculator.github.io/) can be used as an starting point.
+![Advanced WLED setup](../assets/images/content/pic11.jpg)
+3. LED strips can get quite warm during operation and even overheat in the event of a fault. Again, for safety reasons, you have to protect the area around it: you shouldn't just lay LED strips like that, ideally you should integrate them into aluminum profiles or something similar. In normal operation, these act like a heat sink and thus extend the service life of the LEDs. In the event of a fault, they can protect the surroundings.
+4. To save energy while LEDs are off, you might integarte relays that switch the voltage of LEDs off completely.
+
+In the following some third-party controllers are listed. Please use a decent and neutral description when adding things to this list.
 
 !!! tip
     Lists are in alphabetical order. The position of an item in the list does not indicate how good it is or if it will fit your use case.
     Please carefully compare all items in the category you are interested in, and you should find the one that suits your needs best in just a few minutes! 
-
-## Addressable LED Strips
-
-Sorting: 5v data only, 5v Data + Clock, 12v data only
-
-| Type | Voltage | Comments |
-|---|---|---|
-SK6812 | 5v/12v | RGBW
-WS2811 | 5v | usually found in IP68 sealed 12mm pixel strings
-WS2812B | 5v |
-WS2813 | 5v | has a backup data line
-APA102 | 5v | using 2 data pins, Clock and Data
-LPD8806 | 5v | using 2 data pins, Clock and Data
-WS2801 | 5v | using 2 data pins, Clock and Data
-SK9822 | 5v | using 2 data pins, Clock and Data
-GS8208 | 12v |
-TM1814 | 12v | RGBW
-WS2811 | 12v | usually 3-LED segments, has data-line resistor
-WS2815 | 12v | has a backup data line
-
-## Non-Addressable LED Strips
-
-WLED supports non-addressable LED strips as well. Unlike addressable strips, non-addressable strips require a pin for each "color" channel. To drive these strips, additional circuits (MOSFETs) are required.
-As of v0.13.1, WLED supports single color, CCT, RGB, RGBW and RGBCCT strips. These strips are commonly found at 12 or 24 volts.
-The default PWM frequency for dimming is 880 Hz on ESP8266 and 19531 Hz for ESP32.
 
 ## Controllers with WLED pre-installed
 
@@ -50,9 +32,10 @@ The default PWM frequency for dimming is 880 Hz on ESP8266 and 19531 Hz for ESP3
 |---|---|
 [8 Port LED Distro](https://www.tindie.com/products/bong69/8-port-led-distro/) | This is an 8 port ESP32 based LED distro board running WLED. Distributing both power and data in 1 board. The WT32-ETH01 provides support for Wi-Fi or ethernet connections. It can be used with either 5v or 12v or 24v LED pixels. Also includes a USB-C port for programming, level shifter, 5 amp fuse on every port, multiple voltage inputs with no jumpers to set and phoenix connectors for easy wiring.
 [A1-SLWF-02 WLED controller](https://smartlight.me/led-strips/adressable-led-strips/controller-slwf-02) | WLED dedicatedly designed Controller that supports 5V-12V addressable strips from Ukrainian developers. Based on ESP8266. Slim design, sensor button, powered either by type-C or screw-terminal. Screwdriver included. [Worldwide delivery](https://smartlight.me/led-strips/adressable-led-strips/controller-slwf-02).
-[ABC! WLED Controller / ESP8266](https://shop.myhome-control.de/ABC-WLED-Controller-V31-ESP8266/HW10002) | Commercial controller for 5V LED strips. Based on ESP8266 uC. Two outputs. Ready to use. Additional Relay&Fuse board available. (German shop & shipping only within Germany). A similar one is available at [WLED.SHOP](https://wled.shop/produkt/wladis-wled-controller-v31/)
-[ABC! WLED Controller / ESP32](https://shop.myhome-control.de/ABC-WLED-Controller-V41-ESP32/HW10003.1) | Commercial controller for 5V LED strips. Based on ESP32 uC. Two outputs. Option for digital microphone / sound reactive. Ready to use. Additional Relay&Fuse board available. (German shop & shipping only within Germany). A similar one is available at [WLED.SHOP](https://wled.shop/produkt/wladis-wled-controller-v40-esp32/).
-[ABC! WLED Shield, all-purpose, for ESP8266/ESP32](https://shop.myhome-control.de/ABC-WLED-Basis-Board-fuer-5V-und-12V-LED-universell/HW10008) | Commercial WLED Shield for 5V/12V LED strips. To be used with ESP8266 or ESP32 in D1 mini format. Two outputs. Option for digital microphone / sound reactive (with ESP32). Automatic 5V/12V recognition (no jumper/switch etc. required). Enclosure is available too. German shop & shipping currently only within Germany.
+[ABC! WLED Controller / ESP8266](https://shop.myhome-control.de/ABC-WLED-Controller-V31-ESP8266/HW10002) | Commercial controller for 5V LED strips. Based on ESP8266 uC. Two outputs. Ready to use. Additional [Relay&Fuse board](https://shop.myhome-control.de/Relais-Board-fuer-WLED-Controller-5V/HW10005) available. ([German shop & shipping only within Germany.](https://shop.myhome-control.de/ABC-WLED-Controller-V31-ESP8266/HW10002)). A similar one is available at [WLED.SHOP](https://wled.shop/produkt/wladis-wled-controller-v31/)
+[ABC! WLED Controller / ESP32](https://shop.myhome-control.de/ABC-WLED-Controller-V41-ESP32/HW10003.1) | Commercial controller for 5V LED strips. Based on ESP32 uC. Two outputs. Option for digital microphone or [line-in-to-I2S Adapter](https://shop.myhome-control.de/Line-In-zu-I2S-Adapter-fuer-WLED-Controller/HW10013) for sound reactive WLED. Ready to use. Additional [Relay&Fuse board](https://shop.myhome-control.de/Relais-Board-fuer-WLED-Controller-5V/HW10005) available. ([German shop & shipping only within Germany.](https://shop.myhome-control.de/ABC-WLED-Controller-V41-ESP32/HW10003.1)). A similar one is available at [WLED.SHOP](https://wled.shop/produkt/wladis-wled-controller-v40-esp32/).
+[ABC! WLED Controller V43 / ESP32 based / 5V-24V](https://shop.myhome-control.de/ABC-WLED-Controller-Board-5-24V/HW10015) | Commercial controller board for 5V / 12V / 24V LED strips from creator of [LED power, wiring and fuse calculator](https://wled-calculator.github.io/). Based on ESP32 uC. Preflashed SW. Up to four outputs. Option for digital microphone or [line-in-to-I2S Adapter](https://shop.myhome-control.de/Line-In-zu-I2S-Adapter-fuer-WLED-Controller/HW10013) for sound reactive WLED. Automatic 5V/12V/24V recognition (no jumper/switch etc. required). [Ethernet adapter](https://shop.myhome-control.de/Ethernet-Adapter-fuer-WLED-Controller/HW10016) is available . Enclosure is available too.  [German shop & shipping only within Germany.](https://shop.myhome-control.de/ABC-WLED-Controller-Board-5-24V/HW10015) Worldwide shipping available soon at [WLED.SHOP](https://wled.shop/).
+[ABC! WLED mini Controller V70 / ESP32 based / 5V-12V](https://shop.myhome-control.de/ABC-WLED-Controller-Board-mini-5V-12V-ESP32/HW10014) | Commercial controller board for 5V / 12V LED strips from creator of [LED power, wiring and fuse calculator](https://wled-calculator.github.io/). Based on ESP32 uC. Preflashed SW. Up to four outputs. Option for digital microphone or [line-in-to-I2S Adapter](https://shop.myhome-control.de/Line-In-zu-I2S-Adapter-fuer-WLED-Controller/HW10013) for sound reactive WLED. Automatic 5V/12V recognition (no jumper/switch etc. required). Enclosure is available.  [German shop & shipping only within Germany.](https://shop.myhome-control.de/ABC-WLED-Controller-Board-5-24V/HW10015).
 [Athom Light Strip Controller](https://www.aliexpress.com/item/1005002198527735.html) | Simple controller with enclosure for reliably driving 3 pin 5V LEDs. Uses 2M ESP8266.
 [Athom High Power Addressable LED Strip Controller](https://www.athom.tech/blank-1/wled-high-power-led-strip-controller) | Higher power options than the above system. Supports optional clock output.
 [Athom LS8P ESP32 Music Controller](https://www.athom.tech/blank-1/wled-esp32-music-addressable-led-strip-controller) | ESP32 based controller with dual output, microphone and IR. Comes with WLED preinstalled
@@ -76,18 +59,11 @@ The default PWM frequency for dimming is 880 Hz on ESP8266 and 19531 Hz for ESP3
 [Simple WLED Board](https://github.com/wladwnt/wled) | Very simple DIY board, minimum of required components, option for 5V/12V LEDs. Easy to solder (no SMT components). Simple to understand connection schematics and pictures. Can be used with ESP8266 or ESP32 in D1 mini Format.
 [sjm autoprod rgbw, rgbw2+, rgbw4](https://sjmautoprod.com/RGB-Controllers/rgbwX-Wi-Fi-Controllers.html) | Complete, fully-sealed, analog and digital controllers for vehicular use. rgbw has one RGBW channel, rgbw2+ has two analog, RGBW channels plus two/four addressable outputs (requires external 5V source for 5V LEDs). rgbw4 has four analog RGBW channels. 2+ and 4 support 12V or PWM/analog inputs and have internal PTC "fuses".
 [WiFi Controlled Desk Lamp](https://github.com/stanoba/wifi-desk-lamp) | Open source PCB for WLED
-[Yet Another WLED Controller](https://github.com/lizardsystems/yawl-controller) | Small and simple device for 5V addressable LED strips with minimum components and fully assembled by PCB manufacturing service in standard case. [Firmware is here](https://github.com/lizardsystems/yawl-controller/tree/main/firmware/WLED)
-
-## Controllers on Tindie
-🌜
-
-| Name | Description ||
-|---|---|---|
 [WLED ESP32 universal controller](https://github.com/srg74/WLED-ESP32-universal-controller) | ready to buy on [Tindie](https://www.tindie.com/products/27056/), 100% compatible with WLED project. Integrated level shifter, 2 outputs for LEDs strips, 1 fused out for LED strip, relay for energy-saving, temperature sensor, PWM fan header, USB port for re-programing. Headers for shields to extend functionality. Available [shields for controller is here](https://www.tindie.com/stores/serg74/),  [Firmware is here](https://github.com/srg74/WLED-ESP32-universal-controller/tree/main/Firmware).
-[ESP-01 WLED shield](https://www.tindie.com/products/24901/) | shield board for ESP-01 board, ready to buy on [Tindie](https://www.tindie.com/products/24901/). Integrated level shifter, 3 outputs for various configurations, mosfet for 1 analog channel, [Firmware is here](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield).
-[WLED Wemos mini shield](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/mini_shield) | shield board, ready to buy on [Tindie](https://www.tindie.com/products/22680/) also [Tindie EU](https://www.tindie.com/products/28777/). Integrated level shifter, 2 outputs for LEDs strips, 1 fused out for LED strip, resettable fuse for the development board, exposed I2C interface for display or sensors. Exposed pins Digital microphones. Works with Wemos D1 mini and D1-style ESP32 boards. [Firmware is here](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield). | <img width="240" alt="image" src="https://user-images.githubusercontent.com/91013628/213931748-bdec481c-c44e-48ea-84b0-aa733ad4e955.png">
-[WLED Wemos shield](https://github.com/srg74/WLED-wemos-shield) | shield board, ready to buy on [Tindie](https://www.tindie.com/products/22307/) also [Tindie EU](https://www.tindie.com/products/28787/) or DIY 100% compatible with WLED project and WLED [sound reactive fork](https://github.com/atuline/WLED). Integrated level shifter, 4 outputs for LEDs strips, 1 fused out for LED strip, resettable fuse for the development board, exposed I2C interface for display or sensors, relay for energy-saving and 1-wire temperature sensor. Exposed pins for Analog and Digital microphones. Works with Wemos D1 mini and D1-style ESP32 boards. [Firmware is here](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield). | <img width="240" alt="image" src="https://user-images.githubusercontent.com/91013628/213931808-c8d6be07-ccb9-4acc-a5fa-3cdc37459591.png">
+[WLED Wemos mini shield](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/mini_shield) | shield board, ready to buy on [Tindie](https://www.tindie.com/products/22680/) also [Tindie EU](https://www.tindie.com/products/28777/). Integrated level shifter, 2 outputs for LEDs strips, 1 fused out for LED strip, resettable fuse for the development board, exposed I2C interface for display or sensors. Exposed pins Digital microphones. Works with Wemos D1 mini and D1-style ESP32 boards. [Firmware is here](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield).
 [WLED waterproof controller with external antenna](https://github.com/srg74/Controller-for-WLED-firmware) | DIY board, designed for use outside permanently and for longer range Wi-Fi connection. No SMD components means it is easier to solder for DIYers. 100% compatible with WLED project. Level shifter, fuse for LED strip, resettable fuse for Wi-Fi module, exposed I2C interface for display or sensors, relay for energy-saving and 1-wire temperature sensor. Build around ESP-07S module. [Firmware is here](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield)
+[Yet Another WLED Controller](https://github.com/lizardsystems/yawl-controller) | Small and simple device for 5V addressable LED strips with minimum components and fully assembled by PCB manufacturing service in standard case. [Firmware is here](https://github.com/lizardsystems/yawl-controller/tree/main/firmware/WLED)
+[HighSet WLED Controller India](https://highset.in/eshop/WLED-India/wled-controller-India) | ESp32 Based Ready to use WLED device for 5V Pixel LEDs with Shift Resistor Pre-Installed & 4 Outputs in Premium Quality Sealed Enclosure, Customized Orders also Welcomed.
 
 ## Controllers WLED can be installed to
 
@@ -101,6 +77,13 @@ The default PWM frequency for dimming is 880 Hz on ESP8266 and 19531 Hz for ESP3
 SP501e | ESP8285 | 8285-based 1M Controller that supports both Addressable and PWM-based RGBWW LED strips. _Note that recent versions have 2M._ 5-24v DC input, 55mm x 26mm, sold under BTF lighting, RGBZone, etc. Vendors all list 'Fairynest' as the supporting mobile application. Board is silk screened with 'SP5XXe' but no other markings. Serial pads are exposed on the back-side of the board with GND and GPIO0 right next to each other and thus Flash access fairly straight forward. GPIO 0 must be pulled to GND at boot and throughout the flashing process.  I/O configuration: LEDPIN is 'GPIO3' for addressable (note this pin is limited to approx. 250 LEDs), BTNPIN is GPIO 1. PWM pin out for RGBWW: CW: 14, WW: 12, B: 13, R: 15 and G: 4. Flashed via PlatformIO, ESPHome and Tasmotizer. Pics of board here: <https://github.com/Operation760/SP501e-RGB-LED-Controller-/blob/master/SP501e_top_bottom_traced.jpg>  Flashing Connections: <https://github.com/tonyn0/sp501e-flashing/blob/main/sp501e%20flash.png>
 [SP511e](https://www.aliexpress.com/item/32820185063.html) | ESP8285 | An ESP8285 2MB controller with 3 case buttons, built in mic, IR receiver, 38 key remote, and dual outputs. The dual outputs are connected to the same data pin. There is a step-by-step guide for [Installing WLED on SP511E Controller](https://github.com/scottrbailey/WLED-Utils/blob/gh-pages/sp511e_wled.md).
 [ESP LED Strip WIFI Control Board [ESP Version]](https://www.electrodragon.com/product/esp-led-strip-board) | ESP8266 | Controller for addressable or analog LEDs (RGBW), 6-27VDC input, no level shifter, reset and boot buttons, enclosure. NOTE: Although this uses high-current transistors, they used jumpers on two of the connections so you are limited to their current rating (3A?).
+
+## WLED shields to be use with ESP8266/ESP32 controllr boards
+| Name | Description |
+|---|---|
+[ABC! WLED Shield, all-purpose, for ESP8266/ESP32](https://shop.myhome-control.de/ABC-WLED-Basis-Board-fuer-5V-und-12V-LED-universell/HW10008) | Commercial WLED Shield for 5V/12V LED strips. To be used with ESP8266 or ESP32 in D1 mini format. Two outputs. Option for digital microphone or [line-in-to-I2S Adapter](https://shop.myhome-control.de/Line-In-zu-I2S-Adapter-fuer-WLED-Controller/HW10013) for sound reactive WLED (with ESP32 only!). Automatic 5V/12V recognition (no jumper/switch etc. required). Enclosure is available too. German shop & shipping currently only within Germany.
+[ESP-01 WLED shield](https://www.tindie.com/products/24901/) | shield board for ESP-01 board, ready to buy on [Tindie](https://www.tindie.com/products/24901/). Integrated level shifter, 3 outputs for various configurations, mosfet for 1 analog channel, [Firmware is here](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield).
+[WLED Wemos shield](https://github.com/srg74/WLED-wemos-shield) | shield board, ready to buy on [Tindie](https://www.tindie.com/products/22307/) also [Tindie EU](https://www.tindie.com/products/28787/) or DIY 100% compatible with WLED project and WLED [sound reactive fork](https://github.com/atuline/WLED). Integrated level shifter, 4 outputs for LEDs strips, 1 fused out for LED strip, resettable fuse for the development board, exposed I2C interface for display or sensors, relay for energy-saving and 1-wire temperature sensor. Exposed pins for Analog and Digital microphones. Works with Wemos D1 mini and D1-style ESP32 boards. [Firmware is here](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield).
 
 ## Other products WLED can be installed to
 
@@ -129,84 +112,7 @@ ESP-01 | ESP8266 | One of the first and cheapest ESP8266 boards available. **_No
 [QuinLED-ESP32](https://quinled.info/quinled-esp32/)| Custom design D1 Mini32 formfactor ESP32 module | Fed up with the bad quality of generic ESP32 modules on the market, designed my own "beefed up" version. Available in multiple versions: QuinLED-ESP32-AB (Antenna Board), QuinLED-ESP32-AE (Antenna External), QuinLED-ESP32-ABE (Antenna Board + Ethernet). Aircoookie's recommendation for running WLED.
 [RE5V1C](https://www.itead.cc/sonoff-re5v1c.html) | ESP8285 | 5v DC input - onboard 10A relay
 [TwilightLord-ESP32](https://www.tindie.com/products/22968/)| ESP32 | ESP32 Dev Board with latest WROOM-32E module, USB Type-C, 800mA LDO, 8MB flash and PTC fused. D1 Mini32 form factor and compatible pin out.[16MB Flash version also available](https://www.tindie.com/products/23037/)
+[ESP32 mini dev board 16mb by SerKo (aka Serg)](https://www.tindie.com/products/28858/)| ESP32 | ESP32 Dev Board with latest WROOM-32E module, USB Type-C, PTC fused, over-voltage protection. D1 Mini32 form factor and compatible [pin out](https://github.com/srg74/WLED-wemos-shield/blob/master/resources/ESP32_mini/Resources/ESP32_mini_board_pinout.pdf)
 [Wemos D1 mini](https://docs.wemos.cc/en/latest/d1/d1_mini.html) | ESP8266 | An affordable ESP8266 development board. Aircoookie's recommendation for running WLED if you want an ESP8266 board. Current version: 3.1.0
 [Wemos D1 mini Pro](https://docs.wemos.cc/en/latest/d1/d1_mini_pro.html) | ESP8266 | A newer development board with an external antenna connector. Works very well with WLED. Recommended if your signal strength is too low with another board. Current version: 2.0.0. Version 1.0.0 has the same form factor as the D1 mini.
 [WT32-ETH01](https://www.aliexpress.com/wholesale?&SearchText=wt32-eth01) | ESP32 | **Under development!** Ethernet (non-PoE) and WiFi enabled alternative to the Olimex boards, for 1/4 the cost. Features no PoE, and requires initial flashing of a custom compiled image using a FTDI or similar USB to serial converter.
-
-## ESP32 boards on Tindie
-🌜
-
-| Name | Description ||
-|---|---|---|
-[ESP32 mini dev board 16mb](https://github.com/srg74/ESP32-mini-SerKo) | by SerKo (aka Serg). Buy on [Tindie US](https://www.tindie.com/products/28858/) or [Tindie EU](https://www.tindie.com/products/28788/). ESP32 Dev Board with latest WROOM-32E module, USB Type-C, PTC fused, over-voltage protection. D1 Mini32 form factor and compatible [pin out](https://github.com/srg74/ESP32-mini-SerKo/blob/main/Resources/ESP32_mini_board_pinout.pdf) | <img width="240" alt="image" src="https://user-images.githubusercontent.com/91013628/213931205-520ed9e9-9195-4738-9a05-839ad7d57791.png">
-[ESP32 pico board with digital microphone](https://github.com/srg74/WLED-ESP32-pico) | by SerKo (aka Serg). Buy on [Tindie US](https://www.tindie.com/products/serg74/esp32-wled-pico-board/) or [Tindie EU](https://www.tindie.com/products/29131/). ESP32-pico-D4 development board with integrated ics-43434 microphone | <img width="240" alt="image" src="https://user-images.githubusercontent.com/91013628/213931625-0804dc5d-6bce-4c37-ab00-52e11573a2b6.png">
-
-## Microphones on Tindie
-🌜
-
-| Name | Description ||
-|---|---|---|
-Digital I2S microphone ICS-43434 | by SerKo (aka Serg). Buy on [Tindie US](https://www.tindie.com/products/serg74/digital-i2s-microphone-ics-43434-add-on/) or [Tindie EU](https://www.tindie.com/products/28781/). | <img width="240" alt="image" src="https://user-images.githubusercontent.com/91013628/213933631-2e613a69-9f30-40c8-a297-13563843b56f.png"> 
-Digital I2S PDM microphone SPM1423 | by SerKo (aka Serg). Buy on [Tindie EU](https://www.tindie.com/products/28781/). | <img width="240" alt="image" src="https://user-images.githubusercontent.com/91013628/213933684-f6c83270-4621-435c-9ddc-0fe5807b54a2.png"> 
-
-## Useful boards and addons
-
-| Name | Description |
-|---|---|
-[TwilightLord-ESP32 Ethernet Shield](https://www.tindie.com/products/23050/)| Ethernet Shield (10/100Mbps) for ESP32 boards. Stackable with D1 Mini32 form factor boards.
-[Wemos D1 mini Level Shifter Shield](https://www.tindie.com/products/jasoncoon/wemos-d1-mini-esp8266-level-shifter-mini-shield/) | A level shifter shield (74HCT125) - by Evil Genius Labs LLC.
-[WIZmote remote control](https://www.google.com/search?q=wizmote) | Remote control using radio network. Compatible with WLED (vesions 0.14.0-beta3 and above). No additional receiver required.
-
-## Compatible PC RGB Fans and ARGB accessories
-
-| Brand | Model | Comments |
-|---|---|---|
-Corsair | HD120 Fan | Uses WS2812B, data-in only
-PCCOOLER | Moonlight 5-pack Fans | Uses WS2812B, includes Data-out connector to keep each fan uniquely addressable if wired in series like traditional LED strips
-Any | 5v 3-pin ARGB for PC | Any PC RGB device that supports the 5v 3-pin ARGB motherboard header should work fine with WLED. All the major motherboard vendors support the Corsair HD120 and PCCOOLER fans listed, so we can safely assume any device that supports motherboard ARGB 5V 3-Pin standard will work with WLED.
-
-## Levelshifters
-
-| Name | Description |
-|---|---|
-SN74AHCT125 | Aircoookie's recommended levelshifter. Often used in DIY and commercial controllers.
-SN74AHCT32 | Same pinout as above can be used. This is just an OR gate, but any AHCT gate can be used if inputs are connected appropriately. ;)
-SN74HCT125N | Slower, cheaper version. Works just as well for WS2812, but not recommended for APA102.
-SN74LVC2T45 | Modern bus transceiver with voltage translation [Yet Another WLED Controller](https://github.com/lizardsystems/yawl-controller)
-TXS0102, TXS0108 | Bidirectional levelshifters that may work fine with WLED (if possible, 74AHCT gates should be preferred as they support both longer data lines and faster protocols)
-[F-Amp](https://pixelcontroller.com/store/accessories/54-famp-xconnect.html) | Level shifter/data booster
-
-!!! warning
-    I2C shifters are generally too slow for addressable LEDs, so don't use them.
-
-Further reading:
-[Logic Level Shifters for Driving LED Strips](https://electricfiredesign.com/2021/03/12/logic-level-shifters-for-driving-led-strips/)
-
-How to connect Levelshifters:
-![74AHCT125 one output](../assets/images/content/pic1.jpg)
-![74AHCT125 two outputs](../assets/images/content/pic2.jpg)
-![TXS0108](../assets/images/content/pic3.jpg)
-
-## USB/TTL adapters
-
-| Name | Description |
-|---|---|
-[CH340](https://www.aliexpress.com/item/32761423124.html) | CH340 module instead of CP2102, PL2303 or FTDI/FTDT. The CH340 can deliver more current which is needed while the flash process depending on the board type. The timing is also much more stable. **For boards with an USB/TTL adapter onboard this is NOT needed**
-[ESP uploader](https://github.com/srg74/ESP-uploader) |  CP2102N module. Same USB to UART converter as many recent Dev boards using. Featuring latest USB-C connector. For use with many ESP32, ESP8266, ESP8255 and Tuya based modules. 3.3V logic and 5V power pass through for custom boards.
-
-## Miscellaneous
-
-Sorting: Sensors, Displays, Actuators
-
-| Name | Description |
-|---|---|
-[HC-SR501](https://www.aliexpress.com/wholesale?catId=0&SearchText=HC-SR501) | PIR sensor with adjustable sensitivity and on time delay (suitable as a button).
-[HC-SR602](https://www.aliexpress.com/wholesale?catId=0&SearchText=HC-SR602) | PIR sensor (not suitable as a button but can be used with _PIR sensor_ usermod).
-[TSOP38238](https://www.aliexpress.com/item/32834341300.html) | IR receiver compatible with most IR remotes.
-[SSD1305](https://www.aliexpress.com/wholesale?catId=0&SearchText=SSD1305) | I2C display, can be used with [_4 Line Display_ usermod](https://github.com/Aircoookie/WLED/tree/master/usermods/usermod_v2_four_line_display).
-[SSD1306](https://www.aliexpress.com/wholesale?catId=0&SearchText=SSD1306) | I2C & SPI display, can be used with _4 Line Display_ usermod.
-DS18B20 | Recommended temperature sensor for use with WLED. Compatible with the [Temperature usermod](https://github.com/Aircoookie/WLED/tree/master/usermods/Temperature)
-[Display shield](https://www.tindie.com/products/27112/) | Various configurations. Compatible with the [ESP32 WLED dev board](https://www.tindie.com/products/27056/) also can be used with ESP32 mini dev boards.
-[12V Relay & Fuse board](https://shop.myhome-control.de/Relais-Board-fuer-WLED-Controller-12V/HW10011)|Integrates two relays and two 10 A fuses. Suitable for WLED setups with 12 V LED Strips.
-[5V relay](https://www.aliexpress.com/wholesale?catId=0&SearchText=5v+relay+module) | Relay module. Some will require 5V to trigger so you will need level-shifted output (similar as for LEDs) for proper functionality or a circuit with transistor or MOSFET.
-[5V Relay & Fuse board](https://shop.myhome-control.de/Relais-Board-fuer-WLED-Controller-5V/HW10005)|Integrates two relays and two 10 A fuses. Suitable for WLED setups with 5V LED Strips.
