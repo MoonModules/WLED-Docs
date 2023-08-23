@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next release will be v0.14.0-b2)
+Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next major release will be v0.14.0-b35)
 
 ## Some `_S` builds are optimized for speed
 
