@@ -1,4 +1,4 @@
-tha ---
+---
 title: Release notes v0.14.0-b26
 hide:
   # - navigation
