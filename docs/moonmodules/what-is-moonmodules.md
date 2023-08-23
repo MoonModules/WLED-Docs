@@ -40,6 +40,10 @@ Get latest release here: <https://github.com/MoonModules/WLED/releases>
 
 * [Release notes v0.14.0-b3-daily](/moonmodules/release-notes-v0.14.0-b3-daily)
 
+* [Release notes v0.14.0-b27](/moonmodules/release-notes-v0.14.0-b27)
+
+* [Release notes v0.14.0-b26](/moonmodules/release-notes-v0.14.0-b26)
+
 * [Release notes v0.14.0-b25](/moonmodules/release-notes-v0.14.0-b25)
 
 * [Release notes v0.14.0-b15](/moonmodules/release-notes-v0.14.0-b15)
