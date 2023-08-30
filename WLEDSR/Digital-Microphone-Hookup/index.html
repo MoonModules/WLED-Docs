@@ -2662,6 +2662,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#microphone-type-sr-wled-sound-settings" class="md-nav__link">
+    Microphone type (SR-WLED sound settings) )
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pins" class="md-nav__link">
+    Pins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-in" class="md-nav__link">
+    Line-in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#notes-for-older-releases-of-sr-wled-before-0132" class="md-nav__link">
     Notes for older releases of SR WLED (before 0.13.2)
   </a>
@@ -3130,6 +3151,27 @@
   
     <nav class="md-nav" aria-label="I2S Digital Audio">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microphone-type-sr-wled-sound-settings" class="md-nav__link">
+    Microphone type (SR-WLED sound settings) )
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pins" class="md-nav__link">
+    Pins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-in" class="md-nav__link">
+    Line-in
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#notes-for-older-releases-of-sr-wled-before-0132" class="md-nav__link">
@@ -3701,6 +3743,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#microphone-type-sr-wled-sound-settings" class="md-nav__link">
+    Microphone type (SR-WLED sound settings) )
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pins" class="md-nav__link">
+    Pins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-in" class="md-nav__link">
+    Line-in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#notes-for-older-releases-of-sr-wled-before-0132" class="md-nav__link">
     Notes for older releases of SR WLED (before 0.13.2)
   </a>
@@ -3813,7 +3876,7 @@
   <h1>Digital Microphone Hookup</h1>
 
 <h2 id="i2s-digital-audio">I2S Digital Audio</h2>
-<p>I2S digital sound modules utilize the industry-standard 24-bit <a href="https://en.m.wikipedia.org/wiki/I%C2%B2S">I²S interface</a>. The I²S interface allows to connect them directly to an ESP32 (but NOT an ESP8266). The IMNP441, and also the recently tested ICS-43434 (thanks to Serg74) work very well with SR WLED, and they perform much better than any analog device at a comparable price.</p>
+<p>I2S digital sound modules utilize the industry-standard 24-bit <a href="https://en.m.wikipedia.org/wiki/I%C2%B2S">I²S interface</a>. The I²S interface allows to connect them directly to an ESP32 (but NOT an ESP8266). The INMP441, and also the recently tested ICS-43434 (thanks to Serg74) work very well with SR WLED, and they perform much better than any analog device at a comparable price.</p>
 <p><br/></p>
 <table>
 <thead>
@@ -3831,7 +3894,7 @@
 <td>SEL</td>
 <td>SEL</td>
 <td>Gnd</td>
-<td>ground =&gt; left channel</td>
+<td>ground =&gt; left channel. Don't leave this pin unconnected!</td>
 </tr>
 <tr>
 <td>SD</td>
@@ -3877,17 +3940,31 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<blockquote>
+<p><picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/light-theme/tip.svg">
+  <img alt="Tip" src="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/dark-theme/tip.svg">
+</picture><br /></p>
+<p>ESP32 pins in the table are just examples. In fact <strong>any</strong> available GPIO can be used for I²S on ESP32. 
+   * SD can be either an in/out pin (gpio &lt; 34) or an input-only pin (gpi &gt;= 34), 
+   * while WS and SCK <em>must</em> be in/out pins (gpio &lt; 34).</p>
+</blockquote>
 <p>See also &rArr; <a href="/WLEDSR/First-Time-Setup#sound-settings-getting-started-with-common-microphones">Sound setting examples for common microphones</a></p>
 <p><br/></p>
-<p><strong>Microphone type</strong> (<a href="/WLEDSR/Sound-Settings#i2s-digital-input">SR-WLED sound settings</a>)
-* use <code>Generic I2S</code> for INMP441, ICS-43434, and other non-PDM devices
-* use <code>Generic I2S PDM</code> for PDM microphones like SPM1423
-* use <code>SPH0645</code> for adafruit SPH0645
-* use <code>ES7243</code> for Lyra-T mini, and other board that have the ES7243 chip
-* use <code>Generic I2S with Mclk</code> only for devices that have an addition pin for 'master clock'</p>
+<h3 id="microphone-type-sr-wled-sound-settings">Microphone type (<a href="/WLEDSR/Sound-Settings#i2s-digital-input">SR-WLED sound settings</a>) )</h3>
+<ul>
+<li>use <code>Generic I2S</code> for INMP441, ICS-43434, and other non-PDM devices</li>
+<li>use <code>Generic I2S PDM</code> for PDM microphones like SPM1423</li>
+<li>use <code>SPH0645</code> for adafruit SPH0645</li>
+<li>use <code>ES7243</code> for Lyra-T mini, and other board that have the ES7243 chip</li>
+<li>use <code>Generic I2S with Mclk</code> only for devices that have an addition pin for 'master clock'</li>
+</ul>
 <p><strong>Important</strong>: please make sure that your I2S device provides sound input on the <strong>LEFT audio channel</strong>! For the INMP441 this is achieved by wiring the 'L/R' connection to GND (ground). Only exception is the "ES7243" driver, which is always using the <em>RIGHT</em> audio channel.</p>
 <p><br/></p>
+<h3 id="pins">Pins</h3>
 <p>Since 0.12.0, you can change I2S GPIO pins in the <a href="/WLEDSR/Sound-Settings">Sound Settings</a> interface; on ESP32 <strong>any</strong> available GPIO can be used for I²S. The 'SD' signal could also be mapped to an input-only (GPI) pin <em>(*)</em>, if you are low on GPIO pins. You'll need to reboot when done with pin assignment - don't forget to "save". To reboot, please press 'reset' on your ESP32. Unfortunately a restart by software ("soft reboot") is not always sufficient to activate new driver settings.</p>
+<h3 id="line-in">Line-in</h3>
 <p>In addition to I2S microphones, there are solutions available for line-in via I2S. We already have driver support for Boards/Shields with "es7243" chip, and we're investigating "es8388". </p>
 <p>Other I2S ADC (analog-to-digital-converter) devices and microphones that have a <a href="https://en.m.wikipedia.org/wiki/I%C2%B2S">standard I2S interface</a> may already work with WLED-SR, by using one of the I2S "Generic" drivers (<code>Generic I2S</code>, <code>Generic I2S PDM</code>, or <code>Generic I2S with Mclk</code>). It is important however that sound input comes on the <strong>LEFT audio channel</strong>. Please keep in mind that this is a spare-time open source project - we do our best to make generic drivers but we cannot test with all available devices.</p>
 <h3 id="notes-for-older-releases-of-sr-wled-before-0132">Notes for older releases of SR WLED (before 0.13.2)</h3>
