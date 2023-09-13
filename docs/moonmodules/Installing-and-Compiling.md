@@ -11,31 +11,34 @@ MoonModules introduces a new naming convention for bin(ary) files which contains
 ### Naming convention
 
 * WLEDMM_ (to differentiate between WLEDSR and WLEDAC)
-* Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0.11
+* Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0-b27.31
 * Hardware config / presets e.g. wemos_shield_esp32_4MB_ICS4343x
 * S, M or XL config, use M where possible, XL if needed (Previously _min, _max and _all where used)
 
 ### Configurations
 
-S:
+#### S:
 
 * USERMOD_AUDIOREACTIVE
+* FASTPATH mode, and optimizations for speed
+
+#### M:
+
+* S, except for FASTPATH mode
 * USERMOD_ARTIFX
-
-M:
-
-* S
+* USERMOD_ANIMARTRIX ;;  CC BY-NC 3.0 licensed effects by Stefan Petrick
 * USERMOD_DALLASTEMPERATURE
-* USERMOD_FOUR_LINE_DISPLAY
+* USERMOD_FOUR_LINE_DISPLAY USE_ALT_DISPLAY
 * USERMOD_ROTARY_ENCODER_UI
 * USERMOD_AUTO_SAVE
+
+#### XL:
+
+* M
+* WLED_ENABLE_PIXART
 * USERMOD_WEATHER
 * USERMOD_MPU6050_IMU
 * USERMOD_GAMES
-
-XL:
-
-* M
 * USERMOD_BATTERY ;; enable Battery usermod
 * USERMOD_BATTERY_USE_LIPO ;; use new "decharging curve" for LiPo cells
 * USERMOD_BH1750
@@ -52,15 +55,15 @@ XL:
 * USERMOD_BME280
 * USERMOD_DHT
 * USERMOD_VL53L0X_GESTURES
-* WLED_ENABLE_PIXART
 
 ### Examples
 
-* WLEDMM_0.14.0.10_wemos_shield_esp32_16MB_M.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_M.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_LineIn_M.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_SPM1423_M.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_M.bin
+* WLEDMM_0.14.0-b27.31_esp32_4MB_M.bin  (generic, for ESP32)
+* WLEDMM_0.14.0-b27.31_wemos_shield_esp32_16MB_M.bin
+* WLEDMM_0.14.0-b27.31_wemos_shield_esp32_4MB_ICS4343x_M.bin
+* WLEDMM_0.14.0-b27.31_wemos_shield_esp32_4MB_LineIn_M.bin
+* WLEDMM_0.14.0-b27.31_wemos_shield_esp32_4MB_SPM1423_M.bin
+* WLEDMM_0.14.0-b27.31_wemos_shield_esp32_4MB_M.bin
 
 ### Bin awareness
 
