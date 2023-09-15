@@ -14,7 +14,7 @@ WLED SR (🎸) is for the last 2 years maintained mainly by @softhack007 and @ew
 
 WLED AC 0.14 has been made mainly by @Aircoookie , @blazoncek , @softhack007 and @ewowi. 
 
-WLED MM is mainly maintained by @softhack007 and @ewowi and can be considered similar to what AMG is doing to Mercedes (see [amg.wled.me](http://amg.wled.me/)).
+WLED MM is mainly maintained by @softhack007 @ewowi, @netmindz, @sören and @troy and can be considered similar to what AMG is doing to Mercedes (see [amg.wled.me](http://amg.wled.me/)).
 
 ## compatibility
 WLED MM is compatible with WLED AC (it's running on average 1 day to 1 week behind WLED AC latest build) for all features that can also be found in WLED AC. 
