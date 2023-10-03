@@ -23,7 +23,8 @@ SR WLED releases are also included in this web-based installer: https://wled-ins
 
 _Warning_: We had to change the partition size on the ESP32 in order to 'fit' all the new features. This means that the 'old way' of upgrading/flashing, no longer work unfortunately. **You cannot use ESPHome Flasher**, and you cannot use OTA from a build prior to v0.13.0-b5.
 
-1. Download [esptool](https://github.com/espressif/esptool).
+
+1. Download [esptool](https://github.com/espressif/esptool/releases) binary for your PC or MAC.
 1. Download the ESP32 bootloader, such as [esp32_bootloader_v4](https://github.com/Aircoookie/WLED/releases/download/v0.13.3/esp32_bootloader_v4.bin)
 1. Download the sound reactive binary, such as [Atuline releases](https://github.com/atuline/WLED/releases)
 1. Plug the ESP32 board into your computer.
@@ -34,7 +35,7 @@ _Warning_: We had to change the partition size on the ESP32 in order to 'fit' al
 1. Then burn the bootloader with:
     `esptool.exe write_flash 0x0 esp32_bootloader_v4.bin`
 1. Once complete, you can now burn the sound reactive binary with:
-    `esptool write_flash 0x10000 soundReactive_WLED_0.13.X_ESP32.bin`
+    `esptool write_flash 0x10000 WLEDSR_0.13.X_soundReactive_esp32dev.bin`
 1. You can optionally add the port, such as '-p COM6'.
 1. In addition, if this is the first time you've used this version, you need to go to the "Security & Updates" settings page and tick the "Factory reset" box, then select "Save & Reboot". Caveat: May not be necessary if you ran 'erase_flash' above.
 1. This will reset the EEPROM and remove any settings or presets you may have saved.
