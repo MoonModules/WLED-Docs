@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
     
     
       
@@ -26,10 +26,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.79e020e9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bd3936ea.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -3708,8 +3708,9 @@ The former has the advantage of granular white spectrum control independent of t
 <p>Setting this to 100% results in the highest peak brightness output at the neutral white point (CCT value <code>127</code>), as both white channels are active at 100%.</p>
 <p><img alt="" src="/assets/images/content/wledcct.png" /></p>
 <div class="admonition warning">
-<p class="admonition-title">Warning<p>Make sure your setup can handle driving both white channels at maximum output simultaneously. This results in a higher heat output and might reduce the lifetime of your LEDs. For example, bulbs by Athom are designed for linear blending (0%) and may be damaged by attempting to use additive blending.</p>
-</p>
+<p class="admonition-title">Warning</p>
+<div class="highlight"><pre><span></span><code>Make sure your setup can handle driving both white channels at maximum output simultaneously. This results in a higher heat output and might reduce the lifetime of your LEDs. For example, bulbs by Athom are designed for linear blending (0%) and may be damaged by attempting to use additive blending.
+</code></pre></div>
 </div>
 <p>You can limit the maximum allowed additive blending at build time using the <code>WLED_MAX_CCT_BLEND</code> macro.<br />
 For example, add <code>-D WLED_MAX_CCT_BLEND=0</code> to your build flags to force linear blending only.</p>
@@ -3834,10 +3835,10 @@ If your hardware uses an IC that controls the color temperature based on one PWM
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
+      <script src="../../assets/javascripts/bundle.94c44541.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
