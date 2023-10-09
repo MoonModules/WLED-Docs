@@ -77,7 +77,7 @@ The LyraT v4.3 and some AiThinker v2.2 boards use the following pin config:
 * I2C SDA = 18
 * I2C SCL = 23  
 
-Other revisions of the AiThinker v2.2 boards use a chip with the following pins:
+If the above doesn't work for AiThinker v2.2 boards use a chip with the following pins, use if you see errors about I2C:
 
 Note: the underside of ESP32 overhang shows ESP32-A1S B221 and B238 on two boards with this config - the "B" or "B2" may be hints as to revision. 
 
@@ -87,4 +87,4 @@ Note: the underside of ESP32 overhang shows ESP32-A1S B221 and B238 on two board
 * I2S SCK = 27
 * I2S MCLK = 0
 * I2C SDA = 33
-* I2C SCL = 32  
+* I2C SCL = 32
