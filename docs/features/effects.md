@@ -22,6 +22,7 @@ and the colors: <br />
 ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/color_1.gif) Primary (_Fx_)<br />
 ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/color_2.gif) (or black) Secondary  (_Bg_)<br />
 ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/color_3.gif) Tertiary (_Cs_).<br />
+For 2D effects the background (secondary) color is set to black.
 
 
 
