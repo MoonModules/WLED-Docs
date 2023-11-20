@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -2790,28 +2790,36 @@
       
         <li class="md-nav__item">
   <a href="#pmod-i2s2" class="md-nav__link">
-    Pmod I2S2
+    <span class="md-ellipsis">
+      Pmod I2S2
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    
+    <span class="md-ellipsis">
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#ti-pcm1808" class="md-nav__link">
-    TI PCM1808
+    <span class="md-ellipsis">
+      TI PCM1808
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#es8388" class="md-nav__link">
-    ES8388
+    <span class="md-ellipsis">
+      ES8388
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="ES8388">
@@ -2819,7 +2827,33 @@
         
           <li class="md-nav__item">
   <a href="#pin-config" class="md-nav__link">
-    Pin Config
+    <span class="md-ellipsis">
+      Pin Config
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wm8978" class="md-nav__link">
+    <span class="md-ellipsis">
+      WM8978
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WM8978">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin-config_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pin Config
+    </span>
   </a>
   
 </li>
@@ -3635,28 +3669,36 @@
       
         <li class="md-nav__item">
   <a href="#pmod-i2s2" class="md-nav__link">
-    Pmod I2S2
+    <span class="md-ellipsis">
+      Pmod I2S2
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    
+    <span class="md-ellipsis">
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#ti-pcm1808" class="md-nav__link">
-    TI PCM1808
+    <span class="md-ellipsis">
+      TI PCM1808
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#es8388" class="md-nav__link">
-    ES8388
+    <span class="md-ellipsis">
+      ES8388
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="ES8388">
@@ -3664,7 +3706,33 @@
         
           <li class="md-nav__item">
   <a href="#pin-config" class="md-nav__link">
-    Pin Config
+    <span class="md-ellipsis">
+      Pin Config
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wm8978" class="md-nav__link">
+    <span class="md-ellipsis">
+      WM8978
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WM8978">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin-config_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pin Config
+    </span>
   </a>
   
 </li>
@@ -3704,7 +3772,8 @@
 * <a href="https://www.cirrus.com/products/cs5343-44/">CirrusLogic CS5343</a>
 * <a href="https://www.akm.com/eu/en/products/audio/audio-adc/ak5720et/">AKM AK5720</a> (<a href="https://www.akm.com/content/dam/documents/products/audio/audio-adc/ak5720vt/ak5720vt-en-datasheet.pdf">datasheet</a>)
 * <a href="https://www.ti.com/product/PCM1808">Ti PCM1808</a> or <a href="https://www.ti.com/product/PCM1802">Ti PCM1802</a>
-* ES8388</p>
+* <a href="https://datasheet.lcsc.com/lcsc/1912111437_Everest-semi-Everest-Semiconductor-ES8388_C365736.pdf">ES8388</a>
+* <a href="https://www.mouser.com/datasheet/2/76/WM8978_v4.5-1141768.pdf">WM8978</a></p>
 <p>Many I2S ADC boards expect an additional MCLK signal ("Main Clock" aka "System Clock" aka "Master Clock" aka "Memory Clock").  MCLK is sometimes labelled SCLK for "system clock". For these boards with 4 data pins, use our <code>Generic I2S with MCLK</code> input driver, and connect MCLK pin to GPIO pin 0, 1, or 3 on ESP32.</p>
 <h2 id="pmod-i2s2">Pmod I2S2</h2>
 <p><img src="https://user-images.githubusercontent.com/91616163/197608486-cafcdf75-8039-4cb9-9d96-182d835c52c3.JPG" width="24%" height="24%" /> 
@@ -3749,6 +3818,7 @@ https://digilent.com/reference/pmod/pmodi2s2/start</p>
 Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
 </li>
 </ul>
+<p>Line-in should be internally routed to line-out, allowing these boards to be used in the middle of a line-level signal path.</p>
 <h3 id="pin-config">Pin Config</h3>
 <p>The LyraT v4.3 and some AiThinker v2.2 boards use the following pin config:</p>
 <ul>
@@ -3770,6 +3840,24 @@ Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
 <li>I2S MCLK = 0</li>
 <li>I2C SDA = 33</li>
 <li>I2C SCL = 32</li>
+</ul>
+<h2 id="wm8978">WM8978</h2>
+<p>This audio chip reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "WM8978" is selected.</p>
+<p>The on-board microphones are not currently supported - line-in is much better regardless. </p>
+<p>Support for the WM8978 chipset is derived from the <a href="https://github.com/ohmic-net/puca_dsp">Puca DSP board</a>:</p>
+<p><img alt="image" src="https://github.com/MoonModules/WLED-Docs/assets/5659019/a97d0ecc-a024-42c2-99f3-aef11c17ec35" /></p>
+<p>Curently the Puca DSP on-board microphones may leak some sound in extremely loud environments, but the line-in will overpower this signal when presented. This is being investigated.</p>
+<p>Line-in should be internally routed to line-out, allowing this board to be used in the middle of a line-level signal path.</p>
+<h3 id="pin-config_1">Pin Config</h3>
+<p>The Puca DSP board pins are as follows:</p>
+<ul>
+<li>Type: WM8978</li>
+<li>I2S SD = 27</li>
+<li>I2S WS = 25</li>
+<li>I2S SCK = 23</li>
+<li>I2S MCLK = 0</li>
+<li>I2C SDA = 19 (set in global)</li>
+<li>I2C SCL = 18 (set in global)</li>
 </ul>
 
 
@@ -3890,7 +3978,7 @@ Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
