@@ -164,8 +164,7 @@ nav:
     - Contribute to development: moonmodules/contribute-dev.md
     - Super sync: moonmodules/super-sync.md
     - Showcases: 
-      - Human Sized Cube: moonmodules/showcase-hcs.md
-
+      - Human Sized Cube: moonmodules/showcases-hcs.md
   - 2D: 
     - WIP: 2D/wip.md
   - Sound Reactive: 
