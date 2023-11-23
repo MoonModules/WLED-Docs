@@ -27,6 +27,7 @@ hide:
 
 <img width="244" alt="image" src="https://github.com/MoonModules/WLED-Docs/assets/138451817/13b515ea-71bd-49bd-b53e-37ecc0a4a7c7">
 
+* Match the gpio pins with the sides / pins in above image
 * Note: Panel numbering starts at 1
 
 <img width="150" alt="image" src="https://github.com/MoonModules/WLED-Docs/assets/138451817/e810ef75-ede2-4639-a18f-d20a8b27f837">
