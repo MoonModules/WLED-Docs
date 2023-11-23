@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.11">
     
     
       
@@ -1113,6 +1113,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/ethernet-lan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ethernet (LAN) compatibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1419,6 +1439,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/ddp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DDP Realtime
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1714,6 +1754,15 @@
   <a href="#create-arti-fx" class="md-nav__link">
     <span class="md-ellipsis">
       Create ARTI-FX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-custom-effect-as-usermod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a custom effect as usermod
     </span>
   </a>
   
@@ -3686,6 +3735,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-a-custom-effect-as-usermod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a custom effect as usermod
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changing-web-ui" class="md-nav__link">
     <span class="md-ellipsis">
       Changing Web UI
@@ -3834,6 +3892,39 @@ The relevant files for that are <code>FX.cpp</code> and <code>FX.h</code>.</p>
 </li>
 </ol>
 <p>If you programmed a nice effect you want to share, submit a pull request!</p>
+<h3 id="create-a-custom-effect-as-usermod">Create a custom effect as usermod</h3>
+<div class="admonition info">
+<p class="admonition-title">Since 0.14</p>
+<p>This feature was introduced with version 0.14.</p>
+</div>
+<p>It is possible to add new effects in form of a usermod.</p>
+<p>Use <code>255</code> for the effect ID as it is a placeholder for "1st available slot". If you want a permanent ID use whatever is not used by built-in effects or other usermod's effects. It is possible to call <a href="https://github.com/Aircoookie/WLED/blob/1dab26bcbcac051f2b7be47a2d5c757a9938bf1f/wled00/FX.cpp#L7655">addEffect(255,...)</a> multiple times to add more effects without a collision of IDs.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">uint16_t</span><span class="w"> </span><span class="nf">mode_blink</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">FRAMETIME</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">_data_FX_MODE_BLINK</span><span class="p">[]</span><span class="w"> </span><span class="n">PROGMEM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Blink@!,Duty cycle;!,!;!;01&quot;</span><span class="p">;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">BlinkUsermod</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Usermod</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">setup</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">strip</span><span class="p">.</span><span class="n">addEffect</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mode_blink</span><span class="p">,</span><span class="w"> </span><span class="n">_data_FX_MODE_BLINK</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">loop</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">getId</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">USERMOD_ID_</span><span class="p">...;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>For details about the format of the configuration string see <a href="/interfaces/json-api/#effect-metadata">effect metadata</a>.</p>
 <h3 id="changing-web-ui">Changing Web UI</h3>
 <p>In order to conserve space, the Web UI interface is represented as a series of wled00/html_ui.h, wled00/html_settings.h and wled00/html_other.h files which contain C/C++ strings with specific parts of the Web UI.</p>
 <p>These files are automatically created from source files available in wled00/data folder. To generate files, install <a href="https://nodejs.org/en/download/">NodeJS 11.0+</a> globally. After that, recreate <code>html_*.h</code> files by running in the repo directory:
