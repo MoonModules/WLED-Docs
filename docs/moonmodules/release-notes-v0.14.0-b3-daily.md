@@ -11,7 +11,7 @@ Below are the ongoing updates in WLEDMM which has not made it to a release yet (
 
 Nov 23st, 2023
 
-https://github.com/MoonModules/WLED-Docs/assets/138451817/1bb0d7a9-3724-47c6-99e1-a8b341c52d05
+<video width="400" autoplay><source src="https://github.com/MoonModules/WLED-Docs/assets/138451817/1bb0d7a9-3724-47c6-99e1-a8b341c52d05" type="video/mp4"></video>
 
 Default name of new preset now includes the icons (cause it's nice to know if a preset is sound reactive or not)
 Preset checkboxes have now default of last set values (cause it's handy of you don't want to save brightness it is not saved in next preset save as well)
