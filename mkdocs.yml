@@ -95,6 +95,7 @@ nav:
     - Web GUI Sitemap: features/subpages.md
     - White handling: features/cct.md
     - Pixel Art Converter: features/pixel-art-converter.md
+    - Ethernet (LAN) compatibility: features/ethernet-lan.md
   - Interfaces: 
     - Blynk: interfaces/blynk.md
     - DMX Input: interfaces/dmx-input.md
@@ -109,6 +110,7 @@ nav:
     - WLED UDP Sync: interfaces/udp-notifier.md
     - UDP Realtime / tpm2.net: interfaces/udp-realtime.md
     - Websocket: interfaces/websocket.md
+    - DDP Realtime: interfaces/ddp.md
   - Advanced:
     - Audio Reactive WLED: advanced/audio-reactive.md
     - Home Automation: advanced/home-automation.md

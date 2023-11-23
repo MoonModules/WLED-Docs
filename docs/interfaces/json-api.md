@@ -26,6 +26,12 @@ You may also obtain those objects individually using the URLs `/json/state` `/js
     If called, these will fallback to the Solid effect, in the effects list they have the name `RSVD` or `-`.
     To improve user experience, it is recommended to remove effects with the names `RSVD` or `-` form the UI effect selection.
 
+### Example Library
+[WLED JSON API Library in rust](https://github.com/paulwrath1223/wled-json-api-library).
+Even if you are not using rust, or don't know how to read rust,
+the up-to-date JSON structure is included and documented in this project.
+
+
 ### Setting new values
 
 Sending a POST request to `/json` or `/json/state` with (parts of) the state object will update the respective values.
@@ -388,7 +394,7 @@ The metadata string consists of up to five sections, separated by semicolons:
 ##### Effect parameters
 
 The first section specifies the number and labels of effect parameters (e.g. speed, intensity).
-Up to 5 sliders and 3 checkboxes are supported (`sx`,`ix`,`c1`,`c2`,`c3`,`o1`,`o2`,`o3` parameters in the `seg` object).
+Up to 5 sliders and 3 checkboxes are supported (`sx`,`ix`,`c1`,`c2`,`c3`,`o1`,`o2`,`o3` parameters in the `seg` object). For more details about the ranges of the sliders see [contents-of-the-segment-object](#contents-of-the-segment-object).
 Slider/checkbox labels are comma separated.
 An empty or missing label disables this control.
 `!` specifies the default label is used:
