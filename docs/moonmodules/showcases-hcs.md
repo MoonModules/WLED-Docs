@@ -7,12 +7,18 @@ hide:
 
 ## Hardware
 
+Idea, design and first builf by @troy
+
 ![image](https://github.com/MoonModules/WLED-Docs/assets/138451817/8ef936f1-434b-46bc-a523-ced7400e2f12)
 
 * Black numbers: GPIO pins (can be replaced by another set of pins)
 * Red numbers: Panels: 1..4 are the side panels, 5 is the top panel
 
+* result: https://www.instagram.com/reel/CztafORN5Pr/?igshid=MzRlODBiNWFlZA==
+
 ## Software
+
+tuned for HSC by @ewowi
 
 * Use WLED MM latest
 * _S is in theory the most stable but _M works fine as well
