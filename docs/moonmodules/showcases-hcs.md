@@ -14,7 +14,7 @@ Idea, design and first build by @troy
 * Black numbers: GPIO pins (can be replaced by another set of pins)
 * Red numbers: Panels: 1..4 are the side panels, 5 is the top panel
 
-* result: https://www.instagram.com/reel/CztafORN5Pr/?igshid=MzRlODBiNWFlZA==
+* result: [insta](https://www.instagram.com/reel/CztafORN5Pr/?igshid=MzRlODBiNWFlZA==)
 
 ## Software
 
@@ -52,7 +52,7 @@ tuned for HSC by @softhack007 and @ewowi
 
 ## Config, presets and ledmaps
 
-* Can be found here: https://github.com/MoonModules/WLED-Effects/tree/master/Ledmaps/Cube20205
+* Can be found [here](https://github.com/MoonModules/WLED-Effects/tree/master/Ledmaps/Cube20205)
 
 * cfg.json can be used to create above setup
 
