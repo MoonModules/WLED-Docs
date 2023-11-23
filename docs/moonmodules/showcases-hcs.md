@@ -7,7 +7,7 @@ hide:
 
 ## Hardware
 
-Idea, design and first builf by @troy
+Idea, design and first build by @troy
 
 ![image](https://github.com/MoonModules/WLED-Docs/assets/138451817/8ef936f1-434b-46bc-a523-ced7400e2f12)
 
@@ -18,7 +18,7 @@ Idea, design and first builf by @troy
 
 ## Software
 
-tuned for HSC by @ewowi
+tuned for HSC by @softhack007 and @ewowi
 
 * Use WLED MM latest
 * _S is in theory the most stable but _M works fine as well
