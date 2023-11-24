@@ -48,3 +48,7 @@ If you need to use another pin for output than the TX-pin, you'll need to change
 #### questions
 
 If you have further questions about this feature, you can reach me via github (@jwingefeld), ICQ (30914656) or via WLED Discord (JvPeek).
+
+### other references
+* [zapped wled-dmx](https://zappedmyself.com/projects/wled-dmx/)
+
