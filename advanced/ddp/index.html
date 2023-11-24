@@ -3881,24 +3881,25 @@
 <h3 id="art-net">Art-Net</h3>
 <p>🌜</p>
 <p>Art-Net universe output starts at zero. This is not currently configurable in WLED. Zero is the commonly expected starting universe for Art-Net. Channel output starts at one and is not currently configurable in WLED. One is the expected first channel in Art-Net.</p>
-<p>For RGB LEDs, a full universe (170 RGB pixels) produces 510 channels  - channels 511 and 512 will not be transmitted. This is common practice in Art-Net transmit and most (all?) implementations will expect this.</p>
+<p>For RGB LEDs, a full universe (170 RGB pixels) produces 510 channels - channels 511 and 512 will not be transmitted. This is common practice in Art-Net transmit and most (all?) implementations will expect this.</p>
 <p>Art-Net output follows xLights' implementation of packet sequence numbering and universe-channel alignment, and transmits in RGB order. The first pixel output data will always be 0:1:R, 0:2:G, 0:3:B for universe:channel:colorpart.</p>
 <p>This Art-Net implementation does ignore the "always specify length of data as an even number" part of the official specifications. If you encounter this issue, please file a bug report. Even Art-Net themselves say that this has been widely ignored and receivers should not expect an even value in the data length part of the packet.</p>
 <h3 id="background">Background</h3>
 <p>By Troy</p>
 <p>First there was DMX (DMX512). It was great for controlling lighting fixtures - "set light to red" sort of thing. "Pan head to the left". "Dim the lights."</p>
 <p>Then someone decided that DMX should work over the network rather than RS485 networks (usually over an XLR cable).</p>
-<p>So Art-Net and E1.31 were born. DDP is essentially the same thing but slightly better and newer.</p>
-<p>All of these are the same premise as DMX512 - send packets of 8-bit numbers (up to 512 8-bit numbers, or 1440 variable bit numbers for DDP) to remote systems.</p>
+<p>So Art-Net and E1.31 were born. DDP came later and improved upon the idea, but DDP isn't as widely supported yet.</p>
+<p>All of these are the same premise as DMX512 - send packets of 8-bit numbers to remote systems. E1.31 and Art-Net are aligned with DMX512 and can send 512 channels per packet/universe, whereas DDP can send up to 1440 channels.</p>
 <p>THEN a bunch of idiots (us) got into the game with massive LED panels.</p>
 <p>To send LED data over the network, we still use a network form of DMX. E1.31, Art-Net, and DDP are all "network DMX".</p>
-<p>You think of an LED strip (or matrix) as a LOT of dimmable lights:</p>
+<p>You can think of an LED strip (or matrix) as a LOT of dimmable lights:</p>
 <p>You have a red dimmable light. 
 You have a green dimmable light. 
 You have a blue dimmable light.</p>
 <p>That's channels 1,2, and 3 - and they makes up one RGB LED.</p>
-<p>A DMX universe is 512 channels. You can fit 170 LEDs into 510 channels (170 LEDs each having 3 channels - R, G, and B) </p>
+<p>A DMX universe is 512 channels (1440 in DDP). You can fit 170 LEDs into 510 channels (170 LEDs each having 3 channels - R, G, and B) </p>
 <p>...and then you skip to the next universe and start at channel 1 again.</p>
+<p>The issue with Art-Net and E1.31 (and DMX512, really) is that the sequence of numbers are just a list of numbers. There's no context to these numbers in the packet so it's up to the receiving end to understand these numbers in a meaningful fashion. DDP can some context - RGB, RGBW, HSL, and grayscale are all possible to identify in addition to unstructured data. DDP can also specify the bits per pixel, allowing 1, 4, 8, 16, 24 or 32-bit values. DMX/Art-Net/E1.31 are always 8-bit, in the range of 0-255.</p>
 <h4 id="using-art-netdmxe131-to-contol-the-wled-interface">Using Art-Net/DMX/E1.31 to contol the WLED interface</h4>
 <p>This is with WLED set to "Effect" in: Settings &gt; Sync Interfaces &gt; Network DMX Input &gt; DMX Mode &gt; "Effect"</p>
 <p>Using this table: </p>
@@ -3973,7 +3974,7 @@ You have a blue dimmable light.</p>
 </tbody>
 </table>
 <p><img width="508" alt="image" src="https://user-images.githubusercontent.com/91013628/220875588-f5c6aa58-5e09-45e8-86f7-2d86e68d82a0.png"></p>
-<p>So when using Art-Net "Effect" mode in WLED, those 15 sliders in <a href="https://www.qlcplus.org/">QLC+</a> send control data to the 15 parameters in the table.</p>
+<p>When using Art-Net "Effect" mode in WLED, those 15 sliders in <a href="https://www.qlcplus.org/">QLC+</a> send control data to the 15 parameters in the table.</p>
 <ul>
 <li>Slider 1 is master brightness.</li>
 <li>Slider 2 is effect.</li>
