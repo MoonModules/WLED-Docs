@@ -27,3 +27,6 @@ For information about the use of DMX with ESP8266, you might like to read [this]
 #### questions
 
 If you have further questions about this feature, you can ask on [DMX Input Discord](https://discord.com/channels/473448917040758787/1097792072762798110) or reach me via github (@netmindz) or via WLED Discord (netmindz).
+
+### other references
+* [zapped wled-dmx](https://zappedmyself.com/projects/wled-dmx/)
