@@ -1,4 +1,4 @@
-UDP Sound Sync is a feature to synchronize (share) the sound input of a 'master' device with one or more 'slave' devices. All devices must be running the same release of SR WLED, and they must be in the same local network. Sound Sync is not availeable in "upstream" WLED by Aircookie. Sound Sync is also different from direct LEDs control using protocols like E1.31, DMX, DDP or AdaLight.
+UDP Sound Sync is a feature to synchronize (share) the sound input of a 'master' device with one or more 'slave' devices. All devices must be running the same release of SR WLED, and they must be in the same local network. Sound Sync is not available in "upstream" WLED by Aircookie. Sound Sync is also different from direct LEDs control using protocols like E1.31, DMX, DDP or AdaLight.
 
 UDP Sound Sync does not sync the actual animations, but rather transmits summary audio sampling information to several devices that still run their own animations locally. In a nutshell, it means that several devices can share a single microphone.
 
