@@ -7,6 +7,9 @@ hide:
 
 ## Introduction
 
+See here for a quick overview https://mm.kno.wled.ge/moonmodules/release-notes-v0.14.0-b3-daily/#super-sync
+
+Further documentation to be done.
 
 * template text
 * 
