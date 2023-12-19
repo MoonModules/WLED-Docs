@@ -71,9 +71,9 @@ Acts like "Receive", however automaticially falls back to local whenever the UDP
 
 ![image](https://github.com/MoonModules/WLED-Docs/assets/91616163/dd74010b-7904-463c-8f7c-e9668f8046cd)
 
-Local input ![image](https://github.com/MoonModules/WLED-Docs/assets/91616163/cff0a14b-629f-4967-b2e4-8f5db5b66387)
+![image](https://github.com/MoonModules/WLED-Docs/assets/91616163/cff0a14b-629f-4967-b2e4-8f5db5b66387) Local input when sender is missing.
 
-Automitic switch-over to network sound: ![image](https://github.com/MoonModules/WLED-Docs/assets/91616163/5c4728c1-8fb5-4f4b-b930-760cc2276802)
+![image](https://github.com/MoonModules/WLED-Docs/assets/91616163/5c4728c1-8fb5-4f4b-b930-760cc2276802) Automitic switch-over to network sound.
 
 
 By @softhack007
