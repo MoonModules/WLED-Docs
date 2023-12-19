@@ -34,11 +34,11 @@ void ShtUsermod::setup()
 
 #ifdef _MoonModules_WLED_
     if ((i2c_sda >= 0) && (i2c_scl >= 0) && pinManager.joinWire(i2c_sda, i2c_scl)) {   // WLEDMM pin management done by pinManager.joinWire()
-		pinAllocDone = true;
+      pinAllocDone = true;
     } else {
-	    USER_PRINTF("[%s] SHT pin allocation failed!\n", _name);                       // WLEDMM using USER_PRINTF for important messages
-        cleanup();
-        return;
+      USER_PRINTF("[%s] SHT pin allocation failed!\n", _name);                       // WLEDMM using USER_PRINTF for important messages
+      cleanup();
+      return;
     }
 #else
     PinManagerPinType pins[2] = { { i2c_sda, true }, { i2c_scl, true } };
@@ -60,8 +60,8 @@ By @softhack007
 
 December 2023
 
-### Latency from microphone to receiving sound on the remode unit has been optimized drasticially. 
-
+###  Latency reduced drasticially
+Latency from microphone to receiving sound on the remode unit has been optimized drasticially.
 Previously the average delay was 30-60ms. With our optimized code, UDP packets are sent out directly when new samples arrive from the driver, resulting in average delay of 10-25ms.
 
 By @softhack007
@@ -74,7 +74,6 @@ note to self: add ascreenshot
 By @softhack007
 
 ### UDP sound sequence checking (framecounter)
-
 UDP transport itself does neither guarantee delivery nor sequence.
 
 Leveraging on a previously unused byte in the UDP sound sync format, 
