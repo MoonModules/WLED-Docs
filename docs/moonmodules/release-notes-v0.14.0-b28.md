@@ -66,10 +66,15 @@ Previously the average delay was 30-60ms. With our optimized code, UDP packets a
 
 By @softhack007
 
-### New UDP sync mode "Receive or Local": 
-Acts like "Receive", however automaticially falls back to local wen the UDP stream is missing.
+### New UDP sync mode "Receive or Local"
+Acts like "Receive", however automaticially falls back to local whenever the UDP stream is missing.
 
-note to self: add ascreenshot
+![image](https://github.com/MoonModules/WLED-Docs/assets/91616163/dd74010b-7904-463c-8f7c-e9668f8046cd)
+
+Local input ![image](https://github.com/MoonModules/WLED-Docs/assets/91616163/cff0a14b-629f-4967-b2e4-8f5db5b66387)
+
+Automitic switch-over to network sound: ![image](https://github.com/MoonModules/WLED-Docs/assets/91616163/5c4728c1-8fb5-4f4b-b930-760cc2276802)
+
 
 By @softhack007
 
