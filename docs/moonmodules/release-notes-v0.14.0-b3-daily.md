@@ -18,17 +18,25 @@ Preset checkboxes have now default of last set values (cause it's handy of you d
 
 By @ewowi
 
-## Topic
+## Super Sync
 
-Aug 26st, 2023
-
-what it is.
-
+October 15, 2023
 By @ewowi
 
-## Topic
+Super Sync runs one effect on multiple instances allowing for higher framerates as each instance runs only part of the effect.
 
-Date
+![image](https://github.com/MoonModules/WLED-Docs/assets/91013628/37005643-b39b-4764-bfab-774461585d1c)
 
-By @Troyhacks
+The nodes tab shows more info per instance, info which is needed for SuperSync.
+
+SuperSync takes all the panels in the 2D config setup and each panel will be setup on a different node. 
+
+* Master node is in red
+* Orange: non critical differences with the master node
+* Red: client node is not setup right
+
+* SuperSync button: for all nodes with a red yes in the SSync column the desired configuration will be send and configured on that node. After pressing SuperSync all nodes should be in the right config
+
+* SuperSync is work in progress. Some effects run perfect, others not yet. This has mostly to do with the random function giving different values on different instances. Some effects have been adapted to give the same values for random using the same random seeds
+
 
