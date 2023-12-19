@@ -84,8 +84,8 @@ By @softhack007
 UDP transport itself does neither guarantee delivery nor sequence.
 
 Leveraging on a previously unused byte in the UDP sound sync format, 
-WLED-MM will now check that a new packet is "in sequence". 
-WLEDMM will now drop "late" packets, leading to smoother animations.
+WLED-MM now checks that a newly received sound sample is "in sequence". 
+Too-late packets will be dropped, leading to smoother animations.
 
 By @netmindz
 
