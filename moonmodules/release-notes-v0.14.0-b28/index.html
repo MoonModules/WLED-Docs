@@ -4105,8 +4105,8 @@ Previously the average delay was 30-60ms. With our optimized code, UDP packets a
 <h3 id="udp-sound-sequence-checking-framecounter">UDP sound sequence checking (framecounter)</h3>
 <p>UDP transport itself does neither guarantee delivery nor sequence.</p>
 <p>Leveraging on a previously unused byte in the UDP sound sync format, 
-WLED-MM will now check that a new packet is "in sequence". 
-WLEDMM will now drop "late" packets, leading to smoother animations.</p>
+WLED-MM now checks that a newly received sound sample is "in sequence". 
+Too-late packets will be dropped, leading to smoother animations.</p>
 <p>By @netmindz</p>
 <h2 id="presets-name-and-default-checkboxes">Presets name and default checkboxes</h2>
 <p>Nov 23st, 2023</p>
