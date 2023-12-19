@@ -148,5 +148,7 @@ We have however made an effort to analyze bugfixes from upstream until version 0
 As a user, you get our latest features, combined with various stability improvements and bugfixing made in upstream WLED. 
 Plus all bugfixing and improvements of MM specific features that were created in the last 3 months.
 
+The detailed list is here: https://github.com/MoonModules/WLED/blob/mdev/CHANGELOG.md
+
 by @softhack007
 
