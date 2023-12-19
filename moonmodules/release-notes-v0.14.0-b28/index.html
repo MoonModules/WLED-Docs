@@ -2453,9 +2453,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#latency-from-microphone-to-receiving-sound-on-the-remode-unit-has-been-optimized-drasticially" class="md-nav__link">
+  <a href="#latency-reduced-drasticially" class="md-nav__link">
     <span class="md-ellipsis">
-      Latency from microphone to receiving sound on the remode unit has been optimized drasticially.
+      Latency reduced drasticially
     </span>
   </a>
   
@@ -3954,9 +3954,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#latency-from-microphone-to-receiving-sound-on-the-remode-unit-has-been-optimized-drasticially" class="md-nav__link">
+  <a href="#latency-reduced-drasticially" class="md-nav__link">
     <span class="md-ellipsis">
-      Latency from microphone to receiving sound on the remode unit has been optimized drasticially.
+      Latency reduced drasticially
     </span>
   </a>
   
@@ -4069,11 +4069,11 @@
 
 <span class="cp">#ifdef _MoonModules_WLED_</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">i2c_sda</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">i2c_scl</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">pinManager</span><span class="p">.</span><span class="n">joinWire</span><span class="p">(</span><span class="n">i2c_sda</span><span class="p">,</span><span class="w"> </span><span class="n">i2c_scl</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// WLEDMM pin management done by pinManager.joinWire()</span>
-<span class="w">        </span><span class="n">pinAllocDone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">      </span><span class="n">pinAllocDone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">USER_PRINTF</span><span class="p">(</span><span class="s">&quot;[%s] SHT pin allocation failed!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">_name</span><span class="p">);</span><span class="w">                       </span><span class="c1">// WLEDMM using USER_PRINTF for important messages</span>
-<span class="w">        </span><span class="n">cleanup</span><span class="p">();</span>
-<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="n">USER_PRINTF</span><span class="p">(</span><span class="s">&quot;[%s] SHT pin allocation failed!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">_name</span><span class="p">);</span><span class="w">                       </span><span class="c1">// WLEDMM using USER_PRINTF for important messages</span>
+<span class="w">      </span><span class="n">cleanup</span><span class="p">();</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="cp">#else</span>
 <span class="w">    </span><span class="n">PinManagerPinType</span><span class="w"> </span><span class="n">pins</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">i2c_sda</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">i2c_scl</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">};</span>
@@ -4090,8 +4090,9 @@
 <p>By @softhack007</p>
 <h2 id="udp-sound-sync-improvements">UDP Sound Sync improvements</h2>
 <p>December 2023</p>
-<h3 id="latency-from-microphone-to-receiving-sound-on-the-remode-unit-has-been-optimized-drasticially">Latency from microphone to receiving sound on the remode unit has been optimized drasticially.</h3>
-<p>Previously the average delay was 30-60ms. With our optimized code, UDP packets are sent out directly when new samples arrive from the driver, resulting in average delay of 10-25ms.</p>
+<h3 id="latency-reduced-drasticially">Latency reduced drasticially</h3>
+<p>Latency from microphone to receiving sound on the remode unit has been optimized drasticially.
+Previously the average delay was 30-60ms. With our optimized code, UDP packets are sent out directly when new samples arrive from the driver, resulting in average delay of 10-25ms.</p>
 <p>By @softhack007</p>
 <h3 id="new-udp-sync-mode-receive-or-local">New UDP sync mode "Receive or Local":</h3>
 <p>Acts like "Receive", however automaticially falls back to local wen the UDP stream is missing.</p>
