@@ -39,4 +39,9 @@ SuperSync takes all the panels in the 2D config setup and each panel will be set
 
 * SuperSync is work in progress. Some effects run perfect, others not yet. This has mostly to do with the random function giving different values on different instances. Some effects have been adapted to give the same values for random using the same random seeds
 
+Example of setup of supersync on 3x3 = 9 nodes:
+
+<video width="400" autoplay><source src="https://github.com/MoonModules/WLED-Docs/assets/91013628/11a463eb-b8da-4d09-80ad-dc4219075cd2" type="video/mp4"></video>
+
+
 
