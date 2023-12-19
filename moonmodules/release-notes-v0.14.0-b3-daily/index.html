@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#presets-name-and-default-checkboxes" class="md-skip">
+        <a href="#build-runs-anywhere-usermods" class="md-skip">
           Skip to content
         </a>
       
@@ -2413,6 +2413,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#build-runs-anywhere-usermods" class="md-nav__link">
+    <span class="md-ellipsis">
+      build runs-anywhere usermods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udp-sound-sync-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      UDP Sound Sync improvements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UDP Sound Sync improvements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#latency-reduced-drasticially" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latency reduced drasticially
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-udp-sync-mode-receive-or-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      New UDP sync mode "Receive or Local"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#udp-sound-sequence-checking-framecounter" class="md-nav__link">
+    <span class="md-ellipsis">
+      UDP sound sequence checking (framecounter)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#presets-name-and-default-checkboxes" class="md-nav__link">
     <span class="md-ellipsis">
       Presets name and default checkboxes
@@ -2425,6 +2476,24 @@
   <a href="#super-sync" class="md-nav__link">
     <span class="md-ellipsis">
       Super Sync
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wm8978-support-for-ohmic-pico-dsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      WM8978 support for Ohmic Pico DSP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lots-of-bugfix-back-porting-from-upstream" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lots of bugfix back-porting from upstream
     </span>
   </a>
   
@@ -3866,6 +3935,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#build-runs-anywhere-usermods" class="md-nav__link">
+    <span class="md-ellipsis">
+      build runs-anywhere usermods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udp-sound-sync-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      UDP Sound Sync improvements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UDP Sound Sync improvements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#latency-reduced-drasticially" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latency reduced drasticially
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-udp-sync-mode-receive-or-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      New UDP sync mode "Receive or Local"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#udp-sound-sequence-checking-framecounter" class="md-nav__link">
+    <span class="md-ellipsis">
+      UDP sound sequence checking (framecounter)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#presets-name-and-default-checkboxes" class="md-nav__link">
     <span class="md-ellipsis">
       Presets name and default checkboxes
@@ -3878,6 +3998,24 @@
   <a href="#super-sync" class="md-nav__link">
     <span class="md-ellipsis">
       Super Sync
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wm8978-support-for-ohmic-pico-dsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      WM8978 support for Ohmic Pico DSP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lots-of-bugfix-back-porting-from-upstream" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lots of bugfix back-porting from upstream
     </span>
   </a>
   
@@ -3909,6 +4047,66 @@
   <h1>Release notes v0.14.0-b3-daily</h1>
 
 <p>Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next major release will be v0.14.0-b35)</p>
+<h2 id="build-runs-anywhere-usermods">build runs-anywhere usermods</h2>
+<p>Dec 15th, 2023</p>
+<p>WLEDMM now allows you to encapsulate your MoonModules specific code like this:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ShtUsermod</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Usermod</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">private</span><span class="o">:</span>
+<span class="cp">#ifndef _MoonModules_WLED_</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// Is usermod enabled or not //WLEDMM not needed - using public attribute of class UserMod</span>
+<span class="cp">#endif</span>
+
+<span class="w">  </span><span class="k">public</span><span class="o">:</span>
+<span class="cp">#ifdef _MoonModules_WLED_</span>
+<span class="w">    </span><span class="n">ShtUsermod</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">enabled</span><span class="p">)</span><span class="o">:</span><span class="n">Usermod</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">enabled</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="c1">//WLEDMM usermod initializer with parameters</span>
+<span class="cp">#endif</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">ShtUsermod</span><span class="o">::</span><span class="n">setup</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="cp">#ifdef _MoonModules_WLED_</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">i2c_sda</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">i2c_scl</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">pinManager</span><span class="p">.</span><span class="n">joinWire</span><span class="p">(</span><span class="n">i2c_sda</span><span class="p">,</span><span class="w"> </span><span class="n">i2c_scl</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// WLEDMM pin management done by pinManager.joinWire()</span>
+<span class="w">      </span><span class="n">pinAllocDone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">USER_PRINTF</span><span class="p">(</span><span class="s">&quot;[%s] SHT pin allocation failed!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">_name</span><span class="p">);</span><span class="w">                       </span><span class="c1">// WLEDMM using USER_PRINTF for important messages</span>
+<span class="w">      </span><span class="n">cleanup</span><span class="p">();</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="cp">#else</span>
+<span class="w">    </span><span class="n">PinManagerPinType</span><span class="w"> </span><span class="n">pins</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">i2c_sda</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">i2c_scl</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">};</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i2c_sda</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">i2c_scl</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">pinManager</span><span class="p">.</span><span class="n">allocateMultiplePins</span><span class="p">(</span><span class="n">pins</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">PinOwner</span><span class="o">::</span><span class="n">HW_I2C</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">    </span>
+<span class="w">      </span><span class="n">DEBUG_PRINTF</span><span class="p">(</span><span class="s">&quot;[%s] SHT pin allocation failed!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">_name</span><span class="p">);</span>
+<span class="w">      </span><span class="n">cleanup</span><span class="p">();</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">pinAllocDone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="cp">#endif</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">initDone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>By @softhack007</p>
+<h2 id="udp-sound-sync-improvements">UDP Sound Sync improvements</h2>
+<p>December 2023</p>
+<h3 id="latency-reduced-drasticially">Latency reduced drasticially</h3>
+<p>Latency from microphone to receiving sound on the remode unit has been optimized drasticially.
+Previously the average delay was 30-60ms. With our optimized code, UDP packets are sent out directly when new samples arrive from the driver, resulting in average delay of 10-25ms.</p>
+<p>By @softhack007</p>
+<h3 id="new-udp-sync-mode-receive-or-local">New UDP sync mode "Receive or Local"</h3>
+<p>Acts like "Receive", however automaticially falls back to local whenever the UDP stream is missing.</p>
+<p><img alt="image" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/dd74010b-7904-463c-8f7c-e9668f8046cd" /></p>
+<p><img alt="image" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/cff0a14b-629f-4967-b2e4-8f5db5b66387" /> 
+ Local input when sender is missing.</p>
+<p><img alt="image" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/5c4728c1-8fb5-4f4b-b930-760cc2276802" /> 
+ Automitic switch-over to network sound.</p>
+<p>By @softhack007</p>
+<h3 id="udp-sound-sequence-checking-framecounter">UDP sound sequence checking (framecounter)</h3>
+<p>UDP transport itself does neither guarantee delivery nor sequence.</p>
+<p>Leveraging on a previously unused byte in the UDP sound sync format, 
+WLED-MM now checks that a newly received sound sample is "in sequence". 
+Too-late packets will be dropped, leading to smoother animations.</p>
+<p>By @netmindz</p>
 <h2 id="presets-name-and-default-checkboxes">Presets name and default checkboxes</h2>
 <p>Nov 23st, 2023</p>
 <video width="400" autoplay><source src="https://github.com/MoonModules/WLED-Docs/assets/138451817/1bb0d7a9-3724-47c6-99e1-a8b341c52d05" type="video/mp4"></video>
@@ -3938,6 +4136,19 @@ By @ewowi</p>
 </ul>
 <p>Example of setup of supersync on 3x3 = 9 nodes:</p>
 <video width="400" autoplay><source src="https://github.com/MoonModules/WLED-Docs/assets/91013628/11a463eb-b8da-4d09-80ad-dc4219075cd2" type="video/mp4"></video>
+
+<h2 id="wm8978-support-for-ohmic-pico-dsp">WM8978 support for Ohmic Pico DSP</h2>
+<p>Oct 20st, 2023</p>
+<p>Essentially a similar type of chip to the ES8388 - I2S codec configured over I2C. Configured for line-in with pass-thru on the Ohmic ESP32 Pico D4 DSP board: https://github.com/ohmic-net/puca_dsp</p>
+<p>May not work out of the box with all WM8978 boards because of the vast configuration options in the codec, but could easily be adjusted for various configurations. Not that there's many out there. :)</p>
+<p>By @troyhacks</p>
+<h2 id="lots-of-bugfix-back-porting-from-upstream">Lots of bugfix back-porting from upstream</h2>
+<p>Dec 16th, 2023</p>
+<p>Due to technical incompatibilities to latest upstream source code, WLEDMM is still building on the WLED core from summer 2023 (long story...).
+We have however made an effort to analyze bugfixes from upstream until version 0.14.1-beta, and brought them into WLED-MM if possible.</p>
+<p>As a user, you get our latest features, combined with various stability improvements and bugfixing made in upstream WLED. 
+Plus all bugfixing and improvements of MM specific features that were created in the last 3 months.</p>
+<p>by @softhack007</p>
 
 
 
