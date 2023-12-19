@@ -39,7 +39,7 @@ void ShtUsermod::setup()
 	    USER_PRINTF("[%s] SHT pin allocation failed!\n", _name);                       // WLEDMM using USER_PRINTF for important messages
         cleanup();
         return;
-	}
+    }
 #else
     PinManagerPinType pins[2] = { { i2c_sda, true }, { i2c_scl, true } };
     if (i2c_sda < 0 || i2c_scl < 0 || !pinManager.allocateMultiplePins(pins, 2, PinOwner::HW_I2C)) {	
@@ -48,7 +48,6 @@ void ShtUsermod::setup()
       return;
     } else pinAllocDone = true;
 #endif
-
   }
   initDone = true;
 }
