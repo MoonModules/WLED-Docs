@@ -145,7 +145,8 @@ Dec 16th, 2023
 Due to technical incompatibilities to latest upstream source code, WLEDMM is still building on the WLED core from summer 2023 (long story...).
 We have however made an effort to analyze bugfixes from upstream until version 0.14.1-beta, and brought them into WLED-MM if possible.
 
-As a user, you get our latest features, combined with various stability improvements and bugfixing made in upstream WLED.
+As a user, you get our latest features, combined with various stability improvements and bugfixing made in upstream WLED. 
+Plus all bugfixing and improvements of MM specific features that were created in the last 3 months.
 
 by @softhack007
 
