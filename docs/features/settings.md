@@ -69,7 +69,8 @@ The following settings apply to all LED outputs:
 |---|---|---|---|
 Make a segment for each output | on/off | off | Will automatically create a segment for each output, including the correct Start LED and Stop LED settings
 Custom bus start indices | on/off | off| When on, custom "Start" or "Index" values can be set for each output (e.g. output 2 can be set so that it shows up as LED address 200 regardless of output 1's length)
-Use global LED buffer | on/off | on | Improves the performance of WLED-wide brightness controlls (including Automatic Brightness Limiting) at the expense of additional memory usage
+Use global LED buffer | on/off | on | (WLED-AC) Improves the performance of WLED-wide brightness controls (including Automatic Brightness Limiting) at the expense of additional memory usage
+(🌜) Use global LED buffer | on/off | off | (WLED-MM) Similar to WLED-AC, however does _not_ improve color accuracy or brightness controls. it can be useful for "stacking" several effects onto each other.
 
 Additionally, one or more Color Order Overrides can be defined by clicking the plus button. This is useful when you have LEDs with two different color orders sharing the same output. The following settings are available for each override:
 
