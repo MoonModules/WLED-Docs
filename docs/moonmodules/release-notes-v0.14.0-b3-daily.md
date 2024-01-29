@@ -20,6 +20,34 @@ old
 
 By @softhack007
 
+## option to disable sequence checking in sound sync
+
+Jan 5th, 2024
+
+UDP sound sync - sequence checking can be disabled in settings (useful if several units send sound)
+
+![Screenshot_20240129-225644](https://github.com/MoonModules/WLED-Docs/assets/91616163/caa60c45-0c37-4441-96a4-b5e55db930f0)
+
+
+By @softhack007
+
+## new audio reactive effects (enhancing standard effects)
+
+Dec 31st, w023 
+
+Audio Reactive effects 
+
+![20240129_225228](https://github.com/MoonModules/WLED-Docs/assets/91616163/e415834e-2876-4f51-adef-fa51315bc6f4)
+
+ back-ported from WLED-SR. These "audio enhanced" effects are triggered by sound. Like clapping of hands, music starts, beats, fireworks explosions.
+
+Clap your hands - Popcorn ;-)
+
+The popcorn audio effect looks particularly great in 2D mode - select 1D-2D mapping "bars").
+
+By @softhack007
+
+
 ## build runs-anywhere usermods
 
 Dec 15th, 2023
