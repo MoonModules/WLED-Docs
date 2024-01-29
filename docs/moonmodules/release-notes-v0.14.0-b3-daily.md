@@ -12,9 +12,9 @@ Below are the ongoing updates in WLEDMM which has not made it to a release yet (
 Jan 25th, 2024
 
 old
-<img width="35%" alt="old preview" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/388e9b89-2ada-400e-8db9-270a7d965f2f">
-  new 
-<img width="35%" alt="new preview" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/2911ac6a-5f0d-4622-b7eb-941f0ee67070">
+<img width="40%" alt="old preview" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/388e9b89-2ada-400e-8db9-270a7d965f2f">
+  &nbsp; new 
+<img width="40%" alt="new preview" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/2911ac6a-5f0d-4622-b7eb-941f0ee67070">
 
 
 
