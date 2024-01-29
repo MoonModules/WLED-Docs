@@ -7,6 +7,19 @@ hide:
 
 Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next major release will be v0.14.0-b35)
 
+## gamma-correct palettes preview
+
+Jan 25th, 2024
+
+before (AC WLED)
+![20240129_220226](https://github.com/MoonModules/WLED-Docs/assets/91616163/388e9b89-2ada-400e-8db9-270a7d965f2f)
+
+after (MoonModules-b30) 
+![20240129_220153](https://github.com/MoonModules/WLED-Docs/assets/91616163/2911ac6a-5f0d-4622-b7eb-941f0ee67070)
+
+
+By @softhack007
+
 ## build runs-anywhere usermods
 
 Dec 15th, 2023
