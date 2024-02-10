@@ -7,6 +7,12 @@ hide:
 
 Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next major release will be v0.14.1-b30)
 
+## Updated DMX Input - now with RDM support
+
+Feb 10th, 2024
+
+The (wired) DMX Input has been given significant rewrite by @arneboe and now supports RDM - NOTE: you will need to re-enter all 3 pins used when you upgrade to this version
+
 ## gamma-correct palettes preview
 
 Jan 25th, 2024
