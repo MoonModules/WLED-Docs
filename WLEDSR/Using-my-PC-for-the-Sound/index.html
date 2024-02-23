@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -3828,8 +3828,11 @@
 <p>Q. Is it possible to use my PC for the sound and without using the microphone, or any ADC pins on the board.</p>
 <p>The sound reactive fork of WLED was designed as an all-in-one unit that doesn't require the intervention of a PC. You can setup a display and have it run completely independently. It supports your PC's analog line-out signal, several analog microphones, an INMP441 digital microphone, as well as UDP sound sync:</p>
 <p><a href="https://mm.kno.wled.ge/WLEDSR/UDP-Sound-Sync">https://mm.kno.wled.ge/WLEDSR/UDP-Sound-Sync</a></p>
-<p>To answer this question, not directly, except for the line-out signal. Although we support UDP sound sync, someone would have to write a program for their OS of choice to capture the sound from the PC, perform FFT calculations, and UDP transmit the sampled data (the packet matching our sound reactive WLED data structure). That's a non-trivial course of action.</p>
-<p>All that being said, LedFx (as found at <a href="https://github.com/LedFx/LedFx">https://github.com/LedFx/LedFx</a>) may be just the solution for this use case. Since WLED supports UDP, DDP, and E1.31 DMX protocols, you can use the sound reactive LedFx running on your PC to control a WLED device. There's an excellent video on setting this environment up at <a href="https://www.youtube.com/watch?v=ipSfQdfX4fE">https://www.youtube.com/watch?v=ipSfQdfX4fE</a></p>
+<p>To answer this question, there is not a direct, built in way, except for the line-out signal.
+Although we support UDP sound sync, someone would have to write a program for their OS of choice to capture the sound from the PC, perform FFT calculations, and UDP transmit the sampled data (the packet matching our sound reactive WLED data structure). That's a non-trivial course of action.</p>
+<p>All that being said, there are a couple ways to achieve this:</p>
+<p>For windows, there is <strong>WledSRServer</strong> (<a href="https://github.com/Victoare/SR-WLED-audio-server-win">https://github.com/Victoare/SR-WLED-audio-server-win</a>) which is a small application that is using the mentioned sound capture, FFT calculation and UDP packet sending mechanism.</p>
+<p>There is also <strong>LedFx</strong> (as found at <a href="https://github.com/LedFx/LedFx">https://github.com/LedFx/LedFx</a>) which is an another solution for this use case with a different approach. Since WLED supports UDP, DDP, and E1.31 DMX protocols, you can use the sound reactive LedFx running on your PC to control a WLED device. There's an excellent video on setting this environment up at <a href="https://www.youtube.com/watch?v=ipSfQdfX4fE">https://www.youtube.com/watch?v=ipSfQdfX4fE</a>.</p>
 <p>LedFx will then directly control the LED's on your WLED device, although you can still revert to native WLED animations.</p>
 
 
