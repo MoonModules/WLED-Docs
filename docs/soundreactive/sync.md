@@ -82,5 +82,10 @@ When configured to receive audio data from another device, the receiver will *di
 * UDP port can be changed in WLED config pages, for example to have several groups of devices by assigning different UDP ports to each group.
 * UDP multicast can sometimes have issues with some Wifi routers, if you have issues, please try with a different Wifi
 
+## Using a PC as source (PC audio to WLED)
+
+For windows, there is **WledSRServer** (<https://github.com/Victoare/SR-WLED-audio-server-win>) which is a small application that is doing the audio capturing, FFT computation and packet sending on the system. It sends out V2 packets.
+
+
 
 UDP Sound sync brought to you by @spedione on Discord.
