@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
     
     
       
@@ -1316,9 +1316,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#questions" class="md-nav__link">
+  <a href="#background-info" class="md-nav__link">
     <span class="md-ellipsis">
-      questions
+      background info
     </span>
   </a>
   
@@ -1326,6 +1326,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      questions
+    </span>
+  </a>
   
 </li>
       
@@ -3926,9 +3935,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#questions" class="md-nav__link">
+  <a href="#background-info" class="md-nav__link">
     <span class="md-ellipsis">
-      questions
+      background info
     </span>
   </a>
   
@@ -3936,6 +3945,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      questions
+    </span>
+  </a>
   
 </li>
       
@@ -3977,8 +3995,21 @@
 <p>For the DMX feature to work, you'll need to use the V4 build varients.</p>
 <h4 id="hardware-setup">hardware setup</h4>
 <p>The DMX output required the use of a MAX485 transceiver connected to the pins defined in setup of the ESP in order to produce DMX input.</p>
+<p>You will need to use three GPIO pins that support output.</p>
+<p>Do NOT use the pins on your ESP32 labelled RX and TX as your DMX pins!</p>
+<ul>
+<li>RX pin connects to RO</li>
+<li>TX pin connects to DI</li>
+<li>EN pin connects to both DE and RE</li>
+</ul>
+<p>Connect the RS485 power pins as follows</p>
+<ul>
+<li>5v or 3.3v pin to VCC</li>
+<li>GND to GND</li>
+</ul>
+<h4 id="background-info">background info</h4>
 <p>For information about the use of DMX with ESP8266, you might like to read <a href="https://robertoostenveld.nl/art-net-to-dmx512-with-esp8266/">this</a> tutorial by <a href="https://robertoostenveld.nl/">Robert Oostenveld</a>. Note this is just background information about the hardware and you do not need any of the code listed here when using WLED output.</p>
-<h4 id="questions">questions</h4>
+<h2 id="questions">questions</h2>
 <p>If you have further questions about this feature, you can ask on <a href="https://discord.com/channels/473448917040758787/1097792072762798110">DMX Input Discord</a> or reach me via github (@netmindz) or via WLED Discord (netmindz).</p>
 
 
@@ -4110,7 +4141,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
