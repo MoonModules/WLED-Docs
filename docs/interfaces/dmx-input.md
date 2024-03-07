@@ -16,7 +16,7 @@ hide:
 
 #### software setup
 
-For the DMX feature to work, you'll need to use the V4 build varients.
+For the DMX feature to work, you'll need to use the V4 build varients. Define the pins you are using in the DMX input section of the Sync Interfaces menu
 
 #### hardware setup
 
