@@ -27,9 +27,9 @@ You will need to use three GPIO pins that support output.
 
 Do NOT use the pins on your ESP32 labelled RX and TX as your DMX pins!
 
-* RX pin connects to RO
-* TX pin connects to DI
-* EN pin connects to both DE and RE
+* pin assined as DMX RX pin on esp32 connects to RO
+* pin assined as DMX TX pin on esp32 connects to DI
+* pin assined as DMX EN pin on esp32 connects to both DE and RE
 
 Connect the RS485 power pins as follows
 
