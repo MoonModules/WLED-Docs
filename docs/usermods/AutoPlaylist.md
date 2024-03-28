@@ -47,19 +47,24 @@ The change threshhold is calculated on the fly and adjusted up or down based on 
 
 "Change Lockout" will prevent the usermod from changing the presets more frequently than this number of milliseconds, 
 but "Ideal Change Min" and "Ideal Change Max" simply influence the calculated change threshold. If the calculated vector 
-is lower than the current change threshold AND "Change Lockout" as been exceeded, a preset change will **always** take place.
+is lower than the current change threshold AND change lockout has been exceeded, a preset change will almost **always** take place (see note).
+
+* **NEW:** A change between change_lockout and change_lockout+3ms is now skipped to prevent "freefall" changes.
 
 When a change happens more quickly than "Ideal Change Min" or more slowly than "Ideal Change Max", the change threshold is 
 adjusted accordingly.
 
-If we haven't seen a change by the time "Ideal Change Min" has occured, the change threshold is increased to increase the 
-chances of detecting a change. This also helps AutoChange adjust to different music over time, like when a track changes. 
+If we haven't seen a change by the time "Ideal Change Min" has occured, the change threshold is increased to the minimum distance detected to
+increase the chances of detecting a change happening within the time window. This also helps AutoChange adjust to different music over time, 
+like when a track changes. 
 
 ### Installation
 
 Add this to `build_flags` in your platformio_override.ini file:
 
   `-D USERMOD_AUTO_PLAYLIST`
+
+For the AutoChange feature to work, this usermod must be enabled on an installation with an I2S audio source.  
 
 #### PlatformIO requirements
 
