@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -1836,6 +1836,27 @@
   
   <span class="md-ellipsis">
     Custom Access Point Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/pir-sensors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using PIR Sensors
   </span>
   
 
@@ -3828,6 +3849,7 @@
 <p>The server is available at the <code>/ws</code> endpoint, you can access it like <code>ws://[WLED-IP]/ws</code>.</p>
 <p>You may send any JSON state update to the socket.
 On change of the lighting state, the server will send a JSON object containing the state and info objects (this is equivalent to HTTP GET <code>/json/si</code>) to all connected clients. This object will also be sent to a client upon connecting.</p>
+<p>You can manually request the full JSON state object by sending <code>{"v":true}</code> to the websocket.</p>
 <p>You can also request a live stream of the LED values (e.g. the "Peek" feature of WLED-UI) by sending <code>{"lv":true}</code> to the websocket. The returned format is the same as for <code>/json/live</code>. Only one client can receive this at a time, if a new client requests it the stream will stop for the previous client (but the websocket will stay connected).</p>
 <p>There can be a maximum of 4 clients connected at a time. If a fifth client connects, a different client will be disconnected. On ESP8266, it is recommended to have no more than 2 clients connected simultaneously.</p>
 
@@ -3960,7 +3982,7 @@ On change of the lighting state, the server will send a JSON object containing t
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
