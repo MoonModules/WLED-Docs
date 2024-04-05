@@ -3948,12 +3948,16 @@ like when a track changes. </p>
 <h3 id="installation">Installation</h3>
 <p>Add this to <code>build_flags</code> in your platformio_override.ini file:</p>
 <p><code>-D USERMOD_AUTO_PLAYLIST</code></p>
-<p>For the AutoChange feature to work, this usermod must be enabled on an installation with an I2S audio source.  </p>
+<p>Optionally you can add this to enable the usermod's specific debug output:</p>
+<p><code>-D USERMOD_AUTO_PLAYLIST_DEBUG</code></p>
+<p>This debug is also automatically enabled with <code>-D WLED_DEBUG</code> as well.</p>
 <h4 id="platformio-requirements">PlatformIO requirements</h4>
 <p>No special requirements.</p>
 <h3 id="change-log">Change Log</h3>
 <p>2024-03-25
 * Pre-Beta release, docs added.</p>
+<p>2024-04-04
+* Docs updated with debug flag. </p>
 
 
 
