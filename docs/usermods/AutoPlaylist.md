@@ -64,7 +64,11 @@ Add this to `build_flags` in your platformio_override.ini file:
 
   `-D USERMOD_AUTO_PLAYLIST`
 
-For the AutoChange feature to work, this usermod must be enabled on an installation with an I2S audio source.  
+Optionally you can add this to enable the usermod's specific debug output:
+
+  `-D USERMOD_AUTO_PLAYLIST_DEBUG`
+
+This debug is also automatically enabled with `-D WLED_DEBUG` as well.
 
 #### PlatformIO requirements
 
@@ -74,5 +78,7 @@ No special requirements.
 
 2024-03-25
 * Pre-Beta release, docs added.
+2024-04-04
+* Docs updated with debug flag. 
 
 
