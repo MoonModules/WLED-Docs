@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-## Auto Playlist (Not officially released yet)
+## Auto Playlist
 
 v2 Usermod to automatically change between two playlists:
 
