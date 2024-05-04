@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
     
     
       
@@ -3036,9 +3036,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#wm8782" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      WM8782
     </span>
   </a>
   
@@ -3949,9 +3949,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#wm8782" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      WM8782
     </span>
   </a>
   
@@ -4038,7 +4038,7 @@
 
 
 <h1 id="i2s-adc-for-line-in">I2S ADC for Line-In</h1>
-<p>If you want the best experience, then Line-In using I2S will give the best quality. As you are getting a clean audio feed, then the squelch value should be set to 1</p>
+<p>If you want the best experience, then Line-In using I2S will give the best quality. As you are getting a clean audio feed the squelch value should be set to 1 to start with, and a gain of 1 is also likely a good starting point. Automatic Gain Control (AGC) set to "Normal" is still recommended, but not strictly required.</p>
 <p>Looking to add line-in with I2S support? You might want to try I2S ADC boards that use one of these chips: 
 * <a href="https://www.cirrus.com/products/wm8782/">CirrusLogic WM8782</a>
 * <a href="https://www.cirrus.com/products/cs5343-44/">CirrusLogic CS5343</a>
@@ -4046,17 +4046,23 @@
 * <a href="https://www.ti.com/product/PCM1808">Ti PCM1808</a> or <a href="https://www.ti.com/product/PCM1802">Ti PCM1802</a>
 * <a href="https://datasheet.lcsc.com/lcsc/1912111437_Everest-semi-Everest-Semiconductor-ES8388_C365736.pdf">ES8388</a>
 * <a href="https://www.mouser.com/datasheet/2/76/WM8978_v4.5-1141768.pdf">WM8978</a></p>
-<p>Many I2S ADC boards expect an additional MCLK signal ("Main Clock" aka "System Clock" aka "Master Clock" aka "Memory Clock").  MCLK is sometimes labelled SCLK for "system clock". For these boards with 4 data pins, use our <code>Generic I2S with MCLK</code> input driver, and connect MCLK pin to GPIO pin 0, 1, or 3 on ESP32.</p>
+<p>Many I2S ADC line-in boards expect an additional MCLK signal ("Main Clock" aka "System Clock" aka "Master Clock" aka "Memory Clock").  MCLK is sometimes labelled SCLK for "system clock". For these boards with 4 data pins, use the AudioReactive <code>Generic I2S with MCLK</code> input option, and connect MCLK pin to GPIO pin 0 on the original ESP32. </p>
+<p>*<em>NOTE:</em> Technically GPIO 1 and 3 will work on the original ESP32 for MCLK, but these are most often in use for the serial console. If you're using an MCLK-required line-in board on an ESP32-S3 (and possibly other ESP32-XX boards) then the MCLK can be any free GPIO pin. WLED will generally show you which pins are allowed for MCLK on your board.</p>
 <h2 id="pmod-i2s2">Pmod I2S2</h2>
-<p><img src="https://user-images.githubusercontent.com/91616163/197608486-cafcdf75-8039-4cb9-9d96-182d835c52c3.JPG" width="24%" height="24%" /> 
-https://digilent.com/reference/pmod/pmodi2s2/start</p>
-<h2 id="_1"></h2>
+<p><img src="https://user-images.githubusercontent.com/91616163/197608486-cafcdf75-8039-4cb9-9d96-182d835c52c3.JPG" width="24%" height="24%" /></p>
+<ul>
+<li>Jumper: Set to "Slave"</li>
+</ul>
+<p><a href="https://digilent.com/reference/pmod/pmodi2s2/start">Data Sheet and INformation</a></p>
+<h2 id="wm8782">WM8782</h2>
 <p><img src="https://user-images.githubusercontent.com/91616163/193432590-176d20e8-2432-4eca-86f9-86cda91aa873.jpg" width="40%" height="40%" /> &nbsp; &nbsp; </p>
 <p>Buy: <a href="https://www.aliexpress.com/item/32989916894.html">AliExpress</a></p>
 <ul>
 <li>Remove jumper from MLCK</li>
-<li>DIP SWITCH - SLAVE</li>
+<li>DIP switch - SLAVE</li>
+<li>DIP swith - 24 bit</li>
 </ul>
+<p><a href="https://d3uzseaevmutz1.cloudfront.net/pubs/proDatasheet/WM8782_v4.8.pdf">Data Sheet</a></p>
 <h2 id="ti-pcm1808">TI PCM1808</h2>
 <p><img src="https://user-images.githubusercontent.com/91616163/193432571-fb48bbff-e611-4235-bb47-5418f88c2c8d.jpg" width="20%" height="20%" />   &nbsp; &nbsp;</p>
 <p>Buy: <a href="https://a.co/d/3IHJWjV">Amazon</a> or <a href="https://a.aliexpress.com/_EydzFDt">AliExpress</a> </p>
@@ -4067,12 +4073,21 @@ https://digilent.com/reference/pmod/pmodi2s2/start</p>
 <li>OUT = I2S SD</li>
 <li>LRC = I2S WS</li>
 <li>SCK = I2S MCLK (master clock)</li>
-<li>Ground</li>
-<li>3.3v input</li>
+<li>Ground = ground</li>
+<li>3.3v input = 3.3v</li>
 </ul>
-<p>Left side: Format, Mode selector 0, Mode selector 1, ground, 3.3v input, and 5v input.</p>
-<p>In WLED it's "Generic I2S with Mclk". You have 3 choices of what MCLK pin you can use - 0, 1, and 3. Pin 0 highly recommended as 1 as 3 may already be in use</p>
-<p>5v seems to NEED to be connected. You can connect it to 3.3v but it will glitch randomly. Put that pin on 5v for best function. 3.3v and ground are connected to the same pins on the right side, so you just need to connect one of each, on either side. </p>
+<p>Left side: Feature settings and 5v input:</p>
+<ul>
+<li>Format = Currently recommended set to 3.3v (see below) or Not Connected.</li>
+<li>Mode selector 0 = Not connected</li>
+<li>Mode selector 1 = Not connected</li>
+<li>Ground = alternate ground, you only need one</li>
+<li>3.3v input = alternate 3.3v input, you only need one</li>
+<li>5v input = 5v input for audio circuits. Connect to 5v</li>
+</ul>
+<p>In WLED AudioReactive settings you will need to use <code>Generic I2S with MCLK</code>. You have 3 choices of what MCLK pin you can use - 0, 1, and 3. Pin 0 highly recommended as 1 as 3 will likely be in use on the original ESP32 for the serial console.</p>
+<p>5v seems to NEED to be connected. You can connect it to 3.3v but it will glitch randomly. Put that pin on 5v for best function. </p>
+<p>3.3v and ground are connected to the same pins on the right side - just need to connect one of each, on either side. </p>
 <p>MD1 and MD0 set master/slave modes. It defaults to slave (both pins are internally set to low), which is what you want for WLED. Don't connect these to anything.</p>
 <p>FMY (format, FMT in the spec sheet - I assume the "Y" is a typo on the silkscreen) is a bit more interesting. By default it's pulled low internally, which the docs claim to be "I2S, 24-bit" - which will work fine as a default.</p>
 <p>...however, pulling FMY "high" (connected to 3.3v) seems to make everything better in WLED.  According to the spec sheet, this moves the entire 24 bit sequence one pulse earlier ("left justified") and the responsiveness seems to be better overall in WLED.  The GEQ visual output is more "balanced" with the highs being better represented. The format of the 24 bits is unchanged - both are MSB first - but it seems to be better in WLED when the pin is pulled high.</p>
@@ -4080,16 +4095,14 @@ https://digilent.com/reference/pmod/pmodi2s2/start</p>
 <p>This audio chip reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" is selected.</p>
 <p>The on-board microphones are not currently supported - line-in is much better regardless. </p>
 <ul>
-<li>
-<p><a href="https://docs.espressif.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html">ESP32 Lyra-T V4.3</a> 
-<img src="https://user-images.githubusercontent.com/91616163/193413089-6f71193c-d8db-4185-9de3-c8b4005431c1.jpg" width="40%" height="40%" /></p>
-</li>
-<li>
-<p><a href="https://docs.ai-thinker.com/en/esp32-audio-kit">Ai-Thinker ESP32 Audio Kit v2.2</a> 
-<img src="https://user-images.githubusercontent.com/91616163/193413239-e3fd9567-a64d-464c-bdc6-2a2ce69c0df5.png" width="40%" height="40%" />
-Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
-</li>
+<li><a href="https://docs.espressif.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html">ESP32 Lyra-T V4.3</a></li>
 </ul>
+<p><img src="https://user-images.githubusercontent.com/91616163/193413089-6f71193c-d8db-4185-9de3-c8b4005431c1.jpg" width="40%" height="40%" /></p>
+<ul>
+<li><a href="https://docs.ai-thinker.com/en/esp32-audio-kit">Ai-Thinker ESP32 Audio Kit v2.2</a></li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/91616163/193413239-e3fd9567-a64d-464c-bdc6-2a2ce69c0df5.png" width="40%" height="40%" />
+Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
 <p>Line-in should be internally routed to line-out, allowing these boards to be used in the middle of a line-level signal path.</p>
 <h3 id="pin-config">Pin Config</h3>
 <p>The LyraT v4.3 and some AiThinker v2.2 boards use the following pin config:</p>
@@ -4118,7 +4131,7 @@ Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
 <p>The on-board microphones are not currently supported - line-in is much better regardless. </p>
 <p>Support for the WM8978 chipset is derived from the <a href="https://github.com/ohmic-net/puca_dsp">Puca DSP board</a>:</p>
 <p><img alt="image" src="https://github.com/MoonModules/WLED-Docs/assets/5659019/a97d0ecc-a024-42c2-99f3-aef11c17ec35" /></p>
-<p>Curently the Puca DSP on-board microphones may leak some sound in extremely loud environments, but the line-in will overpower this signal when presented. This is being investigated.</p>
+<p>Curently the Puca DSP on-board microphones may leak some sound in <strong>extremely</strong> loud environments, but the line-in will overpower this signal when presented. This has been minimized with settings.</p>
 <p>Line-in should be internally routed to line-out, allowing this board to be used in the middle of a line-level signal path.</p>
 <h3 id="pin-config_1">Pin Config</h3>
 <p>The Puca DSP board pins are as follows:</p>
@@ -4258,7 +4271,7 @@ Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a7c05c9e.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
