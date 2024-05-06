@@ -19,7 +19,7 @@ Many I2S ADC line-in boards expect an additional MCLK signal ("Main Clock" aka "
 
 * Jumper: Set to "Slave"
 
-[Data Sheet and INformation](https://digilent.com/reference/pmod/pmodi2s2/start)
+[Data Sheet and Information](https://digilent.com/reference/pmod/pmodi2s2/start)
 
 ## WM8782
 <img src="https://user-images.githubusercontent.com/91616163/193432590-176d20e8-2432-4eca-86f9-86cda91aa873.jpg" width="40%" height="40%" /> &nbsp; &nbsp; 
