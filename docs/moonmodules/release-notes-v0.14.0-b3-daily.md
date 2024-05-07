@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next major release will be v0.14.1-b30)
+Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next major release will be v0.14.3-b32)
 
 # MoonModules v0.14.3-b32 (work in progress)
 
