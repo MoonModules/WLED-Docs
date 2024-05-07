@@ -13,7 +13,7 @@ WLED's HTTP API allows you to set many properties of your lights, even more than
 !!! help
     _Unsure how all this API stuff works? Check out [this amazing guide](https://tynick.com/blog/01-28-2020/controlling-wled-with-raspberry-pi-using-the-wled-api/) by tynick!_
 
-The basic URL scheme is: `[ipadress]/win`. This will return an XML file with some current values (see bottom of page).
+The basic URL scheme is: `[ipaddress]/win`. This will return an XML file with some current values (see bottom of page).
 Parameters can be added to control some of the variables.
 
 - Example (AP): `192.168.4.1/win&A=255` sets the brightness to maximum
@@ -136,6 +136,7 @@ It is highly recommended to use the [JSON API](/interfaces/json-api) when dealin
 &IT | none | Include UI color theme in API response | 0.8.2
 &RD= | 0 or 1 | Toggle realtime UDP | 0.8.4
 &LO= | 0-2 | Live data override. 0 is off, 1 is override until live data ends, 2 is override until ESP reboot | 0.10.2
+&NP | none | Advance to the next preset in a playlist | 0.15
 
 ## XML response
 
