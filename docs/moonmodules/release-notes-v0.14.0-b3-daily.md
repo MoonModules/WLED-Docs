@@ -7,6 +7,29 @@ hide:
 
 Below are the ongoing updates in WLEDMM which has not made it to a release yet (Next major release will be v0.14.1-b30)
 
+# MoonModules v0.14.3-b32 (work in progress)
+
+
+## Info Page improvements
+
+May 4th
+
+System information in the "Info" panel re-organized, and PSRAM statistics added.
+
+<img width="65%" alt="new INFO Panel" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/7160bf79-3f27-42e7-8ef1-9c6fc930b983">
+
+
+by By @softhack007
+
+## Lots of bugfix back-porting from upstream
+
+ongoing, 2024
+
+Due to technical incompatibilities to latest upstream source code, WLEDMM is still building on the WLED core from summer 2023 (long story...). We have however made an effort to analyze bugfixes from upstream until version 0.14.3, and brought them into WLED-MM if possible. We also pack-ported a few features from upstream 0.15.0-beta.
+
+by @softhack007
+
+
 ## Updated DMX Input - now with RDM support
 
 Feb 10th, 2024
@@ -22,7 +45,7 @@ old
   &nbsp; new 
 <img width="40%" alt="new preview" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/2911ac6a-5f0d-4622-b7eb-941f0ee67070">
 
-
+# MoonModules v0.14.1-b30
 
 By @softhack007
 
