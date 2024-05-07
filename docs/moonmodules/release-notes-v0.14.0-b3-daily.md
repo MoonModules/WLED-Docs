@@ -16,7 +16,7 @@ May 4th, 2024
 
 System information in the "Info" panel re-organized, and PSRAM statistics added.
 
-<img width="75%" alt="new INFO Panel" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/7160bf79-3f27-42e7-8ef1-9c6fc930b983">
+<img width="75%" alt="new INFO Panel" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/286ed81f-ea87-40db-9752-111178a6cdb2">
 
 By @softhack007
 
