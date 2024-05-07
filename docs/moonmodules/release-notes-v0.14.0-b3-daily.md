@@ -19,7 +19,7 @@ System information in the "Info" panel re-organized, and PSRAM statistics added.
 <img width="75%" alt="new INFO Panel" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/7160bf79-3f27-42e7-8ef1-9c6fc930b983">
 
 
-by By @softhack007
+By @softhack007
 
 ## Lots of bugfix back-porting from upstream
 
