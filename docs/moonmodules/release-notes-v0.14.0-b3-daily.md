@@ -18,7 +18,6 @@ System information in the "Info" panel re-organized, and PSRAM statistics added.
 
 <img width="75%" alt="new INFO Panel" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/7160bf79-3f27-42e7-8ef1-9c6fc930b983">
 
-
 By @softhack007
 
 ## Lots of bugfix back-porting from upstream
@@ -36,6 +35,11 @@ Feb 10th, 2024
 
 The (wired) DMX Input has been given significant rewrite by @arneboe and now supports RDM - NOTE: you will need to re-enter all 3 pins used when you upgrade to this version
 
+by @arneboe
+
+
+# MoonModules v0.14.1-b30
+
 ## gamma-correct palettes preview
 
 Jan 25th, 2024
@@ -44,8 +48,6 @@ old
 <img width="40%" alt="old preview" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/388e9b89-2ada-400e-8db9-270a7d965f2f">
   &nbsp; new 
 <img width="40%" alt="new preview" src="https://github.com/MoonModules/WLED-Docs/assets/91616163/2911ac6a-5f0d-4622-b7eb-941f0ee67070">
-
-# MoonModules v0.14.1-b30
 
 By @softhack007
 
