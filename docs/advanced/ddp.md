@@ -7,55 +7,55 @@ hide:
 
 ## Overview
 
-Virtual LEDs allow you to "attach" LEDs from multiple ESPs to a main, controlling ESP. These LEDs can be added to an ESP just like physical pins.
+Virtual LEDs allow you to remotely "attach" LEDs from multiple ESPs or other dedicated hardware to a controlling instanec of WLED. These LEDs can be added to WLED just like physical pins.
 
-On the controlling ESP, go to Config, LED Preferences. 
+On the controlling instance of WLED, go to Config > LED Preferences. 
 
-Select DDP RGB (Network) or Art-Net RGB (Network) as the LED type and enter the Length (number of LEDs on that remote ESP), then enter the ESPs IP address.
+Select DDP RGB (Network) or Art-Net RGB (Network) as the LED type and enter the Length (number of LEDs on the remote WLED or other hardware device), then enter the destinatoon device's IP address.
 
-Multiple remote ESPs can be setup this way.
+Multiple remote WLED instances or other controller hardware can be setup this way.
 
 <img width="448" alt="image" src="https://user-images.githubusercontent.com/91013628/214262598-e7ce0907-ccad-4370-9d02-918efd20577c.png">
 
-For DDP the controlling ESP must be running at least 0.13 firmware while the remotes can be older. As usual, best perfomance is obtained by using an ESP32 for the controlling device. You can use an ESP8266, but only with a small number of LEDs (<300).
+For DDP the controlling WLED instance must be running at least 0.13 firmware while the remotes can be older. As usual, best perfomance is obtained by using an ESP32 for the controlling device. You can use an ESP8266, but only with a small number of LEDs (<300).
 
-Art-Net is only implemented in MoonModules 0.14.0.b1.18.
+Art-Net is only implemented in MoonModules at or above 0.14.0.b1.18.
 
-If your board supports Ethernet, use it instead of WiFi for the most stable performance. 
+If your board supports Ethernet, use it. Ethernet is better than WiFi for the most stable performance. 
 
 ### DDP 
 
-Bascially the same info as AArt-Net. The Art-Net section contains details on where DDP differs. 
+Essentially the same type of transport as Art-Net, but the protocols are not compatible.
 
-Generally speaking, DDP is the better protocol to use, if everything supports it. 
+If you are using WLED -> WLED virtual LEDs, DDP should give the best performance - although this improvement should be marginal.
 
-If you can't use DDP, Art-Net has a much wider adoption.
+If you can't use DDP, Art-Net has a MUCH wider adoption.
 
 ### Art-Net
 🌜
 
 Art-Net universe output starts at zero. This is not currently configurable in WLED. Zero is the commonly expected starting universe for Art-Net. Channel output starts at one and is not currently configurable in WLED. One is the expected first channel in Art-Net.
 
-For RGB LEDs, a full universe (170 RGB pixels) produces 510 channels - channels 511 and 512 will not be transmitted. This is common practice in Art-Net transmit and most (all?) implementations will expect this.
+For RGB LEDs, a full universe (170 RGB pixels) produces 510 channels - channels 511 and 512 will not be transmitted. This is common practice in Art-Net transmit and most implementations will expect this.
 
 Art-Net output follows xLights' implementation of packet sequence numbering and universe-channel alignment, and transmits in RGB order. The first pixel output data will always be 0:1:R, 0:2:G, 0:3:B for universe:channel:colorpart.
 
 This Art-Net implementation does ignore the "always specify length of data as an even number" part of the official specifications. If you encounter this issue, please file a bug report. Even Art-Net themselves say that this has been widely ignored and receivers should not expect an even value in the data length part of the packet.
 
 ### Background
-By Troy
+By TroyHacks
 
 First there was DMX (DMX512). It was great for controlling lighting fixtures - "set light to red" sort of thing. "Pan head to the left". "Dim the lights."
 
-Then someone decided that DMX should work over the network rather than RS485 networks (usually over an XLR cable).
+Then someone decided that DMX should work over the network rather than RS485 networks (usually over an XLR-style cable).
 
-So Art-Net and E1.31 were born. DDP came later and improved upon the idea, but DDP isn't as widely supported yet.
+So Art-Net and E1.31 were born. DDP came later and improved upon the idea, but DDP isn't as widely supported yet and likely won't be outside of software.
 
 All of these are the same premise as DMX512 - send packets of 8-bit numbers to remote systems. E1.31 and Art-Net are aligned with DMX512 and can send 512 channels per packet/universe, whereas DDP can send up to 1440 channels.
 
 THEN a bunch of idiots (us) got into the game with massive LED panels.
 
-To send LED data over the network, we still use a network form of DMX. E1.31, Art-Net, and DDP are all "network DMX".
+To send LED data over the network, we still use a network form of DMX - E1.31, Art-Net, and DDP are all "network DMX".
 
 You can think of an LED strip (or matrix) as a LOT of dimmable lights:
 
@@ -65,7 +65,7 @@ You have a blue dimmable light.
 
 That's channels 1,2, and 3 - and they makes up one RGB LED.
 
-A DMX universe is 512 channels (1440 in DDP). You can fit 170 LEDs into 510 channels (170 LEDs each having 3 channels - R, G, and B) 
+A DMX universe is 512 channels (1440 in DDP). You can fit 170 LEDs into 510 channels (170 LEDs each having 3 channels - R, G, and B) or up to 128 RGBW lights. (Cureently WLED supports both RGB and RGBW internally for Art-Net... but you can only select RGB from the GUI.)
 
 ...and then you skip to the next universe and start at channel 1 again.
 
