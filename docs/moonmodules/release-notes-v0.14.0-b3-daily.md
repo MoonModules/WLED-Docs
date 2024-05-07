@@ -12,7 +12,7 @@ Below are the ongoing updates in WLEDMM which has not made it to a release yet (
 
 ## Info Page improvements
 
-May 4th
+May 4th, 2024
 
 System information in the "Info" panel re-organized, and PSRAM statistics added.
 
