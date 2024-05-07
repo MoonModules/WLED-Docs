@@ -4102,7 +4102,7 @@
 <p class="admonition-title">Help</p>
 <p><em>Unsure how all this API stuff works? Check out <a href="https://tynick.com/blog/01-28-2020/controlling-wled-with-raspberry-pi-using-the-wled-api/">this amazing guide</a> by tynick!</em></p>
 </div>
-<p>The basic URL scheme is: <code>[ipadress]/win</code>. This will return an XML file with some current values (see bottom of page).
+<p>The basic URL scheme is: <code>[ipaddress]/win</code>. This will return an XML file with some current values (see bottom of page).
 Parameters can be added to control some of the variables.</p>
 <ul>
 <li>Example (AP): <code>192.168.4.1/win&amp;A=255</code> sets the brightness to maximum</li>
@@ -4611,6 +4611,12 @@ Parameters can be added to control some of the variables.</p>
 <td>0-2</td>
 <td>Live data override. 0 is off, 1 is override until live data ends, 2 is override until ESP reboot</td>
 <td>0.10.2</td>
+</tr>
+<tr>
+<td>&amp;NP</td>
+<td>none</td>
+<td>Advance to the next preset in a playlist</td>
+<td>0.15</td>
 </tr>
 </tbody>
 </table>
