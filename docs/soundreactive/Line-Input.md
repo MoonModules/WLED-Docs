@@ -73,7 +73,7 @@ FMY (format, FMT in the spec sheet - I assume the "Y" is a typo on the silkscree
 
 This audio chip reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" is selected.
 
-The on-board microphones are not currently supported - line-in is much better regardless. 
+The on-board microphones are not currently supported by default - line-in is much better regardless. (The source code has a working microphone input init if you want to experiment!)
 
 * [ESP32 Lyra-T V4.3](https://docs.espressif.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html)
 
