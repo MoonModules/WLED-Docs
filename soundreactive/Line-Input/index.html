@@ -4131,7 +4131,7 @@ Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
 <p>The on-board microphones are not currently supported - line-in is much better regardless. </p>
 <p>Support for the WM8978 chipset is derived from the <a href="https://github.com/ohmic-net/puca_dsp">Puca DSP board</a>:</p>
 <p><img alt="image" src="https://github.com/MoonModules/WLED-Docs/assets/5659019/a97d0ecc-a024-42c2-99f3-aef11c17ec35" /></p>
-<p>Curently the Puca DSP on-board microphones may leak some sound in <strong>extremely</strong> loud environments, but the line-in will overpower this signal when presented. This has been minimized with settings.</p>
+<p>Curently the Puca DSP on-board microphones may leak some sound in <strong>extremely</strong> loud environments, but the line-in will overpower this signal when presented. This has been minimized with settings. It technically shouldn't be using any mic signal, but there may be a small voltage leak in the analog signal path. </p>
 <p>Line-in should be internally routed to line-out, allowing this board to be used in the middle of a line-level signal path.</p>
 <h3 id="pin-config_1">Pin Config</h3>
 <p>The Puca DSP board pins are as follows:</p>
