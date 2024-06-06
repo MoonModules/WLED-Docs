@@ -28,7 +28,7 @@ Buy: [AliExpress](https://www.aliexpress.com/item/32989916894.html)
 
 * Remove jumper from MLCK
 * DIP switch - SLAVE
-* DIP swith - 24 bit
+* DIP switch - 24 bit
 
 [Data Sheet](https://d3uzseaevmutz1.cloudfront.net/pubs/proDatasheet/WM8782_v4.8.pdf)
 
