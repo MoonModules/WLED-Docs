@@ -120,7 +120,7 @@ Support for the WM8978 chipset is derived from the [Puca DSP board](https://gith
 
 ![image](https://github.com/MoonModules/WLED-Docs/assets/5659019/a97d0ecc-a024-42c2-99f3-aef11c17ec35)
 
-Curently the Puca DSP on-board microphones may leak some sound in **extremely** loud environments, but the line-in will overpower this signal when presented. This has been minimized with settings.
+Curently the Puca DSP on-board microphones may leak some sound in **extremely** loud environments, but the line-in will overpower this signal when presented. This has been minimized with settings. It technically shouldn't be using any mic signal, but there may be a small voltage leak in the analog signal path. 
 
 Line-in should be internally routed to line-out, allowing this board to be used in the middle of a line-level signal path.
 
