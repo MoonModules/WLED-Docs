@@ -53,22 +53,34 @@ UDP_SYNC_HEADER is a versioning number that's defined in audio_reactive.h
 
 ```c++
 #define UDP_SYNC_HEADER_V2 "00002"
-// new "V2" AC 0.14.0 audiosync struct - 40 Bytes
-struct audioSyncPacket_v2 {
-      char    header[6] = UDP_SYNC_HEADER_V2; // 06 bytes, last byte is '\0' as string terminator.
-      float   sampleRaw;      //  04 Bytes  - either "sampleRaw" or "rawSampleAgc" depending on soundAgc setting
-      float   sampleSmth;     //  04 Bytes  - either "sampleAvg" or "sampleAgc" depending on soundAgc setting
-      uint8_t samplePeak;     //  01 Bytes  - 0 no peak; >=1 peak detected. In future, this will also provide peak Magnitude
-      uint8_t reserved1;      //  01 Bytes  - reserved for future extensions like loudness
-      uint8_t fftResult[16];  //  16 Bytes  - FFT results, one byte per GEQ channel
-      float  FFT_Magnitude;   //  04 Bytes  - magnitude of strongest peak in FFT
-      float  FFT_MajorPeak;   //  04 Bytes  - frequency of strongest peak in FFT
-};
+
+// new "V2" audiosync struct - 44 Bytes
+    struct __attribute__ ((packed)) audioSyncPacket {  // WLEDMM "packed" ensures that there are no additional gaps
+      char    header[6];      //  06 Bytes  offset 0
+      uint8_t gap1[2];        // gap added by compiler: 02 Bytes, offset 6
+      float   sampleRaw;      //  04 Bytes  offset 8  - either "sampleRaw" or "rawSampleAgc" depending on soundAgc setting
+      float   sampleSmth;     //  04 Bytes  offset 12 - either "sampleAvg" or "sampleAgc" depending on soundAgc setting
+      uint8_t samplePeak;     //  01 Bytes  offset 16 - 0 no peak; >=1 peak detected. In future, this will also provide peak Magnitude
+      uint8_t frameCounter;   //  01 Bytes  offset 17 - track duplicate/out of order packets
+      uint8_t fftResult[16];  //  16 Bytes  offset 18
+      uint8_t gap2[2];            // gap added by the compiler: 02 Bytes, offset 34
+      float  FFT_Magnitude;   //  04 Bytes  offset 36
+      float  FFT_MajorPeak;   //  04 Bytes  offset 40
+    };
+
 ```
 
 The V2 format expects that AGC is performed by the sender, so there is no need to transmit "AGC" and "non-AGC" samples separately. To save bandwidth, the `myvals[]` array was removed, and all numbers are either `float` or `uint8_t`.
 
 SR-WLED 0.13.3 still sends out V1 format, however it is able to receive and decode V2 format, too.
+
+## values
+
+* In general, all sample data is scaled to be in the range of [0...255], to make effects happy. For the values transmitted as `float`, additional accuracy can be provided by using the fraction part of the number - for example `sampleSmth= 127.125`. Samples transmitted  are the max value from approx 20 milliseconds of sampling, with AGC gain already applied.
+* fftResult[16] are [16 frequency "channels"](https://github.com/MoonModules/WLED/blob/fc173b3bc00694e59b653ca230133052b5476c05/usermods/audioreactive/audio_reactive.h#L733-L760), values in the range of [0...255]
+* uint8_t samplePeak: 0 if no peak, 1 if peak
+* FFT_MajorPeak: strongest frequency from the FFT analysis, in Hz. Minimum frequency is 40hz.
+* FFT_Magnitude: amplitude of the strongest frequency- in units that only the ArduinoFFT library knows 🤷 . Typical range is [0... 4096].
 
 
 ## What else ?
