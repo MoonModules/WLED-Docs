@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -3090,6 +3090,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#values" class="md-nav__link">
+    <span class="md-ellipsis">
+      values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-else" class="md-nav__link">
     <span class="md-ellipsis">
       What else ?
@@ -3967,6 +3976,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#values" class="md-nav__link">
+    <span class="md-ellipsis">
+      values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-else" class="md-nav__link">
     <span class="md-ellipsis">
       What else ?
@@ -4038,20 +4056,31 @@
 <p>UDP_SYNC_HEADER is a versioning number that's defined in audio_reactive.h</p>
 <h3 id="v2-format-wled-version-0140-including-moonmodules-fork">V2 Format - WLED version &gt;= 0.14.0 (including MoonModules fork)</h3>
 <div class="highlight"><pre><span></span><code><span class="cp">#define UDP_SYNC_HEADER_V2 &quot;00002&quot;</span>
-<span class="c1">// new &quot;V2&quot; AC 0.14.0 audiosync struct - 40 Bytes</span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">audioSyncPacket_v2</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="kt">char</span><span class="w">    </span><span class="n">header</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UDP_SYNC_HEADER_V2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 06 bytes, last byte is &#39;\0&#39; as string terminator.</span>
-<span class="w">      </span><span class="kt">float</span><span class="w">   </span><span class="n">sampleRaw</span><span class="p">;</span><span class="w">      </span><span class="c1">//  04 Bytes  - either &quot;sampleRaw&quot; or &quot;rawSampleAgc&quot; depending on soundAgc setting</span>
-<span class="w">      </span><span class="kt">float</span><span class="w">   </span><span class="n">sampleSmth</span><span class="p">;</span><span class="w">     </span><span class="c1">//  04 Bytes  - either &quot;sampleAvg&quot; or &quot;sampleAgc&quot; depending on soundAgc setting</span>
-<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">samplePeak</span><span class="p">;</span><span class="w">     </span><span class="c1">//  01 Bytes  - 0 no peak; &gt;=1 peak detected. In future, this will also provide peak Magnitude</span>
-<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">reserved1</span><span class="p">;</span><span class="w">      </span><span class="c1">//  01 Bytes  - reserved for future extensions like loudness</span>
-<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">fftResult</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="w">  </span><span class="c1">//  16 Bytes  - FFT results, one byte per GEQ channel</span>
-<span class="w">      </span><span class="kt">float</span><span class="w">  </span><span class="n">FFT_Magnitude</span><span class="p">;</span><span class="w">   </span><span class="c1">//  04 Bytes  - magnitude of strongest peak in FFT</span>
-<span class="w">      </span><span class="kt">float</span><span class="w">  </span><span class="n">FFT_MajorPeak</span><span class="p">;</span><span class="w">   </span><span class="c1">//  04 Bytes  - frequency of strongest peak in FFT</span>
-<span class="p">};</span>
+
+<span class="c1">// new &quot;V2&quot; audiosync struct - 44 Bytes</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">__attribute__</span><span class="w"> </span><span class="p">((</span><span class="n">packed</span><span class="p">))</span><span class="w"> </span><span class="n">audioSyncPacket</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// WLEDMM &quot;packed&quot; ensures that there are no additional gaps</span>
+<span class="w">      </span><span class="kt">char</span><span class="w">    </span><span class="n">header</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span><span class="w">      </span><span class="c1">//  06 Bytes  offset 0</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gap1</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w">        </span><span class="c1">// gap added by compiler: 02 Bytes, offset 6</span>
+<span class="w">      </span><span class="kt">float</span><span class="w">   </span><span class="n">sampleRaw</span><span class="p">;</span><span class="w">      </span><span class="c1">//  04 Bytes  offset 8  - either &quot;sampleRaw&quot; or &quot;rawSampleAgc&quot; depending on soundAgc setting</span>
+<span class="w">      </span><span class="kt">float</span><span class="w">   </span><span class="n">sampleSmth</span><span class="p">;</span><span class="w">     </span><span class="c1">//  04 Bytes  offset 12 - either &quot;sampleAvg&quot; or &quot;sampleAgc&quot; depending on soundAgc setting</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">samplePeak</span><span class="p">;</span><span class="w">     </span><span class="c1">//  01 Bytes  offset 16 - 0 no peak; &gt;=1 peak detected. In future, this will also provide peak Magnitude</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">frameCounter</span><span class="p">;</span><span class="w">   </span><span class="c1">//  01 Bytes  offset 17 - track duplicate/out of order packets</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">fftResult</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="w">  </span><span class="c1">//  16 Bytes  offset 18</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gap2</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w">            </span><span class="c1">// gap added by the compiler: 02 Bytes, offset 34</span>
+<span class="w">      </span><span class="kt">float</span><span class="w">  </span><span class="n">FFT_Magnitude</span><span class="p">;</span><span class="w">   </span><span class="c1">//  04 Bytes  offset 36</span>
+<span class="w">      </span><span class="kt">float</span><span class="w">  </span><span class="n">FFT_MajorPeak</span><span class="p">;</span><span class="w">   </span><span class="c1">//  04 Bytes  offset 40</span>
+<span class="w">    </span><span class="p">};</span>
 </code></pre></div>
 <p>The V2 format expects that AGC is performed by the sender, so there is no need to transmit "AGC" and "non-AGC" samples separately. To save bandwidth, the <code>myvals[]</code> array was removed, and all numbers are either <code>float</code> or <code>uint8_t</code>.</p>
 <p>SR-WLED 0.13.3 still sends out V1 format, however it is able to receive and decode V2 format, too.</p>
+<h2 id="values">values</h2>
+<ul>
+<li>In general, all sample data is scaled to be in the range of [0...255], to make effects happy. For the values transmitted as <code>float</code>, additional accuracy can be provided by using the fraction part of the number - for example <code>sampleSmth= 127.125</code>. Samples transmitted  are the max value from approx 20 milliseconds of sampling, with AGC gain already applied.</li>
+<li>fftResult[16] are <a href="https://github.com/MoonModules/WLED/blob/fc173b3bc00694e59b653ca230133052b5476c05/usermods/audioreactive/audio_reactive.h#L733-L760">16 frequency "channels"</a>, values in the range of [0...255]</li>
+<li>uint8_t samplePeak: 0 if no peak, 1 if peak</li>
+<li>FFT_MajorPeak: strongest frequency from the FFT analysis, in Hz. Minimum frequency is 40hz.</li>
+<li>FFT_Magnitude: amplitude of the strongest frequency- in units that only the ArduinoFFT library knows 🤷 . Typical range is [0... 4096].</li>
+</ul>
 <h2 id="what-else">What else ?</h2>
 <p>You might want to take a look at <a href="https://github.com/netmindz/WLED-sync">this</a> library, which allows to <a href="https://github.com/netmindz/WLED-sync">send and receive WLED Audio Sync data</a> independent from WLED.</p>
 <p>When configured to receive audio data from another device, the receiver will <em>disable</em> any onboard microphone sampling and FFT processing, in favor of audio data received from the network.  Any time a UDP Multicast packet is received from a transmitter, it will be treated as a discrete microphone sample and stored in memory the same way it would be if it were a local microphone.</p>
