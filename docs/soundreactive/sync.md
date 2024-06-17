@@ -91,6 +91,7 @@ You might want to take a look at [this](https://github.com/netmindz/WLED-sync) l
 When configured to receive audio data from another device, the receiver will *disable* any onboard microphone sampling and FFT processing, in favor of audio data received from the network.  Any time a UDP Multicast packet is received from a transmitter, it will be treated as a discrete microphone sample and stored in memory the same way it would be if it were a local microphone.
 
 * The UDP &nbsp;<em>Multicast</em>&nbsp; IP is `239.0.0.1`, and the default UDP port is `11988`.
+* The software sends/receives one packet every 20 milliseconds (approx). An external sender may be slower, but not faster than 20ms = 50fps.
 * UDP port can be changed in WLED config pages, for example to have several groups of devices by assigning different UDP ports to each group.
 * UDP multicast can sometimes have issues with some Wifi routers, if you have issues, please try with a different Wifi
 
