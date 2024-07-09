@@ -5,9 +5,9 @@ hide:
   # - toc
 ---
 
-This page is work in progress
+This page is a work in progress
 
-Check [WLED Atuline Wiki](https://github.com/atuline/WLED/wiki/LED-Preferences) for original content
+Check [WLEDSR - 2D Support](/WLEDSR/2D-Support/) for original content
 
 
 Template text:
