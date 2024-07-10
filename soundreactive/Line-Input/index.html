@@ -3075,13 +3075,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#es8388" class="md-nav__link">
+  <a href="#es8388-and-ac101" class="md-nav__link">
     <span class="md-ellipsis">
-      ES8388
+      ES8388 and AC101
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="ES8388">
+    <nav class="md-nav" aria-label="ES8388 and AC101">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3988,13 +3988,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#es8388" class="md-nav__link">
+  <a href="#es8388-and-ac101" class="md-nav__link">
     <span class="md-ellipsis">
-      ES8388
+      ES8388 and AC101
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="ES8388">
+    <nav class="md-nav" aria-label="ES8388 and AC101">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4065,7 +4065,7 @@
 * <a href="https://www.cirrus.com/products/cs5343-44/">CirrusLogic CS5343</a>
 * <a href="https://www.akm.com/eu/en/products/audio/audio-adc/ak5720et/">AKM AK5720</a> (<a href="https://www.akm.com/content/dam/documents/products/audio/audio-adc/ak5720vt/ak5720vt-en-datasheet.pdf">datasheet</a>)
 * <a href="https://www.ti.com/product/PCM1808">Ti PCM1808</a> or <a href="https://www.ti.com/product/PCM1802">Ti PCM1802</a>
-* <a href="https://datasheet.lcsc.com/lcsc/1912111437_Everest-semi-Everest-Semiconductor-ES8388_C365736.pdf">ES8388</a>
+* <a href="https://datasheet.lcsc.com/lcsc/1912111437_Everest-semi-Everest-Semiconductor-ES8388_C365736.pdf">ES8388</a> and <a href="https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC101_User_Manual_v1.1.pdf">AC101</a>
 * <a href="https://www.mouser.com/datasheet/2/76/WM8978_v4.5-1141768.pdf">WM8978</a></p>
 <p>Many I2S ADC line-in boards expect an additional MCLK signal ("Main Clock" aka "System Clock" aka "Master Clock" aka "Memory Clock").  MCLK is sometimes labelled SCLK for "system clock". For these boards with 4 data pins, use the AudioReactive <code>Generic I2S with MCLK</code> input option, and connect MCLK pin to GPIO pin 0 on the original ESP32. </p>
 <p>*<em>NOTE:</em> Technically GPIO 1 and 3 will work on the original ESP32 for MCLK, but these are most often in use for the serial console. If you're using an MCLK-required line-in board on an ESP32-S3 (and possibly other ESP32-XX boards) then the MCLK can be any free GPIO pin. WLED will generally show you which pins are allowed for MCLK on your board.</p>
@@ -4113,11 +4113,16 @@
 <p>MD1 and MD0 set master/slave modes. It defaults to slave (both pins are internally set to low), which is what you want for WLED. Don't connect these to anything.</p>
 <p>FMY (format, FMT in the spec sheet - I assume the "Y" is a typo on the silkscreen) is a bit more interesting. By default it's pulled low internally, which the docs claim to be "I2S, 24-bit" - which will work fine as a default.</p>
 <p>...however, pulling FMY "high" (connected to 3.3v) seems to make everything better in WLED.  According to the spec sheet, this moves the entire 24 bit sequence one pulse earlier ("left justified") and the responsiveness seems to be better overall in WLED.  The GEQ visual output is more "balanced" with the highs being better represented. The format of the 24 bits is unchanged - both are MSB first - but it seems to be better in WLED when the pin is pulled high. This may also depend on if you're using an IDF v3 build (the default) or IDF v4 (the requirement for ESP32-S3 and other more modern boards, optionally for the original ESP32).</p>
-<h2 id="es8388">ES8388</h2>
-<p>This audio chip reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" is selected.</p>
-<p>The on-board microphones are not currently supported by default - line-in is much better regardless. (The source code has a working microphone input init if you want to experiment!)</p>
+<h2 id="es8388-and-ac101">ES8388 and AC101</h2>
+<p>Because of some confusion with these chips being used on various boards interchangably:</p>
 <ul>
-<li><a href="https://docs.espressif.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html">ESP32 Lyra-T V4.3</a></li>
+<li>The ES8388 chip is used in Espressif ESP32 Lyra-T boards and newer AI Thinker ESP AudioKit boards</li>
+<li>The AC101 chip is used in older AI Thinker ESP AudioKit boards</li>
+</ul>
+<p>These audio chips reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" or "AC101" is selected.</p>
+<p>The on-board microphones are not currently supported by default - line-in is much better regardless.</p>
+<ul>
+<li><a href="https://docs.espressif.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html">ESP32 LyraT V4.3</a></li>
 </ul>
 <p><img src="https://user-images.githubusercontent.com/91616163/193413089-6f71193c-d8db-4185-9de3-c8b4005431c1.jpg" width="40%" height="40%" /></p>
 <ul>
@@ -4125,7 +4130,7 @@
 </ul>
 <p><img src="https://user-images.githubusercontent.com/91616163/193413239-e3fd9567-a64d-464c-bdc6-2a2ce69c0df5.png" width="40%" height="40%" />
 Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
-<p>Line-in should be internally routed to line-out, allowing these boards to be used in the middle of a line-level signal path.</p>
+<p>Line-in is internally routed to line-out, allowing these boards to be used in the middle of a line-level signal path.</p>
 <h3 id="pin-config">Pin Config</h3>
 <p>The LyraT v4.3 and some AiThinker v2.2 boards use the following pin config:</p>
 <ul>
@@ -4143,6 +4148,17 @@ Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
 <li>Type: ES8388</li>
 <li>IS2 SD = 35</li>
 <li>I2S WS = 25</li>
+<li>I2S SCK = 27</li>
+<li>I2S MCLK = 0</li>
+<li>I2C SDA = 33</li>
+<li>I2C SCL = 32</li>
+</ul>
+<p>Older Ai-Thinker AudioKit A1S boards use the AC101 chip. The board sample we have is marked "v2.2 2957". There is no stamp on the bottom of the ESP32 antenna overhang. Assume anything lower than that version is an AC101.</p>
+<p>Config for the AC101 is:</p>
+<ul>
+<li>Type: AC101</li>
+<li>IS2 SD = 35</li>
+<li>I2S WS = 26</li>
 <li>I2S SCK = 27</li>
 <li>I2S MCLK = 0</li>
 <li>I2C SDA = 33</li>
