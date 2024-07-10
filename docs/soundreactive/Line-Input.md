@@ -77,7 +77,7 @@ Because of some confusion with these chips being used on various boards intercha
 * The ES8388 chip is used in Espressif ESP32 Lyra-T boards and newer Ai-Thinker ESP AudioKit boards
 * The AC101 chip is used in older Ai-Thinker ESP AudioKit boards
 
-These audio chips reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" or "AC101" is selected.
+These audio chips reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" or "AC101" is selected. (While the chips were sometimes used interchangably for the same basic function, the initialization is not the same!)
 
 The on-board microphones are not currently supported by default - line-in is much better regardless.
 
