@@ -4116,8 +4116,8 @@
 <h2 id="es8388-and-ac101">ES8388 and AC101</h2>
 <p>Because of some confusion with these chips being used on various boards interchangably:</p>
 <ul>
-<li>The ES8388 chip is used in Espressif ESP32 Lyra-T boards and newer AI Thinker ESP AudioKit boards</li>
-<li>The AC101 chip is used in older AI Thinker ESP AudioKit boards</li>
+<li>The ES8388 chip is used in Espressif ESP32 Lyra-T boards and newer Ai-Thinker ESP AudioKit boards</li>
+<li>The AC101 chip is used in older Ai-Thinker ESP AudioKit boards</li>
 </ul>
 <p>These audio chips reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" or "AC101" is selected.</p>
 <p>The on-board microphones are not currently supported by default - line-in is much better regardless.</p>
@@ -4129,7 +4129,7 @@
 <li><a href="https://docs.ai-thinker.com/en/esp32-audio-kit">Ai-Thinker ESP32 Audio Kit v2.2</a></li>
 </ul>
 <p><img src="https://user-images.githubusercontent.com/91616163/193413239-e3fd9567-a64d-464c-bdc6-2a2ce69c0df5.png" width="40%" height="40%" />
-Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
+Note: the underside of ESP32 overhang shows ESP32-A1S 2974. This version uses the ES8388 chip.</p>
 <p>Line-in is internally routed to line-out, allowing these boards to be used in the middle of a line-level signal path.</p>
 <h3 id="pin-config">Pin Config</h3>
 <p>The LyraT v4.3 and some AiThinker v2.2 boards use the following pin config:</p>
@@ -4164,6 +4164,7 @@ Note: the underside of ESP32 overhang shows ESP32-A1S 2974</p>
 <li>I2C SDA = 33</li>
 <li>I2C SCL = 32</li>
 </ul>
+<p>...although who knows what other revisions may be floating around?!</p>
 <h2 id="wm8978">WM8978</h2>
 <p>This audio chip reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "WM8978" is selected.</p>
 <p>The on-board microphones are not currently supported - line-in is much better regardless. </p>
