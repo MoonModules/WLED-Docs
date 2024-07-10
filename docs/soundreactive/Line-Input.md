@@ -74,8 +74,8 @@ FMY (format, FMT in the spec sheet - I assume the "Y" is a typo on the silkscree
 
 Because of some confusion with these chips being used on various boards interchangably:
 
-* The ES8388 chip is used in Espressif ESP32 Lyra-T boards and newer AI Thinker ESP AudioKit boards
-* The AC101 chip is used in older AI Thinker ESP AudioKit boards
+* The ES8388 chip is used in Espressif ESP32 Lyra-T boards and newer Ai-Thinker ESP AudioKit boards
+* The AC101 chip is used in older Ai-Thinker ESP AudioKit boards
 
 These audio chips reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" or "AC101" is selected.
 
@@ -88,7 +88,7 @@ The on-board microphones are not currently supported by default - line-in is muc
 * [Ai-Thinker ESP32 Audio Kit v2.2](https://docs.ai-thinker.com/en/esp32-audio-kit)
 
 <img src="https://user-images.githubusercontent.com/91616163/193413239-e3fd9567-a64d-464c-bdc6-2a2ce69c0df5.png" width="40%" height="40%" />
-Note: the underside of ESP32 overhang shows ESP32-A1S 2974
+Note: the underside of ESP32 overhang shows ESP32-A1S 2974. This version uses the ES8388 chip.
 
 Line-in is internally routed to line-out, allowing these boards to be used in the middle of a line-level signal path.
 
@@ -127,6 +127,8 @@ Config for the AC101 is:
 * I2S MCLK = 0
 * I2C SDA = 33
 * I2C SCL = 32
+
+...although who knows what other revisions may be floating around?!
   
 ## WM8978
 
