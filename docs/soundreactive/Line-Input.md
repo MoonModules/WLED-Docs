@@ -7,7 +7,7 @@ Looking to add line-in with I2S support? You might want to try I2S ADC boards th
 * [CirrusLogic CS5343](https://www.cirrus.com/products/cs5343-44/)
 * [AKM AK5720](https://www.akm.com/eu/en/products/audio/audio-adc/ak5720et/) ([datasheet](https://www.akm.com/content/dam/documents/products/audio/audio-adc/ak5720vt/ak5720vt-en-datasheet.pdf))
 * [Ti PCM1808](https://www.ti.com/product/PCM1808) or [Ti PCM1802](https://www.ti.com/product/PCM1802)
-* [ES8388](https://datasheet.lcsc.com/lcsc/1912111437_Everest-semi-Everest-Semiconductor-ES8388_C365736.pdf)
+* [ES8388](https://datasheet.lcsc.com/lcsc/1912111437_Everest-semi-Everest-Semiconductor-ES8388_C365736.pdf) and [AC101](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC101_User_Manual_v1.1.pdf)
 * [WM8978](https://www.mouser.com/datasheet/2/76/WM8978_v4.5-1141768.pdf)
 
 Many I2S ADC line-in boards expect an additional MCLK signal ("Main Clock" aka "System Clock" aka "Master Clock" aka "Memory Clock").  MCLK is sometimes labelled SCLK for "system clock". For these boards with 4 data pins, use the AudioReactive `Generic I2S with MCLK` input option, and connect MCLK pin to GPIO pin 0 on the original ESP32. 
@@ -70,13 +70,18 @@ FMY (format, FMT in the spec sheet - I assume the "Y" is a typo on the silkscree
 
 ...however, pulling FMY "high" (connected to 3.3v) seems to make everything better in WLED.  According to the spec sheet, this moves the entire 24 bit sequence one pulse earlier ("left justified") and the responsiveness seems to be better overall in WLED.  The GEQ visual output is more "balanced" with the highs being better represented. The format of the 24 bits is unchanged - both are MSB first - but it seems to be better in WLED when the pin is pulled high. This may also depend on if you're using an IDF v3 build (the default) or IDF v4 (the requirement for ESP32-S3 and other more modern boards, optionally for the original ESP32).
 
-## ES8388
+## ES8388 and AC101
 
-This audio chip reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" is selected.
+Because of some confusion with these chips being used on various boards interchangably:
 
-The on-board microphones are not currently supported by default - line-in is much better regardless. (The source code has a working microphone input init if you want to experiment!)
+* The ES8388 chip is used in Espressif ESP32 Lyra-T boards and newer AI Thinker ESP AudioKit boards
+* The AC101 chip is used in older AI Thinker ESP AudioKit boards
 
-* [ESP32 Lyra-T V4.3](https://docs.espressif.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html)
+These audio chips reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "ES8388" or "AC101" is selected.
+
+The on-board microphones are not currently supported by default - line-in is much better regardless.
+
+* [ESP32 LyraT V4.3](https://docs.espressif.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html)
 
 <img src="https://user-images.githubusercontent.com/91616163/193413089-6f71193c-d8db-4185-9de3-c8b4005431c1.jpg" width="40%" height="40%" />
 
@@ -85,7 +90,7 @@ The on-board microphones are not currently supported by default - line-in is muc
 <img src="https://user-images.githubusercontent.com/91616163/193413239-e3fd9567-a64d-464c-bdc6-2a2ce69c0df5.png" width="40%" height="40%" />
 Note: the underside of ESP32 overhang shows ESP32-A1S 2974
 
-Line-in should be internally routed to line-out, allowing these boards to be used in the middle of a line-level signal path.
+Line-in is internally routed to line-out, allowing these boards to be used in the middle of a line-level signal path.
 
 ### Pin Config
 
@@ -111,6 +116,18 @@ Note: the underside of ESP32 overhang shows ESP32-A1S B221 and B238 on two board
 * I2C SDA = 33
 * I2C SCL = 32
 
+Older Ai-Thinker AudioKit A1S boards use the AC101 chip. The board sample we have is marked "v2.2 2957". There is no stamp on the bottom of the ESP32 antenna overhang. Assume anything lower than that version is an AC101.
+
+Config for the AC101 is:
+
+* Type: AC101
+* IS2 SD = 35
+* I2S WS = 26
+* I2S SCK = 27
+* I2S MCLK = 0
+* I2C SDA = 33
+* I2C SCL = 32
+  
 ## WM8978
 
 This audio chip reqires I2C commands to initialize properly. "Line-in mode" has been hard-coded into the initialization and will be used when "WM8978" is selected.
