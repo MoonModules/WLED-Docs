@@ -3,6 +3,7 @@
 If you want the best experience, then Line-In using I2S will give the best quality. As you are getting a clean audio feed the squelch value should be set to 1 to start with, and a gain of 1 is also likely a good starting point. Automatic Gain Control (AGC) set to "Normal" is still recommended, but not strictly required.
 
 Looking to add line-in with I2S support? You might want to try I2S ADC boards that use one of these chips: 
+
 * [CirrusLogic WM8782](https://www.cirrus.com/products/wm8782/)
 * [CirrusLogic CS5343](https://www.cirrus.com/products/cs5343-44/)
 * [AKM AK5720](https://www.akm.com/eu/en/products/audio/audio-adc/ak5720et/) ([datasheet](https://www.akm.com/content/dam/documents/products/audio/audio-adc/ak5720vt/ak5720vt-en-datasheet.pdf))
