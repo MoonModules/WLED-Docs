@@ -4060,13 +4060,15 @@
 
 <h1 id="i2s-adc-for-line-in">I2S ADC for Line-In</h1>
 <p>If you want the best experience, then Line-In using I2S will give the best quality. As you are getting a clean audio feed the squelch value should be set to 1 to start with, and a gain of 1 is also likely a good starting point. Automatic Gain Control (AGC) set to "Normal" is still recommended, but not strictly required.</p>
-<p>Looking to add line-in with I2S support? You might want to try I2S ADC boards that use one of these chips: 
-* <a href="https://www.cirrus.com/products/wm8782/">CirrusLogic WM8782</a>
-* <a href="https://www.cirrus.com/products/cs5343-44/">CirrusLogic CS5343</a>
-* <a href="https://www.akm.com/eu/en/products/audio/audio-adc/ak5720et/">AKM AK5720</a> (<a href="https://www.akm.com/content/dam/documents/products/audio/audio-adc/ak5720vt/ak5720vt-en-datasheet.pdf">datasheet</a>)
-* <a href="https://www.ti.com/product/PCM1808">Ti PCM1808</a> or <a href="https://www.ti.com/product/PCM1802">Ti PCM1802</a>
-* <a href="https://datasheet.lcsc.com/lcsc/1912111437_Everest-semi-Everest-Semiconductor-ES8388_C365736.pdf">ES8388</a> and <a href="https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC101_User_Manual_v1.1.pdf">AC101</a>
-* <a href="https://www.mouser.com/datasheet/2/76/WM8978_v4.5-1141768.pdf">WM8978</a></p>
+<p>Looking to add line-in with I2S support? You might want to try I2S ADC boards that use one of these chips: </p>
+<ul>
+<li><a href="https://www.cirrus.com/products/wm8782/">CirrusLogic WM8782</a></li>
+<li><a href="https://www.cirrus.com/products/cs5343-44/">CirrusLogic CS5343</a></li>
+<li><a href="https://www.akm.com/eu/en/products/audio/audio-adc/ak5720et/">AKM AK5720</a> (<a href="https://www.akm.com/content/dam/documents/products/audio/audio-adc/ak5720vt/ak5720vt-en-datasheet.pdf">datasheet</a>)</li>
+<li><a href="https://www.ti.com/product/PCM1808">Ti PCM1808</a> or <a href="https://www.ti.com/product/PCM1802">Ti PCM1802</a></li>
+<li><a href="https://datasheet.lcsc.com/lcsc/1912111437_Everest-semi-Everest-Semiconductor-ES8388_C365736.pdf">ES8388</a> and <a href="https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC101_User_Manual_v1.1.pdf">AC101</a></li>
+<li><a href="https://www.mouser.com/datasheet/2/76/WM8978_v4.5-1141768.pdf">WM8978</a></li>
+</ul>
 <p>Many I2S ADC line-in boards expect an additional MCLK signal ("Main Clock" aka "System Clock" aka "Master Clock" aka "Memory Clock").  MCLK is sometimes labelled SCLK for "system clock". For these boards with 4 data pins, use the AudioReactive <code>Generic I2S with MCLK</code> input option, and connect MCLK pin to GPIO pin 0 on the original ESP32. </p>
 <p>*<em>NOTE:</em> Technically GPIO 1 and 3 will work on the original ESP32 for MCLK, but these are most often in use for the serial console. If you're using an MCLK-required line-in board on an ESP32-S3 (and possibly other ESP32-XX boards) then the MCLK can be any free GPIO pin. WLED will generally show you which pins are allowed for MCLK on your board.</p>
 <h2 id="pmod-i2s2">Pmod I2S2</h2>
