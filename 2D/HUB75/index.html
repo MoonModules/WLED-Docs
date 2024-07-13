@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuration" class="md-skip">
+        <a href="#setup" class="md-skip">
           Skip to content
         </a>
       
@@ -2879,6 +2879,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -2907,6 +2909,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2915,13 +2919,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#required-software-build" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
+      Required Software Build
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuration">
+    <nav class="md-nav" aria-label="Required Software Build">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2944,6 +2948,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
   
 </li>
       
@@ -3905,6 +3918,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3913,13 +3928,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#required-software-build" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
+      Required Software Build
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuration">
+    <nav class="md-nav" aria-label="Required Software Build">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3942,6 +3957,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
   
 </li>
       
@@ -3968,20 +3992,23 @@
   
 
 
-  <h1>HUB75</h1>
-
 <p>WLED-MM now features support for LED matrix panels using the HUB75 format</p>
 <p>You can use either a regular ESP32 with a suitable adapter board such as <a href="https://esp32trinity.com/">ESP32 Trinity</a> or <a href="https://github.com/rorosaurus/esp32-hub75-driver">rorosaurus/esp32-hub75-driver</a> or the dedicated <a href="https://www.adafruit.com/product/5778">Adafruit Matrix Portal S3</a></p>
-<p>This support is supplied by <a href="https://github.com/mrcodetastic/ESP32-HUB75-MatrixPanel-DMA?tab=readme-ov-file">ESP32-HUB75-MatrixPanel-DMA</a> so see here for more details about supported hardware</p>
-<p>Support for HUB75 in WLED-MM should be considered experimental at the moment, but we welcome early feedback on this new feature</p>
-<h2 id="configuration">Configuration</h2>
+<p>This support is supplied by the <a href="https://github.com/mrcodetastic/ESP32-HUB75-MatrixPanel-DMA?tab=readme-ov-file">ESP32-HUB75-MatrixPanel-DMA</a> library, so see here for more details about supported hardware</p>
+<p>Support for HUB75 in WLED-MM should be considered experimental at the moment, but we welcome early feedback on this new feature - please share your experience in the <a href="https://discord.gg/Pgdv8MgR">2D channel</a></p>
+<h1 id="setup">Setup</h1>
+<h2 id="required-software-build">Required Software Build</h2>
 <h3 id="adafruit-matrix-portal-s3">Adafruit Matrix Portal S3</h3>
 <p>Please use the dedicated adafruit_matrixportal_esp32s3 build as this is pre-configured for HUB75 output</p>
 <h3 id="generic-esp32-support">Generic ESP32 support</h3>
-<p>You need to use a build with WLED_ENABLE_HUB75MATRIX defined, for example, esp32_4MB_V4_S.</p>
-<p>If you are using a board such as the ESP32 Trinity or other boards defined for the default pinout of the ESP32-HUB75-MatrixPanel-DMA driver, this is selected by default</p>
+<p>You must use a build with WLED_ENABLE_HUB75MATRIX defined, for example, esp32_4MB_V4_S. If you do not see Hub75 options in the list of LED types, you are not using the correct build</p>
+<p>If you are using a board such as the ESP32 Trinity or other boards wired for the default pinout of the ESP32-HUB75-MatrixPanel-DMA driver, this is selected by default</p>
+<p><img alt="display_esp32_wiring_bb" src="https://github.com/user-attachments/assets/9fd3cf9f-b6b3-42ce-ba52-cea015e95024" /></p>
 <p>If you are using the rorosaurus/esp32-hub75-driver or any other board using the SmartMatrix default pinout then you will need to do a custom build with ESP32_FORUM_PINOUT defined</p>
 <p>If you are using any other config, you currently need to edit wled00/bus_manager.cpp to add a new elif block and define to your build - it is not possible to set the pin config in LED preferences at the moment</p>
+<h2 id="configuration">Configuration</h2>
+<p>First, you must set the LED output to match the correct Hub75Matrix option for the panel size you are using. The chain length is the number of panels connected. Note: currently only a horizontal chain of panels is supported.</p>
+<p>Next, you need to go into the 2D Configuration and create a single matrix with the total size of your hub75 setup. e.g a chain of 2 panels with 32x32 pixels each, would be created as a 64x32 matrix in the 2D configuration page</p>
 
 
 
