@@ -117,7 +117,7 @@ platform_packages = platformio/framework-arduinoespressif32 @ https://github.com
   toolchain-xtensa-esp32s3@~12.2
 board_build.arduino.upstream_packages = no
 ```
-The "{commit SHA}" is a good way to tell PIO to redownload your new modified code as you create and commit new builds. This is 7 characters and shown in your GitHub account with the last commit you did. (Weirdly if you look at your `git push` output it'll show 8 characters - you can just use the first 7 and drop the last character.)
+The "{commit}" is a good way to tell PIO to redownload your new modified code as you create and commit new builds. This is 7 characters and shown in your GitHub account with the last commit you did. (Weirdly if you look at your `git push` output it'll show 8 characters - you can just use the first 7 and drop the last character.)
 
 The "toolchain" lines are entirely optional - I'm using a newer compiler here in testing. YMMV, etc.
 
