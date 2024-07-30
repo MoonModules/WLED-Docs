@@ -98,9 +98,8 @@ IF you selected `Compiler Options ---> Optimization Level --->  Optimize for per
         list(APPEND compile_options "-Wno-stringop-truncation")
         list(APPEND compile_options "-Wno-stringop-overflow")
         list(APPEND compile_options "-Wno-maybe-uninitialized")
-        list(APPEND compile_options "-ffast-math")
 ```
-If you really want to experiment, you can change `-O2` to `-O3` or even `-Ofast` but only `-O2` seems to work for everything in my custom builds. 
+If you really want to experiment, you can change `-O2` to `-O3` or even `-Ofast` but only `-O2` seems to work for everything in my custom builds. Other compiler flags can be inserted in here as well to various outcomes.
 
 If a build is failing due to a compiler warning, you can edit the above block in `esp-idf/CMakeLists.txt` to add more `-Wno-compiler-warning-that-is-failing` lines to suppress and perhaps get past the particular warning that's causing the build to fail. _**All options DO need to be added one-per-line or it breaks the build system.**_
 
