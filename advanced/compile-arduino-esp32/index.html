@@ -3998,7 +3998,7 @@ If you really want to experiment, you can change <code>-O2</code> to <code>-O3</
   toolchain-xtensa-esp32s3@~12.2
 board_build.arduino.upstream_packages = no
 </code></pre></div>
-The "{commit SHA}" is a good way to tell PIO to redownload your new modified code as you create and commit new builds. This is 7 characters and shown in your GitHub account with the last commit you did. (Weirdly if you look at your <code>git push</code> output it'll show 8 characters - you can just use the first 7 and drop the last character.)</p>
+The "{commit}" is a good way to tell PIO to redownload your new modified code as you create and commit new builds. This is 7 characters and shown in your GitHub account with the last commit you did. (Weirdly if you look at your <code>git push</code> output it'll show 8 characters - you can just use the first 7 and drop the last character.)</p>
 <p>The "toolchain" lines are entirely optional - I'm using a newer compiler here in testing. YMMV, etc.</p>
 <p>Version 2.0.17 is the current version as of wiring this, but that can/will likely change in the future, so adjust accordingly. If you change the underlying IDF version, this version won't change automatically - and it doesn't really matter. If you want to be very correct, you can edit <code>arduino-esp32/package.json</code> with the correct version of arduino-esp32 for your IDF (with IDF v4.4.6 it should be 2.0.14, for example), or whatever custom version you want it to be. </p>
 <p>You can figure out the IDF to arduino-esp32 version mapping by looking thru https://github.com/espressif/arduino-esp32/releases if you really want everything to be correct, even if it doesn't actually matter in your actual build in PIO. </p>
