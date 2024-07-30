@@ -6,6 +6,10 @@ hide:
 ---
 # Compiling a Custom Arduino-ESP32 Build
 
+Why? Well, WLED is itself reliant on a very big pile of code, and that code is provided in a binary format so you don't need to compile all the code for "WiFi Support" (for example) every time you compile WLED. We don't compile it, we just haul it in as a precompiled library.
+
+The downside to this is bloat (we don't use Bluetooth, for example) and some options that are sane for "all users" but perhaps not the fastest options for WLED.
+
 We'll be building arduino-esp32 release 2.x with IDF 4.4.x, which is required for S3 and other modern ESP32 variants.
 
 This requires MacOS or Linux. If you're using Windows, then the Windows Subsystem for Linux works great too as it's Ubuntu based, which matches the docs perfectly and works flawlessly with this.
