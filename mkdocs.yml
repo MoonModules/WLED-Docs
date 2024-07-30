@@ -128,7 +128,7 @@ nav:
     - Custom Access Point Configuration: advanced/custom-ap.md
     - Using PIR Sensors: advanced/pir-sensors.md
     - Net debug: advanced/net-debug.md
-    - Compiling Arduino-ESP32: compile-arduino-esp32.md
+    - Compiling Arduino-ESP32: advanced/compile-arduino-esp32.md
   - About: 
     - Contributors & Credits: about/contributors.md
     - Privacy Policy: about/privacy-policy.md
