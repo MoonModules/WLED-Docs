@@ -1,3 +1,9 @@
+---
+title: Compiling arduino-esp32
+hide:
+  # - navigation
+  # - toc
+---
 # Compiling a Custom arduino-esp32 Build
 
 We'll be building arduino-esp32 release 2.x with IDF 4.4.x, which is required for S3 and other modern ESP32 variants.
