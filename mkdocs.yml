@@ -128,6 +128,7 @@ nav:
     - Custom Access Point Configuration: advanced/custom-ap.md
     - Using PIR Sensors: advanced/pir-sensors.md
     - Net debug: advanced/net-debug.md
+    - Compiling Arduino-ESP32: compile-arduino-esp32.md
   - About: 
     - Contributors & Credits: about/contributors.md
     - Privacy Policy: about/privacy-policy.md
@@ -146,6 +147,7 @@ nav:
       - PIRsensorSwitch: usermods/PIRsensorSwitch.md
       - Weather: usermods/Weather.md
       - Pin Manager: usermods/pinmanager.md
+      - AutoPlaylist & AutoChange: usermods/AutoPlaylist.md
   - MoonModules: 
     - What is MoonModules: moonmodules/what-is-moonmodules.md
     - Release notes v0.14.0-b3-daily: moonmodules/release-notes-v0.14.0-b3-daily.md
