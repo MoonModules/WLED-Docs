@@ -4124,9 +4124,8 @@
         list(APPEND compile_options &quot;-Wno-stringop-truncation&quot;)
         list(APPEND compile_options &quot;-Wno-stringop-overflow&quot;)
         list(APPEND compile_options &quot;-Wno-maybe-uninitialized&quot;)
-        list(APPEND compile_options &quot;-ffast-math&quot;)
 </code></pre></div>
-If you really want to experiment, you can change <code>-O2</code> to <code>-O3</code> or even <code>-Ofast</code> but only <code>-O2</code> seems to work for everything in my custom builds. </li>
+If you really want to experiment, you can change <code>-O2</code> to <code>-O3</code> or even <code>-Ofast</code> but only <code>-O2</code> seems to work for everything in my custom builds. Other compiler flags can be inserted in here as well to various outcomes.</li>
 </ol>
 <p>If a build is failing due to a compiler warning, you can edit the above block in <code>esp-idf/CMakeLists.txt</code> to add more <code>-Wno-compiler-warning-that-is-failing</code> lines to suppress and perhaps get past the particular warning that's causing the build to fail. <em><strong>All options DO need to be added one-per-line or it breaks the build system.</strong></em></p>
 <h2 id="deploying-this-so-you-can-use-it">Deploying this so you can use it</h2>
