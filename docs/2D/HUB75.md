@@ -15,6 +15,10 @@ Support for HUB75 in WLED-MM should be considered experimental at the moment, bu
 ### Adafruit Matrix Portal S3
 Please use the dedicated adafruit_matrixportal_esp32s3 build as this is pre-configured for HUB75 output
 
+### Huidu HD-WF2 ESP32-S3
+* Hold the button down as you use a USB-A to USB-A cable to upload esp32S3_4MB_S
+* See more at https://github.com/mrcodetastic/ESP32-HUB75-MatrixPanel-DMA/issues/433
+
 ### Generic ESP32 support
 You must use a build with WLED_ENABLE_HUB75MATRIX defined, for example, esp32_4MB_V4_S. If you do not see Hub75 options in the list of LED types, you are not using the correct build
 
