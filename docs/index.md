@@ -41,7 +41,7 @@ Disclaimer: using this software is the users responsibility as it is not bug fre
 
 Join the Discord server to discuss everything about WLED MM and SR!
 
-<a href="https://discord.gg/K9JBvgNG"><img src="https://discordapp.com/api/guilds/473448917040758787/widget.png?style=banner2" width="25%"></a>
+<a href="https://discord.gg/HgAsbvWuJ3"><img src="https://discordapp.com/api/guilds/700041398778331156/widget.png?style=banner2" width="25%"></a>
 
 WLED Aircoookie welcome 👇
 
