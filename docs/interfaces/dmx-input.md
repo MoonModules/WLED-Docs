@@ -16,20 +16,20 @@ hide:
 
 #### software setup
 
-For the DMX feature to work, you'll need to use the V4 build varients. Define the pins you are using in the DMX input section of the Sync Interfaces menu
+For the DMX feature to work, you'll need to use the V4 build varients. Define all the pins you are using in the DMX input section of the Sync Interfaces menu
 
 #### hardware setup
 
-The DMX output required the use of a MAX485 transceiver connected to the pins defined in setup of the ESP in order to produce DMX input.
+The DMX interface require the use of an RS484 adapter such as the MAX485 transceiver connected to the pins defined in setup of the ESP in order to handle DMX input and RDM input and output.
 
 
 You will need to use three GPIO pins that support output.
 
-Do NOT use the pins on your ESP32 labelled RX and TX as your DMX pins!
+*Do NOT use the pins on your ESP32 labelled RX and TX as your DMX pins!*
 
-* pin assined as DMX RX pin on esp32 connects to RO
-* pin assined as DMX TX pin on esp32 connects to DI
-* pin assined as DMX EN pin on esp32 connects to both DE and RE
+* pin assined as *DMX* RX pin on esp32 connects to RO
+* pin assined as *DMX* TX pin on esp32 connects to DI
+* pin assined as *DMX* EN pin on esp32 connects to both DE and RE
 
 Connect the RS485 power pins as follows
 
