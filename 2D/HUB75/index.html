@@ -4059,7 +4059,7 @@
 <h1 id="setup">Setup</h1>
 <h2 id="required-software-build">Required Software Build</h2>
 <h3 id="adafruit-matrix-portal-s3">Adafruit Matrix Portal S3</h3>
-<p>Please use the dedicated adafruit_matrixportal_esp32s3 build as this is pre-configured for HUB75 output</p>
+<p>Please use the dedicated adafruit_matrixportal_esp32s3 build as this is pre-configured for the pins needed for HUB75 output</p>
 <h3 id="huidu-hd-wf2-esp32-s3">Huidu HD-WF2 ESP32-S3</h3>
 <ul>
 <li>Hold the button down as you use a USB-A to USB-A cable to upload esp32S3_4MB_S</li>
@@ -4070,7 +4070,7 @@
 <p>If you are using a board such as the ESP32 Trinity or other boards wired for the default pinout of the ESP32-HUB75-MatrixPanel-DMA driver, this is selected by default</p>
 <p><img alt="display_esp32_wiring_bb" src="https://github.com/user-attachments/assets/9fd3cf9f-b6b3-42ce-ba52-cea015e95024" /></p>
 <p>If you are using the rorosaurus/esp32-hub75-driver or any other board using the SmartMatrix default pinout then you will need to do a custom build with ESP32_FORUM_PINOUT defined</p>
-<p>If you are using any other config, you currently need to edit wled00/bus_manager.cpp to add a new elif block and define to your build - it is not possible to set the pin config in LED preferences at the moment</p>
+<p>If you are using any other config, you currently need to edit wled00/bus_manager.cpp to add a new elif block and define to your build - it is not possible to set the HUB75 pin config in LED preferences at the moment</p>
 <h2 id="configuration">Configuration</h2>
 <p>First, you must set the LED output to match the correct Hub75Matrix option for the panel size you are using. The chain length is the number of panels connected. Note: currently only a horizontal chain of panels is supported.</p>
 <p>Next, you need to go into the 2D Configuration and create a single matrix with the total size of your hub75 setup. e.g a chain of 2 panels with 32x32 pixels each, would be created as a 64x32 matrix in the 2D configuration page</p>
