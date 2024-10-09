@@ -13,7 +13,7 @@ Support for HUB75 in WLED-MM should be considered experimental at the moment, bu
 # Setup
 ## Required Software Build
 ### Adafruit Matrix Portal S3
-Please use the dedicated adafruit_matrixportal_esp32s3 build as this is pre-configured for HUB75 output
+Please use the dedicated adafruit_matrixportal_esp32s3 build as this is pre-configured for the pins needed for HUB75 output
 
 ### Huidu HD-WF2 ESP32-S3
 * Hold the button down as you use a USB-A to USB-A cable to upload esp32S3_4MB_S
@@ -29,7 +29,7 @@ If you are using a board such as the ESP32 Trinity or other boards wired for the
 
 If you are using the rorosaurus/esp32-hub75-driver or any other board using the SmartMatrix default pinout then you will need to do a custom build with ESP32_FORUM_PINOUT defined
 
-If you are using any other config, you currently need to edit wled00/bus_manager.cpp to add a new elif block and define to your build - it is not possible to set the pin config in LED preferences at the moment
+If you are using any other config, you currently need to edit wled00/bus_manager.cpp to add a new elif block and define to your build - it is not possible to set the HUB75 pin config in LED preferences at the moment
 
 ## Configuration
 First, you must set the LED output to match the correct Hub75Matrix option for the panel size you are using. The chain length is the number of panels connected. Note: currently only a horizontal chain of panels is supported.
