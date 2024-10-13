@@ -55,6 +55,7 @@ Next, you need to go into the 2D Configuration and create a single matrix with t
 
 ## HUB75 Known Problems and Limitations 
 * Maximum possible sizes: see previous section
+* combining HUB75 with other LED types (including virtual leds) was not tested yet - it may or may not work.
 * classic ESP32: using audioreactive microphones (or line-in) causes crashes and wifi instabilities. You can still use UDP sound receive for receiving audio data from another board. Please select "None - network receive only" as DigitalMic type.
 * ESP32-S2: its not possible to use HUB75 and audioreactive at the same time.
 * ESP32-S3: After changing HUB75 options (LED preferences), your display will go black. You need to reboot for driver changes to take effect.
