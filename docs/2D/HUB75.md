@@ -32,6 +32,29 @@ If you are using the rorosaurus/esp32-hub75-driver or any other board using the 
 If you are using any other config, you currently need to edit wled00/bus_manager.cpp to add a new elif block and define to your build - it is not possible to set the HUB75 pin config in LED preferences at the moment
 
 ## Configuration
-First, you must set the LED output to match the correct Hub75Matrix option for the panel size you are using. The chain length is the number of panels connected. Note: currently only a horizontal chain of panels is supported.
+### Panel size and chain length
+* Due to limitations in the HUB75 DMA driver, only these panel dimensions are supported:
+  * 32 x 32 (2-scan or 4-scan)
+  * 64 x 32 (2-scan or 4-scan)
+  * 64 x 64 (2-scan or 4-scan)
+  * 128 x 64 (2-scan or 4-scan). Please configure this panel type as 64x64 with _chain length = 2_
+* Only _one HUB75e port_ is supported.
+* Please chain your panels (panel#1 _OUT_ --> panel#2 _IN_) if you want to control more than one panel.
+* Maximum possible size:
+  * Classic ESP32: the maximum possible size is 128x64 - however WLEDMM might get unstable with this setup. We recommend to use no more than 64x64 on classic esp32.
+  * ESP32-S3 without PSRAM: the maximum possible size is 128x64.
+  * ESP32-S3 with PSRAM (8MB or more) : the maximum possible size is 128x128, i.e. 4 chained panels of 64x64 pixels each.
+  * ESP32-S2 is possible, however _not recommended_ due to smaller RAM
+  * ESP32-C3, ESP32-C6 and ESP8266 do not support HUB75
+
+### Setup
+First, you must set the LED output to match the correct Hub75Matrix option for the panel size you are using. The chain length is the number of panels connected. Note: currently only a horizontal chain of panels is supported. You can used 2D setup to configure physical panel positions.
 
 Next, you need to go into the 2D Configuration and create a single matrix with the total size of your hub75 setup. e.g a chain of 2 panels with 32x32 pixels each, would be created as a 64x32 matrix in the 2D configuration page
+
+
+## HUB75 Known Problems and Limitations 
+* Maximum possible sizes: see previous section
+* classic ESP32: using audioreactive microphones (or line-in) causes crashes and wifi instabilities. You can still use UDP sound receive for receiving audio data from another board. Please select "None - network receive only" as DigitalMic type.
+* ESP32-S2: its not possible to use HUB75 and audioreactive at the same time.
+* ESP32-S3: After changing HUB75 options (LED preferences), your display will go black. You need to reboot for driver changes to take effect.
