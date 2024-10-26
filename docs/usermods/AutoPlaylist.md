@@ -9,7 +9,7 @@ hide:
 
 v2 Usermod to automatically change between two playlists:
 
-* A playlist fow when music/audio is present (MusicPlaylist)
+* A playlist for when music/audio is present (MusicPlaylist)
 * A playlist for when silence is present (AmbientPlaylist)
 
 Optionally, "AutoChange" will advance your music playlist automatically when the musicality suggests a good time to change presets.
