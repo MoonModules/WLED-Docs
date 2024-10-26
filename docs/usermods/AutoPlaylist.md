@@ -14,6 +14,8 @@ v2 Usermod to automatically change between two playlists:
 
 Optionally, "AutoChange" will advance your music playlist automatically when the musicality suggests a good time to change presets.
 
+**Note**: _The playlist you have designated as "MusicPlaylist" must be active for the AutoPlaylist function to take control of your presets._
+
 ### Settings
 
 * **Enabled** - Enables/disables the usermod.
