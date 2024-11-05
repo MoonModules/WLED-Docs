@@ -154,7 +154,8 @@ Digital I2S PDM microphone SPM1423 | by SerKo (aka Serg). Buy on [Tindie EU](htt
 | Name | Description |
 |---|---|
 [ESP32 Ethernet Network Shield](https://www.tindie.com/products/30385/)| Ethernet Shield (10/100Mbps) for ESP32 boards. Stackable with D1 Mini32 form factor boards.
-[Wemos D1 mini Level Shifter Shield](https://www.tindie.com/products/jasoncoon/wemos-d1-mini-esp8266-level-shifter-mini-shield/) | A level shifter shield (74HCT125) - by Evil Genius Labs LLC.
+[Logic Level Shifter Board](https://www.tindie.com/products/sjmelectronics/logic-level-converter-level-shifter) | A simple level shifter board. Updated version has selectable data-pin resistors.
+[Logic Level Shifter Shield](https://www.tindie.com/products/sjmelectronics/logic-level-converter-shield)| Logic level shifter shield for Seeed Studio ESP32-C3 and D1 Mini format dev boards. Updated version has selectable data-pin resistors.
 [WIZmote remote control](https://www.google.com/search?q=wizmote) | Remote control using radio network. Compatible with WLED (vesions 0.14.0-beta3 and above). No additional receiver required.
 
 ## Compatible PC RGB Fans and ARGB accessories
@@ -169,7 +170,7 @@ Any | 5v 3-pin ARGB for PC | Any PC RGB device that supports the 5v 3-pin ARGB m
 
 | Name | Description |
 |---|---|
-SN74AHCT125 | Aircoookie's recommended levelshifter. Often used in DIY and commercial controllers.
+SN74AHCT125 | Aircoookie's recommended levelshifter. Often used in DIY and commercial controllers. [sjm Level Shifter Board](https://www.tindie.com/products/sjmelectronics/logic-level-converter-level-shifter)
 SN74AHCT32 | Same pinout as above can be used. This is just an OR gate, but any AHCT gate can be used if inputs are connected appropriately. ;)
 SN74HCT125N | Slower, cheaper version. Works just as well for WS2812, but not recommended for APA102.
 SN74LVC2T45 | Modern bus transceiver with voltage translation [Yet Another WLED Controller](https://github.com/lizardsystems/yawl-controller)
