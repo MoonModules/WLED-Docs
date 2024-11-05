@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -4110,8 +4110,8 @@ Please carefully compare all items in the category you are interested in, and yo
 <td>Higher power options than the above system. Supports optional clock output.</td>
 </tr>
 <tr>
-<td><a href="https://www.athom.tech/blank-1/wled-rgbw-light-strip-controller">Athom RGBW Light Strip Controller</a></td>
-<td>Has outputs for individual color channels.</td>
+<td><a href="https://www.athom.tech/blank-1/wled-rgbcct-analog-and-digital-light-strip-controller">Athom RGBCCT Analog and Digital Light Strip Controller</a></td>
+<td>This WLED controller supports both analog and addressable strip.</td>
 </tr>
 <tr>
 <td><a href="https://www.cadsbi-shop.de/shop/led-beleuchtungscontroller/cadsbi-motion-smart/">Cadsbi Motion Smart</a></td>
@@ -4194,12 +4194,20 @@ Please carefully compare all items in the category you are interested in, and yo
 <td><strong>2021 updated version!</strong> DIY/Pre-Assembled board for digital LED driving. Integrated level shifters, temperature sensor option, Auto 5v-24v compatibility, pull-up/down GPIO and safety features such as a onboard fuse. Recommended to use (and comes with) with <a href="https://quinled.info/quinled-esp32/">custom QuinLED-ESP32</a>. Pre-assembled and pre-flashed with WLED <a href="https://quinled.info/pre-assembled-quinled-dig-uno/">available to buy!</a>. Aircoookie's personal recommendation for medium-size WLED projects.\</td>
 </tr>
 <tr>
+<td><a href="https://rgb2go.com/products/duo2go-pixel-controller">RGB2Go Duo2Go</a></td>
+<td>The Duo2Go is a 2-port WiFi pixel controller that comes with WLED pre-installed! Supports a removable ESP8266. Designed specifically with beginners in mind, it is a great way to introduce yourself to this amazing hobby! Two 5A fused outputs are level shifted and uses 33ohm resistors - perfect for use with 3-wire xConnect cables.</td>
+</tr>
+<tr>
+<td><a href="https://rgb2go.com/products/tetra2go-4-port-wi-fi-pixel-controller">RGB2Go Tetra2Go</a></td>
+<td>The Tetra2Go is a 4-port WiFi pixel controller that comes with WLED pre-installed! Supports a removable ESP32 Mini. Designed specifically with beginners in mind, it is a great way to introduce yourself to this amazing hobby! Four 5A fused outputs are level shifted and uses 33ohm resistors - perfect for use with 3-wire xConnect cables. Also has a built-in expansion header that supports optional modules such as Wired Ethernet, OLED displays, a digital microphone for Audio-Reactive support, a Differential Transmitter with 4 additional outputs, an IR Receiver, and SD Card. Controllers and options available <a href="https://rgb2go.com/collections/controllers">here</a></td>
+</tr>
+<tr>
 <td><a href="https://github.com/wladwnt/wled">Simple WLED Board</a></td>
 <td>Very simple DIY board, minimum of required components, option for 5V/12V LEDs. Easy to solder (no SMT components). Simple to understand connection schematics and pictures. Can be used with ESP8266 or ESP32 in D1 mini Format.</td>
 </tr>
 <tr>
-<td><img alt="Gold Member" src="../../assets/images/content/akemi_gold.png" /><br/> <a href="https://sjmautoprod.com/RGB-Controllers/rgbwX-Wi-Fi-Controllers.html">SJM Autoprod rgbw, rgbw2+, rgbw4</a></td>
-<td>Complete, fully-sealed, analog and digital controllers for vehicular use. rgbw has one RGBW channel, rgbw2+ has two analog, RGBW channels plus two/four addressable outputs (requires external 5V source for 5V LEDs). rgbw4 has four analog RGBW channels. 2+ and 4 support 12V or PWM/analog inputs and have internal PTC "fuses".</td>
+<td><img alt="Gold Member" src="../../assets/images/content/akemi_gold.png" /><br/> <a href="https://www.tindie.com/products/sjmelectronics/rgbwx-series-led-controllers/">SJM Electronics rgbw, rgbw2+, rgbw4</a></td>
+<td>Complete, analog and digital controllers for vehicular use. rgbw has one RGBW channel, rgbw2+ has two analog, RGBW channels plus two/four addressable outputs (requires external 5V source for 5V LEDs). rgbw4 has four analog RGBW channels. 2+ and 4 support 12V or PWM/analog inputs and have internal PTC "fuses".</td>
 </tr>
 <tr>
 <td><a href="https://github.com/stanoba/wifi-desk-lamp">WiFi Controlled Desk Lamp</a></td>
@@ -4258,6 +4266,11 @@ Please carefully compare all items in the category you are interested in, and yo
 <td>An ESP8285 2MB controller with 3 case buttons, built in mic, IR receiver, 38 key remote, and dual outputs. The dual outputs are connected to the same data pin. There is a step-by-step guide for <a href="https://github.com/scottrbailey/WLED-Utils/blob/gh-pages/sp511e_wled.md">Installing WLED on SP511E Controller</a>.</td>
 </tr>
 <tr>
+<td><a href="https://www.aliexpress.com/item/1005006472928868.html">SP530e</a></td>
+<td>ESP32-C3</td>
+<td>ESP32-C3 based Controller that supports both Addressable and PWM-based RGBWW LED strips. 5-24v DC input, sold under BTF lighting, RGBZone, etc. Vendors all list 'BanlanX' as the supporting mobile application. Board is silk screened with 'SP530e' but no other markings. Serial pads and GPIO9 are exposed on the back-side of the board. GPIO 9 must be pulled to GND at boot to enter flashing mode. I/O configuration: LEDPIN is 'GPIO19' for addressable LEDs, BTNPIN is GPIO 3. PWM pin out for RGBWW: WW: 4, CW: 5, R: 10, G: 6 and B: 7. Level shifter used: SN74HCT245 - Warning, the flash is <em>encrypted</em> - be sure to specify the <code>-encrypt</code> flag when flashing with <code>esptool.py</code>. Each device has a unique flash encryption key, but the devs forgot to burn the 'disable UART download' efuse, which means that any non-encrypted firmware can be flashed onto the device, and the device will encrypt the firmware on the first boot. Before flashing, please back up the original firmware of the device with esptool.py <code>esptool.py read_flash 0 0x400000 sp530e-encrypted.bin</code>. Pics of board and the flashing connector here: <a href="https://imgur.com/a/0orUKF1">https://imgur.com/a/0orUKF1</a> -  Sample flashing command: <code>esptool.py write_flash --encrypt 0x0 C3_bootloader.bin 0x8000 C3_partitions_4M.bin 0x10000 WLED_0.15.0-b3_ESP32C3_4MB.bin</code>.</td>
+</tr>
+<tr>
 <td><a href="https://www.electrodragon.com/product/esp-led-strip-board">ESP LED Strip WIFI Control Board [ESP Version]</a></td>
 <td>ESP8266</td>
 <td>Controller for addressable or analog LEDs (RGBW), 6-27VDC input, no level shifter, reset and boot buttons, enclosure. NOTE: Although this uses high-current transistors, they used jumpers on two of the connections so you are limited to their current rating (3A?).</td>
@@ -4280,6 +4293,14 @@ Please carefully compare all items in the category you are interested in, and yo
 <tr>
 <td><img alt="Gold Member" src="../../assets/images/content/akemi_gold.png" /><br/> <a href="https://www.tindie.com/products/24901/">ESP-01 WLED shield</a></td>
 <td>shield board for ESP-01 board, ready to buy on <a href="https://www.tindie.com/products/24901/">Tindie</a>. Integrated level shifter, 3 outputs for various configurations, mosfet for 1 analog channel, <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/%40Aircoookie/Latest">Firmware is here</a>.</td>
+</tr>
+<tr>
+<td><img alt="Gold Member" src="../../assets/images/content/akemi_gold.png" /><br/> <a href="https://www.tindie.com/products/sjmelectronics/analog-cct-driver-shield/">Analog CCT Shield</a></td>
+<td>Shield for analog single or dual (CCT) LED strips. Compatible Seeed Stuido C3 ESP boards.</td>
+</tr>
+<tr>
+<td><img alt="Gold Member" src="../../assets/images/content/akemi_gold.png" /><br/> <a href="https://www.tindie.com/products/sjmelectronics/logic-level-converter-shield/">Logic Level Converter Shield</a></td>
+<td>Shield with two, level-shifted, addressable LED outputs that have switchable data-line resistors. Compatible with Mini D1 or Seeed Stuido C3 ESP boards.</td>
 </tr>
 <tr>
 <td><img alt="Gold Member" src="../../assets/images/content/akemi_gold.png" /><br/> <a href="https://github.com/srg74/WLED-wemos-shield">WLED Wemos shield</a></td>
@@ -4347,6 +4368,11 @@ Please carefully compare all items in the category you are interested in, and yo
 <td><a href="https://www.digikey.com/product-detail/en/espressif-systems/ESP32-DEVKITC-32D/1965-1000-ND/9356990">ESP32 DevKitC v4</a></td>
 <td>ESP32</td>
 <td>The original ESP32 Development Board made by Espressif Systems.</td>
+</tr>
+<tr>
+<td><a href="https://www.aliexpress.us/item/3256805781327184.html">ESP32-C3 Super Mini</a></td>
+<td>ESP32-C3</td>
+<td>Very compact, easy to flash with the USB-C port, can support 3A over the USB-C connector. Extremely cheap, but only has one core so there's a small stutter during Wifi communication. <a href="https://roryhay.es/blog/esp32-c3-super-mini-flaw">Be careful purchasing! Some stores sell a version that has crippling Wifi strength issues.</a></td>
 </tr>
 <tr>
 <td><img alt="Gold Member" src="../../assets/images/content/akemi_gold.png" /><br/> <a href="https://www.tindie.com/products/28858/">ESP32 Mini Dev Board 16mb by SerKo (aka Serg)</a></td>
