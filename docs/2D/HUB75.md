@@ -37,20 +37,20 @@ If you are using any other config, you currently need to edit wled00/bus_manager
   * 32 x 32 (2-scan or 4-scan)
   * 64 x 32 (2-scan or 4-scan)
   * 64 x 64 (2-scan or 4-scan)
-  * 128 x 64 (2-scan or 4-scan). Please configure this panel type as 64x64 with _chain length = 2_
+  * 128 x 64 (2-scan or 4-scan).
 * Only _one HUB75e port_ is supported.
 * Please chain your panels (panel#1 _OUT_ --> panel#2 _IN_) if you want to control more than one panel.
 * Maximum possible size:
   * Classic ESP32: the maximum possible size is 128x64 - however WLEDMM might get unstable with this setup. We recommend to use no more than 64x64 on classic esp32.
-  * ESP32-S3 without PSRAM: the maximum possible size is 128x64.
-  * ESP32-S3 with PSRAM (8MB or more) : the maximum possible size is 128x128, i.e. 4 chained panels of 64x64 pixels each.
+  * ESP32-S3 without PSRAM (including Huidu HD-WF2): the maximum possible size is 128x64, however we recommend to use 64x64 because the firmware might get unstable above this size.
+  * ESP32-S3 with PSRAM (8MB or more) : the maximum possible size is 256x64, i.e. 4 chained panels of 64x64 pixels each.
   * ESP32-S2 is possible, however _not recommended_ due to smaller RAM
   * ESP32-C3, ESP32-C6 and ESP8266 do not support HUB75
 
 ### Setup
-First, you must set the LED output to match the correct Hub75Matrix option for the panel size you are using. The chain length is the number of panels connected. Note: currently only a horizontal chain of panels is supported. You can used 2D setup to configure physical panel positions.
+First, you must set the LED output to match the correct Hub75Matrix option for the panel size you are using. The chain length is the number of panels connected. Note: currently only a horizontal chain of panels is supported. ~~You can used 2D setup to configure physical panel positions~~ unfortunately it's not possible to use 2D setup to change the panel layout of chained panels.
 
-Next, you need to go into the 2D Configuration and create a single matrix with the total size of your hub75 setup. e.g a chain of 2 panels with 32x32 pixels each, would be created as a 64x32 matrix in the 2D configuration page
+Next, you need to go into the 2D Configuration and create a __single_ matrix with the total size of your hub75 setup. e.g a chain of 2 panels with 32x32 pixels each, would be created as a 64x32 matrix in the 2D configuration page
 
 
 ## HUB75 Known Problems and Limitations 
