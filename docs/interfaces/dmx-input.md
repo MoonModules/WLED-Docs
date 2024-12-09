@@ -20,7 +20,7 @@ For the DMX feature to work, you'll need to use the V4 build varients. Define al
 
 #### hardware setup
 
-The DMX interface require the use of an RS484 adapter such as the MAX485 transceiver connected to the pins defined in setup of the ESP in order to handle DMX input and RDM input and output.
+The DMX interface require the use of an RS485 adapter such as the MAX485 transceiver connected to the pins defined in setup of the ESP in order to handle DMX input and RDM input and output.
 
 
 You will need to use three GPIO pins that support output.
