@@ -13,10 +13,13 @@ hide:
 #### features and limitations
 
 * one universe (512 channels)
+  
 
 #### software setup
 
-For the DMX feature to work, you'll need to use the V4 build varients. Define all the pins you are using in the DMX input section of the Sync Interfaces menu
+For the DMX feature to work, you'll need to use the V4 build variants. Define all the pins you are using in the DMX input section of the Sync Interfaces menu
+
+The wired DMX will work exactly like the network DMX options, only a single universe, so see [e1.31-dmx](/interfaces/e1.31-dmx/) for details of the different DMX modes
 
 #### hardware setup
 
