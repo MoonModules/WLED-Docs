@@ -136,6 +136,5 @@ WLED -> WLED works fine, of course. Mostly tested with the receiving WLED set to
 
 WLED -> <a href="http://www.live-leds.de/">Jinx</a> technically works, but Jinx only takes a few settings over "network DMX" to remote control the GUI. This will require some tinkering and perhaps building a custom WLED for yourself.
 
-### TODO
-
-I've proposed "DMX into WLED via a physical DMX wire (RS485)." This would be equivalent to "Effect" (and will likely be based on that mapping) so that you could plug WLED boards into a DMX512 cable and have it "do a thing" when you push a slider on the lighting control board/software. **This feature does not currently exist, but is being worked on.**
+### Wired DMX
+If you want your WLED boards to plug into a DMX512 cable and have it "do a thing" when you push a slider on the lighting control board/software, please see [DMX Input](/interfaces/dmx-input/)
