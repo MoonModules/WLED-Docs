@@ -31,7 +31,7 @@ Optionally, "AutoChange" will advance your music playlist automatically when the
 
 AutoChange looks at the properties of the incoming audio to try and determine a good time to change presets in your music playlist.
 
-This is entirely just "for fun" and should not to be relied on to be overly accurate, etc. It's a calculation, not a VJ or lighjting artist.
+This is entirely just "for fun" and should not to be relied on to be overly accurate, etc. It's a calculation, not a VJ or lighting artist - but it does a reasonable job.
 
 AutoChange works with some new values computed in the AudioReactive usermod:
 
