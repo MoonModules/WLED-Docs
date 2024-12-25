@@ -81,7 +81,7 @@ No special requirements.
 
 2024-12-25
 
-This document: Some typos fixed, clarifications added, formatting fixed. 
+* This document: Some typos fixed, clarifications added, formatting fixed. 
 
 2024-04-04
 
