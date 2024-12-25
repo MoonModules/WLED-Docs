@@ -4106,9 +4106,11 @@
 <li><strong>energy</strong> - The squared prodict of adding up all the calculated and normalized FFT results</li>
 <li><strong>lowFreqencyContent</strong> - Currently just the lowest bin of the calculated and normalized FFT results.</li>
 </ul>
-<p>These values are each calculted as two averages in the AutoPlaylist usermod:
-* A fast-moving average for each of the 3 values
-* A slow-moving average for each of the 3 values</p>
+<p>These values are each calculted as two averages in the AutoPlaylist usermod:</p>
+<ul>
+<li>A fast-moving average for each of the 3 values</li>
+<li>A slow-moving average for each of the 3 values</li>
+</ul>
 <p>Finally, a vector is computed to determine the difference between the two average pools. When this vector is minimal, the preset is changed.</p>
 <p>The change threshhold is calculated on the fly and adjusted up or down based on if we are faster or slower than our ideal change window.</p>
 <p>"Change Lockout" will prevent the usermod from changing the presets more frequently than this number of milliseconds, 
