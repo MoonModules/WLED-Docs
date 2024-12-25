@@ -79,10 +79,17 @@ No special requirements.
 
 ### Change Log
 
+2024-12-25
+
+This document: Some typos fixed, clarifications added, formatting fixed. 
+
+2024-04-04
+
+* Docs updated with debug flag. 
+
 2024-03-25
+
 * Pre-Beta release, docs added.
   
-2024-04-04
-* Docs updated with debug flag. 
 
 
