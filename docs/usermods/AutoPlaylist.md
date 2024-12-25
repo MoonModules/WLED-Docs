@@ -40,6 +40,7 @@ AutoChange works with some new values computed in the AudioReactive usermod:
 * **lowFreqencyContent** - Currently just the lowest bin of the calculated and normalized FFT results.
 
 These values are each calculted as two averages in the AutoPlaylist usermod:
+
 * A fast-moving average for each of the 3 values
 * A slow-moving average for each of the 3 values
 
