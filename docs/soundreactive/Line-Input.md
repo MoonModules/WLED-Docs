@@ -10,7 +10,7 @@ Looking to add line-in with I2S support? You might want to try I2S ADC boards th
 * [Ti PCM1808](https://www.ti.com/product/PCM1808) or [Ti PCM1802](https://www.ti.com/product/PCM1802)
 * [ES8388](https://datasheet.lcsc.com/lcsc/1912111437_Everest-semi-Everest-Semiconductor-ES8388_C365736.pdf) and [AC101](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC101_User_Manual_v1.1.pdf)
 * [WM8978](https://www.mouser.com/datasheet/2/76/WM8978_v4.5-1141768.pdf)
-* [ES8311](https://dl.xkwy2018.com/downloads/RK3588/01_Official%20Release/04_Product%20Line%20Branch_NVR/02_Key%20Device%20Specifications/ES8311%20DS.pdf)
+* [ES8311](https://dl.xkwy2018.com/downloads/RK3588/01_Official%20Release/04_Product%20Line%20Branch_NVR/02_Key%20Device%20Specifications/ES8311%20DS.pdf) (mic is the common config)
 
 Many I2S ADC line-in boards expect an additional MCLK signal ("Main Clock" aka "System Clock" aka "Master Clock" aka "Memory Clock").  MCLK is sometimes labelled SCLK for "system clock". For these boards with 4 data pins, use the AudioReactive `Generic I2S with MCLK` input option, and connect MCLK pin to GPIO pin 0 on the original ESP32. 
 
