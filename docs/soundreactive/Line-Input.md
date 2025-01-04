@@ -168,7 +168,7 @@ If you need line-in on the ESP32-P4, you can use any of the other boards above o
 
 Support for the ES8311 chipset is derived from the [Espressif ESP32-P4 EV dev board]([https://github.com/ohmic-net/puca_dsp](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32p4/esp32-p4-function-ev-board/user_guide.html)):
 
-![image](https://github.com/user-attachments/assets/5e56c281-8a06-4854-ba3f-3e74b64ca121)
+![chrome_43Ve8gzxUv](https://github.com/user-attachments/assets/8b78ddf8-e96f-4125-8c78-455d34b28b25)
 
 This has also been confirmed on the Waveshare ESP32-P4 Nano boards as well, which use the same pins:
 
