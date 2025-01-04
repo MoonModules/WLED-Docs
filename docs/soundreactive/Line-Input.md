@@ -162,7 +162,7 @@ The Puca DSP board pins are as follows:
 
 This audio chip reqires I2C commands to initialize properly so including it here as it's a codec chip.
 
-Many current (Jan 21025) ESP32-P4 dev boards use this chip, and those have one microphone on the board - as such this is a mic input and not a line-in, but could be supported in that configuration if someone released hardware.
+Many current (Jan 2025) ESP32-P4 dev boards use this chip, and those have one microphone on the board - as such this is a mic input and not a line-in, but could be supported in that configuration if someone released hardware.
 
 If you need line-in on the ESP32-P4, you can use any of the other boards above on the P4, using different I2S pins from the on-board I2S codec chip.
 
