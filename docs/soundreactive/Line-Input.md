@@ -157,3 +157,31 @@ The Puca DSP board pins are as follows:
 * I2C SDA = 19 (set in global)
 * I2C SCL = 18 (set in global)
  
+## ES8311 (mic, not line-in!)
+
+This audio chip reqires I2C commands to initialize properly so including it here as it's a codec chip.
+
+Many current (Jan 21025) ESP32-P4 dev boards use this chip, and those have one microphone on the board - as such this is a mic input and not a line-in, but could be supported in that configuration if someone released hardware.
+
+If you need line-in on the ESP32-P4, you can use any of the other boards above on the P4, using different I2S pins from the on-board I2S codec chip.
+
+Support for the ES8311 chipset is derived from the [Espressif ESP32-P4 EV dev board]([https://github.com/ohmic-net/puca_dsp](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32p4/esp32-p4-function-ev-board/user_guide.html)):
+
+![image](https://github.com/user-attachments/assets/5e56c281-8a06-4854-ba3f-3e74b64ca121)
+
+This has also been confirmed on the Waveshare ESP32-P4 Nano boards as well, which use the same pins:
+
+![image](https://github.com/user-attachments/assets/7dfabca1-138a-4d62-a6fa-4d1233743e05)
+
+### Pin Config
+
+The Espressif EV and Waveshare Nano ESP32-P4 board pins are as follows:
+
+* Type: ES8311
+* I2S SD = 11
+* I2S WS = 10
+* I2S SCK = 12
+* I2S MCLK = 13
+* I2C SDA = 7 (set in global)
+* I2C SCL = 8 (set in global)
+ 
