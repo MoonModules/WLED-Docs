@@ -115,6 +115,7 @@ For windows, there is **WledSRServer** which is a small application that is doin
 A Python script that transforms an audio stream to feed WLED over the air using its audio-reactive feature with Mac/Linux.
 
 ### [WLEDAudioSync Module for Chataigne](https://github.com/zak-45/WLEDAudioSync-Chataigne-Module)
+A very feature-rich audio toolset that can also communicate with WLED-MM.
 
 --- 
 UDP Sound sync brought to you by @spedione on Discord.
