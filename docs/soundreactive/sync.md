@@ -33,6 +33,8 @@ When an ESP32 is configured for audio transmission, it will connect to a UDP Mul
 
 ### V1 format, used in SR WLED up to 0.13.x
 
+The V1 format is not recommended for new development, as every WLED variant (since 0.13.3) can read the V2 format.
+
 <div style="background-color: LightGray">
   
 ```c++
@@ -54,7 +56,6 @@ struct audioSyncPacket {
 #### important
 * this is a C language "struct". Due to padding performed by gcc, the actual V1 package is slightly bigger; it includes "padding bytes" for aligning struct members to word boundaries.
 * make sure that "reserved" and "gap" fields are initialized to `0`.
-* the V1 format is not recommended for new development, as every WLED variant (since 0.13.3) can parse the V2 format
 
 UDP_SYNC_HEADER is a versioning number that's defined in audio_reactive.h
 
