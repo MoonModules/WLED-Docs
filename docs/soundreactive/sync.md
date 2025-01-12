@@ -32,6 +32,9 @@ In order to change the UDP Sync Mode (Disabled/Transmit/Receive), you need to po
 When an ESP32 is configured for audio transmission, it will connect to a UDP Multicast address, and begin sending a single UDP Multicast packet containing the data used to generate sound-reactive animations out to any other devices that are configured to receive on the same network.  The following information is transmitted:
 
 ### V1 format, used in SR WLED up to 0.13.x
+
+<div style="background-color: LightGray">
+  
 ```c++
 #define UDP_SYNC_HEADER "00001"
 struct audioSyncPacket {
@@ -46,6 +49,8 @@ struct audioSyncPacket {
   double FFT_MajorPeak;   //  08 Bytes
 };
 ```
+</div>
+
 #### important
 * this is a C language "struct". Due to padding performed by gcc, the actual V1 package is slightly bigger; it includes "padding bytes" for aligning struct members to word boundaries.
 * make sure that "reserved" and "gap" fields are initialized to `0`.
@@ -54,6 +59,8 @@ struct audioSyncPacket {
 UDP_SYNC_HEADER is a versioning number that's defined in audio_reactive.h
 
 ### V2 Format - WLED version >= 0.14.0 (including MoonModules fork)
+
+<div style="background-color: LightGray">
 
 ```c++
 #define UDP_SYNC_HEADER_V2 "00002"
@@ -73,6 +80,7 @@ UDP_SYNC_HEADER is a versioning number that's defined in audio_reactive.h
     };
 
 ```
+</div>
 
 The V2 format expects that AGC is performed by the sender, so there is no need to transmit "AGC" and "non-AGC" samples separately. To save bandwidth, the `myvals[]` array was removed, and all numbers are either `float` or `uint8_t`.
 
