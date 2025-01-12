@@ -4229,6 +4229,7 @@
 <h2 id="technical">Technical</h2>
 <p>When an ESP32 is configured for audio transmission, it will connect to a UDP Multicast address, and begin sending a single UDP Multicast packet containing the data used to generate sound-reactive animations out to any other devices that are configured to receive on the same network.  The following information is transmitted:</p>
 <h3 id="v1-format-used-in-sr-wled-up-to-013x">V1 format, used in SR WLED up to 0.13.x</h3>
+<p>The V1 format is not recommended for new development, as every WLED variant (since 0.13.3) can read the V2 format.</p>
 <div style="background-color: LightGray">
 
 <div class="highlight"><pre><span></span><code><span class="cp">#define UDP_SYNC_HEADER &quot;00001&quot;</span>
@@ -4250,7 +4251,6 @@
 <ul>
 <li>this is a C language "struct". Due to padding performed by gcc, the actual V1 package is slightly bigger; it includes "padding bytes" for aligning struct members to word boundaries.</li>
 <li>make sure that "reserved" and "gap" fields are initialized to <code>0</code>.</li>
-<li>the V1 format is not recommended for new development, as every WLED variant (since 0.13.3) can parse the V2 format</li>
 </ul>
 <p>UDP_SYNC_HEADER is a versioning number that's defined in audio_reactive.h</p>
 <h3 id="v2-format-wled-version-0140-including-moonmodules-fork">V2 Format - WLED version &gt;= 0.14.0 (including MoonModules fork)</h3>
