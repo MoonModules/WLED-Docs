@@ -60,7 +60,7 @@ UDP_SYNC_HEADER is a versioning number that's defined in audio_reactive.h
 
 ### V2 Format - WLED version >= 0.14.0 (including MoonModules fork)
 
-<div style="background-color: LightGray">
+<div style="background-color: Gray">
 
 ```c++
 #define UDP_SYNC_HEADER_V2 "00002"
