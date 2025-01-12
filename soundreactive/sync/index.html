@@ -3136,6 +3136,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="V1 format, used in SR WLED up to 0.13.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important" class="md-nav__link">
+    <span class="md-ellipsis">
+      important
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -3144,6 +3159,21 @@
       V2 Format - WLED version &gt;= 0.14.0 (including MoonModules fork)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="V2 Format - WLED version >= 0.14.0 (including MoonModules fork)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4046,6 +4076,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="V1 format, used in SR WLED up to 0.13.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important" class="md-nav__link">
+    <span class="md-ellipsis">
+      important
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -4054,6 +4099,21 @@
       V2 Format - WLED version &gt;= 0.14.0 (including MoonModules fork)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="V2 Format - WLED version >= 0.14.0 (including MoonModules fork)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4164,26 +4224,38 @@
 <span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">FFT_MajorPeak</span><span class="p">;</span><span class="w">   </span><span class="c1">//  08 Bytes</span>
 <span class="p">};</span>
 </code></pre></div>
+<h4 id="important">important</h4>
+<ul>
+<li>this is a C language "struct". Due to padding performed by gcc, the actual V1 package is slightly bigger; it includes "padding bytes" for aligning struct members to word boundaries.</li>
+<li>make sure that "reserved" and "gap" fields are initialized to <code>0</code>.</li>
+<li>the V1 format is not recommended for new development, as every WLED variant (since 0.13.3) can parse the V2 formzt</li>
+</ul>
 <p>UDP_SYNC_HEADER is a versioning number that's defined in audio_reactive.h</p>
 <h3 id="v2-format-wled-version-0140-including-moonmodules-fork">V2 Format - WLED version &gt;= 0.14.0 (including MoonModules fork)</h3>
 <div class="highlight"><pre><span></span><code><span class="cp">#define UDP_SYNC_HEADER_V2 &quot;00002&quot;</span>
 
-<span class="c1">// new &quot;V2&quot; audiosync struct - 44 Bytes</span>
+<span class="w">    </span><span class="c1">// new &quot;V2&quot; audiosync struct - 44 Bytes</span>
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">__attribute__</span><span class="w"> </span><span class="p">((</span><span class="n">packed</span><span class="p">))</span><span class="w"> </span><span class="n">audioSyncPacket</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// WLEDMM &quot;packed&quot; ensures that there are no additional gaps</span>
-<span class="w">      </span><span class="kt">char</span><span class="w">    </span><span class="n">header</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span><span class="w">      </span><span class="c1">//  06 Bytes  offset 0</span>
-<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pressure</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w">    </span><span class="c1">//  02 Bytes, offset 6  - sound pressure as fixed point (8bit integer,  8bit fraction) </span>
-<span class="w">      </span><span class="kt">float</span><span class="w">   </span><span class="n">sampleRaw</span><span class="p">;</span><span class="w">      </span><span class="c1">//  04 Bytes  offset 8  - either &quot;sampleRaw&quot; or &quot;rawSampleAgc&quot; depending on soundAgc setting</span>
+<span class="w">      </span><span class="kt">char</span><span class="w">    </span><span class="n">header</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span><span class="w">          </span><span class="c1">//  06 Bytes  offset 0 - &quot;00002&quot; for protocol version 2 ( includes \0 for c-style string termination) </span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pressure</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w">     </span><span class="c1">//  02 Bytes, offset 6  - sound pressure as fixed point (8bit integer,  8bit fraction) </span>
+<span class="w">      </span><span class="kt">float</span><span class="w">   </span><span class="n">sampleRaw</span><span class="p">;</span><span class="w">       </span><span class="c1">//  04 Bytes  offset 8  - either &quot;sampleRaw&quot; or &quot;rawSampleAgc&quot; depending on soundAgc setting</span>
 <span class="w">      </span><span class="kt">float</span><span class="w">   </span><span class="n">sampleSmth</span><span class="p">;</span><span class="w">     </span><span class="c1">//  04 Bytes  offset 12 - either &quot;sampleAvg&quot; or &quot;sampleAgc&quot; depending on soundAgc setting</span>
-<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">samplePeak</span><span class="p">;</span><span class="w">     </span><span class="c1">//  01 Bytes  offset 16 - 0 no peak; &gt;=1 peak detected. In future, this will also provide peak Magnitude</span>
-<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">frameCounter</span><span class="p">;</span><span class="w">   </span><span class="c1">//  01 Bytes  offset 17 - track duplicate/out of order packets</span>
-<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">fftResult</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="w">  </span><span class="c1">//  16 Bytes  offset 18</span>
-<span class="w">      </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">zeroCrossingCount</span><span class="p">;</span><span class="w"> </span><span class="c1">// 02 Bytes, offset 34</span>
-<span class="w">      </span><span class="kt">float</span><span class="w">  </span><span class="n">FFT_Magnitude</span><span class="p">;</span><span class="w">   </span><span class="c1">//  04 Bytes  offset 36</span>
-<span class="w">      </span><span class="kt">float</span><span class="w">  </span><span class="n">FFT_MajorPeak</span><span class="p">;</span><span class="w">   </span><span class="c1">//  04 Bytes  offset 40</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">samplePeak</span><span class="p">;</span><span class="w">   </span><span class="c1">//  01 Bytes  offset 16 - 0 no peak; &gt;=1 peak detected. In future, this will also provide peak Magnitude</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">frameCounter</span><span class="p">;</span><span class="w">   </span><span class="c1">//  01 Bytes  offset 17 - rolling counter to track duplicate/out of order packets</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">fftResult</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="w">    </span><span class="c1">//  16 Bytes  offset 18 - 16 GEQ channels, each channel has one byte (uint8_t)</span>
+<span class="w">      </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">zeroCrossingCount</span><span class="p">;</span><span class="w"> </span><span class="c1">// 02 Bytes, offset 34 - number of zero crossings seen in 23ms</span>
+<span class="w">      </span><span class="kt">float</span><span class="w">  </span><span class="n">FFT_Magnitude</span><span class="p">;</span><span class="w">   </span><span class="c1">//  04 Bytes  offset 36 - largest FFT result from a single run (raw value, can go up to 4096)</span>
+<span class="w">      </span><span class="kt">float</span><span class="w">  </span><span class="n">FFT_MajorPeak</span><span class="p">;</span><span class="w">   </span><span class="c1">//  04 Bytes  offset 40 - frequency (Hz) of largest FFT result</span>
 <span class="w">    </span><span class="p">};</span>
 </code></pre></div>
 <p>The V2 format expects that AGC is performed by the sender, so there is no need to transmit "AGC" and "non-AGC" samples separately. To save bandwidth, the <code>myvals[]</code> array was removed, and all numbers are either <code>float</code> or <code>uint8_t</code>.</p>
 <p>SR-WLED 0.13.3 still sends out V1 format, however it is able to receive and decode V2 format, too.</p>
+<h4 id="notes">notes</h4>
+<ul>
+<li>this is a C language "packed struct", so you can see padding bytes as gaps.</li>
+<li>binary formats are the ones utilized by the esp32 compiler (float is 4bytes, uint8_t is one byte unsigned)</li>
+<li>make sure that "reserved" and "gap" fields are initialized to <code>0</code>.</li>
+</ul>
 <h2 id="values">values</h2>
 <ul>
 <li>In general, all sample data is scaled to be in the range of [0...255], to make effects happy. For the values transmitted as <code>float</code>, additional accuracy can be provided by using the fraction part of the number - for example <code>sampleSmth= 127.125</code>. Samples transmitted  are the max value from approx 20 milliseconds of sampling, with AGC gain already applied.</li>
