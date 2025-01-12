@@ -106,12 +106,15 @@ When configured to receive audio data from another device, the receiver will *di
 
 ## Using a Computer as source (PC audio to WLED)
 
+Below a (non-executive) list of some open source tools that utilize the audio sync format.
+
 ### [WledSRServer](https://github.com/Victoare/SR-WLED-audio-server-win)
 For windows, there is **WledSRServer** which is a small application that is doing the audio capturing, FFT computation and packet sending on the system. It sends out V2 packets.
 
 ### [Feed_My_WLED](https://github.com/chrisgott/feed_my_wled)
 A Python script that transforms an audio stream to feed WLED over the air using its audio-reactive feature with Mac/Linux.
 
+### [WLEDAudioSync Module for Chataigne](https://github.com/zak-45/WLEDAudioSync-Chataigne-Module)
 
 --- 
 UDP Sound sync brought to you by @spedione on Discord.
