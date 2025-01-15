@@ -111,8 +111,7 @@ Join the Discord server to discuss everything about WLED!
 <a href="https://discord.gg/QAh7wJHrRM"><img src="https://discordapp.com/api/guilds/473448917040758787/widget.png?style=banner2" width="25%"></a>
 
 Check out the WLED [Discourse forum](https://wled.discourse.group)!  
-You can also send me mails to [dev.aircoookie@gmail.com](mailto:dev.aircoookie@gmail.com), but please only do so if you want to talk to me privately.  
-If WLED really brightens up your every day, you can [![Paypalbadge](https://img.shields.io/badge/send%20me%20a%20small%20gift-paypal-blue.svg?style=flat-square)](https://paypal.me/moonmodules)
+If WLED MM really brightens up your every day, you can [![Paypalbadge](https://img.shields.io/badge/send%20me%20a%20small%20gift-paypal-blue.svg?style=flat-square)](https://paypal.me/moonmodules)
 
 !!! danger "Disclaimer"
     If you are sensitive to photosensitive epilepsy it is not recommended that you use this software.  
