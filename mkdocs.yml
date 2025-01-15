@@ -61,7 +61,7 @@ extra:
     - icon: fontawesome/solid/shirt
       link: https://wled.teemill.com/
     - icon: fontawesome/solid/heart
-      link: https://paypal.me/aircoookie/
+      link: https://paypal.me/moonmodules/
   analytics:
     provider: google
     property: G-VDGV464P2H
