@@ -174,7 +174,6 @@ nav:
       - Human Sized Cube: moonmodules/showcases-hcs.md
   - 2D: 
     - HUB75: 2D/HUB75.md
-    - WIP: 2D/wip.md
   - Sound Reactive: 
     - Introduction: soundreactive/introduction.md
     - Sound Settings: soundreactive/Sound-Settings.md
