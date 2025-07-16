@@ -2,7 +2,7 @@ site_name: WLED MoonModules Project
 site_author: Ewoud Wijma (ewowi)
 #site_url: https://wled.app
 repo_name: WLED-MM
-repo_url: https://github.com/MoonModules/WLED
+repo_url: https://github.com/MoonModules/WLED-MM
 repo_title: WLED-MM Repository
 edit_uri: https://github.com/MoonModules/WLED-Docs/edit/main/docs
 theme:
