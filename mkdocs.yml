@@ -173,9 +173,9 @@ nav:
     - Showcases: 
       - Human Sized Cube: moonmodules/showcases-hcs.md
   - 2D:
+    - HUB75: 2D/HUB75.md
     - 2D Support: WLEDSR/2D-Support.md
     - 2D LED Preferences: WLEDSR/LED-Preferences.md  
-    - HUB75: 2D/HUB75.md
   - Sound Reactive: 
     - Introduction: soundreactive/introduction.md
     - Sound Settings: soundreactive/Sound-Settings.md
