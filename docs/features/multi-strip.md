@@ -60,7 +60,7 @@ In WLED-MM, classic ESP32 can calculate about *200k-300k LEDs* per second
 - 4 output pins seem to be the sweet spot (see below).
 - With many output pins the ESP32 will be very busy driving parallel outputs, so it can't calculate as many LEDs.
 
-Keep in mind that the limiting factor is usually the speed of the ws2812b protocol - each strip (=output pin) runs an 800kz serial protocol, and each pixel needs 24 bits (RGB color).
+Keep in mind that the limiting factor is usually the speed of the ws2812b protocol - each strip (=output pin) runs an 800 kHz serial protocol, and each pixel needs 24 bits (RGB color).
 You can calculate the max possible speed - per output pin - with this formula : 
 
  ``800000 / 24 / strip_length_in_pixels `` = max frames per second.
