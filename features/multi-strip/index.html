@@ -4496,20 +4496,24 @@ Pins and LED numbers can be easily configured in LED settings, you don't need to
 </ul>
 <h4 id="performance">Performance</h4>
 <p>In WLED-MM, classic ESP32 can calculate about <em>200k-300k LEDs</em> per second
-- This means 1,000 LEDs at 250 frames per second, 2,000 LEDs at 120 frames per second, and 4,000 LEDs at 70 frames per second.
+- This means 1,000 LEDs at 250 frames per second, 2,000 LEDs at 120 frames per second, or 4,000 LEDs at 70 frames per second.
 - WLED-MM framerates can even be faster if effects don't redraw each LED in each frame.
 - However these maximum values can only be achieved with HUB75, or when you distribute your LEDs over several output pins.
-- 4 output pins seem to be the sweet spot.
+- 4 output pins seem to be the sweet spot (see below).
 - With many output pins the ESP32 will be very busy driving parallel outputs, so it can't calculate as many LEDs.</p>
-<p>Keep in mind that limiting factor is often the speed of the ws2812b protocol. Each strip (=output pin) runs a 800kz bitwise protocol, and each pixel needs 24 bits (RGB color).
-- You can calculate the max possible speed (per output pin) with this formula : <code>800000 / 24 / strip_length_pixels</code> = max frames per second. For RGB+White, replace "24" with "32".
-- 144 LEDs per output pin -&gt; max 230 fps
-- 240 LEDs per output pin -&gt; max 139 fps
-- 320 LEDs per output pin -&gt; max 104 fps
-- 500 LEDs per output pin -&gt; max 67 fps
-- 800 LEDs per output pin -&gt; max 42 fps
-- 1000 LEDs per output pin -&gt; max 33 fps
-- 2000 LEDs per output pin -&gt; max 17 fps</p>
+<p>Keep in mind that the limiting factor is usually the speed of the ws2812b protocol - each strip (=output pin) runs an 800kz serial protocol, and each pixel needs 24 bits (RGB color).
+You can calculate the max possible speed - per output pin - with this formula : </p>
+<p><code>800000 / 24 / strip_length_in_pixels</code> = max frames per second.
+  For RGB+White (sk6812), replace "24" with "32".</p>
+<ul>
+<li>144 LEDs per output pin -&gt; max 230 fps</li>
+<li>240 LEDs per output pin -&gt; max 139 fps</li>
+<li>320 LEDs per output pin -&gt; max 104 fps</li>
+<li>500 LEDs per output pin -&gt; max 67 fps</li>
+<li>800 LEDs per output pin -&gt; max 42 fps</li>
+<li>1000 LEDs per output pin -&gt; max 33 fps</li>
+<li>2000 LEDs per output pin -&gt; max 17 fps</li>
+</ul>
 <h3 id="virtual-leds-ddp-and-art-net">Virtual LEDs (DDP and Art-Net 🌜)</h3>
 <p>See <a href="/advanced/ddp">Virtual Leds</a></p>
 
