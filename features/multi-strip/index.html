@@ -4508,7 +4508,7 @@ Pins and LED numbers can be easily configured in LED settings, you don't need to
 <li>4 output pins seem to be the sweet spot (see below).</li>
 <li>With many output pins the ESP32 will be very busy driving parallel outputs, so it can't calculate as many LEDs.</li>
 </ul>
-<p>Keep in mind that the limiting factor is usually the speed of the ws2812b protocol - each strip (=output pin) runs an 800kz serial protocol, and each pixel needs 24 bits (RGB color).
+<p>Keep in mind that the limiting factor is usually the speed of the ws2812b protocol - each strip (=output pin) runs an 800 kHz serial protocol, and each pixel needs 24 bits (RGB color).
 You can calculate the max possible speed - per output pin - with this formula : </p>
 <p><code>800000 / 24 / strip_length_in_pixels</code> = max frames per second.
   For RGB+White (sk6812), replace "24" with "32".</p>
