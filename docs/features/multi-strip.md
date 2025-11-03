@@ -46,8 +46,27 @@ There are a few tips and recomendations to keep in mind when designing your setu
 - For good performance, you can use 1000 LEDs/pin with 4 outputs for a total of 4000 LEDs.
 - For okay performance, you can use 1000 LEDs/pin with 5 outputs for a total of 5000 LEDs.
 - For okay performance, you can use 800 LEDs/pin with 6 outputs for a total of 4800 LEDs.
-- ESP32 can calculate about 65k-85k LEDs per second (that means 1000 LEDs @~70fps, 2000 LEDs @~35fps, 4000 LEDs @~18fps)
-- 4 outputs seem to be the sweet spot. 
+
+
+#### Performance
+
+In WLED-MM, classic ESP32 can calculate about *200k-300k LEDs* per second
+- This means 1,000 LEDs at 250 frames per second, 2,000 LEDs at 120 frames per second, and 4,000 LEDs at 70 frames per second.
+- WLED-MM framerates can even be faster if effects don't redraw each LED in each frame.
+- However these maximum values can only be achieved with HUB75, or when you distribute your LEDs over several output pins.
+- 4 output pins seem to be the sweet spot.
+- With many output pins the ESP32 will be very busy driving parallel outputs, so it can't calculate as many LEDs.
+
+Keep in mind that limiting factor is often the speed of the ws2812b protocol. Each strip (=output pin) runs a 800kz bitwise protocol, and each pixel needs 24 bits (RGB color).
+- You can calculate the max possible speed (per output pin) with this formula : ``800000 / 24 / strip_length_pixels `` = max frames per second. For RGB+White, replace "24" with "32".
+- 144 LEDs per output pin -> max 230 fps
+- 240 LEDs per output pin -> max 139 fps
+- 320 LEDs per output pin -> max 104 fps
+- 500 LEDs per output pin -> max 67 fps
+- 800 LEDs per output pin -> max 42 fps
+- 1000 LEDs per output pin -> max 33 fps
+- 2000 LEDs per output pin -> max 17 fps
+
 
 ### Virtual LEDs (DDP and Art-Net 🌜)
 
