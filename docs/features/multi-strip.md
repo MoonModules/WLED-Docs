@@ -41,9 +41,11 @@ There are a few tips and recomendations to keep in mind when designing your setu
  - * ESP32-S2: 5 led strips (4 with audioreactive)
  - * ESP32-C3: 2 led strips
 - Contrary to the ESP8266, the pin usage does not matter on ESP32, feel free to use any available pin
-- For perfect performance, it is recommeded to use 512 LEDs/pin with 4 outputs for a total of 2048 LEDs.
-- For very good performance, it is recommended to use 800 LEDs/pin with 4 outputs for a total of 3200 LEDs.
-- For good performance, you can use 1000 LEDs/pin with 4 outputs for a total of 4000 LEDs.
+  
+- For best eye-candy performance, it is recommeded to use 320 LEDs/pin with 4 outputs for a total of 1280 LEDs.
+- For smooth performance, it is recommeded to use 512 LEDs/pin with 4 outputs for a total of 2048 LEDs.
+- For acceptable performance, it is recommended to use 800 LEDs/pin with 4 outputs for a total of 3200 LEDs.
+- For okay performance, you can use 1000 LEDs/pin with 4 outputs for a total of 4000 LEDs.
 - For okay performance, you can use 1000 LEDs/pin with 5 outputs for a total of 5000 LEDs.
 - For okay performance, you can use 800 LEDs/pin with 6 outputs for a total of 4800 LEDs.
 
@@ -54,7 +56,7 @@ In WLED-MM, classic ESP32 can calculate about *200k-300k LEDs* per second
 
 - This means 1,000 LEDs at 250 frames per second, 2,000 LEDs at 120 frames per second, or 4,000 LEDs at 70 frames per second.
 - WLED-MM framerates can even be faster if effects don't redraw each LED in each frame.
-- However these maximum values can only be achieved with HUB75, or when you distribute your LEDs over several output pins.
+- However these maximum values can only be achieved with HUB75, Art-Net hardware, or when you distribute your LEDs over several output pins.
 - 4 output pins seem to be the sweet spot (see below).
 - With many output pins the ESP32 will be very busy driving parallel outputs, so it can't calculate as many LEDs.
 
@@ -65,7 +67,7 @@ You can calculate the max possible speed - per output pin - with this formula :
   For RGB+White (sk6812), replace "24" with "32".
 
 - 144 LEDs per output pin -> max 230 fps
-- 240 LEDs per output pin -> max 139 fps
+- 256 LEDs per output pin -> max 130 fps
 - 320 LEDs per output pin -> max 104 fps
 - 500 LEDs per output pin -> max 67 fps
 - 800 LEDs per output pin -> max 42 fps
