@@ -4487,10 +4487,15 @@ Pins and LED numbers can be easily configured in LED settings, you don't need to
 <li>ESP32-C3: 2 led strips</li>
 </ul>
 </li>
-<li>Contrary to the ESP8266, the pin usage does not matter on ESP32, feel free to use any available pin</li>
-<li>For perfect performance, it is recommeded to use 512 LEDs/pin with 4 outputs for a total of 2048 LEDs.</li>
-<li>For very good performance, it is recommended to use 800 LEDs/pin with 4 outputs for a total of 3200 LEDs.</li>
-<li>For good performance, you can use 1000 LEDs/pin with 4 outputs for a total of 4000 LEDs.</li>
+<li>
+<p>Contrary to the ESP8266, the pin usage does not matter on ESP32, feel free to use any available pin</p>
+</li>
+<li>
+<p>For best eye-candy performance, it is recommeded to use 320 LEDs/pin with 4 outputs for a total of 1280 LEDs.</p>
+</li>
+<li>For smooth performance, it is recommeded to use 512 LEDs/pin with 4 outputs for a total of 2048 LEDs.</li>
+<li>For acceptable performance, it is recommended to use 800 LEDs/pin with 4 outputs for a total of 3200 LEDs.</li>
+<li>For okay performance, you can use 1000 LEDs/pin with 4 outputs for a total of 4000 LEDs.</li>
 <li>For okay performance, you can use 1000 LEDs/pin with 5 outputs for a total of 5000 LEDs.</li>
 <li>For okay performance, you can use 800 LEDs/pin with 6 outputs for a total of 4800 LEDs.</li>
 </ul>
@@ -4499,7 +4504,7 @@ Pins and LED numbers can be easily configured in LED settings, you don't need to
 <ul>
 <li>This means 1,000 LEDs at 250 frames per second, 2,000 LEDs at 120 frames per second, or 4,000 LEDs at 70 frames per second.</li>
 <li>WLED-MM framerates can even be faster if effects don't redraw each LED in each frame.</li>
-<li>However these maximum values can only be achieved with HUB75, or when you distribute your LEDs over several output pins.</li>
+<li>However these maximum values can only be achieved with HUB75, Art-Net hardware, or when you distribute your LEDs over several output pins.</li>
 <li>4 output pins seem to be the sweet spot (see below).</li>
 <li>With many output pins the ESP32 will be very busy driving parallel outputs, so it can't calculate as many LEDs.</li>
 </ul>
@@ -4509,7 +4514,7 @@ You can calculate the max possible speed - per output pin - with this formula : 
   For RGB+White (sk6812), replace "24" with "32".</p>
 <ul>
 <li>144 LEDs per output pin -&gt; max 230 fps</li>
-<li>240 LEDs per output pin -&gt; max 139 fps</li>
+<li>256 LEDs per output pin -&gt; max 130 fps</li>
 <li>320 LEDs per output pin -&gt; max 104 fps</li>
 <li>500 LEDs per output pin -&gt; max 67 fps</li>
 <li>800 LEDs per output pin -&gt; max 42 fps</li>
