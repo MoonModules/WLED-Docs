@@ -51,14 +51,18 @@ There are a few tips and recomendations to keep in mind when designing your setu
 #### Performance
 
 In WLED-MM, classic ESP32 can calculate about *200k-300k LEDs* per second
-- This means 1,000 LEDs at 250 frames per second, 2,000 LEDs at 120 frames per second, and 4,000 LEDs at 70 frames per second.
+- This means 1,000 LEDs at 250 frames per second, 2,000 LEDs at 120 frames per second, or 4,000 LEDs at 70 frames per second.
 - WLED-MM framerates can even be faster if effects don't redraw each LED in each frame.
 - However these maximum values can only be achieved with HUB75, or when you distribute your LEDs over several output pins.
-- 4 output pins seem to be the sweet spot.
+- 4 output pins seem to be the sweet spot (see below).
 - With many output pins the ESP32 will be very busy driving parallel outputs, so it can't calculate as many LEDs.
 
-Keep in mind that limiting factor is often the speed of the ws2812b protocol. Each strip (=output pin) runs a 800kz bitwise protocol, and each pixel needs 24 bits (RGB color).
-- You can calculate the max possible speed (per output pin) with this formula : ``800000 / 24 / strip_length_pixels `` = max frames per second. For RGB+White, replace "24" with "32".
+Keep in mind that the limiting factor is usually the speed of the ws2812b protocol - each strip (=output pin) runs an 800kz serial protocol, and each pixel needs 24 bits (RGB color).
+You can calculate the max possible speed - per output pin - with this formula : 
+
+ ``800000 / 24 / strip_length_in_pixels `` = max frames per second.
+  For RGB+White (sk6812), replace "24" with "32".
+
 - 144 LEDs per output pin -> max 230 fps
 - 240 LEDs per output pin -> max 139 fps
 - 320 LEDs per output pin -> max 104 fps
