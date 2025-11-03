@@ -51,6 +51,7 @@ There are a few tips and recomendations to keep in mind when designing your setu
 #### Performance
 
 In WLED-MM, classic ESP32 can calculate about *200k-300k LEDs* per second
+
 - This means 1,000 LEDs at 250 frames per second, 2,000 LEDs at 120 frames per second, or 4,000 LEDs at 70 frames per second.
 - WLED-MM framerates can even be faster if effects don't redraw each LED in each frame.
 - However these maximum values can only be achieved with HUB75, or when you distribute your LEDs over several output pins.
