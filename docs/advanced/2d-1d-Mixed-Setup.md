@@ -12,6 +12,7 @@ WLED-MM supports mixing 2D and 1D setup on the same unit, the expected result is
 
 !!! important 
     The necessary steps are different from upstream WLED. In WLED-MM, you create a "pseudo" 2D panel for the trailing strip, then set "Expand 1D FX" to "Pixels" in segment options.
+    
     As WLED-SR has introduced 2D panels long before upstream WLED, we are still using the original approach for mixed setups. As a benefit, you will be able to create interesting effects by running a 2D effects on "stripes" of a pseudo 2D panel (example: GEQ flat on a pseudo 16x6 panel -> puts all bars next to each other on the strip)
 
 
