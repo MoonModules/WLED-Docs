@@ -268,6 +268,13 @@
   
     
     
+      
+  
+  
+  
+  
+    
+    
       <li class="md-tabs__item">
         <a href="../../basics/getting-started/" class="md-tabs__link">
           
@@ -277,6 +284,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -311,7 +321,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../interfaces/blynk/" class="md-tabs__link">
+        <a href="../../interfaces/dmx-input/" class="md-tabs__link">
           
   
   
@@ -586,9 +596,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../basics/getting-started/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -597,7 +621,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/wiring-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wiring Guides
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1378,29 +1460,6 @@
             Interfaces
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../interfaces/blynk/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Blynk
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -4387,6 +4446,7 @@
 <li>Timed light duration over</li>
 <li>Device (re)boot (up to 0.10.2, use LED settings <code>Boot preset</code> in 0.11)</li>
 </ul>
+<p>Note: If you have multiple presets that run at the same time, the lowest down the list takes precedence.</p>
 <p>Each macro has the format of a standard <a href="/interfaces/http-api">HTTP API call</a> without the IP. Optionally, the "win&amp;" may be omitted.
 For example, the macro "A=255" sets the brightness to maximum. "R=255&amp;G=160&amp;B=0" sets the color to orange.
 You can specify up to 16 macros. (up to 250 in WLED 0.11 since the Macro functionality has been merged into the Presets feature)</p>

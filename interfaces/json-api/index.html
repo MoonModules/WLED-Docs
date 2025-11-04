@@ -268,6 +268,13 @@
   
     
     
+      
+  
+  
+  
+  
+    
+    
       <li class="md-tabs__item">
         <a href="../../basics/getting-started/" class="md-tabs__link">
           
@@ -277,6 +284,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -311,7 +321,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../blynk/" class="md-tabs__link">
+        <a href="../dmx-input/" class="md-tabs__link">
           
   
   
@@ -586,9 +596,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../basics/getting-started/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -597,7 +621,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/wiring-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wiring Guides
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1307,29 +1389,6 @@
             Interfaces
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../blynk/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Blynk
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -4916,7 +4975,7 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 <tr>
 <td>ps</td>
 <td>-1 to 250</td>
-<td>ID of currently set preset. <code>1~17~</code> can be used to iterate through presets 1-17, or <code>4~10~r</code> to select random preset between presets 4 and 10 (inclusive).</td>
+<td>ID of currently set preset. <code>1~17~</code> can be used to iterate through presets 1-17, or <code>4~10r</code> to select random preset between presets 4 and 10 (inclusive).</td>
 </tr>
 <tr>
 <td><del>pss</del></td>
@@ -5517,7 +5576,7 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 </tr>
 <tr>
 <td>Select random palette between 5 and 10 on segment 2</td>
-<td><code>{"seg":[{"id":2,"pal":"5~10~r"}]}</code></td>
+<td><code>{"seg":[{"id":2,"pal":"5~10r"}]}</code></td>
 </tr>
 <tr>
 <td>Change segment 0 name</td>

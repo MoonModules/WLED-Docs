@@ -268,6 +268,13 @@
   
     
     
+      
+  
+  
+  
+  
+    
+    
       <li class="md-tabs__item">
         <a href="basics/getting-started/" class="md-tabs__link">
           
@@ -277,6 +284,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -309,7 +319,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="interfaces/blynk/" class="md-tabs__link">
+        <a href="interfaces/dmx-input/" class="md-tabs__link">
           
   
   
@@ -637,9 +647,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="basics/getting-started/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -648,7 +672,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basics/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basics/wiring-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wiring Guides
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1353,29 +1435,6 @@
             Interfaces
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="interfaces/blynk/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Blynk
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -4335,8 +4394,7 @@
   <a href="https://wled.discourse.group"><img src="https://img.shields.io/discourse/topics?colorB=blue&label=forum&server=https%3A%2F%2Fwled.discourse.group%2F&style=flat-square"></a>
   <a href="https://discord.gg/4CQRmfR"><img src="https://img.shields.io/discord/700041398778331156.svg?colorB=blue&label=discord&style=flat-square"></a>
   <a href="https://github.com/MoonModules/WLED"><img src="https://img.shields.io/badge/source-github-blue.svg?style=flat-square"></a>
-  <a href="https://github.com/Aircoookie/WLED-App"><img src="https://img.shields.io/badge/app-wled-blue.svg?style=flat-square"></a>
-  <a href="https://gitpod.io/#https://github.com/MoonModules/WLED"><img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?style=flat-square&logo=gitpod"></a>
+  <a href="https://github.com/WLED/WLED-App"><img src="https://img.shields.io/badge/app-wled-blue.svg?style=flat-square"></a>
 </p>
 
 <h1 id="welcome-to-wled-moonmodules">Welcome to WLED MoonModules</h1>
@@ -4362,7 +4420,7 @@
 <p><a href="https://discord.gg/HgAsbvWuJ3"><img src="https://discordapp.com/api/guilds/700041398778331156/widget.png?style=banner2" width="25%"></a></p>
 <p>WLED Aircoookie welcome 👇</p>
 <h1 id="welcome-to-my-project-wled">Welcome to my project WLED! ✨</h1>
-<p>A fast and feature-rich implementation of an ESP8266/ESP32 webserver to control NeoPixel (WS2812B, WS2811, SK6812) LEDs or also SPI based chipsets like the WS2801 and APA102!</p>
+<p>A fast and feature-rich implementation of an ESP32/ESP8266 webserver to control NeoPixel (WS2812B, WS2811, SK6812) LEDs or also SPI based chipsets like the WS2801 and APA102!</p>
 <h2 id="features">⚙️ Features</h2>
 <ul>
 <li>WS2812FX library integrated for over 100 special effects  </li>
@@ -4384,8 +4442,8 @@
 </ul>
 <h2 id="supported-light-control-interfaces">💡 Supported light control interfaces</h2>
 <ul>
-<li><a href="https://github.com/Aircoookie/WLED-App">WLED app</a> for <a href="https://play.google.com/store/apps/details?id=com.aircoookie.WLED">Android</a> and <a href="https://apps.apple.com/us/app/wled/id1475695033">iOS</a></li>
-<li>Alternatively, WLED Native app made by community member <a href="https://github.com/Moustachauve">Moustachauve</a><ul>
+<li>Community driven mobile applications</li>
+<li>WLED Native app made by community member <a href="https://github.com/Moustachauve">Moustachauve</a><ul>
 <li>For <a href="https://play.google.com/store/apps/details?id=ca.cgagnier.wlednativeandroid">Android</a> [<a href="(https://github.com/Moustachauve/WLED-Native-Android)">Source</a>]</li>
 <li>For <a href="https://apps.apple.com/us/app/wled-native/id6446207239">iOS</a> [<a href="(https://github.com/Moustachauve/WLED-Native-iOS/)">Source</a>]</li>
 </ul>
@@ -4411,7 +4469,7 @@
 <h2 id="compatible-hardware">💾 Compatible hardware</h2>
 <p>See <a href="/basics/compatible-hardware">here</a>!</p>
 <h2 id="other">✌️ Other</h2>
-<p>Licensed under the MIT license<br />
+<p>Licensed under the EUPL-1.2 license 
 Credits <a href="/about/contributors">here</a>!</p>
 <p>Join the Discord server to discuss everything about WLED!</p>
 <p><a href="https://discord.gg/QAh7wJHrRM"><img src="https://discordapp.com/api/guilds/473448917040758787/widget.png?style=banner2" width="25%"></a></p>

@@ -268,6 +268,13 @@
   
     
     
+      
+  
+  
+  
+  
+    
+    
       <li class="md-tabs__item">
         <a href="../../basics/getting-started/" class="md-tabs__link">
           
@@ -277,6 +284,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -309,7 +319,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../interfaces/blynk/" class="md-tabs__link">
+        <a href="../../interfaces/dmx-input/" class="md-tabs__link">
           
   
   
@@ -586,9 +596,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../basics/getting-started/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -597,7 +621,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/wiring-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wiring Guides
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1403,29 +1485,6 @@
             Interfaces
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../interfaces/blynk/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Blynk
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -4535,8 +4594,8 @@
   <h1>Compiling WLED</h1>
 
 <p>You want to add custom features to WLED, use non-default pins, or add in a usermod? You've found the right place!</p>
-<p>WLED has come to rely on so many dependencies in the latest versions that building with the Arduino IDE is no longer recommended.
-Instead, installing Visual Studio Code and its PlatformIO (PIO) extension is easier, as it will install the ESP Arduino core, all the required libraries and the correct compilation settings for you automatically.</p>
+<p>WLED has come to rely on so many dependencies in the latest versions that building with Visual Studio Code and its PlatformIO (PIO) extension is the recommended way. It will install the ESP Arduino core, all the required libraries and the correct compilation settings for you automatically. The Arduino IDE is no longer recommended.</p>
+<p>If you don't want to change the code but only add some compile options and/or usermods, you can use bot on discord or compile with just few clicks using <a href="https://wled-compile.github.io/">this inofficial web based wled compiler</a>. Using it you can download the resulting .bin file directly or install  via USB using built-in web-based installer.</p>
 <h3 id="preparations">Preparations</h3>
 <ol>
 <li>Make sure Git client is installed on your system. If it isn't, you can get it <a href="https://git-scm.com/downloads">here</a>.</li>

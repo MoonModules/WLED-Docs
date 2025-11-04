@@ -268,6 +268,13 @@
   
     
     
+      
+  
+  
+  
+  
+    
+    
       <li class="md-tabs__item">
         <a href="../../basics/getting-started/" class="md-tabs__link">
           
@@ -277,6 +284,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -309,7 +319,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../interfaces/blynk/" class="md-tabs__link">
+        <a href="../../interfaces/dmx-input/" class="md-tabs__link">
           
   
   
@@ -586,9 +596,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../basics/getting-started/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -597,7 +621,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/wiring-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wiring Guides
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1302,29 +1384,6 @@
             Interfaces
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../interfaces/blynk/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Blynk
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -4560,8 +4619,7 @@
   <h1>Audio Reactive WLED</h1>
 
 <h2 id="what-is-audio-reactive-wled">What is Audio Reactive WLED?</h2>
-<p>Audio Reactive WLED is a possibility of using WLED controllers in such a way that the LEDs react to music and light up in time. First time this was implemented by a <a href="https://github.com/atuline/WLED">Sound Reactive Fork</a>. As of WLED version 0.14.0-beta1 an usermod is available for original WLED too.
-Currently only ESP32 microcontrollers are supported.</p>
+<p>Audio Reactive WLED is a possibility of using WLED controllers in such a way that the LEDs react to music and light up in time. First time this was implemented by a <a href="https://github.com/atuline/WLED">Sound Reactive Fork</a>. As of WLED version 0.14.0-beta1 an usermod is available for original WLED too. Since version 0.15.0 this usermod is included in the official WLED releases.</p>
 <h2 id="hardware-required">Hardware required</h2>
 <p>The audio must be "feed" into the microcontroller. There are basically four options: using microphones, line-in adapters, another WLED instance or directly from a PC.</p>
 <h3 id="microphones-supported">Microphones supported</h3>
@@ -4592,11 +4650,12 @@ Currently only ESP32 microcontrollers are supported.</p>
 <p><img alt="Examples analog to I2S" src="../../assets/images/content/examples_analog_to_i2s.jpg" /></p>
 <p>For some more details please refer to <a href="https://mm.kno.wled.ge/soundreactive/introduction/">Sound Reactive WLED WIKI</a></p>
 <h3 id="audio-sync-wled">Audio Sync - WLED</h3>
-<p>You do not need to include an audio input source in every WLED device to take advantage of the Audio Reactive effects. Simply set the sync mode to "send" on the device with the audio input and all the other devices set to "receive" for their sync mode in the Audio Reactive settings. </p>
+<p>You do not need to include an audio input source in every WLED device to take advantage of the Audio Reactive effects. Simply set the sync mode to "send" on the device with the audio input and all the other devices set to "receive" for their sync mode in the Audio Reactive settings.
+This only works if your network supports multicast.</p>
 <h3 id="audio-sync-wledsrserver">Audio Sync - WledSRServer</h3>
 <p>For Windows, there is <a href="https://github.com/Victoare/SR-WLED-audio-server-win">WledSRServer</a> which is a small application that can capture audio directly from your PC, process it into WLED Audio Sync data and send it out onto your network - emulating WLED in send mode. Configure all your WLED instances to receive.</p>
 <h2 id="software-required">Software required</h2>
-<p>Because audio reactive capability is currently implemented as a usermod, you need WLED compiled with this usermod included. The <a href="https://install.wled.me/">official WEB-based WLED installer</a> does not include original WLED with audio reactive usermod, but offers Sound Reactive WLED as an option. The <a href="https://wled-install.github.io/">unofficial WEB-based WLED installer</a> offers more options including original WLED with audio reactive usermod.</p>
+<p>Because audio reactive capability is currently implemented as a usermod, you need WLED compiled with this usermod included. The <a href="https://install.wled.me/">official WEB-based WLED installer</a> includes the usermod by default since version 0.15.0. The <a href="https://wled-install.github.io/">unofficial WEB-based WLED installer</a> offers more options including original WLED with audio reactive usermod for older versions.</p>
 
 
 
