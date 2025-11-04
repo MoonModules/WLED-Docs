@@ -28,4 +28,4 @@ WLED-MM supports mixing 2D and 1D setup on the same unit, the expected result is
 Note: some "pseudo" 2D layouts are automaticially detected by WLED-MM. For these cases, 1D effects will run as expected, but you might not see the  "Expand 1D FX" segment option.
 
 !!! Tip
-    A user has posted a [set of screenhosts here](https://github.com/MoonModules/WLED-MM/issues/79#issuecomment-2068537606) that guide through all steps.
+    A user has posted a [set of screenshots here](https://github.com/MoonModules/WLED-MM/issues/79#issuecomment-2068537606) that guide through all steps.
