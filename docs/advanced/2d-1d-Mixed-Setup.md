@@ -13,11 +13,11 @@ WLED-MM supports mixing 2D and 1D setup on the same unit, the expected result is
 !Important: The necessary steps are different from upstream WLED. In WLED-MM, you create a "pseudo" 2D panel for the trailing strip, then set "Expand 1D FX" to "Pixels" in segment options.
 
 
-1. Setup your total LED count in Config -> LED Preferences as usual. For example a 8x8 matrix and a strip of 32 pixels chained to the end of your matrix. The total count should be 64 + 32 = 96. This also works with virtual LEDs via DDP or ArtNet.
+1. Setup your total LED count in Config -> LED Preferences as usual. For example a 8x8 matrix and a strip of 30 pixels chained to the end of your matrix. The total count should be 64 + 30 = 94. This also works with virtual LEDs via DDP or ArtNet.
 2. Go to Config -> 2D setup and create the 8x8 matrix, and a second matrix panel for the trailing strip.
 3. For larger pixel counts, you should chose square dimensions like 5x6. For smaller pixel counts, create a panel with only one row, like 30x1.
 4. Position the "pseudo" 2D panel at the right / top side of your "real" 8x8 matrix panel => startX = 8, startY = 0.
-5. Now create segments for both 2D panels. click on the segment for your trailing strip, slect a 1D effect, then change "Expand 1D FX" to "Pixels" in segment options.
+5. Now create segments for both 2D panels. click on the segment for your trailing strip, select a 1D effect, then change "Expand 1D FX" to "Pixels" in segment options.
 6. You might need to experiment with "Reverse X" and "Reverse Y" options, to make the effect behave correctly.
 7. Save your segment, create a new preset for the current setup. Its recommended to set this preset as startup preset in LEDs settings.
 
