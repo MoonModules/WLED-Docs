@@ -10,7 +10,8 @@ hide:
 
 WLED-MM supports mixing 2D and 1D setup on the same unit, the expected result is that you could use 2D fixture and still chain a strip after or setup a strip and then a matrix after on the same pin.
 
-!Important: The necessary steps are different from upstream WLED. In WLED-MM, you create a "pseudo" 2D panel for the trailing strip, then set "Expand 1D FX" to "Pixels" in segment options.
+!!! important 
+    The necessary steps are different from upstream WLED. In WLED-MM, you create a "pseudo" 2D panel for the trailing strip, then set "Expand 1D FX" to "Pixels" in segment options.
 
 
 1. Setup your total LED count in Config -> LED Preferences as usual. For example a 8x8 matrix and a strip of 30 pixels chained to the end of your matrix. The total count should be 64 + 30 = 94. This also works with virtual LEDs via DDP or ArtNet.
