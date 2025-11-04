@@ -33,7 +33,7 @@ There are a few tips and recomendations to keep in mind when designing your setu
 - ESP8266 can calculate about 15k LEDs per second (that means 250LEDs @~60fps, 500 LEDs @~30fps, 1000 LEDs @~15fps)
 - The LED settings will give you a bar that shows how much memory you can allocate.
 
-### ESP32
+### ESP32 🌜
 
 - There is a maximum of 10 strips supported on "classic" ESP32 (dual core) boards. In audioreactive builds, you can use up to 9, because the audio input driver needs one of the hardware units that is normally available for driving LEDs.
  - * "classic" ESP32: 10 led strips (9 with audioreactive)
@@ -50,7 +50,7 @@ There are a few tips and recomendations to keep in mind when designing your setu
 - For okay performance, you can use 800 LEDs/pin with 6 outputs for a total of 4800 LEDs.
 
 
-#### Performance
+#### Performance 🌜
 
 In WLED-MM, classic ESP32 can calculate about *200k-300k LEDs* per second
 
