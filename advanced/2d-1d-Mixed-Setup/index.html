@@ -4332,7 +4332,9 @@
 <p class="admonition-title">Important</p>
 <p>The necessary steps are different from upstream WLED. In WLED-MM, you create a "pseudo" 2D panel for the trailing strip, then set "Expand 1D FX" to "Pixels" in segment options.</p>
 </div>
-<p>| As WLED-SR has introduced 2D panels long before upstream WLED, we are still using the original approach for mixed setups. As a benefit, you will be able to create interesting effects by running a 2D effects on "stripes" of a pseudo 2D panel (example: GEQ 2D on a pseudo 16x6 panel -&gt; puts all bars next to each other on the strip)</p>
+<blockquote>
+<p>As WLED-SR has introduced 2D panels long before upstream WLED, we are still using the original approach for mixed setups. As a benefit, you will be able to create interesting effects by running a 2D effects on "stripes" of a pseudo 2D panel (example: GEQ 2D on a pseudo 16x6 panel -&gt; puts all bars next to each other on the strip)</p>
+</blockquote>
 <ol>
 <li>Setup your total LED count in Config -&gt; LED Preferences as usual. For example a 8x8 matrix and a strip of 30 pixels chained to the end of your matrix. The total count should be 64 + 30 = 94. This also works with virtual LEDs via DDP or ArtNet.</li>
 <li>Go to Config -&gt; 2D setup and create the 8x8 matrix, and a second matrix panel for the trailing strip.</li>
