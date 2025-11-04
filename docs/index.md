@@ -12,8 +12,7 @@ hide:
   <a href="https://wled.discourse.group"><img src="https://img.shields.io/discourse/topics?colorB=blue&label=forum&server=https%3A%2F%2Fwled.discourse.group%2F&style=flat-square"></a>
   <a href="https://discord.gg/4CQRmfR"><img src="https://img.shields.io/discord/700041398778331156.svg?colorB=blue&label=discord&style=flat-square"></a>
   <a href="https://github.com/MoonModules/WLED"><img src="https://img.shields.io/badge/source-github-blue.svg?style=flat-square"></a>
-  <a href="https://github.com/Aircoookie/WLED-App"><img src="https://img.shields.io/badge/app-wled-blue.svg?style=flat-square"></a>
-  <a href="https://gitpod.io/#https://github.com/MoonModules/WLED"><img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?style=flat-square&logo=gitpod"></a>
+  <a href="https://github.com/WLED/WLED-App"><img src="https://img.shields.io/badge/app-wled-blue.svg?style=flat-square"></a>
 </p>
   
 # Welcome to WLED MoonModules
@@ -47,7 +46,7 @@ WLED Aircoookie welcome 👇
 
 # Welcome to my project WLED! ✨
 
-A fast and feature-rich implementation of an ESP8266/ESP32 webserver to control NeoPixel (WS2812B, WS2811, SK6812) LEDs or also SPI based chipsets like the WS2801 and APA102!
+A fast and feature-rich implementation of an ESP32/ESP8266 webserver to control NeoPixel (WS2812B, WS2811, SK6812) LEDs or also SPI based chipsets like the WS2801 and APA102!
 
 ## ⚙️ Features
 
@@ -70,8 +69,8 @@ A fast and feature-rich implementation of an ESP8266/ESP32 webserver to control 
 
 ## 💡 Supported light control interfaces
 
-- [WLED app](https://github.com/Aircoookie/WLED-App) for [Android](https://play.google.com/store/apps/details?id=com.aircoookie.WLED) and [iOS](https://apps.apple.com/us/app/wled/id1475695033)
-  - Alternatively, WLED Native app made by community member [Moustachauve](https://github.com/Moustachauve)
+- Community driven mobile applications
+  - WLED Native app made by community member [Moustachauve](https://github.com/Moustachauve)
     - For [Android](https://play.google.com/store/apps/details?id=ca.cgagnier.wlednativeandroid) [[Source]((https://github.com/Moustachauve/WLED-Native-Android))]
     - For [iOS](https://apps.apple.com/us/app/wled-native/id6446207239) [[Source]((https://github.com/Moustachauve/WLED-Native-iOS/))]
 - [JSON](/interfaces/json-api) and [HTTP request](/interfaces/http-api) APIs  
@@ -103,7 +102,7 @@ See [here](/basics/compatible-hardware)!
 
 ## ✌️ Other
 
-Licensed under the MIT license  
+Licensed under the EUPL-1.2 license 
 Credits [here](/about/contributors)!
 
 Join the Discord server to discuss everything about WLED!

@@ -153,6 +153,8 @@ Digital I2S PDM microphone SPM1423 | by SerKo (aka Serg). Buy on [Tindie EU](htt
 
 | Name | Description |
 |---|---|
+[ABC! WLED PWM Board](https://shop.myhome-control.de/WLED-PWM-Board/HW10024) | This board integrates MOSFETs with additional protection measures (overcurrent, overtemperature, short circuit and reverse polarity) and can be used in combination with any WLED controller to control analogue LED strips. [German shop & shipping within Germany or to Poland.](https://shop.myhome-control.de/WLED-PWM-Board/HW10024)
+[ABC! WLED Switch Board](https://shop.myhome-control.de/en/ABC-WLED-Switch-Board/HW10021) | This board integrates self-protected electronic switches (MOSFET based) as modern alternative to relays and can be used to switch off power provided to LEDs in "OFF" state. It also provides overcurrent, overtemperature, short circuit and reverse polarity protection. [German shop & shipping within Germany or to Poland.](https://shop.myhome-control.de/en/ABC-WLED-Switch-Board/HW10021)
 [ESP32 Ethernet Network Shield](https://www.tindie.com/products/30385/)| Ethernet Shield (10/100Mbps) for ESP32 boards. Stackable with D1 Mini32 form factor boards.
 [Logic Level Shifter Board](https://www.tindie.com/products/sjmelectronics/logic-level-converter-level-shifter) | A simple level shifter board. Updated version has selectable data-pin resistors.
 [Logic Level Shifter Shield](https://www.tindie.com/products/sjmelectronics/logic-level-converter-shield)| Logic level shifter shield for Seeed Studio ESP32-C3 and D1 Mini format dev boards. Updated version has selectable data-pin resistors.
@@ -177,6 +179,7 @@ SN74LVC2T45 | Modern bus transceiver with voltage translation [Yet Another WLED 
 Amplifier/Splitter | These have been tested and do work. [More info here.](https://discord.com/channels/473448917040758787/719873873071308821/1278797679656439849) - [Example product](https://www.amazon.com/BTF-LIGHTING-WS2812B-Amplifier-Support-addressable/dp/B0B5ZSSFR7)
 TXS0102, TXS0108 | Not recommended: these bidirectional levelshifters do work but only for short data lines (less than 50cm).
 [F-Amp](https://pixelcontroller.com/store/accessories/54-famp-xconnect.html) | Level shifter/data booster
+Adafruit Shifter | https://www.adafruit.com/product/6066
 
 !!! warning
     I2C shifters are generally too slow for addressable LEDs, so don't use them.  

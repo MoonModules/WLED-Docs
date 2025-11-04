@@ -72,7 +72,9 @@ extra_javascript:
 nav:
   - Welcome: index.md
   - Basics:
-    - Getting Started: basics/getting-started.md
+    - Getting Started: 
+      - Quick Start: basics/getting-started.md
+      - Wiring Guides: basics/wiring-guides.md
     - Top 5 mistakes: basics/top5_mistakes.md
     - Compatibility:
       - LED strips: basics/compatible-led-strips.md
@@ -99,7 +101,6 @@ nav:
     - Pixel Art Converter: features/pixel-art-converter.md
     - Ethernet (LAN) compatibility: features/ethernet-lan.md
   - Interfaces: 
-    - Blynk: interfaces/blynk.md
     - DMX Input: interfaces/dmx-input.md
     - DMX Output: interfaces/dmx-output.md
     - E1.31 (DMX) / Art-Net: interfaces/e1.31-dmx.md
