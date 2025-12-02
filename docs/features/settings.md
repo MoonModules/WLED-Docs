@@ -53,7 +53,7 @@ Each output has the following settings:
 |---|---|---|---|
 Type (represented by the output's number) | multiple options | WS281x | Select the type of LEDs this output will be controlling
 Clock | multiple options | "Normal" | Select the PWM or SPI frequency used when driving supported LEDs <br> Used PWM frequencies for the ESP8266 / ESP32, and SPI respectively; <br> Slowest: 293.33 Hz / 6510.33 Hz / 1 MHz <br> Slow: 440 Hz / 9765.50 Hz / 2 MHz <br> Normal: 880 Hz / 19531 Hz / 5 MHz <br> Fast: 1760 Hz / 39062 Hz / 10 MHz <br> Fastest: 2640 Hz / 58593 Hz / 20 MHz <br> [*only appears if "Type" is set to a type that is controlled by PWM or SPI*]
-Color order | muliple options | "GRB" | Select which order your LEDs process color information (e.g. if your LEDs display red and green swapped, try changing it) [*only appears if "Type" is set to a type that supports color order*]
+Color order | multiple options | "GRB" | Select which order your LEDs process color information (e.g. if your LEDs display red and green swapped, try changing it) [*only appears if "Type" is set to a type that supports color order*]
 Start/Index | integer | cummulative length of all previous outputs | Define which address this output (or its first pixel) should use within WLED's address space [*only editable if "Custom bus start indices" is on*]
 Length | integer | 1 | Define how many pixels are connected to this output [*only appears if "Type" is set to a type that supports multiple pixels*]
 (Data/Clk) GPIO(s) | integer | (blank) | Tell WLED which GPIO pin(s) this output is connected to [*number and description of GPIO settings will depend on the output's selected type*]
@@ -79,7 +79,7 @@ Additionally, one or more Color Order Overrides can be defined by clicking the p
 |---|---|---|---|
 Start | integer | 0 | Define which address this color override should start it
 Length | integer | 1 | Define how many pixels in a row should have their color setting overridden
-Color order | muliple options | "GRB" | Same as "Color order" above
+Color order | multiple options | "GRB" | Same as "Color order" above
 
 ### Other settings
 
@@ -91,7 +91,7 @@ Turn on after power up | Y/N | Whether the lights should turn on after a reset
 Apply preset | 0..16 | Preset to load at boot (0 = none)
 Use Gamma for brightness | Y/N | Will correct brightness changes to make it appear more linear. Advised to leave off
 Use Gamma for color | Y/N | Will correct colors to match those on a monitor. Strongly advised to keep on
-Brightness factor | 1..255 | Factor to change master brightness if it is to dim/bright for a certain configuration
+Brightness factor | 1..255 | Factor to change master brightness if it is too dim/bright for a certain configuration
 Crossfade | Y/N | Whether to have a smooth fading transitional effect when changing colors/brightness
 Transition time | 0..65535 | How many milliseconds the transition lasts
 Enable transition for secondary color | Y/N |
