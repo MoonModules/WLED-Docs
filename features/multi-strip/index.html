@@ -5320,11 +5320,17 @@
 <h2 id="multi-strip-support">Multi strip support</h2>
 <p>Starting in WLED 0.12.0, you are able to use multiple LED outputs from one ESP board!
 Pins and LED numbers can be easily configured in LED settings, you don't need to re-compile code for your specific setup. Custom binaries for multiple pins are now also a thing of the past!</p>
-<p>There are a few tips and recomendations to keep in mind when designing your setup:</p>
+<p>There are a few tips and recommendations to keep in mind when designing your setup:</p>
 <h3 id="general">General</h3>
 <ul>
 <li>It is highly recommended to use an ESP32 when using more than 1 output</li>
 <li>You may freely choose the LEDs type, pin numbers, length and color order of your LED strips at runtime in the LED settings page</li>
+<li>You cannot use input-only pins for LEDs output<ul>
+<li>classic esp32: pins 34 through 39 are input only.</li>
+<li>esp32-s2: pin 46 is input only.</li>
+<li>esp32-s3 and esp32-c3 don't have any input-only pins.</li>
+</ul>
+</li>
 <li>Highly recommended to size power supply correctly according to your setup and disable the WLED brightness limiter setting to increase framerate with very large LED counts</li>
 <li>Most strip types have yet to be tested. Add confirmed working below:</li>
 <li>Confirmed working: WS281x, SK6812 RGBW, PWM white</li>
@@ -5366,7 +5372,7 @@ Pins and LED numbers can be easily configured in LED settings, you don't need to
 </ul>
 </li>
 <li>
-<p>Contrary to the ESP8266, the pin usage does not matter on ESP32, feel free to use any available pin</p>
+<p>Contrary to the ESP8266, the pin usage does not matter on ESP32, feel free to use any available pin, except for input-only pins.</p>
 </li>
 <li>
 <p>For best eye-candy performance, it is recommeded to use 320 LEDs/pin with 4 outputs for a total of 1280 LEDs.</p>
