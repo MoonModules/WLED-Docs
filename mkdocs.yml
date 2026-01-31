@@ -126,6 +126,7 @@ nav:
     - Custom Features: advanced/custom-features.md
     - ESP32 Recovery: advanced/esp32-recovery.md
     - Mapping: advanced/mapping.md
+    - Segment Masks: advanced/segment-masks.md
     - Mixed 2D and 1D Setups: advanced/2d-1d-Mixed-Setup.md
     - Virtual LEDs: advanced/ddp.md
     - Custom Access Point Configuration: advanced/custom-ap.md
