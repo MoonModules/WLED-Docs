@@ -21,8 +21,8 @@ theme:
     - content.action.edit
     # - toc.integrate
   palette:
-    - scheme: wled
-      primary: cyan #mostly overriden in extra.css
+    - scheme: slate
+      primary: cyan #mostly overridden in extra.css
       accent: orange
       toggle: 
         icon: material/weather-sunny
@@ -118,12 +118,14 @@ nav:
     - Audio Reactive WLED: advanced/audio-reactive.md
     - Home Automation: advanced/home-automation.md
     - Remote Access / IFTTT: advanced/remote-access-ifttt.md
-    - Security: advanced/security.md
+    - OTA Lock: advanced/ota-lock.md
+    - Accessing WLED over Internet: advanced/access-over-internet.md
     - Wiring Protips: advanced/wiring.md
     - Long Data Lines: advanced/longdata.md
     - Compiling WLED: advanced/compiling-wled.md
     - WLED Build Flags: advanced/buildflags.md
     - Custom Features: advanced/custom-features.md
+    - Community Usermods: advanced/community-usermods.md
     - ESP32 Recovery: advanced/esp32-recovery.md
     - Mapping: advanced/mapping.md
     - Mixed 2D and 1D Setups: advanced/2d-1d-Mixed-Setup.md
