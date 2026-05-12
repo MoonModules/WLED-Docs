@@ -81,7 +81,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -152,7 +152,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Light Mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
@@ -2185,14 +2185,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/security/" class="md-nav__link">
+      <a href="../../advanced/ota-lock/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Security
+    OTA Lock
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/access-over-internet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessing WLED over Internet
   
 
     
@@ -2333,6 +2361,34 @@
     
   
     Custom Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/community-usermods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community Usermods
   
 
     
@@ -5376,6 +5432,10 @@ Please carefully compare all items in the category you are interested in, and yo
 <td>The E8-WiFi Plus is an advanced 8-port WLED pixel controller built on the robust ESP32 microcontroller, designed for maximum performance and flexibility. It comes fully pre-assembled, supporting a wide voltage range from 5V to 24V DC. With a high output current capacity of up to 30A across all 8 outputs, each is fused by a 5A auto fuse. Features include an external antenna for improved WiFi coverage, dual power input for reliability, spring terminals for easy connections, and a micro-SD card slot for standalone operations. An IR receiver is also included, along with extra connectivity options like access to extra GPIOs and the I2C bus. The controller is also compatible with Xlights, to be used in light shows.</td>
 </tr>
 <tr>
+<td><a href="https://www.tindie.com/products/allexok/esp32-stick-wled-powering-smart-leds-using-poe/">Esp32-Stick-WLED</a></td>
+<td>PoE-powered ESP32 Ethernet board with 2 smart LEDs and 1 RGB channel, featuring Phoenix connectors. The board includes integrated level shifters and an external antenna connector. A 5V 2.5A output is available, and 3D-printable enclosure files are provided. The boards are shipped with WLED pre-flashed.</td>
+</tr>
+<tr>
 <td><a href="https://www.maltepoeggel.de/?site=pixelcontroller">ESP8266 Pixel Controller</a></td>
 <td>DIY board for 5V/12V LED strips with TTL or RS485 output using a Wemos D1 mini, integrated fuse, pluggable terminal block, 3D printed module case</td>
 </tr>
@@ -5518,7 +5578,7 @@ Please carefully compare all items in the category you are interested in, and yo
 <tr>
 <td><a href="https://www.aliexpress.com/item/1005006472928868.html">SP530e</a></td>
 <td>ESP32-C3</td>
-<td>ESP32-C3 based Controller that supports both Addressable and PWM-based RGBWW LED strips. 5-24v DC input, sold under BTF lighting, RGBZone, etc. Vendors all list 'BanlanX' as the supporting mobile application. Board is silk screened with 'SP530e' but no other markings. Serial pads and GPIO9 are exposed on the back-side of the board. GPIO 9 must be pulled to GND at boot to enter flashing mode. I/O configuration: LEDPIN is 'GPIO19' for addressable LEDs, BTNPIN is GPIO 3. PWM pin out for RGBWW: WW: 4, CW: 5, R: 10, G: 6 and B: 7. Level shifter used: SN74HCT245 - Warning, the flash is <em>encrypted</em> - be sure to specify the <code>-encrypt</code> flag when flashing with <code>esptool.py</code>. Each device has a unique flash encryption key, but the devs forgot to burn the 'disable UART download' efuse, which means that any non-encrypted firmware can be flashed onto the device, and the device will encrypt the firmware on the first boot. Before flashing, please back up the original firmware of the device with esptool.py <code>esptool.py read_flash 0 0x400000 sp530e-encrypted.bin</code>. Pics of board and the flashing connector here: <a href="https://imgur.com/a/0orUKF1">https://imgur.com/a/0orUKF1</a> -  Sample flashing command: <code>esptool.py write_flash --encrypt 0x0 C3_bootloader.bin 0x8000 C3_partitions_4M.bin 0x10000 WLED_0.15.0-b3_ESP32C3_4MB.bin</code>.</td>
+<td>ESP32-C3 based Controller that supports both Addressable and PWM-based RGBWW LED strips. 5-24v DC input, sold under BTF lighting, RGBZone, etc. Vendors all list 'BanlanX' as the supporting mobile application. Board is silk screened with 'SP530e' but no other markings. Serial pads and GPIO9 are exposed on the back-side of the board. GPIO 9 must be pulled to GND at boot to enter flashing mode. I/O configuration: LEDPIN is 'GPIO19' for addressable LEDs, BTNPIN is GPIO 8, MIC is GPIO3, On-board LEDS are GPIO0 and GPIO1. PWM pin out for RGBWW: WW: 4, CW: 5, R: 10, G: 7 and B: 6. Level shifter used: SN74HCT245 - Warning, the flash is <em>encrypted</em> - be sure to specify the <code>-encrypt</code> flag when flashing with <code>esptool.py</code>. Each device has a unique flash encryption key, but the devs forgot to burn the 'disable UART download' efuse, which means that any non-encrypted firmware can be flashed onto the device, and the device will encrypt the firmware on the first boot. Before flashing, please back up the original firmware of the device with esptool.py <code>esptool.py read_flash 0 0x400000 sp530e-encrypted.bin</code>. Pics of board and the flashing connector here: <a href="https://imgur.com/a/0orUKF1">https://imgur.com/a/0orUKF1</a> -  Sample flashing command: <code>esptool.py write_flash --encrypt 0x0 C3_bootloader.bin 0x8000 C3_partitions_4M.bin 0x10000 WLED_0.15.0-b3_ESP32C3_4MB.bin</code>.</td>
 </tr>
 <tr>
 <td><a href="https://www.electrodragon.com/product/esp-led-strip-board">ESP LED Strip WIFI Control Board [ESP Version]</a></td>
@@ -5623,7 +5683,7 @@ Please carefully compare all items in the category you are interested in, and yo
 <tr>
 <td><a href="https://www.aliexpress.us/item/3256805781327184.html">ESP32-C3 Super Mini</a></td>
 <td>ESP32-C3</td>
-<td>Very compact, easy to flash with the USB-C port, can support 3A over the USB-C connector. Extremely cheap, but only has one core so there's a small stutter during Wifi communication. <a href="https://roryhay.es/blog/esp32-c3-super-mini-flaw">Be careful purchasing! Some stores sell a version that has crippling Wifi strength issues.</a></td>
+<td>Very compact, easy to flash with the USB-C port, can support 3A over the USB-C connector. Extremely cheap, but only has one core so there's a small stutter during Wifi communication. Be careful purchasing! Some stores sell a version that has <a href="https://github.com/DedeHai/WLED-ESPNow-Remote/blob/main/images/C3_good_bad.jpg">crippling Wifi strength issues</a>.</td>
 </tr>
 <tr>
 <td><img alt="Gold Member" src="../../assets/images/content/akemi_gold.png" /><br/> <a href="https://www.tindie.com/products/28858/">ESP32 Mini Dev Board 16mb by SerKo (aka Serg)</a></td>

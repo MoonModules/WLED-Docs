@@ -81,7 +81,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -152,7 +152,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Light Mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
@@ -808,6 +808,34 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-to-consider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More to consider
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="More to consider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#take-care-of-psu-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Take care of PSU used
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2150,14 +2178,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/security/" class="md-nav__link">
+      <a href="../../advanced/ota-lock/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Security
+    OTA Lock
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/access-over-internet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessing WLED over Internet
   
 
     
@@ -2298,6 +2354,34 @@
     
   
     Custom Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/community-usermods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community Usermods
   
 
     
@@ -5180,6 +5264,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#more-to-consider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More to consider
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="More to consider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#take-care-of-psu-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Take care of PSU used
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5224,6 +5336,12 @@ If you then still have troubles and are going to ask for help, provide as much i
     <img alt="Example LED type setup" src="../../assets/images/content/example_led_type_setup.jpg" /></li>
 <li>Wiring is bad. Wiring must be done thoroughly. Loose contacts, cold solder joints etc. must be avoided. You also need to be careful about the correct sizing of the cables: too thin wires can not only cause high voltage drop but also lead to an overheating and fire! For wire sizing you may use this <a href="https://wled-calculator.github.io/">LED power, wiring and fuse calculator</a>. If many power sources are used (for example separate one for ESP and separate one for the LED strip), then all their grounds (GND, V-) must be connected together (but do not connect their V+ together!).</li>
 </ol>
+<h3 id="more-to-consider">More to consider</h3>
+<h4 id="take-care-of-psu-used">Take care of PSU used</h4>
+<p>Pay close attention to the power supply unit (PSU) you use. Flickering in addressable LED strips is somethimes caused by poor-quality PSUs that generate significant electromagnetic interference (EMI).</p>
+<p>When selecting a PSU, don’t rely solely on general customer reviews. Make sure the unit has been successfully used specifically with addressable LED strips (e.g., WS2812, SK6812). Many inexpensive PSUs receive positive reviews but are primarily used with analog LED strips.</p>
+<p>Analog LEDs are relatively tolerant of voltage fluctuations and electrical noise. In contrast, addressable LEDs require a stable voltage and low-noise power supply to function correctly, as they rely on precise digital signaling.</p>
+<p>Audible artifacts such as humming, buzzing, or high-pitched whining can indicate poor PSU design or low component quality. These issues often correlate with unstable output and increased electrical noise, which can directly affect LED performance.</p>
 
 
 

@@ -81,7 +81,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -152,7 +152,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Light Mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
@@ -1785,10 +1785,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-library" class="md-nav__link">
+  <a href="#client-libraries" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example Library
+        Client libraries
       
     </span>
   </a>
@@ -2403,14 +2403,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/security/" class="md-nav__link">
+      <a href="../../advanced/ota-lock/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Security
+    OTA Lock
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/access-over-internet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessing WLED over Internet
   
 
     
@@ -2551,6 +2579,34 @@
     
   
     Custom Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/community-usermods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community Usermods
   
 
     
@@ -5423,10 +5479,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-library" class="md-nav__link">
+  <a href="#client-libraries" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example Library
+        Client libraries
       
     </span>
   </a>
@@ -5734,10 +5790,12 @@ In order for each effect to have an unique ID on all devices, having unsupported
 If called, these will fallback to the Solid effect, in the effects list they have the name <code>RSVD</code> or <code>-</code>.
 To improve user experience, it is recommended to remove effects with the names <code>RSVD</code> or <code>-</code> form the UI effect selection.</p>
 </div>
-<h3 id="example-library">Example Library</h3>
-<p><a href="https://github.com/paulwrath1223/wled-json-api-library">WLED JSON API Library in rust</a>.
-Even if you are not using rust, or don't know how to read rust,
-the up-to-date JSON structure is included and documented in this project.</p>
+<h3 id="client-libraries">Client libraries</h3>
+<p>The community has created libraries for various programming languages to make working with the WLED JSON API easier.</p>
+<ul>
+<li><a href="https://github.com/paulwrath1223/wled-json-api-library">WLED JSON API Library in Rust</a> - Even if you are not using Rust, or don't know how to read Rust, the up-to-date JSON structure is included and documented in this project.</li>
+<li><a href="https://github.com/frenck/python-wled">python-wled</a> - Python library for the WLED JSON API and the WLED Weboscket API.</li>
+</ul>
 <h3 id="setting-new-values">Setting new values</h3>
 <p>Sending a POST request to <code>/json</code> or <code>/json/state</code> with (parts of) the state object will update the respective values.
 Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <code>{"seg":[{"col":[[0,255,200]]}]}</code> sets the color of the first segment to teal.
@@ -6077,7 +6135,7 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>col</td>
 <td>array of colors</td>
-<td>Array that has up to 3 color arrays as elements, the primary, secondary (background) and tertiary colors of the segment. Each color is an array of 3 or 4 bytes, which represents a RGB(W) color, i.e. <code>[[255,170,0],[0,0,0],[64,64,64]]</code>. It can also be represented as aan array of strings of <em>hex</em> values, i.e. <code>["FFAA00","000000","404040"]</code> for orange, black and grey.</td>
+<td>Array that has up to 3 color arrays as elements, the primary, secondary (background) and tertiary colors of the segment. Each color is an array of 3 or 4 bytes, which represents a RGB(W) color, i.e. <code>[[255,170,0],[0,0,0],[64,64,64]]</code>. It can also be represented as an array of strings of <em>hex</em> values, i.e. <code>["FFAA00","000000","404040"]</code> for orange, black and grey. One or more colors can be set randomly with <code>"r"</code>, i.e. <code>["r",[0,0,0],"r"]</code>. <em>(random will soon be available in 0.16.0)</em></td>
 </tr>
 <tr>
 <td>fx</td>

@@ -81,7 +81,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -152,7 +152,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Light Mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
@@ -2203,14 +2203,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../security/" class="md-nav__link">
+      <a href="../ota-lock/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Security
+    OTA Lock
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access-over-internet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessing WLED over Internet
   
 
     
@@ -2471,6 +2499,34 @@
     
   
     Custom Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community-usermods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community Usermods
   
 
     
@@ -5488,15 +5544,29 @@ For most ESP8266 boards, the <code>d1_mini</code> environment is best.</li>
 <li>Copy and paste the contents of <code>platformio_override.ini.sample</code> into a new file called <code>platformio_override.ini</code>. Make sure <code>platformio_override.ini</code> is in the same folder as <code>platformio.ini</code>.</li>
 <li>Replace the line <code>default_envs = WLED_tasmota_1M</code> with the line you uncommented in <code>platformio.ini</code> in the previous steps (from Compilation guide (PlatformIO)). Example: <code>default_envs = d1_mini</code></li>
 <li>In <code>platformio.ini</code> scroll down until you see
-<code>#--------------------
+<div class="highlight"><pre><span></span><code> #--------------------
  # WLED BUILDS
- #--------------------</code></li>
-<li>Find the section that matches the build environment you selected in previous steps. Example: <code>[env:d1_mini]</code></li>
-<li>Select the whole section (including the first line in brackets [ ] ), and copy and paste it into <code>platformio_override.ini</code> overwriting the build environment section that was already there.</li>
-<li>Add a new line under the the line that starts with <code>build_flags =</code></li>
-<li>Put your <code>-D</code> overrides on this new line, giving each <code>-D</code> it's own new line.</li>
-<li>Compile your freshly customized WLED image!</li>
+ #--------------------
+ ```
+ 4. Find the section that matches the build environment you selected in previous steps. Example: `[env:d1_mini]`
+ 5. Select the whole section (including the first line in brackets [ ] ), and copy and paste it into `platformio_override.ini` overwriting the build environment section that was already there.
+ 6. Add a new line under the the line that starts with `build_flags =`
+ 7. Put your `-D` overrides on this new line, giving each `-D` it&#39;s own new line.
+ 8. Compile your freshly customized WLED image!
+
+### Adding usermods
+
+To include one or more usermods in your build, add a `custom_usermods` line to your environment in `platformio_override.ini`:
+
+```ini
+[env:esp32dev_temperature]
+extends = env:esp32dev
+custom_usermods =
+  audioreactive
+  Temperature
+</code></pre></div></li>
 </ol>
+<p>Each name corresponds to a folder under <code>usermods/</code>. No other file editing is required — usermods self-register when compiled in. For full details, including how to add external usermods from a git repository and how to write your own, see <a href="/advanced/custom-features">Custom Features</a>.</p>
 <h3 id="flashing-the-compiled-binary">Flashing the compiled binary</h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -5516,7 +5586,8 @@ For current compiles I recommend the latest Arduino core version 2.7.4. If you d
 </li>
 <li>
 <p>Run the following command to build the Web UI files:
-  <code>npm run build</code></p>
+  <div class="highlight"><pre><span></span><code>npm run build
+</code></pre></div></p>
 </li>
 <li>
 <p>You will need to install a few libraries:</p>

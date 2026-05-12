@@ -81,7 +81,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -152,7 +152,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Light Mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
@@ -2078,14 +2078,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/security/" class="md-nav__link">
+      <a href="../../advanced/ota-lock/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Security
+    OTA Lock
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/access-over-internet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessing WLED over Internet
   
 
     
@@ -2226,6 +2254,34 @@
     
   
     Custom Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/community-usermods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community Usermods
   
 
     
@@ -5265,8 +5321,9 @@ Tonyno - tireless user support and documentation<br />
 <a href="https://www.myhome-control.de/">Wladislaw Waag</a> - contributes documentation and maintains <a href="https://wled-faq.github.io">WLED FAQ</a> (unofficial documentation in German/English), <a href="https://wled-calculator.github.io/">WLED calculator</a> and <a href="https://wled-install.github.io/">WLED unofficial installer</a>.</p>
 <h3 id="used-libraries-and-dependencies">Used Libraries and Dependencies</h3>
 <p><a href="https://github.com/esp8266/Arduino">ESP8266</a>/<a href="https://github.com/espressif/arduino-esp32">ESP32</a> Arduino Core<br />
+<a href="https://github.com/tasmota/platform-espressif32">ESP32 Tasmota</a>/<a href="https://github.com/pioarduino/platform-espressif32">ESP32 pioarduino</a> Arduino Core and build tools (since 16.0.0)<br />
 <a href="https://github.com/Makuna/NeoPixelBus">NeoPixelBus</a> by Makuna<br />
-<a href="https://github.com/FastLED/FastLED/">FastLED</a> library<br />
+<a href="https://github.com/FastLED/FastLED/">FastLED</a> library (up to 0.15.5)<br />
 <a href="https://github.com/me-no-dev/ESPAsyncTCP">ESPAsyncTCP</a> by me-no-dev<br />
 <a href="https://github.com/me-no-dev/ESPAsyncUDP">ESPAsyncUDP</a> by me-no-dev (as of 0.9.0)<br />
 <a href="https://github.com/me-no-dev/ESPAsyncWebServer">ESPAsyncWebServer</a> by me-no-dev<br />
@@ -5275,7 +5332,7 @@ Tonyno - tireless user support and documentation<br />
 <a href="https://github.com/kitesurfer1404/WS2812FX">WS2812FX</a> by kitesurfer1404 (modified)<br />
 <a href="https://github.com/markszabo/IRremoteESP8266">IRremoteESP8266</a> by markszabo (optional)<br />
 <a href="https://github.com/JChristensen/Timezone">Timezone</a> by JChristensen<br />
-<a href="https://github.com/blynkkk/blynk-library">Blynk</a> library (compacted)<br />
+<a href="https://github.com/blynkkk/blynk-library">Blynk</a> library (compacted, up to 0.14.1)<br />
 <a href="https://github.com/forkineye/E131">E1.31</a> library by forkineye (modified)<br />
 <a href="https://github.com/Aircoookie/Espalexa">Espalexa</a> by Aircoookie (modified)<br />
 Many included FastLED effects are modified versions of <a href="https://gist.github.com/kriegsman/">kriegsman</a>'s gists!  </p>
@@ -5284,7 +5341,8 @@ Many included FastLED effects are modified versions of <a href="https://gist.git
 <a href="https://github.com/knolleary/pubsubclient">PubSubClient</a> by knolleary (modified, up to 0.8.3)  </p>
 <p><a href="https://shields.io"><img alt="badge" src="https://img.shields.io/badge/badges-by%20shields.io-blue.svg?style=flat-square" /></a><br />
 <a href="https://iro.js.org/">iro.js</a> colorpicker by James Daniel!<br />
-Classic UI icons by <a href="https://linearicons.com">Linearicons</a> created by <a href="https://perxis.com">Perxis</a>!  </p>
+<a href="https://corsfix.com/">Corsfix</a></p>
+<p>Classic UI icons by <a href="https://linearicons.com">Linearicons</a> created by <a href="https://perxis.com">Perxis</a>!  </p>
 <p>If you would like to appear in this list for a contribution you made or be removed from it, feel free to contact me!</p>
 
 
