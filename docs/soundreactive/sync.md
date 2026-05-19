@@ -61,27 +61,24 @@ UDP_SYNC_HEADER is a versioning number that's defined in audio_reactive.h
 
 ### V2 Format - WLED version >= 0.14.0 (including MoonModules fork)
 
-<div style="background-color: Gray">
-
-```c++
+``` { .cpp .copy }
 #define UDP_SYNC_HEADER_V2 "00002"
 
     // new "V2" audiosync struct - 44 Bytes
-    struct __attribute__ ((packed)) audioSyncPacket {  // WLEDMM "packed" ensures that there are no additional gaps
-      char    header[6];          //  06 Bytes  offset 0 - "00002" for protocol version 2 ( includes \0 for c-style string termination) 
-      uint8_t pressure[2];     //  02 Bytes, offset 6  - optional - sound pressure as fixed point (8bit integer,  8bit fraction) 
-      float   sampleRaw;       //  04 Bytes  offset 8  - either "sampleRaw" or "rawSampleAgc" depending on soundAgc setting
-      float   sampleSmth;     //  04 Bytes  offset 12 - either "sampleAvg" or "sampleAgc" depending on soundAgc setting
-      uint8_t samplePeak;   //  01 Bytes  offset 16 - 0 no peak; >=1 peak detected. In future, this will also provide peak Magnitude
-      uint8_t frameCounter;   //  01 Bytes  offset 17 - optional - rolling counter to track duplicate/out of order packets
-      uint8_t fftResult[16];    //  16 Bytes  offset 18 - 16 GEQ channels, each channel has one byte (uint8_t)
-      uint16_t zeroCrossingCount; // 02 Bytes, offset 34 - optional - number of zero crossings seen in 23ms
-      float  FFT_Magnitude;   //  04 Bytes  offset 36 - largest FFT result from a single run (raw value, can go up to 4096)
-      float  FFT_MajorPeak;   //  04 Bytes  offset 40 - frequency (Hz) of largest FFT result
+    struct __attribute__ ((packed)) audioSyncPacket {
+      char    header[6];            //  06 Bytes  offset 0  - "00002" for protocol version 2 ( includes \0 for c-style string termination) 
+      uint8_t pressure[2];          //  02 Bytes, offset 6  - optional - sound pressure as fixed point (8bit integer,  8bit fraction) 
+      float   sampleRaw;            //  04 Bytes  offset 8  - either "sampleRaw" or "rawSampleAgc" depending on soundAgc setting
+      float   sampleSmth;           //  04 Bytes  offset 12 - either "sampleAvg" or "sampleAgc" depending on soundAgc setting
+      uint8_t samplePeak;           //  01 Bytes  offset 16 - 0 no peak; >=1 peak detected. In future, this will also provide peak Magnitude
+      uint8_t frameCounter;         //  01 Bytes  offset 17 - optional - rolling counter to track duplicate/out of order packets
+      uint8_t fftResult[16];        //  16 Bytes  offset 18 - 16 GEQ channels, each channel has one byte (uint8_t)
+      uint16_t zeroCrossingCount;   //  02 Bytes, offset 34 - optional - number of zero crossings seen in 23ms
+      float  FFT_Magnitude;         //  04 Bytes  offset 36 - largest FFT result from a single run (raw value, can go up to 4096)
+      float  FFT_MajorPeak;         //  04 Bytes  offset 40 - frequency (Hz) of largest FFT result
     };
 
 ```
-</div>
 
 The V2 format expects that AGC is performed by the sender, so there is no need to transmit "AGC" and "non-AGC" samples separately. To save bandwidth, the `myvals[]` array was removed, and all numbers are either `float` or `uint8_t`.
 
